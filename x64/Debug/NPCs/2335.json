@@ -1,0 +1,22 @@
+{
+	"Index" : 2335,
+	"Name" : "1868",
+	"Description" : "Pran Accessory Shop",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 90,
+	"Position" : [872,3657],
+	"Equip" : [247,0,0,0,0,0,1448,0],
+	"Inventory" : [2380,2381,2382,2383,0,2410,2406,2407,2408,2409,2411,0,0,0,0,2484,2485,2486,2487,2488,0,0,0,0,0,0,0,0,0,0,5550,5551,0,0,0,5502,5503,5504,5505,5506],
+	"options" : {
+		"0" : {"text": "Missao", "type": 2 },
+		"1" : {"text": "Loja", "type": 5 },
+		"2" : {"text": "Fechar", "type": 8 }
+	}
+}

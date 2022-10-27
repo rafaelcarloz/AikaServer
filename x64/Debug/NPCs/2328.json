@@ -1,0 +1,23 @@
+{
+	"Index" : 2328,
+	"Name" : "1856",
+	"Description" : "Ancient Honor Metal Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 210,
+	"Position" : [915,3656],
+	"Equip" : [228,0,0,0,0,0,1502,0],
+	"Inventory" : [9288,9289,9290,9291,0,9293,9294,9295,9296,9297,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Nothing_16", "type": 51 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

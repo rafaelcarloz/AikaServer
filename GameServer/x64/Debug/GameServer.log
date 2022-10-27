@@ -1,0 +1,44 @@
+﻿  BuffsController.cpp
+  GameEntity.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+C:\AikaProject\AikaServer\GameServer\GameEntity.cpp(67,21): warning C4244: '=': conversão de 'uint16_t' para 'BYTE', possível perda de dados
+  InventoryController.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+C:\AikaProject\AikaServer\GameServer\InventoryController.cpp(31,53): warning C4244: 'argumento': conversão de 'UINT64' para 'int', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\InventoryController.cpp(65,53): warning C4244: 'argumento': conversão de 'UINT64' para 'int', possível perda de dados
+  Program.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+  CharacterController.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+C:\AikaProject\AikaServer\GameServer\CharacterController.cpp(415,15): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\CharacterController.cpp(416,15): warning C4244: '=': conversão de 'int' para 'float', possível perda de dados
+  DataLoader.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+C:\AikaProject\AikaServer\GameServer\ReinforceData.h(21,2): warning C4091: 'typedef ': ignorado à esquerda de 'ItemAttributeReinforce' quando nenhuma variável é declarada
+C:\AikaProject\AikaServer\GameServer\ReinforceData.h(48,2): warning C4091: 'typedef ': ignorado à esquerda de 'ArmorAttributeReinforce' quando nenhuma variável é declarada
+  EntityHandler.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+  Nation.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+  PacketHandler.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(638,120): warning C4244: 'argumento': conversão de 'WORD' para 'BYTE', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(638,87): warning C4244: 'argumento': conversão de 'WORD' para 'BYTE', possível perda de dados
+  Player.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+  ServerInstance.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+  StatusController.cpp
+C:\AikaProject\AikaServer\GameServer\ReinforceData.h(21,2): warning C4091: 'typedef ': ignorado à esquerda de 'ItemAttributeReinforce' quando nenhuma variável é declarada
+C:\AikaProject\AikaServer\GameServer\ReinforceData.h(48,2): warning C4091: 'typedef ': ignorado à esquerda de 'ArmorAttributeReinforce' quando nenhuma variável é declarada
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+C:\AikaProject\AikaServer\GameServer\StatusController.cpp(198,83): warning C4244: '+=': conversão de 'DWORD' para 'WORD', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\StatusController.cpp(200,84): warning C4244: '+=': conversão de 'DWORD' para 'WORD', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\StatusController.cpp(257,83): warning C4244: '+=': conversão de 'DWORD' para 'WORD', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\StatusController.cpp(259,84): warning C4244: '+=': conversão de 'DWORD' para 'WORD', possível perda de dados
+  VisibleController.cpp
+C:\AikaProject\AikaServer\GameServer\Packets.h(350,3): warning C4091: 'typedef ': ignorado à esquerda de 'packets::PacketUseItem' quando nenhuma variável é declarada
+  Gerando Código...
+C:\AikaProject\AikaServer\GameServer\ServerInstance.cpp(22): warning C4715: 'ConsoleHandler': nem todos os caminhos de controle retornam um valor
+C:\AikaProject\AikaServer\GameServer\EntityHandler.cpp(130): warning C4172: retornando o endereço da variável local ou temporário: entity
+  GameServer.vcxproj -> C:\AikaProject\AikaServer\x64\Debug\GameServer.exe

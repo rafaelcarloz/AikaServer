@@ -1,0 +1,23 @@
+{
+	"Index" : 2474,
+	"Name" : "2494",
+	"Description" : "Honor Weapon Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 90,
+	"Position" : [1827,3733],
+	"Equip" : [113,12,0,13130,0,13111,152,0],
+	"Inventory" : [12056,12091,12196,12231,12266,12301,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Nothing_25", "type": 64 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

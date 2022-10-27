@@ -1,0 +1,23 @@
+{
+	"Index" : 2368,
+	"Name" : "1815",
+	"Description" : "Obsidian Honor Cloth Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 190,
+	"Position" : [1583,2272],
+	"Equip" : [225,0,0,0,0,0,1504,0],
+	"Inventory" : [3328,3358,3388,3418,0,3448,3478,3508,3538,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Loja", "type": 5 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

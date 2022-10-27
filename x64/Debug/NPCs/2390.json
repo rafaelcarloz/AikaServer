@@ -1,0 +1,25 @@
+{
+	"Index" : 2390,
+	"Name" : "1809",
+	"Description" : "Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 220,
+	"Position" : [882,2203],
+	"Equip" : [234,0,0,0,0,0,1505,0],
+	"Inventory" : [4351,4391,0,0,0,4616,4617,4618,4619,4620,4621,4622,4623,0,0,4601,4602,4603,4604,4605,4606,4607,4608,0,0,5502,5503,5504,5505,5506,0,0,4537,4522,4470,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Consertar", "type": 31 },
+		"3" : {"text": "Consertar Tudo", "type": 32 },
+		"4" : {"text": "Loja", "type": 5 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"Index" : 2284,
+	"Name" : "1994",
+	"Description" : "Save Point",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 165,
+	"Position" : [2441,913],
+	"Equip" : [232,0,0,0,0,0,1442,0],
+	"Inventory" : [8348,8349,8350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Salvar Localizacao", "type": 25 },
+		"1" : {"text": "Fechar", "type": 8 }
+	}
+}

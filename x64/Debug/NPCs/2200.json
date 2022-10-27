@@ -1,0 +1,22 @@
+{
+	"Index" : 2200,
+	"Name" : "499",
+	"Description" : "Honor Accessory Dealer",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 270,
+	"Position" : [3441,551],
+	"Equip" : [225,0,0,0,0,0,1504,0],
+	"Inventory" : [1336,1366,1396,1426,0,1337,1367,1397,1427,0,1316,1368,1398,1428,0,1420,1421,1422,1423,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Missao", "type": 2 },
+		"1" : {"text": "Loja", "type": 5 },
+		"2" : {"text": "Fechar", "type": 8 }
+	}
+}

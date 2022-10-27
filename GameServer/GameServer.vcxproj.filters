@@ -1,31 +1,223 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="GameServer.cpp" />
-    <ClCompile Include="GameManager.cpp">
+    <ClCompile Include="Program.cpp" />
+    <ClCompile Include="ServerSocekt.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Encryptation.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="WebHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="WinHttpWrapper.cpp">
+      <Filter>Network\Web</Filter>
+    </ClCompile>
+    <ClCompile Include="WinVersion.cpp">
+      <Filter>Network\Web</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerInstance.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="SocketServer.cpp">
-      <Filter>Network\Connection</Filter>
+    <ClCompile Include="EntityHandler.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="PacketHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="Nation.cpp">
+      <Filter>Nation</Filter>
+    </ClCompile>
+    <ClCompile Include="DateFunctions.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="DataLoader.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="InitialCharacters.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemList.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="SetItem.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="ReinforceData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="InventoryController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="StatusController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="VisibleController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEntity.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="BuffsController.cpp">
+      <Filter>Controller</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="Core">
-      <UniqueIdentifier>{df8b0597-a7e8-49b2-9aab-4077c8c288b0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Network">
-      <UniqueIdentifier>{46f70b5f-ccf4-46eb-a524-9c619cabb9c7}</UniqueIdentifier>
+      <UniqueIdentifier>{79a82ace-0e21-43a5-9dc5-d269334ea159}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Network\Connection">
-      <UniqueIdentifier>{d91076c3-a7da-4121-89a3-86880963d63e}</UniqueIdentifier>
+    <Filter Include="Functions">
+      <UniqueIdentifier>{99a060bf-3c3b-4ce6-a5e4-a9cd8adaa7fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Data">
+      <UniqueIdentifier>{cdf471ee-0e50-4a2b-98c3-dcb740ffdafc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Web">
+      <UniqueIdentifier>{217a5831-b123-4d2a-b276-7dc2dc059707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Handlers">
+      <UniqueIdentifier>{5d8075fc-ab0f-4026-a334-97696d8b1ade}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{7da2a785-cf69-4b78-a6b8-5eb301e748f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{d141179c-d3d6-4ae7-994e-5c8a3367437b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nation">
+      <UniqueIdentifier>{38215148-5ac2-418f-b172-4355591d5b89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{09a9024e-2876-4853-a5f4-1e756c20a8af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Controller">
+      <UniqueIdentifier>{eb6cca1f-0fd7-4459-86d2-44b6bca862e4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameManager.h">
+    <ClInclude Include="ServerSocket.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="Encryptation.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="WebHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="WinHttpWrapper.h">
+      <Filter>Network\Web</Filter>
+    </ClInclude>
+    <ClInclude Include="WinVersion.h">
+      <Filter>Network\Web</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerInstance.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="SocketServer.h">
-      <Filter>Network\Connection</Filter>
+    <ClInclude Include="GameEntity.h">
+      <Filter>Entities</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityHandler.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="PacketHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Nation.h">
+      <Filter>Nation</Filter>
+    </ClInclude>
+    <ClInclude Include="DateFunctions.h">
+      <Filter>Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Packets.h">
+      <Filter>Network\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="DataLoader.h">
+      <Filter>Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="InitialCharacters.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemList.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.fwd.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterController.fwd.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerSocket.fwd.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="SetItem.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="ReinforceData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="InventoryController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="StatusController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="VisibleController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEntity.fwd.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="BuffsController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="GameServer.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

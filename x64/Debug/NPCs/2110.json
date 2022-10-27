@@ -1,0 +1,23 @@
+{
+	"Index" : 2110,
+	"Name" : "93",
+	"Description" : "Pran Clothing Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 270,
+	"Position" : [3552,655],
+	"Equip" : [247,0,0,0,0,0,1448,0],
+	"Inventory" : [2380,2382,0,0,0,2406,2408,2410,0,0,2432,2433,2440,0,0,2458,2461,0,0,0,2484,2485,0,0,0,2434,2435,2436,2437,2438,2439,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Loja", "type": 5 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

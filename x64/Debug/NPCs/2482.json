@@ -1,0 +1,22 @@
+{
+	"Index" : 2482,
+	"Name" : "2590",
+	"Description" : "Abandoned Pran",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 315,
+	"Position" : [1234,881],
+	"Equip" : [112,11,0,13137,0,13112,151,0],
+	"Inventory" : [12370,12400,12430,12460,0,12490,12520,12550,12580,12340,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Fechar", "type": 8 }
+	}
+}

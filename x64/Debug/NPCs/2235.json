@@ -1,0 +1,25 @@
+{
+	"Index" : 2235,
+	"Name" : "813",
+	"Description" : "Relic Upgrade",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 0,
+	"Position" : [3454,631],
+	"Equip" : [249,0,0,0,0,0,1509,0],
+	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Aprimorar Reliquia", "type": 39 },
+		"3" : {"text": "Nothing_12", "type": 40 },
+		"4" : {"text": "Situacao Atual", "type": 41 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

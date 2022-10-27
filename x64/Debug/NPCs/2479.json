@@ -1,0 +1,22 @@
+{
+	"Index" : 2479,
+	"Name" : "2499",
+	"Description" : "[Honor] Medal of Courage Merchan",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 45,
+	"Position" : [1822,3686],
+	"Equip" : [230,0,0,0,0,0,1504,0],
+	"Inventory" : [9440,0,0,0,0,9441,0,0,0,0,9442,0,0,0,0,9443,0,0,0,0,9444,0,0,0,0,9445,0,0,0,0,9446,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Missao", "type": 2 },
+		"1" : {"text": "Loja", "type": 5 },
+		"2" : {"text": "Fechar", "type": 8 }
+	}
+}

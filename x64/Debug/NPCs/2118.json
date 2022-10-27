@@ -1,0 +1,25 @@
+{
+	"Index" : 2118,
+	"Name" : "99",
+	"Description" : "Military Blacksmith",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 270,
+	"Position" : [3446,1569],
+	"Equip" : [227,0,0,0,0,0,1446,0],
+	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Manofaturar", "type": 15 },
+		"2" : {"text": "Missao", "type": 2 },
+		"3" : {"text": "Consertar", "type": 31 },
+		"4" : {"text": "Consertar Tudo", "type": 32 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

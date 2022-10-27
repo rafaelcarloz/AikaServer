@@ -1,0 +1,23 @@
+{
+	"Index" : 2327,
+	"Name" : "1855",
+	"Description" : "Ancient Honor Weapon Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 180,
+	"Position" : [908,3659],
+	"Equip" : [226,0,0,0,0,0,1505,0],
+	"Inventory" : [9287,9292,9298,9303,9308,9313,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Nothing_16", "type": 51 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

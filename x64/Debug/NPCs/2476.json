@@ -1,0 +1,23 @@
+{
+	"Index" : 2476,
+	"Name" : "2496",
+	"Description" : "Honor Leather Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 90,
+	"Position" : [1827,3741],
+	"Equip" : [115,14,0,13137,0,13115,154,0],
+	"Inventory" : [12610,12640,12670,12700,0,12730,12760,12790,12820,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Nothing_25", "type": 64 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

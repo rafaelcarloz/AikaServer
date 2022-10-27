@@ -1,0 +1,23 @@
+{
+	"Index" : 2446,
+	"Name" : "2302",
+	"Description" : "Alchemist and Reinforcement",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 225,
+	"Position" : [1901,3791],
+	"Equip" : [263,0,0,0,0,0,1511,0],
+	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Refinar", "type": 16 },
+		"2" : {"text": "Missao", "type": 2 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

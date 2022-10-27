@@ -1,0 +1,25 @@
+{
+	"Index" : 2069,
+	"Name" : "55",
+	"Description" : "Cloth Armor Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 0,
+	"Position" : [3487,691],
+	"Equip" : [229,0,0,0,0,0,1503,0],
+	"Inventory" : [2140,2170,2200,2230,0,2141,2171,2201,2231,0,2142,2172,2202,2232,0,0,0,0,0,0,2260,2290,2320,2350,0,2261,2291,2321,2351,0,2262,2292,2322,2352,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Consertar", "type": 31 },
+		"3" : {"text": "Consertar Tudo", "type": 32 },
+		"4" : {"text": "Loja", "type": 5 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

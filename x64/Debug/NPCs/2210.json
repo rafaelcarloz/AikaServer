@@ -1,0 +1,22 @@
+{
+	"Index" : 2210,
+	"Name" : "847",
+	"Description" : "Mid-Ranking Aitan",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 0,
+	"Position" : [2598,1967],
+	"Equip" : [44,7706,2024,2054,2084,2114,1509,0],
+	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Nothing_1", "type": 12 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Fechar", "type": 8 }
+	}
+}

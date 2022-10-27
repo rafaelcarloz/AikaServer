@@ -1,0 +1,24 @@
+{
+	"Index" : 2072,
+	"Name" : "63",
+	"Description" : "Pran Station",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 45,
+	"Position" : [3497,656],
+	"Equip" : [225,0,0,0,0,0,1504,0],
+	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Central da Pran", "type": 13 },
+		"2" : {"text": "Missao", "type": 2 },
+		"3" : {"text": "Encantar Pran", "type": 62 },
+		"4" : {"text": "Fechar", "type": 8 }
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"Index" : 2309,
+	"Name" : "1934",
+	"Description" : "Guild Skill Master",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 270,
+	"Position" : [3473,594],
+	"Equip" : [12,151,0,2873,2903,2933,2559,0],
+	"Inventory" : [9258,9285,0,0,0,0,0,0,0,0,9259,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Habilidade Guild", "type": 46 },
+		"1" : {"text": "Loja", "type": 5 },
+		"2" : {"text": "Fechar", "type": 8 }
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"Index" : 2186,
+	"Name" : "863",
+	"Description" : "New Aitan",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 180,
+	"Position" : [2625,1794],
+	"Equip" : [40,7700,2020,2050,2080,2110,1508,0],
+	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Loja", "type": 5 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

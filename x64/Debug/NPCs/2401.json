@@ -1,0 +1,25 @@
+{
+	"Index" : 2401,
+	"Name" : "1887",
+	"Description" : "Advanced Cloth Shop",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 90,
+	"Position" : [882,3645],
+	"Equip" : [230,0,0,0,0,0,1503,0],
+	"Inventory" : [2149,2179,2209,2239,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2269,2299,2329,2359,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Consertar", "type": 31 },
+		"3" : {"text": "Consertar Tudo", "type": 32 },
+		"4" : {"text": "Loja", "type": 5 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

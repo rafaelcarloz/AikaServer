@@ -1,0 +1,21 @@
+{
+	"Index" : 2483,
+	"Name" : "2591",
+	"Description" : "Rescued Aitan",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 135,
+	"Position" : [1218,844],
+	"Equip" : [31,150,0,2060,2090,2120,1510,0],
+	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Missao", "type": 2 },
+		"1" : {"text": "Fechar", "type": 8 }
+	}
+}

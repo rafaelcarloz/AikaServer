@@ -1,0 +1,21 @@
+{
+	"Index" : 2371,
+	"Name" : "1810",
+	"Description" : "Poacher",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 150,
+	"Position" : [2635,1389],
+	"Equip" : [234,0,0,0,0,0,1505,0],
+	"Inventory" : [6139,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Loja", "type": 5 },
+		"1" : {"text": "Fechar", "type": 8 }
+	}
+}

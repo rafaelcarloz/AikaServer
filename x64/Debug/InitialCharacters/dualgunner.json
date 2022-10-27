@@ -1,0 +1,97 @@
+{
+	"index": 3,
+	"class_info": 31,
+	"level": 0,
+	"status": {
+		"str": 8,
+		"dex": 14,
+		"int": 10,
+		"const": 12,
+		"spirit": 6,
+		"stats": 0
+	},
+	"sizes": {
+		"altura": 7,
+		"tronco": 119,
+		"perna": 119,
+		"corpo": 0
+	},
+	"gold": 0,
+	"start_equips" : [
+		{
+			"slot": 3,
+			"index": 2079
+		},
+		{
+			"slot": 5,
+			"index": 2139
+		},
+		{
+			"slot": 6,
+			"index": 1174
+		}
+	],
+	"start_inventory": [
+		{
+			"slot": 0,
+			"index": 4350, 
+			"amount": 10
+		},
+		{
+			"slot": 1,
+			"index": 4390, 
+			"amount": 10
+		},
+		{
+			"slot": 2,
+			"index": 10044, 
+			"amount": 1
+		},
+		{
+			"slot": 3,
+			"index": 5284, 
+			"amount": 1
+		},
+		{
+			"slot": 60,
+			"index": 5300, 
+			"amount": 1
+		}
+	],
+	"start_skills": [
+		{
+			"slot": 0,
+			"index": 2881
+		},
+		{
+			"slot": 1,
+			"index": 2897
+		},
+		{
+			"slot": 2,
+			"index": 2913
+		},
+		{
+			"slot": 6,
+			"index": 2977
+		}
+	],
+	"start_item_bar": [
+		{
+			"slot": 0,
+			"index": 46098
+		},
+		{
+			"slot": 1,
+			"index": 47634
+		},
+		{
+			"slot": 2,
+			"index": 46610
+		},
+		{
+			"slot": 7,
+			"index": 46354
+		}
+	]
+}

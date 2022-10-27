@@ -1,0 +1,25 @@
+{
+	"Index" : 2065,
+	"Name" : "49",
+	"Description" : "Reinforcement",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 180,
+	"Position" : [3541,731],
+	"Equip" : [223,0,0,0,0,0,1502,0],
+	"Inventory" : [9035,9036,9037,9038,9039,9040,9041,9042,0,0,9044,9045,9046,9047,9048,9049,9050,9051,0,0,9350,6666,6667,6668,6669,8774,8777,8783,8786,0,8780,8789,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Refinar", "type": 16 },
+		"2" : {"text": "Missao", "type": 2 },
+		"3" : {"text": "Loja", "type": 5 },
+		"4" : {"text": "", "type": 71 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

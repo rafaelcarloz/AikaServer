@@ -1,0 +1,21 @@
+{
+	"Index" : 2416,
+	"Name" : "2155",
+	"Description" : "Aquados",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 80,
+	"Position" : [1768,3681],
+	"Equip" : [221,0,0,0,0,0,0,0],
+	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Entrar na Dungeon", "type": 26 },
+		"1" : {"text": "Fechar", "type": 8 }
+	}
+}

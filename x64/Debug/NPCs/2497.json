@@ -1,0 +1,22 @@
+{
+	"Index" : 2497,
+	"Name" : "2676",
+	"Description" : "Conqueror Honor Recipe Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 115,
+	"Position" : [1826,3677],
+	"Equip" : [226,0,0,0,0,0,1505,0],
+	"Inventory" : [18094,18095,18096,18097,18098,18099,18125,18126,18127,18128,18101,18102,18103,18104,0,18105,18106,18107,18108,18100,18109,18110,18111,18112,0,18113,18114,18115,18116,0,18117,18118,18119,18120,0,18121,18122,18123,18124,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Loja", "type": 5 },
+		"2" : {"text": "Fechar", "type": 8 }
+	}
+}

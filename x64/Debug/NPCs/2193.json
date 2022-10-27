@@ -1,0 +1,25 @@
+{
+	"Index" : 2193,
+	"Name" : "480",
+	"Description" : "Fancy Metal Armor Dealer",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 90,
+	"Position" : [1583,2167],
+	"Equip" : [224,0,0,0,0,0,1503,0],
+	"Inventory" : [1663,1693,1723,1753,0,1664,1694,1724,1754,0,1665,1695,1725,1755,0,0,0,0,0,0,1783,1813,1843,1873,0,1784,1814,1844,1874,0,1785,1815,1845,1875,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Consertar", "type": 31 },
+		"3" : {"text": "Consertar Tudo", "type": 32 },
+		"4" : {"text": "Loja", "type": 5 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

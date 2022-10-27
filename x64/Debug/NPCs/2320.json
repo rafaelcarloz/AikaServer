@@ -1,0 +1,25 @@
+{
+	"Index" : 2320,
+	"Name" : "1880",
+	"Description" : "Superior Weapon Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 90,
+	"Position" : [1677,2199],
+	"Equip" : [227,0,0,0,0,0,1446,0],
+	"Inventory" : [1041,1042,1043,0,0,1006,1007,1008,0,0,1181,1182,1183,0,0,1146,1147,1148,0,0,1251,1252,1253,0,0,1216,1217,1218,0,0,1286,1287,1288,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Consertar", "type": 31 },
+		"3" : {"text": "Consertar Tudo", "type": 32 },
+		"4" : {"text": "Loja", "type": 5 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

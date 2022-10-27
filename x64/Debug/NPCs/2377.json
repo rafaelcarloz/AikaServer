@@ -1,0 +1,22 @@
+{
+	"Index" : 2377,
+	"Name" : "1800",
+	"Description" : "Eldine Client",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 160,
+	"Position" : [827,1704],
+	"Equip" : [482,0,0,0,0,0,1504,0],
+	"Inventory" : [97,113,129,145,161,177,193,209,225,241,257,273,289,305,321,337,353,369,385,401,417,433,449,465,481,497,513,529,545,561,577,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Fechar", "type": 8 }
+	}
+}

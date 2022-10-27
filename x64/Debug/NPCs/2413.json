@@ -1,0 +1,22 @@
+{
+	"Index" : 2413,
+	"Name" : "213",
+	"Description" : "Honor Potion Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 0,
+	"Position" : [3402,530],
+	"Equip" : [247,0,0,0,0,0,1448,0],
+	"Inventory" : [4353,4354,11701,11702,11703,4393,4394,11751,11752,11753,4471,4310,4311,4312,4313,4314,4315,4316,4317,4318,4204,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Missao", "type": 2 },
+		"1" : {"text": "Loja", "type": 5 },
+		"2" : {"text": "Fechar", "type": 8 }
+	}
+}

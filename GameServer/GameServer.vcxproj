@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b72e3925-0eb0-4bbe-a27d-732488350770}</ProjectGuid>
+    <ProjectGuid>{323da858-e3f6-4295-a0ee-8891e561ff4d}</ProjectGuid>
     <RootNamespace>GameServer</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -29,26 +29,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -70,18 +70,6 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -116,10 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\cpplib\boost_1_80_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\cpplib\boost_1_80_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,15 +129,85 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="GameServer.cpp" />
-    <ClCompile Include="SocketServer.cpp" />
+    <ClCompile Include="BuffsController.cpp" />
+    <ClCompile Include="GameEntity.cpp" />
+    <ClCompile Include="InventoryController.cpp" />
+    <ClCompile Include="ItemData.cpp" />
+    <ClCompile Include="MiscData.cpp" />
+    <ClCompile Include="PlayerData.cpp" />
+    <ClCompile Include="Program.cpp" />
+    <ClCompile Include="CharacterController.cpp" />
+    <ClCompile Include="DataLoader.cpp" />
+    <ClCompile Include="DateFunctions.cpp" />
+    <ClCompile Include="InitialCharacters.cpp" />
+    <ClCompile Include="ItemList.cpp" />
+    <ClCompile Include="Encryptation.cpp" />
+    <ClCompile Include="EntityHandler.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="Nation.cpp" />
+    <ClCompile Include="PacketHandler.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="ReinforceData.cpp" />
+    <ClCompile Include="ServerSocekt.cpp" />
+    <ClCompile Include="ServerInstance.cpp" />
+    <ClCompile Include="SetItem.cpp" />
+    <ClCompile Include="SkillData.cpp" />
+    <ClCompile Include="StatusController.cpp" />
+    <ClCompile Include="VisibleController.cpp" />
+    <ClCompile Include="WebHandler.cpp" />
+    <ClCompile Include="WinHttpWrapper.cpp" />
+    <ClCompile Include="WinVersion.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameManager.h" />
-    <ClInclude Include="SocketServer.h" />
+    <ClInclude Include="BuffsController.h" />
+    <ClInclude Include="CharacterController.fwd.h" />
+    <ClInclude Include="CharacterController.h" />
+    <ClInclude Include="DataLoader.h" />
+    <ClInclude Include="DateFunctions.h" />
+    <ClInclude Include="Encryptation.h" />
+    <ClInclude Include="EntityHandler.h" />
+    <ClInclude Include="GameEntity.fwd.h" />
+    <ClInclude Include="GameEntity.h" />
+    <ClInclude Include="InitialCharacters.h" />
+    <ClInclude Include="InventoryController.h" />
+    <ClInclude Include="ItemData.h" />
+    <ClInclude Include="ItemList.h" />
+    <ClInclude Include="MiscData.h" />
+    <ClInclude Include="Packets.h" />
+    <ClInclude Include="Player.fwd.h" />
+    <ClInclude Include="PlayerData.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Nation.h" />
+    <ClInclude Include="PacketHandler.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="ReinforceData.h" />
+    <ClInclude Include="ServerInstance.h" />
+    <ClInclude Include="ServerSocket.fwd.h" />
+    <ClInclude Include="ServerSocket.h" />
+    <ClInclude Include="SetItem.h" />
+    <ClInclude Include="SkillData.h" />
+    <ClInclude Include="StatusController.h" />
+    <ClInclude Include="VisibleController.h" />
+    <ClInclude Include="WebHandler.h" />
+    <ClInclude Include="WinHttpWrapper.h" />
+    <ClInclude Include="WinVersion.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="GameServer.json">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\nlohmann.json.3.11.2\build\native\nlohmann.json.targets" Condition="Exists('..\packages\nlohmann.json.3.11.2\build\native\nlohmann.json.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\nlohmann.json.3.11.2\build\native\nlohmann.json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nlohmann.json.3.11.2\build\native\nlohmann.json.targets'))" />
+  </Target>
 </Project>

@@ -1,0 +1,25 @@
+{
+	"Index" : 2067,
+	"Name" : "52",
+	"Description" : "Guild Administrator",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 270,
+	"Position" : [3473,596],
+	"Equip" : [226,0,0,0,0,0,1505,0],
+	"Inventory" : [6101,6102,6103,6104,6105,6106,6107,6141,6109,6110,19051,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Criar Guild", "type": 10 },
+		"2" : {"text": "Armazem da Guild", "type": 11 },
+		"3" : {"text": "Missao", "type": 2 },
+		"4" : {"text": "Loja", "type": 5 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"Index" : 2420,
+	"Name" : "2186",
+	"Description" : "Item Creator",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 200,
+	"Position" : [1651,3651],
+	"Equip" : [223,0,0,0,0,0,1502,0],
+	"Inventory" : [9035,9036,9037,9038,9039,9040,9041,0,0,0,9044,9045,9046,9047,9048,9049,9050,0,0,0,9063,9350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Loja", "type": 5 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

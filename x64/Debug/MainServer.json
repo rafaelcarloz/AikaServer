@@ -1,0 +1,13 @@
+{
+  "serverSettings": {
+    "address": "127.0.0.1",
+    "port": 8831,
+    "porta": 8831,
+    "version": 100,
+    "maxConnections": 10
+  },
+  "internalServerSettings": {
+    "address": "127.0.0.1",
+    "port": 8800
+  }
+}

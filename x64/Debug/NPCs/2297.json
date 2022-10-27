@@ -1,0 +1,21 @@
+{
+	"Index" : 2297,
+	"Name" : "1966",
+	"Description" : "Dark Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 0,
+	"Position" : [14,14],
+	"Equip" : [235,0,0,0,0,0,1502,0],
+	"Inventory" : [4685,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Loja", "type": 5 },
+		"1" : {"text": "Fechar", "type": 8 }
+	}
+}

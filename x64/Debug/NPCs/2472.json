@@ -1,0 +1,21 @@
+{
+	"Index" : 2472,
+	"Name" : "2333",
+	"Description" : "Lakia Merchant Association",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 90,
+	"Position" : [874,647],
+	"Equip" : [234,0,0,0,0,0,1505,0],
+	"Inventory" : [11336,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Missao", "type": 2 },
+		"1" : {"text": "Fechar", "type": 8 }
+	}
+}

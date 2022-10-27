@@ -1,0 +1,25 @@
+{
+	"Index" : 2322,
+	"Name" : "1882",
+	"Description" : "Superior Leather Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 90,
+	"Position" : [1678,2204],
+	"Equip" : [234,0,0,0,0,0,1505,0],
+	"Inventory" : [1906,1936,1966,1996,0,1907,1937,1967,1997,0,1908,1938,1968,1998,0,0,0,0,0,0,2026,2056,2086,2116,0,2027,2057,2087,2117,0,2028,2058,2088,2118,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Consertar", "type": 31 },
+		"3" : {"text": "Consertar Tudo", "type": 32 },
+		"4" : {"text": "Loja", "type": 5 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

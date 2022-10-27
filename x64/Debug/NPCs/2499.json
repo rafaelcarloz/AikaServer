@@ -1,0 +1,25 @@
+{
+	"Index" : 2499,
+	"Name" : "3173",
+	"Description" : "Rumble Officer",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 0,
+	"Position" : [893,3670],
+	"Equip" : [414,0,0,0,0,0,1482,0],
+	"Inventory" : [18977,18978,0,0,0,18976,18988,18989,18990,18991,20609,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Loja", "type": 5 },
+		"3" : {"text": "", "type": 72 },
+		"4" : {"text": "", "type": 73 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

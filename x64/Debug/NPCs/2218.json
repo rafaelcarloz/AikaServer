@@ -1,0 +1,25 @@
+{
+	"Index" : 2218,
+	"Name" : "822",
+	"Description" : "Blacksmith",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 180,
+	"Position" : [1585,2191],
+	"Equip" : [227,0,0,0,0,0,1446,0],
+	"Inventory" : [5162,5179,5161,5180,0,5168,5170,5172,5174,0,5169,5171,5173,5175,0,5205,5206,5207,5208,5209,5210,5211,5212,0,0,5214,5215,5216,5217,5218,5219,5220,5221,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Trocar Aparencia", "type": 18 },
+		"2" : {"text": "Reduzir Item", "type": 19 },
+		"3" : {"text": "Missao", "type": 2 },
+		"4" : {"text": "Loja", "type": 5 },
+		"5" : {"text": "Fechar", "type": 8 }
+	}
+}

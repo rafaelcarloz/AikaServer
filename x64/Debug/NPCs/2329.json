@@ -1,0 +1,23 @@
+{
+	"Index" : 2329,
+	"Name" : "1857",
+	"Description" : "Ancient Honor Leather Merchant",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 210,
+	"Position" : [922,3650],
+	"Equip" : [361,0,0,0,0,0,1480,0],
+	"Inventory" : [9299,9300,9301,9302,0,9304,9305,9306,9307,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
+	"options" : {
+		"0" : {"text": "Conversa", "type": 1 },
+		"1" : {"text": "Missao", "type": 2 },
+		"2" : {"text": "Nothing_16", "type": 51 },
+		"3" : {"text": "Fechar", "type": 8 }
+	}
+}

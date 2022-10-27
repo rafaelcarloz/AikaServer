@@ -1,0 +1,24 @@
+{
+	"Index" : 2182,
+	"Name" : "871",
+	"Description" : "National Sales Agent",
+	"MobEffect" : 0,
+	"InitialDialog" : 0,
+	"Emote" : 0,
+	"Effect1" : 0,
+	"Effect2" : 0,
+	"Effect3" : 0,
+	"Effect4" : 0,
+	"WeaponGlow" : 0,
+	"Rotation" : 0,
+	"Position" : [3514,584],
+	"Equip" : [223,0,0,0,0,0,1502,0],
+	"Inventory" : [4351,4391,4352,4392,0,4616,4617,4618,4619,4620,4621,4622,4623,0,0,4601,4602,4603,4604,4605,4606,4607,4608,0,0,5502,5503,0,0,0,0,0,0,0,0,4522,4470,0,0,0],
+	"options" : {
+		"0" : {"text": "Missao", "type": 2 },
+		"1" : {"text": "Consertar", "type": 31 },
+		"2" : {"text": "Consertar Tudo", "type": 32 },
+		"3" : {"text": "Leilao", "type": 48 },
+		"4" : {"text": "Fechar", "type": 8 }
+	}
+}
