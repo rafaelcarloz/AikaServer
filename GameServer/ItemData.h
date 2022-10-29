@@ -95,7 +95,7 @@ enum ItemUseType : WORD {
 	ItemUseCityScroll = 202,
 	ItemUseLocationScroll = 204,
 	ItemUseRecipe,
-	ItemUseDungeonScroll = 208,
+	ItemUsePortalScroll = 208,
 
 	ItemUseBagInventory = 217,
 	ItemUseBagStorage,

@@ -9,7 +9,7 @@ int main(int argc, char* argv[]){
 	std::string serverData;
 
 	if (argc < 2){
-		serverData = R"({"serverAddress":"127.0.0.1","serverPort":8822,"nationID":3, "serverType": 1})";
+		serverData = R"({"serverAddress":"127.0.0.1","serverPort":8822,"nationID":1, "serverType": 1})";
 	}
 	else {
 		serverData = argv[1];

@@ -37,6 +37,12 @@ private:
 
 	//Titles
 	bool LoadTitles();
+
+	//Teleport Positions
+	bool LoadTeleportPositions();
+
+	//MapData
+	bool LoadMapData();
 public:
 	bool Startup(ServerInstance* server);
 };

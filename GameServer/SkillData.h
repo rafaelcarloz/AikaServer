@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <map>
 
+#pragma pack(push,1)
+
 
 #pragma region "SkillData File"
 
@@ -72,5 +74,7 @@ public:
 
 	BYTE GetSendToWorldSkill(WORD skillId, DWORD& skillValue);
 };
+
+#pragma pack(pop)
 
 #endif

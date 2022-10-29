@@ -12,6 +12,8 @@
 #include "SetItem.h"
 #include "SkillData.h"
 #include "ReinforceData.h"
+#include "TitleList.h"
+#include "MapData.h"
 
 bool DataLoader::Startup(ServerInstance* server) {
 	this->_server = server;
@@ -47,6 +49,18 @@ bool DataLoader::Startup(ServerInstance* server) {
 
 	if (!this->LoadItemConsumeEffects()) {
 		return false; 
+	}
+
+	if (!this->LoadTitles()) {
+		return false;
+	}
+
+	if (!this->LoadTeleportPositions()) {
+		return false;
+	}
+
+	if (!this->LoadMapData()) {
+		return false;
 	}
 
     return true;
@@ -330,7 +344,7 @@ bool ProcessItemConsumeFunction(std::string workingrPath, std::string fileName) 
 	if (r == LUA_OK) {
 		lua_getglobal(L, "CONSUME_FUNCTION_ID");
 
-		int index = lua_tointeger(L, -1);
+		uint32_t index = (uint32_t)lua_tointeger(L, -1);
 
 		if (index <= 0) {
 			return false;
@@ -374,7 +388,7 @@ bool ProcessItemConsumeEffect(std::string workingrPath, std::string fileName) {
 	if (r == LUA_OK) {
 		lua_getglobal(L, "CONSUME_EFFECT_ID");
 
-		int index = lua_tointeger(L, -1);
+		uint32_t index = (uint32_t)lua_tointeger(L, -1);
 
 		if (index <= 0) {
 			return false;
@@ -461,5 +475,161 @@ bool DataLoader::LoadSkillData() {
 	return true;
 }
 
+
+#pragma endregion
+#pragma region "Titles"
+
+bool DataLoader::LoadTitles() {
+	std::string fileName = Logger::Format(R"(%s\Data\Title.bin)", this->_currentDir.c_str());
+
+	std::ifstream ifs(fileName, std::ios::in | std::ios::binary);
+
+	if (!ifs.is_open()) {
+		Logger::Write("error loading Titles, file not found!", LOG_TYPE::Error);
+		return false;
+	}
+
+	int itemsLoaded = 0;
+
+	try {
+		int bufferSize = sizeof(TitleFromList);
+		char* buffer = new char[bufferSize];
+
+		size_t bytesRead{ 0 };
+
+		TitleList* titleList = TitleList::GetInstance();
+
+		do {
+			bytesRead = ifs.read(buffer, bufferSize).gcount();
+
+			if (bytesRead == 0) {
+				continue;
+			}
+
+			TitleFromList item = TitleFromList();
+			memcpy(&item, &buffer[0], bufferSize);
+
+			titleList->Add(item);
+
+			if (item.Level[0].TitleIndex == 0) {
+				continue;
+			}
+
+			itemsLoaded++;
+		} while (bytesRead == bufferSize);
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[DataLoader::LoadTitles] error: %s", e.what());
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d items from Title.bin", itemsLoaded);
+
+	return true;
+}
+
+#pragma endregion
+#pragma region "Teleport Positions"
+
+bool DataLoader::LoadTeleportPositions() {
+	std::string fileName = Logger::Format(R"(%s\Data\ScrollPos.bin)", this->_currentDir.c_str());
+
+	std::ifstream ifs(fileName, std::ios::in | std::ios::binary);
+
+	if (!ifs.is_open()) {
+		Logger::Write("error loading teleport list, file not found!", LOG_TYPE::Error);
+		return false;
+	}
+
+	int itemsLoaded = 0;
+
+	try {
+		int bufferSize = sizeof(ScrollTeleportPosition);
+		char* buffer = new char[bufferSize];
+
+		size_t bytesRead{ 0 };
+
+		MapData* mapData = MapData::GetInstance();
+
+		do {
+			bytesRead = ifs.read(buffer, bufferSize).gcount();
+
+			if (bytesRead == 0) {
+				continue;
+			}
+
+			ScrollTeleportPosition item = ScrollTeleportPosition();
+			memcpy(&item, &buffer[0], bufferSize);
+
+			mapData->AddTeleport(item);
+
+			if (item.MapName[0] == 0) {
+				continue;
+			}
+
+			itemsLoaded++;
+		} while (bytesRead == bufferSize);
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[DataLoader::LoadTeleportPositions] error: %s", e.what());
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d items from ScrollPos.bin", itemsLoaded);
+
+	return true;
+}
+
+#pragma endregion
+#pragma region "Map Data"
+
+bool DataLoader::LoadMapData() {
+	std::string fileName = Logger::Format(R"(%s\Data\Map.bin)", this->_currentDir.c_str());
+
+	std::ifstream ifs(fileName, std::ios::in | std::ios::binary);
+
+	if (!ifs.is_open()) {
+		Logger::Write("error loading map bounds list, file not found!", LOG_TYPE::Error);
+		return false;
+	}
+
+	int itemsLoaded = 0;
+
+	try {
+		int bufferSize = sizeof(MapBounds);
+		char* buffer = new char[bufferSize];
+
+		size_t bytesRead{ 0 };
+
+		MapData* mapData = MapData::GetInstance();
+
+		do {
+			bytesRead = ifs.read(buffer, bufferSize).gcount();
+
+			if (bytesRead == 0) {
+				continue;
+			}
+
+			MapBounds item = MapBounds();
+			memcpy(&item, &buffer[0], bufferSize);
+
+			mapData->AddBounds(item);
+
+			if (item.EndPositionX == 0) {
+				continue;
+			}
+
+			itemsLoaded++;
+		} while (bytesRead == bufferSize);
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[DataLoader::LoadMapData] error: %s", e.what());
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d items from Map.bin", itemsLoaded);
+
+	return true;
+}
 
 #pragma endregion

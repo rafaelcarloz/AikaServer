@@ -18,7 +18,7 @@
 typedef struct ItemAttributeReinforce {
 	DWORD AttributePhysic[16];
 	DWORD AttributeMagic[16];
-};
+}*PItemAttributeReinforce;
 
 enum Reinforce2_Area_
 {
@@ -45,7 +45,7 @@ const unsigned reinforce2sectionSize = 960u;
 typedef struct ArmorAttributeReinforce {
 	DWORD DamageReduction[16];
 	DWORD HealthIncrementPoints[16];
-};
+}*PArmorAttributeReinforce;
 
 enum Reinforce3_Area_
 {

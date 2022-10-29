@@ -195,9 +195,9 @@ void StatusController::CalculateEquipmentDamage() {
 	ReinforceData* reinforceData = ReinforceData::GetInstance();
 
 	this->volatileStatus.Damage.MagDamage +=
-		reinforceData->GetReinforce2(equipedWeapon->Index).AttributeMagic[reinforceLevel];
+		(WORD)reinforceData->GetReinforce2(equipedWeapon->Index).AttributeMagic[reinforceLevel];
 	this->volatileStatus.Damage.PhysDamage +=
-		reinforceData->GetReinforce2(equipedWeapon->Index).AttributePhysic[reinforceLevel];
+		(WORD)reinforceData->GetReinforce2(equipedWeapon->Index).AttributePhysic[reinforceLevel];
 }
 
 void StatusController::CalculateDamage() {
@@ -254,9 +254,9 @@ void StatusController::CalculateEquipmentDefense() {
 		ReinforceData* reinforceData = ReinforceData::GetInstance();
 
 		this->volatileStatus.Damage.MagDefense +=
-			reinforceData->GetReinforce2(equipedArmor->Index).AttributeMagic[reinforceLevel];
+			(WORD)reinforceData->GetReinforce2(equipedArmor->Index).AttributeMagic[reinforceLevel];
 		this->volatileStatus.Damage.PhysDefense +=
-			reinforceData->GetReinforce2(equipedArmor->Index).AttributePhysic[reinforceLevel];
+			(WORD)reinforceData->GetReinforce2(equipedArmor->Index).AttributePhysic[reinforceLevel];
 	}
 }
 
@@ -535,7 +535,7 @@ int32_t StatusController::GetHealthRegenaration() {
 	int32_t result = (int)round(this->volatileStatus.Life.MaxHP * (BASE_HP_REGEN + ((restorePoints / 100) / 10)));
 
 	if (result > (this->volatileStatus.Life.MaxHP * 0.2)) {
-		result = this->volatileStatus.Life.MaxHP * 0.2;
+		result = (uint32_t)this->volatileStatus.Life.MaxHP * 0.2;
 	}
 
 	return result;
@@ -556,7 +556,7 @@ int32_t StatusController::GetManaRegenaration() {
 	int32_t result = (int)round(this->volatileStatus.Life.MaxMP * (BASE_MP_REGEN + ((restorePoints / 100) / 10)));
 
 	if (result > (this->volatileStatus.Life.MaxMP * 0.2)) {
-		result = this->volatileStatus.Life.MaxMP * 0.2;
+		result = (uint32_t)this->volatileStatus.Life.MaxMP * 0.2;
 	}
 
 	return result;
@@ -584,7 +584,7 @@ void StatusController::DoRegenerationTick() {
 	bool hasRecovered = false;
 
 	if (this->_character->Status.Life.CurHP < this->volatileStatus.Life.MaxHP) {
-		int hpRecovery = this->_character->Status.Life.CurHP + this->GetHealthRegenaration();
+		uint32_t hpRecovery = this->_character->Status.Life.CurHP + this->GetHealthRegenaration();
 
 		if (hpRecovery > this->volatileStatus.Life.MaxHP) {
 			hpRecovery = this->volatileStatus.Life.MaxHP;
@@ -597,7 +597,7 @@ void StatusController::DoRegenerationTick() {
 	}
 
 	if (this->_character->Status.Life.CurMP < this->volatileStatus.Life.MaxMP) {
-		int mpRecovery = this->_character->Status.Life.CurMP+this->GetManaRegenaration();
+		uint32_t mpRecovery = this->_character->Status.Life.CurMP+this->GetManaRegenaration();
 
 		if (mpRecovery > this->volatileStatus.Life.MaxMP) {
 			mpRecovery = this->volatileStatus.Life.MaxMP;

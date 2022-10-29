@@ -149,4 +149,6 @@ typedef struct Character {
 
 }*PCharacter;
 
+#pragma pack(pop)
+
 #endif

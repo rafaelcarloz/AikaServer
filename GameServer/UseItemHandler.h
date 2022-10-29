@@ -44,6 +44,10 @@ private:
 	BYTE GetIventoryAvailableSlots(lua_State* L);
 	bool SendClientMessage(lua_State* L);
 	BYTE GetCharacterClass(lua_State* L);
+	BYTE GetServerNation(lua_State* L);
+	BYTE GetCharacterNation(lua_State* L);
+
+	void TeleportScroll(lua_State* L);
 public:
 	void UseInventoryItem(PPlayer player, BYTE slot, WORD useData);
 };

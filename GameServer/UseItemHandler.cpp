@@ -1,5 +1,7 @@
 #include "UseItemHandler.h"
 #include "Player.h"
+#include "ServerInstance.h"
+#include "MapData.h"
 
 
 void UseItemHandler::UseInventoryItem(PPlayer player, BYTE slot, WORD useData) {
@@ -45,6 +47,9 @@ bool UseItemHandler::RunScript(WORD scriptId, ScriptType scriptType) {
 		.addFunction("AddCharacterHealth", &UseItemHandler::AddCharacterHealth)
 		.addFunction("AddCharacterMana", &UseItemHandler::AddCharacterMana)
 		.addFunction("AddCharacterBuff", &UseItemHandler::AddCharacterBuff)
+		.addFunction("GetServerNation", &UseItemHandler::GetServerNation)
+		.addFunction("GetCharacterNation", &UseItemHandler::GetCharacterNation)
+		.addFunction("TeleportScroll", &UseItemHandler::TeleportScroll)
 		.endClass();
 	
 	
@@ -140,4 +145,20 @@ bool UseItemHandler::SendClientMessage(lua_State* L) {
 
 BYTE UseItemHandler::GetCharacterClass(lua_State* L) {
 	return (BYTE)((BYTE)this->_player->character.ClassInfo / 10);
+}
+
+BYTE UseItemHandler::GetServerNation(lua_State* L) {
+	return ServerInstance::GetInstance()->GetNationData()->nationId;
+}
+
+BYTE UseItemHandler::GetCharacterNation(lua_State* L) {
+	return this->_player->account->accountNation;
+}
+
+void UseItemHandler::TeleportScroll(lua_State* L) {
+	uint16_t teleportPosition = _useData;
+
+	ScrollTeleportPosition scrollTeleport = MapData::GetTeleport(teleportPosition);
+
+	_player->characterController->Teleport(scrollTeleport.ToPosition());
 }
