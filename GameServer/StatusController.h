@@ -453,6 +453,12 @@ namespace {
 }
 
 #pragma endregion
+#pragma region "Regenaration"
+
+const double BASE_HP_REGEN = 0.04;
+const double BASE_MP_REGEN = 0.04;
+
+#pragma endregion
 
 
 class StatusController {
@@ -496,11 +502,14 @@ private:
 
 	void SendRefreshStatusScore();
 	void SendRefreshAttributes();
-	void SendCurrentLife();
-
+	
 	void CalculateEquipedItemEffect(BYTE slot);
 	void CalculateSetEffects();
 	void CalculateItemEffects();
+
+
+	int32_t GetHealthRegenaration();
+	int32_t GetManaRegenaration();
 
 public:
 	CharacterStatus volatileStatus;
@@ -513,9 +522,11 @@ public:
 	void RestaureLifePoints();
 
 	void SendCurrentStatus();
-
+	void SendCurrentLife();
 
 	void RecalculateEffects();
+
+	void DoRegenerationTick();
 };
 
 

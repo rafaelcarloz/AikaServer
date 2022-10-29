@@ -13,6 +13,10 @@
 #pragma region "Items Data"
 
 
+const BYTE INVALID_SLOT = 255;
+
+const WORD HOUR_TO_SEC_MULTIPLYER = 3600;
+
 
 enum ItemRarityType : BYTE {
 	ITEM_RARITY_NORMAL,
@@ -38,8 +42,19 @@ typedef struct Item {
 	WORD Amount;
 	WORD Time;
 public:
-	BYTE GetReinforce();
 	bool CanAgroup();
+	bool CanEquip();
+
+	BYTE GetReinforce();
+	BYTE GetEquipSlot();
+
+	time_t GetExpireDate();
+	void SetExpireDate(time_t date);
+
+	bool IsSealed();
+	void SetSealed(bool seal);
+
+	DWORD GetEquipmentSellPrice();
 } *PItem;
 
 
@@ -66,6 +81,55 @@ enum ITEM_GROUP_RESPONSE : BYTE {
 	GROUP_NOT_ALLOWED,
 	GROUP_AMOUNT_LIMIT,
 	GROUP_ALLOWED
+};
+
+enum ItemUseType : WORD {
+	ItemUseFace,
+	ItemUseHair,
+	ItemUseHead,
+	ItemUseArmor,
+	ItemUseGloves,
+	ItemUseShoes,
+
+	ItemUsePranFood = 26,
+	ItemUseCityScroll = 202,
+	ItemUseLocationScroll = 204,
+	ItemUseRecipe,
+	ItemUseDungeonScroll = 208,
+
+	ItemUseBagInventory = 217,
+	ItemUseBagStorage,
+	ItemUseBagPran,
+
+	ItemUseStorageOpen = 226,
+	ItemUsePranDigest = 230,
+
+	ItemUseGoldCoin = 234,
+	ItemUseCashCoin = 239,
+
+	ItemUseRegisterNation = 300,
+
+	ItemUseAddExpPerc = 404,
+
+	ItemUseHealthPotion = 700,
+	ItemUseManaPotion,
+	ItemUseBuffPotion,
+
+	ItemUseAddLevel = 704,
+	ItemUseRandomChest,
+
+	ItemUseOpenChest = 714,
+	ItemUseAddBuff,
+
+	ItemUseRichGoldCoin = 717,
+
+	ItemUseHpMpPotion = 800
+};
+
+enum ItemAgroupStatus: BYTE {
+	ItemUnagrupable,
+	ItemQuantityExceded,
+	ItemAgrupable
 };
 
 #pragma endregion

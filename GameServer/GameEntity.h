@@ -28,6 +28,12 @@ public:
 	StatusController statusController;
 	VisibleController* visibleController;
 
+	time_t timeLastReceivedAttack;
+	time_t timeLastBasicAttack;
+
+	time_t timeLastRegenerationTick;
+	time_t timeLastBuffTick;
+
 	virtual ~GameEntity() {};
 
 	bool IsDead();

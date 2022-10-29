@@ -1,6 +1,9 @@
 #include <iostream>
 #include <boost/json.hpp>
 
+#include <Lua/lua.hpp>
+#pragma comment(lib, "lua54.lib")
+
 #include "DataLoader.h"
 #include "Logger.h"
 
@@ -38,6 +41,14 @@ bool DataLoader::Startup(ServerInstance* server) {
 		return false;
 	}
 
+	if (!this->LoadItemConsumeFunctions()) {
+		return false; 
+	}
+
+	if (!this->LoadItemConsumeEffects()) {
+		return false; 
+	}
+
     return true;
 }
 
@@ -69,7 +80,7 @@ bool DataLoader::ForEachFileInFolder(std::string folderPath, bool (*procedure)(s
 	return true;
 }
 
-#pragma region Characters
+#pragma region "Characters"
 
 bool ProcessInitialCharacterFile(std::string workingrPath, std::string fileName) {
 	std::string fullFileName = Logger::Format(R"(%s\InitialCharacters\%s)", workingrPath.c_str(), fileName.c_str());
@@ -114,7 +125,7 @@ bool DataLoader::LoadInitialCharacters() {
 }
 
 #pragma endregion
-#pragma region Items
+#pragma region "Items"
 
 bool DataLoader::LoadItemList() {
 	std::string fileName = Logger::Format(R"(%s\Data\ItemList.bin)", this->_currentDir.c_str());
@@ -307,7 +318,99 @@ bool DataLoader::LoadReinforce3() {
 
 
 #pragma endregion
-#pragma region Skills
+#pragma region "Items Use"
+
+bool ProcessItemConsumeFunction(std::string workingrPath, std::string fileName) {
+	std::string fullFileName = Logger::Format(R"(%s\Scripts\Itens\ConsumeFunctions\%s)", workingrPath.c_str(), fileName.c_str());
+
+	lua_State* L = luaL_newstate();
+
+	int r = luaL_dofile(L, fullFileName.c_str());
+
+	if (r == LUA_OK) {
+		lua_getglobal(L, "CONSUME_FUNCTION_ID");
+
+		int index = lua_tointeger(L, -1);
+
+		if (index <= 0) {
+			return false;
+		}
+	
+		ItemList::GetInstance()->AddUseItem(index, fullFileName, 0);
+	}
+	else {
+		std::string errormessage = lua_tostring(L, -1);
+		
+		Logger::Write(Error, "[ProcessItemConsumeFunction] error: %s", errormessage.c_str());
+	}
+
+	lua_close(L);
+
+	return true;
+}
+
+bool DataLoader::LoadItemConsumeFunctions() {
+	std::string folderPathFilter = Logger::Format(R"(%s\Scripts\Itens\ConsumeFunctions\*.lua)", this->_currentDir.c_str());
+
+	int loadedFiles = 0;
+
+	if (!this->ForEachFileInFolder(folderPathFilter, &ProcessItemConsumeFunction, &loadedFiles)) {
+		Logger::Write(Error, "error loading ItemConsumeFunction data!");
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d ItemConsumeFunction data files!", loadedFiles);
+
+	return true;
+}
+
+bool ProcessItemConsumeEffect(std::string workingrPath, std::string fileName) {
+	std::string fullFileName = Logger::Format(R"(%s\Scripts\Itens\ConsumeEffects\%s)", workingrPath.c_str(), fileName.c_str());
+
+	lua_State* L = luaL_newstate();
+
+	int r = luaL_dofile(L, fullFileName.c_str());
+
+	if (r == LUA_OK) {
+		lua_getglobal(L, "CONSUME_EFFECT_ID");
+
+		int index = lua_tointeger(L, -1);
+
+		if (index <= 0) {
+			return false;
+		}
+
+		ItemList::GetInstance()->AddUseItem(index, fullFileName, 1);
+	}
+	else {
+		std::string errormessage = lua_tostring(L, -1);
+
+		Logger::Write(Error, "[ProcessItemConsumeEffect] error: %s", errormessage.c_str());
+	}
+
+	lua_close(L);
+
+	return true;
+}
+
+
+bool DataLoader::LoadItemConsumeEffects() {
+	std::string folderPathFilter = Logger::Format(R"(%s\Scripts\Itens\ConsumeEffects\*.lua)", this->_currentDir.c_str());
+
+	int loadedFiles = 0;
+
+	if (!this->ForEachFileInFolder(folderPathFilter, &ProcessItemConsumeEffect, &loadedFiles)) {
+		Logger::Write(Error, "error loading ItemConsumeEffects data!");
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d ItemConsumeEffects data files!", loadedFiles);
+
+	return true;
+}
+
+#pragma endregion
+#pragma region "Skills"
 
 bool DataLoader::LoadSkillData() {
 	std::string fileName = Logger::Format(R"(%s\Data\SkillData.bin)", this->_currentDir.c_str());

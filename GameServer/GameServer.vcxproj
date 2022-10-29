@@ -104,12 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\cpplib\boost_1_80_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\cpplib\lua_542;C:\cpplib\boost_1_80_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\cpplib\boost_1_80_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\cpplib\boost_1_80_0\stage\lib;C:\cpplib\lua_542;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -133,6 +133,7 @@
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="InventoryController.cpp" />
     <ClCompile Include="ItemData.cpp" />
+    <ClCompile Include="MapData.cpp" />
     <ClCompile Include="MiscData.cpp" />
     <ClCompile Include="PlayerData.cpp" />
     <ClCompile Include="Program.cpp" />
@@ -153,6 +154,8 @@
     <ClCompile Include="SetItem.cpp" />
     <ClCompile Include="SkillData.cpp" />
     <ClCompile Include="StatusController.cpp" />
+    <ClCompile Include="TitleList.cpp" />
+    <ClCompile Include="UseItemHandler.cpp" />
     <ClCompile Include="VisibleController.cpp" />
     <ClCompile Include="WebHandler.cpp" />
     <ClCompile Include="WinHttpWrapper.cpp" />
@@ -172,6 +175,7 @@
     <ClInclude Include="InventoryController.h" />
     <ClInclude Include="ItemData.h" />
     <ClInclude Include="ItemList.h" />
+    <ClInclude Include="MapData.h" />
     <ClInclude Include="MiscData.h" />
     <ClInclude Include="Packets.h" />
     <ClInclude Include="Player.fwd.h" />
@@ -187,6 +191,8 @@
     <ClInclude Include="SetItem.h" />
     <ClInclude Include="SkillData.h" />
     <ClInclude Include="StatusController.h" />
+    <ClInclude Include="TitleList.h" />
+    <ClInclude Include="UseItemHandler.h" />
     <ClInclude Include="VisibleController.h" />
     <ClInclude Include="WebHandler.h" />
     <ClInclude Include="WinHttpWrapper.h" />

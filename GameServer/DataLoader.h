@@ -28,6 +28,10 @@ private:
 
 	bool LoadPremiumItem();
 
+	//Items Use
+	bool LoadItemConsumeFunctions();
+	bool LoadItemConsumeEffects();
+
 	//Skills
 	bool LoadSkillData();
 

@@ -6,6 +6,7 @@
 #include "DateFunctions.h"
 #include "WebHandler.h"
 #include "ServerInstance.h"
+#include "UseItemHandler.h"
 
 
 namespace json = boost::json;
@@ -66,10 +67,6 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 		player->characterController->EnterIngame();
 		break;
 
-	case 0x70F:
-		PacketHandler::RecvMoveItemPacket(player, buffer);
-		break;
-
 	case 0x303:
 		PacketHandler::RecvRevivePlayerPacket(player, buffer);
 		break;
@@ -78,6 +75,22 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 		break;
 	case 0x305:
 		PacketHandler::RecvRotationPacket(player, buffer);
+		break;
+
+	case 0x70F:
+		PacketHandler::RecvMoveItemPacket(player, buffer);
+		break;
+	case 0x31D:
+		PacketHandler::RecvUseItemPacket(player, buffer);
+		break;
+	case 0x32C:
+		PacketHandler::RecvDeleteItemPacket(player, buffer);
+		break;
+	case 0x332:
+		PacketHandler::RecvGroupItemsPacket(player, buffer);
+		break;
+	case 0x333:
+		PacketHandler::RecvUngroupItemsPacket(player, buffer);
 		break;
 
 	default:
@@ -635,7 +648,7 @@ bool PacketHandler::RecvCharacterActionPacket(PPlayer player, char* buffer) {
 bool PacketHandler::RecvMoveItemPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketMoveItem&>(buffer[0]);
 
-	if (!player->characterController->inventoryController.MoveItem(packet.SrcType, packet.SrcSlot, packet.DestType, packet.DestSlot)) {
+	if (!player->inventoryController.MoveItem(packet.SrcType, packet.SrcSlot, packet.DestType, packet.DestSlot)) {
 		return true;
 	}
 
@@ -647,6 +660,35 @@ bool PacketHandler::RecvMoveItemPacket(PPlayer player, char* buffer) {
 	return true;
 }
 
+bool PacketHandler::RecvDeleteItemPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketDeleteItem&>(buffer[0]);
+
+	return player->inventoryController.DeleteItem((SlotType)packet.SlotType, packet.Slot);
+}
+
+bool PacketHandler::RecvGroupItemsPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketJoinItems&>(buffer[0]);
+
+	if (packet.SrcSlot > 59 || packet.DestSlot > 59) {
+		return false;
+	}
+
+	PItem sourceItem = &player->character.Inventory[packet.SrcSlot];
+	PItem destItem = &player->character.Inventory[packet.DestSlot];
+
+	if (!player->inventoryController.GroupItems(sourceItem, destItem)) {
+		return false;
+	}
+
+	player->inventoryController.SendRefreshSlot(SlotInventory, packet.SrcSlot, *sourceItem);
+	player->inventoryController.SendRefreshSlot(SlotInventory, packet.DestSlot, *destItem);
+}
+
+bool PacketHandler::RecvUngroupItemsPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketSplitItem&>(buffer[0]);
+
+	return player->inventoryController.UngroupItems((SlotType)packet.SlotType, (BYTE)packet.Slot, (WORD)packet.Amount);
+}
 
 bool PacketHandler::RecvRevivePlayerPacket(PPlayer player, char* buffer) {
 	if (!player->IsDead()) {
@@ -662,11 +704,39 @@ bool PacketHandler::RecvRevivePlayerPacket(PPlayer player, char* buffer) {
 		player->characterController->SendToSavedPosition();
 	}
 
-	player->character.Status.Life.CurHP = (uint32_t)(player->character.Status.Life.MaxHP / 0x10);
-	player->character.Status.Life.CurHP = (uint32_t)(player->character.Status.Life.MaxMP / 0x10);
+	player->character.Status.Life.CurHP = (uint32_t)(player->statusController.volatileStatus.Life.MaxHP / 0x10);
+	player->character.Status.Life.CurMP = (uint32_t)(player->statusController.volatileStatus.Life.MaxMP / 0x10);
 
 	player->buffsController.Recalculate();
 	player->statusController.Recalculate();
 
+	return true;
+}
+
+
+bool PacketHandler::RecvUseItemPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketUseItem&>(buffer[0]);
+
+	if (player->IsDead()) {
+		return false;
+	}
+
+	UseItemHandler handler = UseItemHandler();
+
+	switch (packet.TypeSlot)
+	{
+
+	case SlotInventory:
+		if (packet.Slot > 59) {
+			return false;
+		}
+		
+		handler.UseInventoryItem(player, packet.Slot, packet.Type1);
+		break;
+
+	default:
+		break;
+	}
+	
 	return true;
 }

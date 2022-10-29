@@ -52,6 +52,7 @@ public:
 	boost::json::value _characterList[3];
 
 	CharacterController* characterController;
+	InventoryController inventoryController;
 
 	void Start(SOCKET socket, sockaddr addr, WORD index);
 	void Destroy();

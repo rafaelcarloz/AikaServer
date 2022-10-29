@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <map>
+#include <mutex>
 
 #include "ItemData.h"
 
@@ -89,9 +90,12 @@ typedef struct ItemFromList {
 
 class ItemList {
 private:
-	static ItemList* _instance;
+	static std::atomic<ItemList*> _instance;
+	static std::mutex _mutex;
 
 	std::map<WORD, ItemFromList> _items;
+	std::map<WORD, std::string> _consumeFunctions;
+	std::map<WORD, std::string> _consumeEffects;
 
 	WORD _itemCount = 0;
 protected:
@@ -105,9 +109,12 @@ public:
 
 	bool Add(const ItemFromList item);
 	bool Get(const WORD itemId, ItemFromList* item);
-	ItemFromList Get(const WORD itemId);
+	static ItemFromList Get(const WORD itemId);
 
 	ItemFromList operator[](const WORD itemId);
+
+	bool AddUseItem(const WORD index, std::string fileName, BYTE scriptType);
+	std::string GetUseItem(const WORD index, BYTE scriptType);
 };
 
 #endif

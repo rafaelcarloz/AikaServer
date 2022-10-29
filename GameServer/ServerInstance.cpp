@@ -211,12 +211,18 @@ Nation* ServerInstance::GetNationData() {
 	return this->nation;
 }
 
+#pragma region "Server Threads"
+
 bool ServerInstance::StartRoutines() {
 	this->_threadUpdatedVisible = std::thread(&ServerInstance::RoutineUpdateVisibleEntities, this);
 	this->_threadUpdatedVisible.detach();
 
+	this->_threadUpdateBuffsAndStatus = std::thread(&ServerInstance::RoutineUpdateBuffsAndStatus, this);
+	this->_threadUpdateBuffsAndStatus.detach();
+
 	return true;
 }
+
 
 void ServerInstance::RoutineUpdateVisibleEntities() {
 	while (this->isActive)
@@ -245,3 +251,23 @@ void ServerInstance::RoutineUpdateVisibleEntities() {
 		Sleep(10);
 	}
 }
+
+void ServerInstance::RoutineUpdateBuffsAndStatus() {
+	while (this->isActive)
+	{
+		auto entities = this->entityHandler->GetEntities();
+
+		for (auto& entity : entities) {
+			if (!entity.second->IsIstantiated) {
+				continue;
+			}
+
+			entity.second->statusController.DoRegenerationTick();
+		}
+
+		Sleep(100);
+	}
+}
+
+
+#pragma endregion

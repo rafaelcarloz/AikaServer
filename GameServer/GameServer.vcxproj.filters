@@ -41,25 +41,10 @@
     <ClCompile Include="DataLoader.cpp">
       <Filter>Functions</Filter>
     </ClCompile>
-    <ClCompile Include="InitialCharacters.cpp">
-      <Filter>Data</Filter>
-    </ClCompile>
-    <ClCompile Include="ItemList.cpp">
-      <Filter>Data</Filter>
-    </ClCompile>
     <ClCompile Include="CharacterController.cpp">
       <Filter>Controller</Filter>
     </ClCompile>
     <ClCompile Include="PlayerData.cpp">
-      <Filter>Data</Filter>
-    </ClCompile>
-    <ClCompile Include="SetItem.cpp">
-      <Filter>Data</Filter>
-    </ClCompile>
-    <ClCompile Include="ReinforceData.cpp">
-      <Filter>Data</Filter>
-    </ClCompile>
-    <ClCompile Include="SkillData.cpp">
       <Filter>Data</Filter>
     </ClCompile>
     <ClCompile Include="MiscData.cpp">
@@ -82,6 +67,30 @@
     </ClCompile>
     <ClCompile Include="BuffsController.cpp">
       <Filter>Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="UseItemHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="InitialCharacters.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemList.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapData.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SetItem.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillData.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleList.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReinforceData.cpp">
+      <Filter>Data\Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +123,9 @@
     </Filter>
     <Filter Include="Controller">
       <UniqueIdentifier>{eb6cca1f-0fd7-4459-86d2-44b6bca862e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data\Files">
+      <UniqueIdentifier>{b56bc203-564c-4312-a719-f8fc8fa14da9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -168,12 +180,6 @@
     <ClInclude Include="DataLoader.h">
       <Filter>Functions</Filter>
     </ClInclude>
-    <ClInclude Include="InitialCharacters.h">
-      <Filter>Data</Filter>
-    </ClInclude>
-    <ClInclude Include="ItemList.h">
-      <Filter>Data</Filter>
-    </ClInclude>
     <ClInclude Include="CharacterController.h">
       <Filter>Controller</Filter>
     </ClInclude>
@@ -185,15 +191,6 @@
     </ClInclude>
     <ClInclude Include="ServerSocket.fwd.h">
       <Filter>Network</Filter>
-    </ClInclude>
-    <ClInclude Include="SetItem.h">
-      <Filter>Data</Filter>
-    </ClInclude>
-    <ClInclude Include="ReinforceData.h">
-      <Filter>Data</Filter>
-    </ClInclude>
-    <ClInclude Include="SkillData.h">
-      <Filter>Data</Filter>
     </ClInclude>
     <ClInclude Include="MiscData.h">
       <Filter>Data</Filter>
@@ -212,6 +209,30 @@
     </ClInclude>
     <ClInclude Include="BuffsController.h">
       <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="UseItemHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="InitialCharacters.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemList.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapData.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ReinforceData.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SetItem.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillData.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleList.h">
+      <Filter>Data\Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

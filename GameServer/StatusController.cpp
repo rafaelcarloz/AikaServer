@@ -415,6 +415,8 @@ void StatusController::SendCurrentLife() {
 	packet.Header.Index = this->_entityId;
 	packet.Header.Code = 0x103;
 
+	this->volatileStatus.Life.CurHP = this->_character->Status.Life.CurHP;
+
 	packet.Life = this->volatileStatus.Life;
 
 	PGameEntity gameEntity = EntityHandler::GetEntity(this->_entityId);
@@ -512,6 +514,104 @@ void StatusController::CalculateItemEffects() {
 	}
 
 	this->CalculateSetEffects();
+}
+
+#pragma endregion
+#pragma region "Regeneration"
+
+
+int32_t StatusController::GetHealthRegenaration() {
+	int32_t restorePoints = 0;
+
+	restorePoints += this->GetEffect(EF_REGENHP);
+	restorePoints += this->GetEffect(EF_PRAN_REGENHP);
+
+	restorePoints += this->volatileStatus.Attributes.Constitution * 3;
+
+	if (restorePoints < 0) {
+		restorePoints = 1;
+	}
+
+	int32_t result = (int)round(this->volatileStatus.Life.MaxHP * (BASE_HP_REGEN + ((restorePoints / 100) / 10)));
+
+	if (result > (this->volatileStatus.Life.MaxHP * 0.2)) {
+		result = this->volatileStatus.Life.MaxHP * 0.2;
+	}
+
+	return result;
+}
+
+int32_t StatusController::GetManaRegenaration() {
+	int32_t restorePoints = 0;
+
+	restorePoints += this->GetEffect(EF_REGENMP);
+	restorePoints += this->GetEffect(EF_PRAN_REGENMP);
+
+	restorePoints += this->volatileStatus.Attributes.Spirit * 3;
+
+	if (restorePoints < 0) {
+		restorePoints = 1;
+	}
+
+	int32_t result = (int)round(this->volatileStatus.Life.MaxMP * (BASE_MP_REGEN + ((restorePoints / 100) / 10)));
+
+	if (result > (this->volatileStatus.Life.MaxMP * 0.2)) {
+		result = this->volatileStatus.Life.MaxMP * 0.2;
+	}
+
+	return result;
+}
+
+void StatusController::DoRegenerationTick() {
+	PGameEntity entity = EntityHandler::GetEntity(this->_entityId);
+
+	if (entity->IsDead()) {
+		return;
+	}
+
+	if ((int)difftime(time(0), entity->timeLastRegenerationTick) < 3) {
+		return;
+	}
+
+	if ((int)difftime(time(0), entity->timeLastReceivedAttack) < 5) {
+		return;
+	}
+
+	if ((int)difftime(time(0), entity->timeLastBasicAttack) < 5) {
+		return;
+	}
+
+	bool hasRecovered = false;
+
+	if (this->_character->Status.Life.CurHP < this->volatileStatus.Life.MaxHP) {
+		int hpRecovery = this->_character->Status.Life.CurHP + this->GetHealthRegenaration();
+
+		if (hpRecovery > this->volatileStatus.Life.MaxHP) {
+			hpRecovery = this->volatileStatus.Life.MaxHP;
+		}
+
+		this->_character->Status.Life.CurHP = hpRecovery;
+		this->volatileStatus.Life.CurHP = hpRecovery;
+
+		hasRecovered = true;
+	}
+
+	if (this->_character->Status.Life.CurMP < this->volatileStatus.Life.MaxMP) {
+		int mpRecovery = this->_character->Status.Life.CurMP+this->GetManaRegenaration();
+
+		if (mpRecovery > this->volatileStatus.Life.MaxMP) {
+			mpRecovery = this->volatileStatus.Life.MaxMP;
+		}
+
+		this->_character->Status.Life.CurMP = mpRecovery;
+		this->volatileStatus.Life.CurMP = mpRecovery;
+
+		hasRecovered = true;
+	}
+
+	this->SendCurrentLife();
+
+	entity->timeLastRegenerationTick = time(0);
 }
 
 #pragma endregion

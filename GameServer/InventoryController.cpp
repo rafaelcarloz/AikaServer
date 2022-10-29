@@ -2,6 +2,7 @@
 #include "Logger.h"
 #include "WebHandler.h"
 #include "Player.h"
+#include "ItemList.h"
 
 namespace json = boost::json;
 
@@ -103,7 +104,7 @@ boost::json::value InventoryController::InventoryToJSON() {
 			json::value item = this->ItemToJSON(*sourceItem, i, 0, this->_character->EquipamentsDB[i]);
 
 			if (item.at("ItemListID").is_null()) {
-				Logger::Write(Error, "[InventoryController::InventoryToJSON] generatin item json error [Equipments:%d]", i);
+				Logger::Write(Error, "[InventoryController::InventoryToJSON] generation json items error [Equipments:%d]", i);
 				continue;
 			}
 
@@ -116,7 +117,7 @@ boost::json::value InventoryController::InventoryToJSON() {
 			json::value item = this->ItemToJSON(*sourceItem, i, 1, this->_character->InventoryDB[i]);
 
 			if (item.at("ItemListID").is_null()) {
-				Logger::Write(Error, "[InventoryController::InventoryToJSON] generatin item json error [Inventory:%d]", i);
+				Logger::Write(Error, "[InventoryController::InventoryToJSON] generation json items error [Inventory:%d]", i);
 				continue;
 			}
 
@@ -210,6 +211,29 @@ PItem InventoryController::GetInventoryBagFromSlot(BYTE slot) {
 	return &this->_character->Inventory[bagSlot];
 }
 
+BYTE InventoryController::GetInventoryMaxSlots(SlotType slotType) {
+	BYTE maxSlots = 0;
+
+	switch (slotType)
+	{
+
+	case SlotInventory:
+		if (this->_player->character.Inventory[60].Index != 0) { maxSlots += 15; }
+		if (this->_player->character.Inventory[61].Index != 0) { maxSlots += 15; }
+		if (this->_player->character.Inventory[62].Index != 0) { maxSlots += 15; }
+		if (this->_player->character.Inventory[63].Index != 0) { maxSlots += 15; }
+		break;
+	case SlotStorage:
+		
+		break;
+
+	default:
+		break;
+	}
+
+	return maxSlots;
+}
+
 
 bool InventoryController::MoveItem(SlotType sourceType, BYTE sourceSlot, SlotType destType, BYTE destSlot) {
 	if (sourceType == SlotEquipment && destType != SlotInventory) {
@@ -271,14 +295,29 @@ bool InventoryController::MoveItem(SlotType sourceType, BYTE sourceSlot, SlotTyp
 		}
 
 		destItem = &this->_character->Inventory[destSlot];
+
+		if (sourceType == SlotEquipment) {
+			if (destItem->Index > 0) {
+				if (!destItem->CanEquip() || destItem->GetEquipSlot() != sourceItem->GetEquipSlot()) {
+					return false;
+				}
+			}
+		}
 		break;
 
 	case SlotEquipment:
-		if (sourceSlot < 1 || sourceSlot > 15) {
+		if (destSlot < 1 || destSlot > 15) {
 			return false;
 		}
 
 		destItem = &this->_character->Equipaments[destSlot];
+
+		if (sourceItem->Index > 0) {
+			if (!sourceItem->CanEquip() || sourceItem->GetEquipSlot() != destSlot) {
+				return false;
+			}
+		}
+
 		break;
 
 	default:
@@ -312,6 +351,127 @@ bool InventoryController::SwapItems(PItem source, PItem destination) {
 }
 
 bool InventoryController::GroupItems(PItem source, PItem destination) {
+	if (source->Index == 0 || destination->Index == 0) {
+		return false;
+	}
+
+	if (source->Index != destination->Index) {
+		return false;
+	}
+
+	if (!source->CanAgroup()) {
+		return false;
+	}
+
+	int maxAmount = ItemList::GetInstance()->Get(source->Index).MaxAmount;
+
+	if (maxAmount == 0) {
+		return false;
+	}
+
+	if (maxAmount < (source->Amount + destination->Amount)) {
+		int Remains = (source->Amount + destination->Amount) - maxAmount;
+
+		destination->Amount = maxAmount;
+		source->Amount = Remains;
+	}
+	else {
+		destination->Amount += source->Amount;
+		ZeroMemory(source, sizeof(Item));
+	}
+
+	return true;
+}
+
+bool InventoryController::UngroupItems(PItem source, PItem destination, WORD amount) {
+	if (source->Amount < 2 || source->Amount <= amount) {
+		return false;
+	}
+
+	*destination = *source;
+
+	source->Amount -= amount;
+	destination->Amount = amount;
+
+	return true;
+}
+
+bool InventoryController::UngroupItems(SlotType slotType, BYTE sourceSlot, WORD amount) {
+	auto destinationSlot = this->GetEmptySlot(slotType);
+
+	if (destinationSlot == INVALID_SLOT) {
+		this->_player->SendClientMessage("Inventario cheio.");
+		return true;
+	}
+
+	PItem destinationItem;
+	PItem sourceItem;
+
+	switch (slotType)
+	{
+
+	case SlotInventory:
+		sourceItem = &_player->character.Inventory[sourceSlot];
+		destinationItem = &_player->character.Inventory[destinationSlot];
+		break;
+	case SlotStorage:
+		return true;
+		break;
+
+	default:
+		return true;
+		break;
+	}
+
+	if (!this->UngroupItems(sourceItem, destinationItem, amount)) {
+		return false;
+	}
+
+	this->SendRefreshSlot(slotType, sourceSlot, *sourceItem);
+	this->SendRefreshSlot(slotType, destinationSlot, *destinationItem);
+}
+
+bool InventoryController::DeleteItem(SlotType sourceType, BYTE sourceSlot, bool notify) {
+	PItem sourceItem;
+
+	switch (sourceType) {
+
+	case SlotEquipment:
+		if (sourceSlot < 2 && sourceSlot > 15) {
+			return false;
+		}
+
+		sourceItem = &this->_character->Equipaments[sourceSlot];
+		break;
+	case SlotInventory:
+		if (sourceSlot > 59) {
+			return false;
+		}
+
+		sourceItem = &this->_character->Inventory[sourceSlot];
+		break;
+	default:
+		return true;
+		break;
+	}
+
+	if (sourceItem == nullptr) {
+		return true;
+	}
+
+	if (sourceItem->Index == 0) {
+		return true;
+	}
+
+	if (notify) {
+		_player->SendClientMessage(Logger::Format("o item [%s] foi de base.",
+			ItemList::GetInstance()->Get(sourceItem->Index).Name));
+	}
+	
+
+	ZeroMemory(sourceItem, sizeof(Item));
+	this->SendRefreshSlot(sourceType, sourceSlot, *sourceItem, false);
+
 	return true;
 }
 
@@ -333,4 +493,239 @@ bool InventoryController::SendRefreshSlot(SlotType slotType, BYTE slot, Item ite
 	packet.Item = item;
 
 	return _player->SendPacket(&packet, packet.Header.Size);
+}
+
+
+BYTE InventoryController::GetEmptySlot(SlotType slotType) {
+	BYTE maxSlots = this->GetInventoryMaxSlots(slotType);
+
+	for (BYTE i = 0; i < maxSlots; i++) {
+		switch (slotType) {
+
+		case SlotInventory:
+			if (this->_player->character.Inventory[i].Index == 0) {
+				return i;
+			}
+			break;
+
+		case SlotStorage:
+			return INVALID_SLOT;
+			break;
+		}
+	}
+
+	return INVALID_SLOT;
+}
+
+BYTE InventoryController::GetUsedSlotsCount(SlotType slotType) {
+	int usedCount = 0;
+	BYTE maxSlots = this->GetInventoryMaxSlots(slotType);
+
+	switch (slotType) {
+
+	case SlotInventory:
+		for (BYTE i = 0; i < maxSlots; i++) {
+			if (this->_player->character.Inventory[i].Index > 0) {
+				usedCount++;
+			}
+		}
+
+		break;
+	case SlotStorage:
+		return INVALID_SLOT;
+		break;
+	}
+
+	return usedCount;
+}
+
+BYTE InventoryController::GetAvailableSlotsCount(SlotType slotType) {
+	return this->GetInventoryMaxSlots(slotType) - this->GetUsedSlotsCount(slotType);
+}
+
+
+void InventoryController::DecreaseAmount(BYTE slot, WORD amount, SlotType slotType, PItem source) {
+	if (source == nullptr) {
+		switch (slotType)
+		{
+		case SlotInventory:
+			source = &this->_player->character.Inventory[slot];
+			break;
+		case SlotStorage:
+			return;
+			break;
+		case SlotPremium:
+			return;
+			break;
+		default:
+			return;
+			break;
+		}
+	}
+
+	if (source->Index == 0) {
+		Logger::Write(Warnings, 
+			"[InventoryController::DecreaseAmount] trying to decrease amount on a null item {slot=%d, amount=%d}", slot, amount);
+		return;
+	}
+
+	source->Amount -= amount;
+
+	if (source->Amount == 0) {
+		this->DeleteItem(slotType, slot, false);
+	}
+	else {
+		this->SendRefreshSlot(slotType, slot, *source);
+	}
+}
+
+ItemAgroupStatus InventoryController::CanAgroupAmount(const Item item, WORD amount) {
+	ItemFromList itemData = ItemList::GetInstance()->Get(item.Index);
+
+	if (!itemData.CanAgroup) {
+		return ItemUnagrupable;
+	}
+
+	if ((item.Amount + amount) > itemData.MaxAmount) {
+		return ItemQuantityExceded;
+	}
+
+	return ItemAgrupable;
+}
+
+
+BYTE InventoryController::GetSlotById(const Item item, SlotType slotType, BYTE startSlot) {
+	switch (slotType)
+	{
+	case SlotEquipment:
+		for (BYTE i = 0; i < 16; i++) {
+			if (_player->character.Equipaments[i].Index == item.Index) {
+				return i;
+			}
+		}
+		break;
+	case SlotInventory:
+		for (BYTE i = 0; i < 64; i++) {
+			if (_player->character.Inventory[i].Index == item.Index) {
+				return i;
+			}
+		}
+		break;
+	case SlotStorage:
+		return INVALID_SLOT;
+		break;
+	case SlotPremium:
+		return INVALID_SLOT;
+		break;
+	default:
+		return INVALID_SLOT;
+		break;
+	}
+
+	return INVALID_SLOT;
+}
+
+
+BYTE InventoryController::PutItem(Item item, BYTE startSlot, bool notify) {
+	BYTE slot = 0;
+	BYTE result = INVALID_SLOT;
+
+	ItemFromList itemData = ItemList::Get(item.Index);
+
+	if (itemData.Expires && !itemData.CanSealed) {
+		item.SetSealed(false);
+	}
+
+	if (itemData.CanSealed) {
+		item.SetSealed(true);
+	}
+
+	BYTE existingSlot = this->GetSlotById(item, SlotInventory, startSlot);
+
+	if (existingSlot == INVALID_SLOT) {
+		slot = this->GetEmptySlot();
+
+		if (slot == INVALID_SLOT) {
+			_player->SendClientMessage("inventory full!");
+			return result;
+		}
+
+		_player->character.Inventory[slot] = item;
+		this->SendRefreshSlot(SlotInventory, slot, item, notify);
+		return slot;
+	}
+
+	int maxAmount;
+	int remainingAmount;
+	PItem existingItem;
+
+	switch (this->CanAgroupAmount(item, item.Amount))
+	{
+
+	case ItemUnagrupable:
+		slot = this->GetEmptySlot();
+
+		if (slot == INVALID_SLOT) {
+			_player->SendClientMessage("inventory full!");
+			return result;
+		}
+
+		_player->character.Inventory[slot] = item;
+		this->SendRefreshSlot(SlotInventory, slot, item, notify);
+		break;
+
+	case ItemQuantityExceded:
+		existingItem = &_player->character.Inventory[existingSlot];
+
+		maxAmount = itemData.MaxAmount;
+		remainingAmount = maxAmount  -existingItem->Amount;
+
+		if (remainingAmount > 0) {
+			existingItem->Amount = maxAmount;
+			this->SendRefreshSlot(SlotInventory, existingSlot, *existingItem);
+
+			item.Amount = remainingAmount;
+			result = this->PutItem(item, existingSlot+1, notify);
+		}
+		else {
+			result = this->PutItem(item, existingSlot+1, notify);
+		}
+
+		return result;
+		break;
+
+	case ItemAgrupable:
+		existingItem = &_player->character.Inventory[existingSlot];
+
+		existingItem->Amount += item.Amount;
+
+		this->SendRefreshSlot(SlotInventory, existingSlot, *existingItem, notify);
+
+		result = existingSlot;
+		break;
+
+	default:
+		return result;
+		break;
+	}
+
+	if (result == INVALID_SLOT && slot != INVALID_SLOT) {
+		result = slot;
+	}
+
+	return result;
+}
+
+BYTE InventoryController::PutItem(WORD itemId, WORD amount) {
+	Item item = Item();
+
+	ZeroMemory(&item, sizeof(Item));
+
+	item.Index = itemId;
+	item.Apparence = itemId;
+	item.Amount = amount;
+	item.MaxDurability = ItemList::GetInstance()->Get(itemId).Durability;
+	item.MinDurability = item.MaxDurability;
+
+	return this->PutItem(item, 0, true);
 }

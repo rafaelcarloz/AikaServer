@@ -29,7 +29,7 @@ void CharacterController::Initialize(long characterId, PPlayer player) {
 		return;
 	}
 
-	if (!this->inventoryController.Initialize(&this->_player->character, _player)) {
+	if (!this->_player->inventoryController.Initialize(&this->_player->character, _player)) {
 		this->_player->isActive = false;
 		return;
 	}
@@ -202,7 +202,7 @@ bool CharacterController::SaveCharacterData() {
 bool CharacterController::SaveInventoryData() {
 	WebHandler webHandler;
 
-	json::value inventoryData = this->inventoryController.InventoryToJSON();
+	json::value inventoryData = this->_player->inventoryController.InventoryToJSON();
 	json::value response;
 
 	if (!webHandler.PostCharacterItems(this->_characterId, inventoryData, &response)) {
@@ -358,6 +358,12 @@ bool CharacterController::EnterIngame() {
 
 	this->_LoggedOn = time(0);
 
+	this->_player->timeLastBasicAttack = time(0);
+	this->_player->timeLastReceivedAttack = time(0);
+
+	this->_player->timeLastBuffTick = time(0);
+	this->_player->timeLastRegenerationTick = time(0);
+
 	return true;
 }
 
@@ -412,8 +418,8 @@ void CharacterController::Teleport(Position position) {
 void CharacterController::Teleport(int positionX, int positionY) {
 	Position position = Position();
 
-	position.X = positionX;
-	position.Y = positionY;
+	position.X = static_cast<float>(positionX);
+	position.Y = static_cast<float>(positionY);
 
 	this->Teleport(position);
 }

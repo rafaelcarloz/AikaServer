@@ -34,8 +34,6 @@ public:
 
 	Title activeTitle;
 
-	InventoryController inventoryController;
-
 	Position savedPosition;
 
 	bool activePlayerKill;

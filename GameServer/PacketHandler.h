@@ -20,6 +20,10 @@ private:
 	static bool RecvCharacterActionPacket(PPlayer player, char* buffer);
 
 	static bool RecvMoveItemPacket(PPlayer player, char* buffer);
+	static bool RecvDeleteItemPacket(PPlayer player, char* buffer);
+	static bool RecvGroupItemsPacket(PPlayer player, char* buffer);
+	static bool RecvUngroupItemsPacket(PPlayer player, char* buffer);
+	static bool RecvUseItemPacket(PPlayer player, char* buffer);
 
 	static bool RecvRevivePlayerPacket(PPlayer player, char* buffer);
 public:

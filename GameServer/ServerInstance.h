@@ -21,6 +21,7 @@ private:
 	std::thread _connectionsThread;
 
 	std::thread _threadUpdatedVisible;
+	std::thread _threadUpdateBuffsAndStatus;
 
 	ServerSocket serverSocket;
 
@@ -65,6 +66,7 @@ public:
 
 	bool StartRoutines();
 	void RoutineUpdateVisibleEntities();
+	void RoutineUpdateBuffsAndStatus();
 };
 
 
