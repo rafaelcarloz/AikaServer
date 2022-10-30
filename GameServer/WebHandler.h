@@ -42,6 +42,10 @@ public:
 	//HotBar
 	bool GetCharacterHotBar(int characterId, json::value* response);
 	bool PostCharacterHotBar(int characterId, const json::value items, json::value* response);
+
+	//Buffs
+	bool GetCharacterBuffs(int characterId, json::value* response);
+	bool PostCharacterBuffs(int characterId, const json::value items, json::value* response);
 };
 
 #endif

@@ -253,5 +253,35 @@ bool WebHandler::PostCharacterHotBar(int characterId, const json::value items, j
 }
 
 #pragma endregion
+#pragma region "Buffs"
+
+bool WebHandler::GetCharacterBuffs(int characterId, json::value* response) {
+	HttpRequest reqquest(this->_domain, this->_port, this->_https);
+	HttpResponse httpResponse;
+
+	std::wstring url = L"/characters/" + std::to_wstring(characterId) + L"/buffs";
+
+	reqquest.Get(url,
+		this->_requestHeader,
+		httpResponse);
+
+	return this->ProcessResponse(httpResponse, response);
+}
+
+bool WebHandler::PostCharacterBuffs(int characterId, const json::value items, json::value* response) {
+	HttpRequest reqquest(this->_domain, this->_port, this->_https);
+	HttpResponse httpResponse;
+
+	std::wstring url = L"/characters/" + std::to_wstring(characterId) + L"/buffs";
+
+	reqquest.Post(url,
+		this->_requestHeader,
+		json::serialize(items),
+		httpResponse);
+
+	return this->ProcessResponse(httpResponse, response);
+}
+
+#pragma endregion
 
 

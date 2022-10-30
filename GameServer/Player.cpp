@@ -161,6 +161,8 @@ bool Player::SendPacket(LPVOID packet, WORD size) {
 		return false;
 	}
 
+	printf("sent packet size: %d \n", size);
+
 	return true;
 }
 

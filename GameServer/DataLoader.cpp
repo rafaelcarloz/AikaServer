@@ -439,7 +439,7 @@ bool DataLoader::LoadSkillData() {
 	int itemsLoaded = 0;
 
 	try {
-		int bufferSize = sizeof(ItemFromList);
+		int bufferSize = sizeof(SkillFromList);
 		char* buffer = new char[bufferSize];
 
 		size_t bytesRead{ 0 };

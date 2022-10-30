@@ -393,6 +393,47 @@ namespace packets{
 
 
 #pragma endregion
+#pragma region "Buffs Packets"
+
+	typedef struct PacketRefreshAllBuffs {
+		PacketHeader header;
+		WORD buffsIDs[60];
+		DWORD buffsDuration[60];
+	}*PPacket_10B;
+
+	typedef struct PacketRefreshBuffs {
+		PacketHeader header;
+		WORD buffsIDs[40];
+		DWORD buffsDuration[40];
+	}*PPacket_16E;
+
+	typedef struct PacketUpdateBuff {
+		PacketHeader header;
+		DWORD buffID;
+		DWORD buffDuration;
+		DWORD UNK_0;
+	}*PPacket_16F;
+
+	typedef struct PacketRemoveBuff {
+		PacketHeader header;
+		DWORD buffID;
+	}*PPacket_329;
+
+#pragma endregion
+#pragma region "Item Bar Packets"
+
+	typedef struct PacketItemBar {
+		PacketHeader header;
+		DWORD destSlot;
+		DWORD destType;
+		DWORD index;
+	}*PPacket_31E;
+
+
+#pragma endregion
+
+
+
 
 
 }

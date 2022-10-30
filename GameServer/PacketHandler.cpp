@@ -83,6 +83,9 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 	case 0x31D:
 		PacketHandler::RecvUseItemPacket(player, buffer);
 		break;
+	case 0x31E:
+		PacketHandler::RecvItemBarPacket(player, buffer);
+		break;
 	case 0x32C:
 		PacketHandler::RecvDeleteItemPacket(player, buffer);
 		break;
@@ -707,7 +710,7 @@ bool PacketHandler::RecvRevivePlayerPacket(PPlayer player, char* buffer) {
 	player->character.Status.Life.CurHP = (uint32_t)(player->statusController.volatileStatus.Life.MaxHP / 0x10);
 	player->character.Status.Life.CurMP = (uint32_t)(player->statusController.volatileStatus.Life.MaxMP / 0x10);
 
-	player->buffsController.Recalculate();
+	player->buffsController->Recalculate();
 	player->statusController.Recalculate();
 
 	return true;
@@ -738,5 +741,29 @@ bool PacketHandler::RecvUseItemPacket(PPlayer player, char* buffer) {
 		break;
 	}
 	
+	return true;
+}
+
+
+bool PacketHandler::RecvItemBarPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketItemBar&>(buffer[0]);
+
+	if (packet.destSlot > 24) {
+		player->SendClientMessage("item bar invalid slot!");
+		return false;
+	}
+
+	if (packet.destType > 10) {
+		player->SendClientMessage("item bar invalid type!");
+		return false;
+	}
+
+	BYTE slot = (BYTE)packet.destSlot;
+
+	player->character.ItemBar[slot].itemID = (WORD)packet.index;
+	player->character.ItemBar[slot].itemType = (WORD)packet.destType;
+
+	player->characterController->SendItemBarSlot(packet.destSlot);
+
 	return true;
 }

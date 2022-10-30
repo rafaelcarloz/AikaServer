@@ -25,11 +25,16 @@ private:
 	bool _firstLogin;
 
 	bool GetCharacterData();
+	bool GetSkillsData();
+	bool GetHotBarData();
 
 	boost::json::value CharacterToJSON();
 
 	bool SaveCharacterData();
 	bool SaveInventoryData();
+	bool SaveSkillsData();
+	bool SaveHotBarData();
+	bool SaveBuffsData();
 public:
 
 	Title activeTitle;
@@ -51,6 +56,8 @@ public:
 	void Teleport(int positionX, int positionY);
 
 	void SendToSavedPosition();
+
+	void SendItemBarSlot(BYTE slot, BYTE destType = 0, WORD index = 0);
 };
 
 

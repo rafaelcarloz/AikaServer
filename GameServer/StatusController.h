@@ -472,8 +472,6 @@ private:
 
 	uint32_t _mobEffects[400];
 
-
-	uint32_t GetEffect(uint16_t effectId);
 	void AddEffect(uint16_t effectId, uint32_t effectValue);
 	void SetEffect(uint16_t effectId, uint32_t effectValue);
 
@@ -506,6 +504,7 @@ private:
 	void CalculateEquipedItemEffect(BYTE slot);
 	void CalculateSetEffects();
 	void CalculateItemEffects();
+	void CalculateBuffsEffects();
 
 
 	int32_t GetHealthRegenaration();
@@ -516,6 +515,8 @@ public:
 	CharacterAditionalStatus aditionalStatus;
 
 	void Initialize(uint16_t entityId, PCharacter character, Character baseCharacter);
+
+	uint32_t GetEffect(uint16_t effectId);
 
 	void Recalculate();
 	

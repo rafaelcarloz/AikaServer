@@ -16,37 +16,57 @@
 
 #pragma region "SkillData File"
 
-struct SkillFromList {
-	DWORD Null_1,
+typedef struct SkillFromList {
+	uint32_t Index,
 		MinLevel,
-		Null_3,
+		Null_0,
 		Level,
-		Null_4;
+		Classification;
 	char EnglishName[64];
 	char Name[64];
+
 	DWORD SkillPoints;
 	DWORD LearnCosts;
 	DWORD Classe;
-	BYTE UNK_1[12];
+
+	BYTE UNK_0[12];
+
 	DWORD MagicPointsRequired;
-	BYTE UNK_2[8];
-	DWORD Cooldown;
+
 	DWORD NULL_1;
+
+	DWORD PreCooldown;
+	DWORD Cooldown;
+	DWORD CooldownType;
+	DWORD TargetType;
+	DWORD UniqueType;
+	DWORD MaxTargets;
+	DWORD UNK_2;
 	DWORD Range;
-	BYTE UNK_3[52];
+	DWORD DamageRange;
+	DWORD SuccessRate;
+	DWORD Agressive;
+	DWORD BuffDebuff;
+	DWORD Attribute;
+	BYTE UNK_3[16];
 	DWORD Damage;
 	DWORD Adicional;
 	DWORD UNK_4;
+
 	DWORD EF[4];
 	DWORD EFV[4];
-	INT32 Duration;
+
+	DWORD Duration;
+
 	BYTE UNK_5[24];
 	DWORD CastTime;
 	BYTE UNK_6[24];
 	DWORD TargetAnimation;
-	BYTE UNK_7[76];
+	DWORD UNK_7;
+	DWORD Animation;
+	BYTE UNK_8[68];
 	char Description[288];
-};
+}*PSkillFromList;
 
 #pragma endregion
 

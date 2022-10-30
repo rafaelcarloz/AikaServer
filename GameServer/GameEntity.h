@@ -24,7 +24,7 @@ public:
 	
 	bool IsIstantiated = false;
 
-	BuffsController buffsController;
+	BuffsController* buffsController;
 	StatusController statusController;
 	VisibleController* visibleController;
 

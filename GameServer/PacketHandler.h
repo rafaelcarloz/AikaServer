@@ -26,6 +26,8 @@ private:
 	static bool RecvUseItemPacket(PPlayer player, char* buffer);
 
 	static bool RecvRevivePlayerPacket(PPlayer player, char* buffer);
+
+	static bool RecvItemBarPacket(PPlayer player, char* buffer);
 public:
 	static bool PacketControl(PPlayer player, char* buffer, int receivedBytes, int initialOffset);
 };

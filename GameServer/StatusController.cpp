@@ -1,10 +1,10 @@
 #include "StatusController.h"
 #include "ReinforceData.h"
 #include "ItemList.h"
-
 #include "ServerInstance.h"
 #include "Packets.h"
 #include "SetItem.h"
+#include "SkillData.h"
 
 using namespace packets;
 
@@ -442,6 +442,10 @@ uint32_t StatusController::GetEffect(uint16_t effectId) {
 }
 
 void StatusController::AddEffect(uint16_t effectId, uint32_t effectValue) {
+	if (effectId == 0) {
+		return;
+	}
+
 	this->_mobEffects[effectId] += effectValue;
 }
 
@@ -455,6 +459,7 @@ void StatusController::RecalculateEffects() {
 	ZeroMemory(&this->_mobEffects, sizeof(this->_mobEffects));
 
 	this->CalculateItemEffects();
+	this->CalculateBuffsEffects();
 }
 
 void StatusController::CalculateEquipedItemEffect(BYTE slot) {
@@ -514,6 +519,30 @@ void StatusController::CalculateItemEffects() {
 	}
 
 	this->CalculateSetEffects();
+}
+
+void StatusController::CalculateBuffsEffects() {
+	auto entity = EntityHandler::GetEntity(this->_entityId);
+
+	SkillData* skillData = SkillData::GetInstance();
+
+	auto buffs = entity->buffsController->GetBuffs();
+
+	if (buffs.size() == 0) {
+		return;
+	}
+
+	for (auto& buff : buffs) {
+		SkillFromList buffSkill = skillData->Get(buff.first);
+
+		for (int i = 0; i < 4; i++) {
+			if (buffSkill.EF[i] == 0) {
+				continue;
+			}
+
+			this->AddEffect(buffSkill.EF[i], buffSkill.EFV[i]);
+		}
+	}
 }
 
 #pragma endregion
@@ -609,7 +638,9 @@ void StatusController::DoRegenerationTick() {
 		hasRecovered = true;
 	}
 
-	this->SendCurrentLife();
+	if (hasRecovered) {
+		this->SendCurrentLife();
+	}
 
 	entity->timeLastRegenerationTick = time(0);
 }

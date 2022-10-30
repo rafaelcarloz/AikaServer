@@ -11,6 +11,7 @@
 #include "SkillData.h"
 #include "ServerInstance.h"
 #include "DateFunctions.h"
+#include "TitleList.h"
 
 using namespace packets;
 
@@ -23,8 +24,19 @@ void CharacterController::Initialize(long characterId, PPlayer player) {
 	this->_player = player;
 
 	this->_player->visibleController = new VisibleController();
+	this->_player->buffsController = new BuffsController();
 
 	if (!this->GetCharacterData()) {
+		this->_player->isActive = false;
+		return;
+	}
+
+	if (!this->GetSkillsData()) {
+		this->_player->isActive = false;
+		return;
+	}
+
+	if (!this->GetHotBarData()) {
 		this->_player->isActive = false;
 		return;
 	}
@@ -115,6 +127,64 @@ bool CharacterController::GetCharacterData() {
 	return true;
 }
 
+bool CharacterController::GetSkillsData() {
+	WebHandler webHandler;
+
+	try {
+		json::value skills = json::value();
+
+		if (!webHandler.GetCharacterSkills(this->_characterId, &skills)) {
+			Logger::Write(Error, "[CharacterController::GetSkillsData] request error");
+			return false;
+		}
+
+		for (auto& skill : skills.as_array()) {
+			int slot = json::value_to<int>(skill.at("skillSlot"));
+			uint64_t databaseID = json::value_to<int>(skill.at("characterSkillID"));
+
+			this->_player->character.SkillList[slot].databaseID = databaseID;
+			this->_player->character.SkillList[slot].skillID = json::value_to<int>(skill.at("skillListID"));
+		}
+
+		return true;
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[CharacterController::GetSkillsData] error: %s", e.what());
+	}
+
+	return false;
+}
+
+bool CharacterController::GetHotBarData() {
+	WebHandler webHandler;
+
+	try {
+		json::value items = json::value();
+
+		if (!webHandler.GetCharacterHotBar(this->_characterId, &items)) {
+			Logger::Write(Error, "[CharacterController::GetHotBarData] request error");
+			return false;
+		}
+
+		for (auto& item : items.as_array()) {
+			int slot = json::value_to<int>(item.at("itemSlot"));
+			uint64_t databaseID = json::value_to<int>(item.at("characterHotBarID"));
+
+			this->_player->character.ItemBar[slot].databaseID = databaseID;
+
+			this->_player->character.ItemBar[slot].itemType = json::value_to<int>(item.at("itemType"));
+			this->_player->character.ItemBar[slot].itemID = json::value_to<int>(item.at("itemID"));
+		}
+
+		return true;
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[CharacterController::GetHotBarData] error: %s", e.what());
+	}
+
+	return false;
+}
+
 #pragma endregion
 #pragma region "Save Data" 
 
@@ -183,8 +253,24 @@ bool CharacterController::SaveCharacter() {
 		return false;
 	}
 
+	if (!this->SaveSkillsData()) {
+		Logger::Write(Error, "[CharacterController::SaveSkillsData] error while saving data!");
+		return false;
+	}
+
+	if (!this->SaveHotBarData()) {
+		Logger::Write(Error, "[CharacterController::SaveHotBarData] error while saving data!");
+		return false;
+	}
+
+	if (!this->SaveBuffsData()) {
+		Logger::Write(Error, "[CharacterController::SaveBuffsData] error while saving data!");
+		return false;
+	}
+
 	return true;
 }
+
 
 bool CharacterController::SaveCharacterData() {
 	WebHandler webHandler;
@@ -212,12 +298,103 @@ bool CharacterController::SaveInventoryData() {
 	return true;
 }
 
+bool CharacterController::SaveSkillsData() {
+	json::value skillsData = json::value();
+
+	json::array& items = skillsData.emplace_array();
+
+	try {
+
+		for (int i = 0; i < 60; i++) {
+			json::value _holder;
+			json::object& item = _holder.emplace_object();
+
+			item.emplace("CharacterSkillID", this->_player->character.SkillList[i].databaseID);
+
+			item.emplace("SkillStatus", 1);
+			item.emplace("CharacterID", this->_characterId);
+			item.emplace("SkillType", (i < 6)? 0 : 1);
+			item.emplace("SkillSlot", i);
+			item.emplace("SkillListID", this->_player->character.SkillList[i].skillID);
+
+			items.emplace_back(item);
+		}
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[CharacterController::SaveSkillsData] error: %s", e.what());
+		return false;
+	}
+
+
+	WebHandler webHandler;
+
+	json::value response;
+
+	if (!webHandler.PostCharacterSkills(this->_characterId, skillsData, &response)) {
+		return false;
+	}
+
+	return true;
+}
+
+bool CharacterController::SaveHotBarData() {
+	json::value hotBarData = json::value();
+
+	json::array& items = hotBarData.emplace_array();
+
+	try {
+
+		for (int i = 0; i < 24; i++) {
+			json::value _holder;
+			json::object& item = _holder.emplace_object();
+
+			item.emplace("CharacterHotBarID", this->_player->character.ItemBar[i].databaseID);
+
+			item.emplace("ItemStatus", 1);
+			item.emplace("CharacterID", this->_characterId);
+			item.emplace("ItemType", this->_player->character.ItemBar[i].itemType);
+			item.emplace("ItemSlot", i);
+			item.emplace("ItemID", this->_player->character.ItemBar[i].itemID);
+
+			items.emplace_back(item);
+		}
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[CharacterController::SaveHotBarData] error: %s", e.what());
+		return false;
+	}
+
+
+	WebHandler webHandler;
+
+	json::value response;
+
+	if (!webHandler.PostCharacterHotBar(this->_characterId, hotBarData, &response)) {
+		return false;
+	}
+
+	return true;
+}
+
+bool CharacterController::SaveBuffsData() {
+	WebHandler webHandler;
+
+	json::value buffsData = this->_player->buffsController->ToJSON();
+	json::value response;
+
+	if (!webHandler.PostCharacterBuffs(this->_characterId, buffsData, &response)) {
+		return false;
+	}
+
+	return true;
+}
+
 #pragma endregion
 
 bool CharacterController::SendToWorld() {
 	this->_player->visibleController->Initialize(this->_player);
 	this->_player->statusController.Initialize(this->_player->index, &this->_player->character, this->_player->baseCharacter);
-	this->_player->buffsController.Initialize(this->_player->index, &this->_player->character);
+	this->_player->buffsController->Initialize(this->_player->index, _player);
 
 	if (this->_firstLogin) {
 		this->_player->statusController.RestaureLifePoints();
@@ -248,10 +425,15 @@ bool CharacterController::SendToWorld() {
 	memcpy(&Packet.Equipaments[0], &this->_player->character.Equipaments[0], sizeof(Packet.Equipaments));
 	memcpy(&Packet.Inventory[0], &this->_player->character.Inventory[0], sizeof(Packet.Inventory));
 
-	memcpy(&Packet.ItemBar[0], &this->_player->character.ItemBar[0], sizeof(Packet.ItemBar));
-
 	SkillData* skillData = SkillData::GetInstance();
 
+#pragma region "Set Item Bar"
+
+	for (int i = 0; i < 24; i++) {
+		Packet.ItemBar[i] = (this->_player->character.ItemBar[i].itemID << 4) + this->_player->character.ItemBar[i].itemType;
+	}
+
+#pragma endregion
 #pragma region "Set Skill List"
 
 	int j = 0;
@@ -287,12 +469,11 @@ bool CharacterController::SendToWorld() {
 
 		Packet.TitleCategoryLevel[TitleCategory] += CurrentTitle->GetLevelValue(TitleSlot);
 
-		/*
-		switch (TitleList[CurrentTitle->Index].Level[CurrentTitle->Level - 1].TitleType)
+		switch (TitleList::Get(CurrentTitle->Index).Level[CurrentTitle->Level - 1].TitleType)
 		{
 
 		case 8:
-			Packet.TitleProgressType8[TitleList[CurrentTitle->Index].Level[CurrentTitle->Level - 1].TitleIndex - 1] =
+			Packet.TitleProgressType8[TitleList::Get(CurrentTitle->Index).Level[CurrentTitle->Level - 1].TitleIndex - 1] =
 				CurrentTitle->Progress;
 			break;
 		case 9:
@@ -320,7 +501,7 @@ bool CharacterController::SendToWorld() {
 			Packet.TitleProgressType15 = CurrentTitle->Progress;
 			break;
 		case 16:
-			Packet.TitleProgressType16[TitleList[CurrentTitle->Index].Level[CurrentTitle->Level - 1].TitleIndex - 1] =
+			Packet.TitleProgressType16[TitleList::Get(CurrentTitle->Index).Level[CurrentTitle->Level - 1].TitleIndex - 1] =
 				CurrentTitle->Progress;
 			break;
 		case 23:
@@ -330,8 +511,6 @@ bool CharacterController::SendToWorld() {
 		default:
 			break;
 		}
-
-		*/
 	}
 
 #pragma endregion
@@ -426,4 +605,22 @@ void CharacterController::Teleport(int positionX, int positionY) {
 
 void CharacterController::SendToSavedPosition() {
 	this->Teleport(this->savedPosition);
+}
+
+
+void CharacterController::SendItemBarSlot(BYTE slot, BYTE destType, WORD index) {
+	PacketItemBar packet;
+
+	ZeroMemory(&packet, sizeof(PacketItemBar));
+
+	packet.header.Size = sizeof(PacketItemBar);
+	packet.header.Index = 0x7535;
+	packet.header.Code = 0x31E;
+
+	packet.destSlot = slot;
+
+	packet.destType = (index == 0) ? this->_player->character.ItemBar[slot].itemType : destType;
+	packet.index = (index == 0) ? this->_player->character.ItemBar[slot].itemID : index;
+
+	this->_player->SendPacket(&packet, packet.header.Size);
 }

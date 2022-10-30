@@ -262,6 +262,8 @@ void ServerInstance::RoutineUpdateBuffsAndStatus() {
 				continue;
 			}
 
+			entity.second->buffsController->Recalculate();
+
 			entity.second->statusController.DoRegenerationTick();
 		}
 

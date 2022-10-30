@@ -18,7 +18,8 @@ namespace AikaWeb.Data
         public DbSet<CharacterModel> Characters { get; set; } = default!;
         public DbSet<ItemModel> Items { get; set; } = default!;
         public DbSet<SkillModel> Skills { get; set; } = default!;
-        public DbSet<HotBarModel> Hotbars { get; set; } = default!;
+        public DbSet<HotBarModel> Hotbars { get; set; } = default!; 
+        public DbSet<BuffModel> Buffs { get; set; } = default!;
 
         public DbSet<ServerModel> Servers { get; set; } = default!;
         public DbSet<NationModel> Nations { get; set; } = default!;

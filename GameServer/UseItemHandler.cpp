@@ -127,7 +127,7 @@ bool UseItemHandler::AddCharacterMana(lua_State* L) {
 }
 
 bool UseItemHandler::AddCharacterBuff(lua_State* L) {
-	return true;
+	return this->_player->buffsController->AddBuff(_itemData.UseEffect);
 }
 
 

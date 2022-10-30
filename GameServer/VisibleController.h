@@ -7,6 +7,7 @@
 #include <list>
 #include <algorithm>
 #include <mutex>
+#include <functional>
 
 #include "PlayerData.h"
 #include "GameEntity.fwd.h"

@@ -43,7 +43,7 @@ bool TitleList::Get(const uint16_t itemId, TitleFromList* item) {
 		}
 
 		if (this->_items.find(itemId) == this->_items.end()) {
-			Logger::Write(Warnings, "[TitleList::Get] itemId %d not found", itemId);
+			Logger::Write(Warnings, "[TitleList::Get] titleId %d not found", itemId);
 			return false;
 		}
 

@@ -116,9 +116,13 @@ typedef struct CharacterSkill {
 	WORD skillID;
 }*PCharacterSkill;
 
-typedef struct CharacterItemBar {
+
+
+typedef struct CharacterItemBarDB {
 	UINT64 databaseID;
-	DWORD itemID;
+	
+	WORD itemID;
+	WORD itemType;
 }*PCharacterItemBar;
 
 typedef struct CharacterTitle {
@@ -144,7 +148,7 @@ typedef struct Character {
 	UINT64 Gold;
 
 	CharacterSkill SkillList[60];
-	CharacterItemBar ItemBar[24];
+	CharacterItemBarDB ItemBar[24];
 	CharacterTitle Titles[96];
 
 }*PCharacter;

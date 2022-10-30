@@ -250,9 +250,31 @@ namespace AikaWeb.Controllers
             [HttpPost("/characters/{characterID}/hotbar")]
             public ActionResult<CharacterCreateResponse> PostCharacterHotBarAll(long characterID, [FromBody] IEnumerable<HotBarModel> items)
             {
-                foreach (var skill in items)
+                foreach (var item in items)
                 {
-                    _context.Entry(skill).State = (skill.CharacterHotBarID == 0) ? EntityState.Added : EntityState.Modified;
+                    _context.Entry(item).State = (item.CharacterHotBarID == 0) ? EntityState.Added : EntityState.Modified;
+                }
+
+                _context.SaveChanges();
+
+                return new CharacterCreateResponse() { success = true };
+            }
+
+            #endregion
+            #region "Buffs"
+
+            [HttpGet("/characters/{characterID}/buffs")]
+            public ActionResult<IEnumerable<BuffModel>> GetCharacterBuffs(long characterID)
+            {
+                return _context.Buffs.Where(item => (item.CharacterID == characterID) && (item.BuffStatus > 0)).OrderByDescending(item => item.BuffDuration).ToList();
+            }
+
+            [HttpPost("/characters/{characterID}/buffs")]
+            public ActionResult<CharacterCreateResponse> PostCharacterBuffs(long characterID, [FromBody] IEnumerable<BuffModel> items)
+            {
+                foreach (var buff in items)
+                {
+                    _context.Entry(buff).State = (buff.CharacterBuffID == 0) ? EntityState.Added : EntityState.Modified;
                 }
 
                 _context.SaveChanges();
