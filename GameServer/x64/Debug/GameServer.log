@@ -1,2 +1,11 @@
-﻿  TitleList.cpp
+﻿  PacketHandler.cpp
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(667,99): warning C4244: 'argumento': conversão de 'WORD' para 'BYTE', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(667,66): warning C4244: 'argumento': conversão de 'WORD' para 'BYTE', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(682,81): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(699,67): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(700,67): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(750,55): warning C4244: 'argumento': conversão de 'DWORD' para 'WORD', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(750,42): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(821,53): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\AikaProject\AikaServer\GameServer\PacketHandler.cpp(701): warning C4715: 'PacketHandler::RecvGroupItemsPacket': nem todos os caminhos de controle retornam um valor
   GameServer.vcxproj -> C:\AikaProject\AikaServer\x64\Debug\GameServer.exe

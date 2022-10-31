@@ -99,8 +99,6 @@ void VisibleController::EvaluateVisibles() {
 
 			entity->visibleController->RemoveFromVisible(this->_parent->index);
 			entity->SendUnspawnEntity(this->_parent->index);
-
-			printf("removed: %d \n", entityId);
 		}
 	}
 }

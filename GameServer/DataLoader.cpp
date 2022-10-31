@@ -13,6 +13,7 @@
 #include "SkillData.h"
 #include "ReinforceData.h"
 #include "TitleList.h"
+#include "NPC.h"
 #include "MapData.h"
 
 bool DataLoader::Startup(ServerInstance* server) {
@@ -60,6 +61,10 @@ bool DataLoader::Startup(ServerInstance* server) {
 	}
 
 	if (!this->LoadMapData()) {
+		return false;
+	}
+
+	if (!this->LoadNPCs()) {
 		return false;
 	}
 
@@ -628,6 +633,55 @@ bool DataLoader::LoadMapData() {
 	}
 
 	Logger::Write(Status, "loaded %d items from Map.bin", itemsLoaded);
+
+	return true;
+}
+
+#pragma endregion
+#pragma region "NPCs"
+
+bool ProcessNPC(std::string workingrPath, std::string fileName) {
+	std::string fullFileName = Logger::Format(R"(%s\NPCs\%s)", workingrPath.c_str(), fileName.c_str());
+
+	try {
+		std::ifstream ifs(fullFileName);
+		std::string	input(std::istreambuf_iterator<char>(ifs), {});
+		ifs.close();
+
+		json::value npcData = json::parse(input);
+
+		if (npcData.is_null()) {
+			return false;
+		}
+
+		UINT32 entityId = json::value_to<int>(npcData.at("Index"));
+		ServerInstance* instance = ServerInstance::GetInstance();
+
+		instance->entityHandler->AddEntity(new NPC(), EntityNPC, &entityId);
+
+		PNpc npc = (PNpc)instance->entityHandler->GetEntity(entityId);
+		npc->Initialize(entityId, npcData);
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[ProcessInitialCharacterFile] error: %s", e.what());
+		return false;
+	}
+
+	return true;
+}
+
+
+bool DataLoader::LoadNPCs(){
+	std::string folderPathFilter = Logger::Format(R"(%s\NPCs\*.json)", this->_currentDir.c_str());
+
+	int loadedFiles = 0;
+
+	if (!this->ForEachFileInFolder(folderPathFilter, &ProcessNPC, &loadedFiles)) {
+		Logger::Write(Error, "error loading NPCs data!");
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d NPCs data files!", loadedFiles);
 
 	return true;
 }

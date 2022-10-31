@@ -14,9 +14,10 @@ void GameEntity::GetCreateMobPacket(PacketCreateMob& packet, int targetId) {
 
 	packet.Header.Size = sizeof(packet);
 	packet.Header.Index = this->index;
-	packet.Header.Code = 0x349;
+	packet.Header.Code = PacketCode::PacketCreateMob;
 
 	strcpy_s(packet.Name, this->character.Name);
+	strcpy_s(packet.Title, this->textTitle.c_str());
 
 	packet.ChaosPoint = (BYTE)this->character.Status.ChaosTime;
 
@@ -51,6 +52,8 @@ void GameEntity::GetCreateMobPacket(PacketCreateMob& packet, int targetId) {
 		packet.ActiveTitle.Index = player->characterController->activeTitle.Index;
 		packet.ActiveTitle.Level = player->characterController->activeTitle.Level - 1;
 	}
+
+	packet.IsService = (EntityHandler::GetEntityType(this->index) == EntityNPC);
 }
 
 void GameEntity::SendCreateMob(uint16_t spawnType, int targetId) {
@@ -87,7 +90,7 @@ void GameEntity::SendRemoveMob(int targetId, uint16_t deleteType) {
 
 	packet.Header.Size = sizeof(packet);
 	packet.Header.Index = targetId;
-	packet.Header.Code = 0x101;
+	packet.Header.Code = PacketCode::PacketRemoveMob;
 
 	packet.DeleteType = deleteType;
 	packet.Index = this->index;
@@ -104,7 +107,7 @@ void GameEntity::SendUnspawnEntity(int entityId, DeleteType deleteType) {
 
 	packet.Header.Size = sizeof(packet);
 	packet.Header.Index = this->index;
-	packet.Header.Code = 0x101;
+	packet.Header.Code = PacketCode::PacketRemoveMob;
 
 	packet.DeleteType = deleteType;
 	packet.Index = entityId;

@@ -81,6 +81,13 @@ ItemFromList ItemList::operator[](const WORD itemId) {
 	return item;
 }
 
+bool ItemList::Contains(const WORD itemId) {
+	if (this->_items.size() == 0) {
+		return false;
+	}
+
+	return (this->_items.find(itemId) != this->_items.end());
+}
 
 
 bool ItemList::AddUseItem(const WORD index, std::string fileName, BYTE scriptType) {

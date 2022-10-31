@@ -34,6 +34,8 @@ public:
 	time_t timeLastRegenerationTick;
 	time_t timeLastBuffTick;
 
+	std::string textTitle;
+
 	virtual ~GameEntity() {};
 
 	bool IsDead();

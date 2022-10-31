@@ -146,7 +146,7 @@ void BuffsController::SendRefreshBuffs() {
 
 	packet.header.Size = sizeof(PacketRefreshAllBuffs);
 	packet.header.Index = this->_entityId;
-	packet.header.Code = 0x10B;
+	packet.header.Code = PacketCode::PacketUpdateBuffsAll;
 
 	auto buffs = this->GetBuffs();
 

@@ -92,6 +92,12 @@
     <ClCompile Include="ReinforceData.cpp">
       <Filter>Data\Files</Filter>
     </ClCompile>
+    <ClCompile Include="NPC.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Network">
@@ -233,6 +239,12 @@
     </ClInclude>
     <ClInclude Include="TitleList.h">
       <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCHandler.h">
+      <Filter>Handlers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

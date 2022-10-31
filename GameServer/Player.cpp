@@ -161,26 +161,26 @@ bool Player::SendPacket(LPVOID packet, WORD size) {
 		return false;
 	}
 
-	printf("sent packet size: %d \n", size);
+	//printf("sent packet size: %d \n", size);
 
 	return true;
 }
 
-bool Player::SendSignalData(WORD opcode, DWORD data) {
+bool Player::SendSignalData(PacketCode opcode, DWORD data) {
 	PacketSignalData Packet;
 
 	ZeroMemory(&Packet, sizeof(Packet));
 
 	Packet.Header.Size = sizeof(Packet);
 	Packet.Header.Index = this->index;
-	Packet.Header.Code = opcode;
+	Packet.Header.Code = (PacketCode)opcode;
 
 	Packet.Data = data;
 
 	return this->SendPacket(&Packet, Packet.Header.Size);
 }
 
-bool Player::SendSignal(WORD opcode) {
+bool Player::SendSignal(PacketCode opcode) {
 	PacketHeader Packet;
 
 	ZeroMemory(&Packet, sizeof(Packet));
@@ -202,7 +202,7 @@ void Player::SendClientMessage(std::string message, BYTE color, BYTE type) {
 	ZeroMemory(&Packet, sizeof(Packet));
 
 	Packet.Header.Size = sizeof(Packet);
-	Packet.Header.Code = 0x984;
+	Packet.Header.Code = PacketCode::PacketSendMessage;
 
 	Packet.Color = (MESSAGE_COLOR)color;
 	Packet.Type = (MESSAGE_TYPE)type;
@@ -312,7 +312,7 @@ void Player::SendCharacterList() {
 
 	try {
 		Packet.Header.Size = sizeof(Packet);
-		Packet.Header.Code = 0x901;
+		Packet.Header.Code = PacketCode::PacketCharacterList;
 
 		if (!this->GetCharacterList(Packet.CharactersData)) {
 			Logger::Write(Logger::Format("account [%s] getting characters error", this->account->accountUsername.c_str()), LOG_TYPE::Warnings);

@@ -17,9 +17,10 @@ bool EntityHandler::AddEntity(GameEntity* entity, EntityType entityType, UINT32*
 		this->entities.insert(std::pair<UINT32, GameEntity*>(*entityId, entity));
 		break;
 	case EntityNPC:
+		this->entities.insert(std::pair<UINT32, GameEntity*>(*entityId, entity));
 		break;
 	case EntityMob:
-
+		this->entities.insert(std::pair<UINT32, GameEntity*>(*entityId, entity));
 		break;
 	default:
 		return false;
@@ -82,6 +83,10 @@ bool EntityHandler::FindFreeEntityId(EntityType entityType, UINT32* entityId) {
 
 		break;
 	case EntityNPC:
+		if (*entityId != 0) {
+			return true;
+		}
+
 		for (UINT32 i = NPC_ID_START; i < NPC_ID_END; i++) {
 			if (this->entities.find(i) == this->entities.end()) {
 				*entityId = i;
@@ -121,7 +126,7 @@ bool EntityHandler::GetEntity(const UINT32 entityId, PGameEntity& entity) {
 }
 
 PGameEntity& EntityHandler::GetEntity(const UINT32 entityId) {
-	PGameEntity entity = NULL;
+	PGameEntity entity = nullptr;
 
 	ServerInstance* instance = ServerInstance::GetInstance();
 

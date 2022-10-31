@@ -371,7 +371,7 @@ void StatusController::SendRefreshStatusScore() {
 
 	packet.Header.Size = sizeof(PacketCharacterStatus);
 	packet.Header.Index = 0x7535;
-	packet.Header.Code = 0x10A;
+	packet.Header.Code = PacketCode::PacketUpdateStatus;
 
 	packet.Damage = this->volatileStatus.Damage;
 
@@ -395,7 +395,7 @@ void StatusController::SendRefreshAttributes() {
 
 	packet.Header.Size = sizeof(PacketCharacterAttributtes);
 	packet.Header.Index = 0x7535;
-	packet.Header.Code = 0x109;
+	packet.Header.Code = PacketCode::PacketUpdateAttributes;
 
 	packet.Attributes = this->volatileStatus.Attributes;
 
@@ -413,7 +413,7 @@ void StatusController::SendCurrentLife() {
 
 	packet.Header.Size = sizeof(PacketCharacterLife);
 	packet.Header.Index = this->_entityId;
-	packet.Header.Code = 0x103;
+	packet.Header.Code = PacketCode::PacketCharacterLife;
 
 	this->volatileStatus.Life.CurHP = this->_character->Status.Life.CurHP;
 

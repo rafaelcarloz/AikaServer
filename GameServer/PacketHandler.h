@@ -25,6 +25,9 @@ private:
 	static bool RecvUngroupItemsPacket(PPlayer player, char* buffer);
 	static bool RecvUseItemPacket(PPlayer player, char* buffer);
 
+	static bool RecvOpenNPCPacket(PPlayer player, char* buffer);
+	static bool RecvCloseNPC(PPlayer player, char* buffer);
+
 	static bool RecvRevivePlayerPacket(PPlayer player, char* buffer);
 
 	static bool RecvItemBarPacket(PPlayer player, char* buffer);

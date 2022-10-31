@@ -69,8 +69,10 @@ bool ServerInstance::Startup(json::value serverInfo) {
 		return false;
 	}
 
-	DataLoader dataLoader;
+	this->entityHandler = new EntityHandler();
 
+	DataLoader dataLoader;
+	
 	if (!dataLoader.Startup(this)) {
 		return false;
 	}
@@ -83,8 +85,6 @@ bool ServerInstance::Startup(json::value serverInfo) {
 	SetConsoleCtrlHandler(&ConsoleHandler, true);
 
 	this->SetNationData(json::value_to<int>(serverInfo.at("nationID")));
-
-	this->entityHandler = new EntityHandler();
 
 	this->_connectionsThread = std::thread(&ServerInstance::HandleConnections, this);
 	this->_connectionsThread.detach();

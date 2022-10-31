@@ -43,6 +43,9 @@ private:
 
 	//MapData
 	bool LoadMapData();
+
+	//NPCs
+	bool LoadNPCs();
 public:
 	bool Startup(ServerInstance* server);
 };

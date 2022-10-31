@@ -135,6 +135,8 @@
     <ClCompile Include="ItemData.cpp" />
     <ClCompile Include="MapData.cpp" />
     <ClCompile Include="MiscData.cpp" />
+    <ClCompile Include="NPC.cpp" />
+    <ClCompile Include="NPCHandler.cpp" />
     <ClCompile Include="PlayerData.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="CharacterController.cpp" />
@@ -177,6 +179,8 @@
     <ClInclude Include="ItemList.h" />
     <ClInclude Include="MapData.h" />
     <ClInclude Include="MiscData.h" />
+    <ClInclude Include="NPC.h" />
+    <ClInclude Include="NPCHandler.h" />
     <ClInclude Include="Packets.h" />
     <ClInclude Include="Player.fwd.h" />
     <ClInclude Include="PlayerData.h" />

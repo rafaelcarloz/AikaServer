@@ -46,11 +46,11 @@ void CharacterController::Initialize(long characterId, PPlayer player) {
 		return;
 	}
 
-	this->_player->SendSignalData(0xCCCC, 1);
+	this->_player->SendSignalData((PacketCode)0xCCCC, 1);
 
-	this->_player->SendSignalData(0x186, 1);
-	this->_player->SendSignalData(0x186, 1);
-	this->_player->SendSignalData(0x186, 1);
+	this->_player->SendSignalData((PacketCode)0x186, 1);
+	this->_player->SendSignalData((PacketCode)0x186, 1);
+	this->_player->SendSignalData((PacketCode)0x186, 1);
 
 	this->SendToWorld();
 }
@@ -406,7 +406,7 @@ bool CharacterController::SendToWorld() {
 
 	Packet.header.Size = sizeof(Packet);
 	Packet.header.Index = 0x7535;
-	Packet.header.Code = 0x925;
+	Packet.header.Code = PacketCode::PacketSendToWorld;
 
 	Packet.accountId = this->_player->account->accountId;
 
@@ -582,7 +582,7 @@ void CharacterController::Teleport(Position position) {
 
 	packet.Header.Size = sizeof(PacketMovemment);
 	packet.Header.Index = this->_player->index;
-	packet.Header.Code = 0x301;
+	packet.Header.Code = PacketCode::PacketMovemment;
 
 	packet.Destination = position;
 	packet.MoveType = MovemmentTeleport;
@@ -615,7 +615,7 @@ void CharacterController::SendItemBarSlot(BYTE slot, BYTE destType, WORD index) 
 
 	packet.header.Size = sizeof(PacketItemBar);
 	packet.header.Index = 0x7535;
-	packet.header.Code = 0x31E;
+	packet.header.Code = PacketCode::PacketItemBar;
 
 	packet.destSlot = slot;
 

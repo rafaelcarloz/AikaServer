@@ -483,7 +483,7 @@ bool InventoryController::SendRefreshSlot(SlotType slotType, BYTE slot, Item ite
 
 	packet.Header.Size = sizeof(PacketRefreshItem);
 	packet.Header.Index = _player->index;
-	packet.Header.Code = 0xF0E;
+	packet.Header.Code = PacketCode::PacketRefreshItem;
 
 	packet.SlotType = slotType;
 	packet.Slot = slot;

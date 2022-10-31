@@ -9,6 +9,316 @@
 
 namespace packets{
 
+	enum class PacketCode : WORD {
+		CheckTokenPacket = 0x81,
+		ResponseLoginPacket,
+
+		PacketRemoveMob = 0x101,
+		PacketDisplayDamage,
+		PacketCharacterLife,
+
+		PacketNPCShop = 0x106,
+		PacketCharacterSkillsLevel,
+		PacketCharacterLevel,
+		PacketUpdateAttributes,
+		PacketUpdateStatus,
+		PacketUpdateBuffsAll,
+		PacketUnknow10C,
+		PacketUnknow10D, //pacote de pontos de exclamacao das quest
+		PacketNPCTalk,
+		PacketCloseNPC,
+		PacketUnknow110,
+		PacketAnimationTalk,
+		PacketShowNPCOption,
+
+		PacketSoundPlay = 0x115, //?? n é ctz
+		PacketPranLevel,
+		PacketClientIndex,
+
+		PacketDungeonDialog = 0x119,
+
+		PacketGiveExpGold = 0x11B,
+		PacketUnknow11C,
+		PacketPartyMemberPosition,
+
+		PacketUnknow11F = 0x11F,
+
+		PacketCastleStatus = 0x121,
+		PacketUnknow122, //para o som
+		PacketUnknow123, //resultado guerra castelo som
+
+		PacketGuildAddPlayer = 0x125,
+
+		PacketUnknow127 = 0x127,
+		PacketUnknow128,
+
+		PacketUpdateHonorPvP = 0x12A,
+		PacketUpdateDurability,
+		PacketSendSkills,
+
+		PacketPlayerGuild = 0x130,
+		PacketUnknow131,
+
+		PacketReliques = 0x136,
+		PacketStorage,
+		PacketPremiumStorage,
+
+		PacketBattlefildLobby = 0x13C,
+
+		PacketBattleTimer = 0x142,
+
+		PacketDungeonLobby = 0x145,
+
+		PacketAccountStatus = 0x14F,
+
+		PacketUpdateClientId = 0x150,
+		PacketSendOnlineTime, //msg verde do tempo online embaixo na tela
+		PacketUnknow152,
+		PacketGiveExperience,
+		PacketUnknow154,
+
+		PacketUnknow160 = 0x160, //resposta de algum tipo de aprimoramento
+
+		PacketUnknow16B = 0x16B,
+
+		PacketUnknow16D = 0x16D, //msg "Desmontado" e dados aleatorios
+		PacketUpdateBuffs,
+		PacketUpdateBuff,
+		PacketUnknow170,
+
+		PacketTitleList = 0x17D,
+
+		PacketUnknow186, //on send to world ??
+
+		PacketCharacterViewRequest = 0x19E,
+
+		PacketDuelResult = 0x1A0,
+
+		PacketDuelTimer = 0x1A2,
+
+		PacketRaidGiveLeader = 0x207,
+
+		PacketGetStatusPoint = 0x213,
+
+		PacketBuffItem = 0x21B,
+
+		PacketUnknow227 = 0x227,
+
+		PacketCharacterViewResponse = 0x22C,
+		PacketChatItem,
+
+		PacketUnknow233 = 0x233,
+
+		PacketMovemment = 0x301,
+		PacketAttackTarget,
+		PacketRevive,
+		PacketCharacterAction,
+		PacketCharacterRotation,
+		PacketRequestMobInfoformation,
+		PacketPKStatus,
+
+		PacketOpenNPC = 0x30F,
+		PacketNpcDialog,
+
+		PacketRefreshGold = 0x312,
+		PacketBuyItem,
+		PacketSellItem,
+		PacketTradeRequest,
+		PacketTradeResponse,
+		PacketTrade,
+		PacketPersonalShopClose,
+		PacketPersonalShopData,
+		PacketPersonalShopOpen,
+		PacketPersonalShopBuy,
+		PacketAcquireSkill,
+		PacketUseItem,
+		PacketItemBar,
+
+		PacketSkillUse,
+		PacketUpdateSizes,
+		PacketPartyRequest,
+		PacketPartyResponse,
+		PacketPartyKick,
+		PacketPartyDestroy,
+		PacketPartyUpdate,
+
+		PacketRemoveBuff = 0x329,
+
+		PacketCraftItem = 0x32B,
+		PacketDeleteItem,
+		PacketItemAttribute,
+		PacketReinforceResponse,
+		PacketQuestCancel,
+		PacketQuestRewardSelect,
+		PacketQuestInfo,
+		PacketJoinItems,
+		PacketSplitItem,
+		PacketDungeonSelect,
+
+		PacketCollectTimer = 0x336,
+
+		PacketPartyMemberPosition0 = 0x338,
+
+		PacketCancelCollect = 0x33A,
+
+		PacketUnknow33D = 0x33D, //envia ao entrar
+
+		PacketCreateGuild = 0x341,
+		PacketRaidInvite,
+		PacketRaidResponse,
+		PacketRaidRemoveParty,
+
+		PacketCloseUsingNPC = 0x348,
+		PacketCreateMob,
+		PacketTeleportMage,
+		PacketPartyGiveLeader,
+
+		PacketBattlefieldResult = 0x353,
+		PacketDungeonConfirm = 0x355,
+		PacketPremiumGift,
+		PacketUnknow357,
+		PacketServerVersion = 0x358, //msg "Versão do servidor foi atualizada e o jogo precisa ser reiniciado" fecha o game depois de timer 5s
+		PacketSendCaptcha = 0x35A,
+		PacketCreateMobSpawn = 0x35E,
+		PacketUpgradeResult2 = 0x35F,
+
+		PacketActiveTitle = 0x361,
+		PacketFishingStart,
+		PacketFishingResult,
+
+		PacketFriendRequest = 0x372,
+
+		PacketUpgradeResult = 0x38C, //Resultado melhoramento?
+
+		PacketDuelRequest = 0x395,
+		PacketDuelResponse,
+
+		PacketAHackStatusCheck = 0x39D,
+
+		PacketUnknow3A2 = 0x3A2,
+
+		PacketCharacterDelete = 0x603,
+
+		PacketGuildChangeMaster = 0x619,
+
+		PacketGuildGoldDeposit = 0x661,
+
+		PacketFriendResponse = 0x673,
+
+
+		PacketLoginRequest = 0x685,
+
+		PacketMoveItem = 0x70F,
+
+		PacketFriendSocialPacket = 0x870,
+
+		PacketCharacterList = 0x901,
+
+		PacketPranToWorld = 0x907,
+
+		PacketGuildAlly = 0x911,
+
+		PacketGuildsCastleSiege = 0x91A,
+
+		PacketSendToWorld = 0x925,
+
+		PacketGuildPerfilMessage = 0x932,
+
+		PacketNationLeader = 0x936,
+
+		PacketUnknow94C = 0x94C,
+
+		PacketDevirReliqueTimes = 0x953,
+
+		PacketReliqueUpgradeData = 0x957,
+
+		PacketGuildInfo = 0x965,
+
+		PacketAllyInfo = 0x967,
+
+		PacketGuildLogin = 0x969,
+		PacketGuildLogout,
+		PacketPranDevotion,
+
+		PacketFriendLogin = 0x96F,
+
+		PacketFriendLogout = 0x971,
+
+		PacketFriendInfo = 0x975,
+
+		PacketGuildInvite = 0x97C,
+		PacketGuildMembers = 0x97F,
+
+		PacketSendMessage = 0x984,
+
+		PacketDevirInfoRequest = 0xB52,
+
+
+		PacketGuildGold = 0xD18,
+
+		PacketGuildMemberLevel = 0xD1E,
+
+		PacketUnknowD41 = 0xD41, //envia numeros 
+
+		PacketAltarChest = 0xD56,
+
+		PacketGuildChest = 0xD58,
+
+		PacketNationTaxes = 0xE3A,
+
+		PacketNumericToken = 0xF02,
+
+		PacketChannelChange = 0xF05,
+		PacketChannelChangeInfo,
+
+		PacketEnterIngame = 0xF0B,
+
+		PacketRefreshItem = 0xF0E,
+
+		PacketGuildChestPermission = 0xF10,
+
+		PacketGuildAllyRequest = 0xF12,
+
+		PacketGuildMemberRank = 0xF1D,
+
+		PacketGuildNotices = 0xF20,
+		PacketGuildSites = 0xF21,
+
+		PacketNationTreasure = 0xF34,
+
+		PacketNationAllyRequest = 0xF3B,
+		PacketNationAllyCancelRequest = 0xF3E,
+
+		PacketDisplayGuildChest = 0xF55,
+		PacketChangeChestGold = 0xF59,
+
+		PacketChatItemLink = 0xF6F,
+
+		PacketFriendChat = 0xF26,
+		PacketFriendWindowOpen,
+
+		PacketFriendWindowClose = 0xF30,
+
+		PacketFriendDelete = 0xF74,
+
+		PacketChat = 0xF86,
+
+		PacketMobMovement = 0x30BF,
+
+		PacketCharacterDeletePermanent = 0x3E01,
+		PacketPramRename,
+		PacketCharacterCreate = 0x3E04,
+
+		PacketAuctionRegister = 0x3F0B,
+
+		PacketAuctionBuyOffer = 0x3F0C,
+		PacketAuctionItemsSearch,
+
+		PacketAuctionCancelOffer = 0x3F10,
+		PacketAuctionPlayerItems,
+
+	};
+
 #pragma region "Header and Basics"
 
 	typedef struct PacketHeader
@@ -16,7 +326,8 @@ namespace packets{
 		WORD Size;
 		BYTE Key;
 		BYTE ChkSum;
-		WORD Index, Code;
+		WORD Index;
+		PacketCode Code;
 		DWORD Time;
 	}*PPacketHeader;
 
@@ -431,6 +742,32 @@ namespace packets{
 
 
 #pragma endregion
+#pragma region "NPC Packets"
+
+	typedef struct PacketOpenNPC {
+		PacketHeader Header;
+		DWORD Index;
+		DWORD Type1;
+		DWORD Type2;
+	}*PPacket_30F;
+
+	typedef struct PacketShowNPCOption {
+		PacketHeader Header;
+		DWORD Option;
+		DWORD Null;
+		char Text[64];
+		DWORD Show;
+	}*PPacket_112;
+
+	typedef struct PacketNPCShop {
+		PacketHeader header;
+		WORD index;
+		WORD shopType;
+		WORD items[40];
+	}*PPacket_106;
+
+#pragma endregion
+
 
 
 

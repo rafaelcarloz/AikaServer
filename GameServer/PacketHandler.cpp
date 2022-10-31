@@ -7,6 +7,7 @@
 #include "WebHandler.h"
 #include "ServerInstance.h"
 #include "UseItemHandler.h"
+#include "NPCHandler.h"
 
 
 namespace json = boost::json;
@@ -37,64 +38,76 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 
 	switch (header.Code) {
 
-	case 0x301: {
+	case PacketCode::PacketMovemment: {
 		PacketHandler::RecvMovementPacket(player, buffer);
 		break;
 	}
 
-	case 0x685:
+	case PacketCode::PacketLoginRequest:
 		PacketHandler::RecvLoginRequest(player, buffer);
 		break;
-	case 0x3E04:
+	case PacketCode::PacketCharacterCreate:
 		PacketHandler::RecvCreateCharacter(player, buffer);
 		break;
 
-	case 0x603:
+	case PacketCode::PacketCharacterDelete:
 		PacketHandler::RecvDeleteCharacter(player, buffer);
 		break;
-	case 0x3E01:
+	case PacketCode::PacketCharacterDeletePermanent:
 		PacketHandler::RecvDeleteCharacterPermanent(player, buffer);
 		break;
 
-	case 0xF02:
+	case PacketCode::PacketNumericToken:
 		PacketHandler::RecvNumericTokenRequest(player, buffer);
 		break;
 
-	case 0x39D:
+	case PacketCode::PacketAHackStatusCheck:
 		break;
 
-	case 0xF0B:
+	case PacketCode::PacketEnterIngame:
 		player->characterController->EnterIngame();
 		break;
 
-	case 0x303:
+	case PacketCode::PacketRevive:
 		PacketHandler::RecvRevivePlayerPacket(player, buffer);
 		break;
-	case 0x304:
+	case PacketCode::PacketCharacterAction:
 		PacketHandler::RecvCharacterActionPacket(player, buffer);
 		break;
-	case 0x305:
+	case PacketCode::PacketCharacterRotation:
 		PacketHandler::RecvRotationPacket(player, buffer);
 		break;
 
-	case 0x70F:
+	case PacketCode::PacketOpenNPC:
+		PacketHandler::RecvOpenNPCPacket(player, buffer);
+		break;
+
+	case PacketCode::PacketMoveItem:
 		PacketHandler::RecvMoveItemPacket(player, buffer);
 		break;
-	case 0x31D:
+	case PacketCode::PacketUseItem:
 		PacketHandler::RecvUseItemPacket(player, buffer);
 		break;
-	case 0x31E:
+	case PacketCode::PacketItemBar:
 		PacketHandler::RecvItemBarPacket(player, buffer);
 		break;
-	case 0x32C:
+	case PacketCode::PacketDeleteItem:
 		PacketHandler::RecvDeleteItemPacket(player, buffer);
 		break;
-	case 0x332:
+	case PacketCode::PacketJoinItems:
 		PacketHandler::RecvGroupItemsPacket(player, buffer);
 		break;
-	case 0x333:
+	case PacketCode::PacketSplitItem:
 		PacketHandler::RecvUngroupItemsPacket(player, buffer);
 		break;
+
+	case PacketCode::PacketCloseUsingNPC:
+		PacketHandler::RecvCloseNPC(player, buffer);
+		break;
+	case PacketCode::PacketChat:
+		player->SendSignalData(PacketCode::PacketDevirInfoRequest, 01);
+		break;
+	
 
 	default:
 		Logger::Write(Logger::Format("recv unknown packet => size: %x - opcode: %x", header.Size, header.Code), Packets);
@@ -745,10 +758,51 @@ bool PacketHandler::RecvUseItemPacket(PPlayer player, char* buffer) {
 }
 
 
+bool PacketHandler::RecvOpenNPCPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketOpenNPC&>(buffer[0]);
+
+	if (packet.Index == 0 && packet.Type1 == 8) {
+		player->usingNPC = nullptr;
+		player->usingNPCOption = 0;
+		return true;
+	}
+
+	Logger::Write(Packets, "using npc: %d - %d", packet.Index, packet.Type1);
+
+	EntityType entityType = EntityHandler::GetEntityType(packet.Index);
+
+	switch (entityType)
+	{
+	case EntityPlayer:
+		break;
+	case EntityNPC:
+		NPCHandler::OpenNPC(player, (PNpc)EntityHandler::GetEntity(packet.Index), packet);
+		break;
+	default:
+		break;
+	}
+
+	return true;
+}
+
+bool PacketHandler::RecvCloseNPC(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketSignalData&>(buffer[0]);
+
+	if (player->usingNPC == nullptr) {
+		return true;
+	}
+
+	player->usingNPC = nullptr;
+	player->usingNPCOption = 0;
+
+	return true;
+}
+
+
 bool PacketHandler::RecvItemBarPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketItemBar&>(buffer[0]);
 
-	if (packet.destSlot > 24) {
+	if (packet.destSlot >= 24) {
 		player->SendClientMessage("item bar invalid slot!");
 		return false;
 	}
@@ -759,8 +813,9 @@ bool PacketHandler::RecvItemBarPacket(PPlayer player, char* buffer) {
 	}
 
 	BYTE slot = (BYTE)packet.destSlot;
+	WORD index = (WORD)packet.index;
 
-	player->character.ItemBar[slot].itemID = (WORD)packet.index;
+	player->character.ItemBar[slot].itemID = index;
 	player->character.ItemBar[slot].itemType = (WORD)packet.destType;
 
 	player->characterController->SendItemBarSlot(packet.destSlot);

@@ -12,6 +12,7 @@
 
 #include "Logger.h"
 #include "GameEntity.h"
+#include "NPC.h"
 
 #include "Packets.h"
 
@@ -54,6 +55,9 @@ public:
 	CharacterController* characterController;
 	InventoryController inventoryController;
 
+	PNpc usingNPC = nullptr;
+	uint16_t usingNPCOption;
+
 	void Start(SOCKET socket, sockaddr addr, WORD index);
 	void Destroy();
 
@@ -63,8 +67,8 @@ public:
 
 	void HandleNetworkRecv();
 	bool SendPacket(LPVOID packet, WORD size);
-	bool SendSignalData(WORD opcode, DWORD data);
-	bool SendSignal(WORD opcode);
+	bool SendSignalData(packets::PacketCode opcode, DWORD data);
+	bool SendSignal(packets::PacketCode opcode);
 
 	void SendClientMessage(std::string message, BYTE color = 0, BYTE type = 16);
 

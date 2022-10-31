@@ -110,6 +110,7 @@ public:
 	bool Add(const ItemFromList item);
 	bool Get(const WORD itemId, ItemFromList* item);
 	static ItemFromList Get(const WORD itemId);
+	bool Contains(const WORD itemId);
 
 	ItemFromList operator[](const WORD itemId);
 
