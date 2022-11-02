@@ -1,0 +1,28 @@
+{
+    "Index": 21,
+    "Name": "Kali-Kali",
+    "Face": 255,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1146,
+    "Rotation": 90,
+    "Level": 11,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3304,
+            "StartPosY": 1032,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3309,
+            "DestPosY": 1034,
+            "DestRange": 7,
+            "DestWait": 6
+        }
+    ]
+}

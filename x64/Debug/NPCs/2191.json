@@ -1,22 +1,88 @@
 {
-	"Index" : 2191,
-	"Name" : "479",
-	"Description" : "Honor Cloth Armor Dealer",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 270,
-	"Position" : [3441,557],
-	"Equip" : [106,0,6266,6295,0,0,7784,0],
-	"Inventory" : [3301,3331,3361,3391,0,3302,3332,3362,3392,0,3319,3349,3379,3409,0,3321,3351,3381,3411,0,3421,3451,3481,3511,0,3422,3452,3482,3512,0,3439,3469,3499,3529,0,3441,3471,3501,3531,0],
-	"options" : {
-		"0" : {"text": "Missao", "type": 2 },
-		"1" : {"text": "Loja", "type": 5 },
-		"2" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2191,
+    "Name": "479",
+    "Description": "Honor Cloth Armor Dealer",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 270,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 150
+    },
+    "Position": [
+        3441.39990234375,
+        557.400024414063
+    ],
+    "Equip": [
+        106,
+        0,
+        6266,
+        6295,
+        0,
+        0,
+        7784,
+        0
+    ],
+    "Inventory": [
+        3301,
+        3331,
+        3361,
+        3391,
+        0,
+        3302,
+        3332,
+        3362,
+        3392,
+        0,
+        3319,
+        3349,
+        3379,
+        3409,
+        0,
+        3321,
+        3351,
+        3381,
+        3411,
+        0,
+        3421,
+        3451,
+        3481,
+        3511,
+        0,
+        3422,
+        3452,
+        3482,
+        3512,
+        0,
+        3439,
+        3469,
+        3499,
+        3529,
+        0,
+        3441,
+        3471,
+        3501,
+        3531,
+        0
+    ],
+    "options": [
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

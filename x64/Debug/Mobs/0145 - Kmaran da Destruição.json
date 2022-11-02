@@ -1,0 +1,28 @@
+{
+    "Index": 145,
+    "Name": "Kmaran da Destruição",
+    "Face": 245,
+    "Hair": 0,
+    "Weapon": 1434,
+    "Health": 2204,
+    "Rotation": 65402,
+    "Level": 21,
+    "Height": 11,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64256,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3126,
+            "StartPosY": 1408,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3132,
+            "DestPosY": 1418,
+            "DestRange": 7,
+            "DestWait": 8
+        }
+    ]
+}

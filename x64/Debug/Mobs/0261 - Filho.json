@@ -1,0 +1,28 @@
+{
+    "Index": 261,
+    "Name": "Filho",
+    "Face": 260,
+    "Hair": 0,
+    "Weapon": 1452,
+    "Health": 3195,
+    "Rotation": 44,
+    "Level": 24,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3662,
+            "StartPosY": 1687,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3673,
+            "DestPosY": 1699,
+            "DestRange": 12,
+            "DestWait": 4
+        }
+    ]
+}

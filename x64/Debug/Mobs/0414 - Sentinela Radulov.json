@@ -1,0 +1,28 @@
+{
+    "Index": 414,
+    "Name": "Sentinela Radulov",
+    "Face": 235,
+    "Hair": 0,
+    "Weapon": 1430,
+    "Health": 1159,
+    "Rotation": 0,
+    "Level": 22,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3614,
+            "StartPosY": 1669,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3620,
+            "DestPosY": 1680,
+            "DestRange": 9,
+            "DestWait": 5
+        }
+    ]
+}

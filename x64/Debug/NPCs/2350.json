@@ -1,22 +1,88 @@
 {
-	"Index" : 2350,
-	"Name" : "1841",
-	"Description" : "Escaped Huron Slave",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 0,
-	"Position" : [631,3280],
-	"Equip" : [286,0,0,0,0,0,1509,0],
-	"Inventory" : [4351,4391,4352,4392,0,4616,4617,4618,4619,4620,4621,4622,4623,0,0,4601,4602,4603,4604,4605,4606,4607,4608,0,0,5502,5503,0,0,0,0,0,0,0,0,4522,4470,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2350,
+    "Name": "1841",
+    "Description": "Escaped Huron Slave",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 0,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 65
+    },
+    "Position": [
+        631.400024414062,
+        3280.39990234375
+    ],
+    "Equip": [
+        286,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1509,
+        0
+    ],
+    "Inventory": [
+        4351,
+        4391,
+        4352,
+        4392,
+        0,
+        4616,
+        4617,
+        4618,
+        4619,
+        4620,
+        4621,
+        4622,
+        4623,
+        0,
+        0,
+        4601,
+        4602,
+        4603,
+        4604,
+        4605,
+        4606,
+        4607,
+        4608,
+        0,
+        0,
+        5502,
+        5503,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4522,
+        4470,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

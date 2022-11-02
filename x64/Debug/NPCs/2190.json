@@ -1,22 +1,88 @@
 {
-	"Index" : 2190,
-	"Name" : "478",
-	"Description" : "Honor Leather Armor Dealer",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 0,
-	"Position" : [3436,549],
-	"Equip" : [255,0,0,0,0,0,0,0],
-	"Inventory" : [3061,3091,3121,3151,0,3062,3092,3122,3152,0,3079,3109,3139,3169,0,3081,3111,3141,3171,0,3181,3211,3241,3271,0,3182,3212,3242,3272,0,3199,3229,3259,3289,0,3201,3231,3261,3291,0],
-	"options" : {
-		"0" : {"text": "Missao", "type": 2 },
-		"1" : {"text": "Loja", "type": 5 },
-		"2" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2190,
+    "Name": "478",
+    "Description": "Honor Leather Armor Dealer",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 0,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 149
+    },
+    "Position": [
+        3436.39990234375,
+        549.400024414063
+    ],
+    "Equip": [
+        255,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "Inventory": [
+        3061,
+        3091,
+        3121,
+        3151,
+        0,
+        3062,
+        3092,
+        3122,
+        3152,
+        0,
+        3079,
+        3109,
+        3139,
+        3169,
+        0,
+        3081,
+        3111,
+        3141,
+        3171,
+        0,
+        3181,
+        3211,
+        3241,
+        3271,
+        0,
+        3182,
+        3212,
+        3242,
+        3272,
+        0,
+        3199,
+        3229,
+        3259,
+        3289,
+        0,
+        3201,
+        3231,
+        3261,
+        3291,
+        0
+    ],
+    "options": [
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

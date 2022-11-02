@@ -1,0 +1,28 @@
+{
+    "Index": 425,
+    "Name": "Sansan",
+    "Face": 290,
+    "Hair": 0,
+    "Weapon": 1502,
+    "Health": 2982,
+    "Rotation": 340,
+    "Level": 26,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1029,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3279,
+            "StartPosY": 3389,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3270,
+            "DestPosY": 3396,
+            "DestRange": 7,
+            "DestWait": 7
+        }
+    ]
+}

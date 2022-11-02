@@ -1,0 +1,158 @@
+{
+    "Index": 231,
+    "Name": "Golem de Aço",
+    "Face": 271,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2358,
+    "Rotation": 65402,
+    "Level": 28,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1030,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3768,
+            "StartPosY": 2062,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3769,
+            "DestPosY": 2071,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3741,
+            "StartPosY": 2084,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3748,
+            "DestPosY": 2091,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3725,
+            "StartPosY": 2091,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3731,
+            "DestPosY": 2081,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3723,
+            "StartPosY": 2086,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3711,
+            "DestPosY": 2083,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3689,
+            "StartPosY": 2077,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3682,
+            "DestPosY": 2087,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3690,
+            "StartPosY": 2091,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3687,
+            "DestPosY": 2085,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3753,
+            "StartPosY": 2071,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3752,
+            "DestPosY": 2074,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3738,
+            "StartPosY": 2066,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3728,
+            "DestPosY": 2056,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3749,
+            "StartPosY": 2102,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3761,
+            "DestPosY": 2098,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3746,
+            "StartPosY": 2104,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3743,
+            "DestPosY": 2098,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3755,
+            "StartPosY": 2069,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3745,
+            "DestPosY": 2070,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3722,
+            "StartPosY": 2109,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3725,
+            "DestPosY": 2098,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3738,
+            "StartPosY": 2114,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3745,
+            "DestPosY": 2112,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3680,
+            "StartPosY": 2084,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3670,
+            "DestPosY": 2086,
+            "DestRange": 8,
+            "DestWait": 5
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "Index": 473,
+    "Name": "Huppert",
+    "Face": 314,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 5953,
+    "Rotation": 108,
+    "Level": 36,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2492,
+            "StartPosY": 1997,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 2499,
+            "DestPosY": 2000,
+            "DestRange": 6,
+            "DestWait": 5
+        }
+    ]
+}

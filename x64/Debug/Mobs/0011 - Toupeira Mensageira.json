@@ -1,0 +1,78 @@
+{
+    "Index": 11,
+    "Name": "Toupeira Mensageira",
+    "Face": 255,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 622,
+    "Rotation": 44,
+    "Level": 5,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1024,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3554,
+            "StartPosY": 853,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 3548,
+            "DestPosY": 849,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3581,
+            "StartPosY": 900,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3573,
+            "DestPosY": 912,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3588,
+            "StartPosY": 860,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 3590,
+            "DestPosY": 868,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3587,
+            "StartPosY": 848,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3599,
+            "DestPosY": 846,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3594,
+            "StartPosY": 899,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3596,
+            "DestPosY": 889,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3637,
+            "StartPosY": 857,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 3629,
+            "DestPosY": 863,
+            "DestRange": 9,
+            "DestWait": 6
+        }
+    ]
+}

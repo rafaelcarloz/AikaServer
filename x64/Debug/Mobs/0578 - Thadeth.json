@@ -1,0 +1,28 @@
+{
+    "Index": 578,
+    "Name": "Thadeth",
+    "Face": 292,
+    "Hair": 0,
+    "Weapon": 1460,
+    "Health": 11419,
+    "Rotation": 0,
+    "Level": 49,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1540,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1657,
+            "StartPosY": 1811,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 1662,
+            "DestPosY": 1819,
+            "DestRange": 11,
+            "DestWait": 4
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "Index": 449,
+    "Name": "Mago Chepa Mavek",
+    "Face": 327,
+    "Hair": 0,
+    "Weapon": 1471,
+    "Health": 2554,
+    "Rotation": 161,
+    "Level": 42,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1536,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2209,
+            "StartPosY": 1886,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 2202,
+            "DestPosY": 1884,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2194,
+            "StartPosY": 1880,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 2201,
+            "DestPosY": 1868,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2184,
+            "StartPosY": 1871,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 2194,
+            "DestPosY": 1879,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2202,
+            "StartPosY": 1865,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2193,
+            "DestPosY": 1860,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2167,
+            "StartPosY": 1863,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 2171,
+            "DestPosY": 1854,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2145,
+            "StartPosY": 1851,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2154,
+            "DestPosY": 1842,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2113,
+            "StartPosY": 1857,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2104,
+            "DestPosY": 1853,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2109,
+            "StartPosY": 1853,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2118,
+            "DestPosY": 1842,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2099,
+            "StartPosY": 1872,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 2106,
+            "DestPosY": 1876,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2108,
+            "StartPosY": 1877,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2119,
+            "DestPosY": 1871,
+            "DestRange": 10,
+            "DestWait": 8
+        }
+    ]
+}

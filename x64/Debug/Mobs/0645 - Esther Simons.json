@@ -1,0 +1,28 @@
+{
+    "Index": 645,
+    "Name": "Esther Simons",
+    "Face": 41,
+    "Hair": 7708,
+    "Weapon": 1146,
+    "Health": 10430,
+    "Rotation": 44,
+    "Level": 48,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1614,
+            "StartPosY": 1860,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 1626,
+            "DestPosY": 1856,
+            "DestRange": 7,
+            "DestWait": 4
+        }
+    ]
+}

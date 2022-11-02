@@ -1,0 +1,28 @@
+{
+    "Index": 265,
+    "Name": "Krigel",
+    "Face": 271,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 5633,
+    "Rotation": 90,
+    "Level": 27,
+    "Height": 13,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1030,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3691,
+            "StartPosY": 2024,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3703,
+            "DestPosY": 2020,
+            "DestRange": 10,
+            "DestWait": 6
+        }
+    ]
+}

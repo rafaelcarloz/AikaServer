@@ -1,0 +1,28 @@
+{
+    "Index": 607,
+    "Name": "Bayal Zersegnai",
+    "Face": 312,
+    "Hair": 0,
+    "Weapon": 1465,
+    "Health": 7305,
+    "Rotation": 50,
+    "Level": 40,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2508,
+            "StartPosY": 1733,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 2510,
+            "DestPosY": 1742,
+            "DestRange": 9,
+            "DestWait": 4
+        }
+    ]
+}

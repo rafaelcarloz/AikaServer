@@ -3,7 +3,10 @@
 #ifndef _PACKETS_H_
 #define _PACKETS_H_
 
+#include <iostream>
+
 #include "PlayerData.h"
+#include "MiscData.h"
 
 #pragma pack(push,1)
 
@@ -134,7 +137,7 @@ namespace packets{
 		PacketUseItem,
 		PacketItemBar,
 
-		PacketSkillUse,
+		PacketSkillUse = 0x320,
 		PacketUpdateSizes,
 		PacketPartyRequest,
 		PacketPartyResponse,
@@ -179,7 +182,7 @@ namespace packets{
 		PacketUnknow357,
 		PacketServerVersion = 0x358, //msg "Versão do servidor foi atualizada e o jogo precisa ser reiniciado" fecha o game depois de timer 5s
 		PacketSendCaptcha = 0x35A,
-		PacketCreateMobSpawn = 0x35E,
+		PacketSpawnMob = 0x35E,
 		PacketUpgradeResult2 = 0x35F,
 
 		PacketActiveTitle = 0x361,
@@ -539,6 +542,12 @@ namespace packets{
 	}*PPacket_925;
 
 
+	typedef struct PacketClientIndex {
+		PacketHeader Header;
+		DWORD Index;
+		DWORD Effect;
+	}*PPacket_117;
+
 #pragma endregion
 #pragma region "Spawn & Unspawn Packets"
 
@@ -576,6 +585,25 @@ namespace packets{
 		WORD NULL_2;
 	}*PPacket_349;
 
+	typedef struct PacketSpawnMob {
+		PacketHeader Header;
+		WORD Equipaments[8];
+		Position CurrentPosition;
+		DWORD Rotation;
+		DWORD CurHP, CurMP;
+		DWORD MaxHP, MaxMP;
+		WORD unk_1;
+		WORD Level;
+		WORD Null_1;
+		WORD IsService;
+		BYTE Effects[4];
+		SpawnType spawnType;
+		CharacterSize Sizes;
+		WORD MobType;
+		BYTE unk_2;
+		WORD MobName;
+		WORD unk_3[3];
+	}*PPacket_35E;
 
 	typedef struct PacketRemoveMob {
 		PacketHeader Header;
@@ -588,6 +616,7 @@ namespace packets{
 		DWORD Index;
 		DWORD MobType;
 	}*PPacket_306;
+
 
 #pragma endregion
 #pragma region "Movemment Packets"
@@ -767,10 +796,127 @@ namespace packets{
 	}*PPacket_106;
 
 #pragma endregion
+#pragma region "Titles"
+
+	typedef struct PacketUpdateActiveTitle {
+		PacketHeader Header;
+		DWORD TitleIndex;
+		DWORD TitleLevel;
+	}*PPacket_361;
+
+#pragma endregion
+#pragma region "Premium Items/Cash Packets"
+
+	typedef struct PacketUpdateCashInventory {
+		PacketHeader Header;
+		ItemCash Items[24];
+	}*PPacket_138;
+
+	typedef struct PacketSendPremiumGift {
+		PacketHeader Header;
+		WORD GiftTarget;
+		WORD Slot;
+		char Nick[16];
+	}*PPacket_356;
 
 
+#pragma endregion
+#pragma region "Chat Packets"
 
+	enum class ChatType : WORD {
+		Normal,
+		Whisper,
+		Party,
+		Guild,
+		Shout
+	};
 
+	typedef struct PacketChat {
+		PacketHeader Header;
+		ChatType ChatType;
+		BYTE NULL_1[6];
+		DWORD Color;
+		char Nickname[16];
+		char ChatText[128];
+	}*PPacket_F86;
+
+#pragma endregion
+#pragma region "Attack e Skill"
+
+	enum class DamageType : BYTE {
+		Normal,
+		Critical,
+		Double,
+		DoubleCritical,
+		Immune,
+		ImmuneCritical,
+		ImmuneDouble,
+		ImmuneDoubleCritical,
+		Miss,
+		MissCritical,
+		MissDouble,
+		MissCritical2,
+		Miss2,
+		Miss2Critical,
+		Miss2Double,
+		Miss2Critical2,
+		Block,
+		BlockCritical,
+		BlockDouble,
+		BlockCritical2,
+		Immune2,
+		Immune2Critical,
+		Immune2Double,
+		Immune2Critical2,
+		Miss3,
+		Miss3Critical,
+		Miss3Double,
+		Miss3Critical2,
+		Miss4,
+		Miss4Critical,
+		Miss4Double,
+		Miss4Critical2,
+		None
+	};
+
+	typedef struct PacketAttackTarget {
+		PacketHeader Header;
+		WORD Index;
+		BYTE null_0[14];
+		WORD Animation;
+		WORD Skill;
+		Position AttackerPosition;
+		Position TargetPosition;
+	}*PPacket_302;
+
+	typedef struct PacketSkillUse {
+		PacketHeader header;
+		DWORD skill;
+		DWORD index;
+		Position position;
+	}*PPacket_320;
+
+	typedef struct PacketDisplayDamage {
+		PacketHeader header;
+		DWORD skill;
+		Position attackerPosition;
+		DWORD null_1;
+		WORD attackerId;
+		BYTE null_2;
+		BYTE animation;
+		BYTE null_3[12];
+		DWORD attackerHp;
+		BYTE null_4[8];
+		WORD targetId;
+		DamageType damageType;
+		BYTE mobAnimation;
+		uint64_t damage;
+		DWORD null_5;
+		DWORD targetHp;
+		Position deathPosition;
+	}*PPacket_102;
+
+#pragma endregion
 
 
 }

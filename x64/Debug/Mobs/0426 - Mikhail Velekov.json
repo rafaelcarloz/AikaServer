@@ -1,0 +1,28 @@
+{
+    "Index": 426,
+    "Name": "Mikhail Velekov",
+    "Face": 233,
+    "Hair": 0,
+    "Weapon": 1442,
+    "Health": 3195,
+    "Rotation": 0,
+    "Level": 24,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1024,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3117,
+            "StartPosY": 3431,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3118,
+            "DestPosY": 3435,
+            "DestRange": 6,
+            "DestWait": 7
+        }
+    ]
+}

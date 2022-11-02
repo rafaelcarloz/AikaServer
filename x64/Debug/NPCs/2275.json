@@ -1,23 +1,93 @@
 {
-	"Index" : 2275,
-	"Name" : "2008",
-	"Description" : "Mount Administrator",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 0,
-	"Position" : [1672,2094],
-	"Equip" : [361,0,0,0,0,0,1480,0],
-	"Inventory" : [362,363,364,365,366,367,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Missao", "type": 2 },
-		"1" : {"text": "Encantar Montaria", "type": 44 },
-		"2" : {"text": "Loja", "type": 5 },
-		"3" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2275,
+    "Name": "2008",
+    "Description": "Mount Administrator",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 0,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 242
+    },
+    "Position": [
+        1672.40002441406,
+        2094.39990234375
+    ],
+    "Equip": [
+        361,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1480,
+        0
+    ],
+    "Inventory": [
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Encantar Montaria",
+            "type": 44,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

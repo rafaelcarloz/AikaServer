@@ -88,15 +88,21 @@ enum NpcDialog : BYTE {
 
 
 enum NpcShopType {
-	NpcShopItems = 0x0B,
-	NpcShoSkills
+	NpcShoSkills = 0x0B,
+	NpcShopItems
+};
+
+struct NPCMenuOption {
+	uint16_t Index;
+	std::string Name;
+	DWORD Color;
 };
 
 class NPC : public GameEntity {
 private:
 	bool FromJSON(boost::json::value data);
 public:
-	std::map<uint16_t, std::string> options;
+	std::map<uint16_t, NPCMenuOption> options;
 
 	bool Initialize(uint16_t entityId, boost::json::value data);
 };

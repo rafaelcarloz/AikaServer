@@ -1,0 +1,168 @@
+{
+    "Index": 436,
+    "Name": "Cubo do Pesadelo",
+    "Face": 305,
+    "Hair": 0,
+    "Weapon": 1502,
+    "Health": 2999,
+    "Rotation": 90,
+    "Level": 39,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1287,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2492,
+            "StartPosY": 1702,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2485,
+            "DestPosY": 1707,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2504,
+            "StartPosY": 1691,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 2511,
+            "DestPosY": 1681,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2469,
+            "StartPosY": 1674,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 2480,
+            "DestPosY": 1664,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2475,
+            "StartPosY": 1630,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 2475,
+            "DestPosY": 1639,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2464,
+            "StartPosY": 1652,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2453,
+            "DestPosY": 1663,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2487,
+            "StartPosY": 1641,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 2498,
+            "DestPosY": 1629,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2505,
+            "StartPosY": 1651,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2494,
+            "DestPosY": 1648,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2512,
+            "StartPosY": 1670,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 2517,
+            "DestPosY": 1660,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2494,
+            "StartPosY": 1681,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 2492,
+            "DestPosY": 1688,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2456,
+            "StartPosY": 1633,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2467,
+            "DestPosY": 1643,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2480,
+            "StartPosY": 1698,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2481,
+            "DestPosY": 1708,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2461,
+            "StartPosY": 1682,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 2452,
+            "DestPosY": 1670,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2481,
+            "StartPosY": 1666,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2485,
+            "DestPosY": 1667,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2495,
+            "StartPosY": 1664,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2493,
+            "DestPosY": 1654,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2480,
+            "StartPosY": 1684,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 2472,
+            "DestPosY": 1696,
+            "DestRange": 10,
+            "DestWait": 7
+        }
+    ]
+}

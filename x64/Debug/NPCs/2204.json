@@ -1,22 +1,88 @@
 {
-	"Index" : 2204,
-	"Name" : "501",
-	"Description" : "Pran Clothing Merchant",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 0,
-	"Position" : [2189,1961],
-	"Equip" : [110,0,0,6295,0,0,7785,0],
-	"Inventory" : [6292,6293,6294,6295,6296,6297,0,0,0,0,6318,6319,6320,6321,0,0,0,0,0,0,0,0,0,0,0,2434,2435,2436,2437,2438,2439,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Missao", "type": 2 },
-		"1" : {"text": "Loja", "type": 5 },
-		"2" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2204,
+    "Name": "501",
+    "Description": "Pran Clothing Merchant",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 0,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 163
+    },
+    "Position": [
+        2189.39990234375,
+        1961.40002441406
+    ],
+    "Equip": [
+        110,
+        0,
+        0,
+        6295,
+        0,
+        0,
+        7785,
+        0
+    ],
+    "Inventory": [
+        6292,
+        6293,
+        6294,
+        6295,
+        6296,
+        6297,
+        0,
+        0,
+        0,
+        0,
+        6318,
+        6319,
+        6320,
+        6321,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2434,
+        2435,
+        2436,
+        2437,
+        2438,
+        2439,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

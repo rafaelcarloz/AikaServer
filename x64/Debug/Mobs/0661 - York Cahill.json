@@ -1,0 +1,168 @@
+{
+    "Index": 661,
+    "Name": "York Cahill",
+    "Face": 219,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 3818,
+    "Rotation": 65402,
+    "Level": 46,
+    "Height": 11,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1874,
+            "StartPosY": 2161,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1872,
+            "DestPosY": 2171,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1885,
+            "StartPosY": 2159,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 1889,
+            "DestPosY": 2166,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1871,
+            "StartPosY": 2170,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 1880,
+            "DestPosY": 2161,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1887,
+            "StartPosY": 2171,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 1890,
+            "DestPosY": 2182,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1879,
+            "StartPosY": 2190,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 1870,
+            "DestPosY": 2194,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1904,
+            "StartPosY": 2193,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 1893,
+            "DestPosY": 2200,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1903,
+            "StartPosY": 2168,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 1911,
+            "DestPosY": 2166,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1906,
+            "StartPosY": 2183,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 1902,
+            "DestPosY": 2187,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1910,
+            "StartPosY": 2176,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 1901,
+            "DestPosY": 2181,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1892,
+            "StartPosY": 2155,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 1891,
+            "DestPosY": 2154,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1878,
+            "StartPosY": 2118,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 1870,
+            "DestPosY": 2106,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1870,
+            "StartPosY": 2126,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 1865,
+            "DestPosY": 2118,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1877,
+            "StartPosY": 2123,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 1889,
+            "DestPosY": 2121,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1875,
+            "StartPosY": 2114,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 1871,
+            "DestPosY": 2116,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1894,
+            "StartPosY": 2186,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 1885,
+            "DestPosY": 2184,
+            "DestRange": 11,
+            "DestWait": 7
+        }
+    ]
+}

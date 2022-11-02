@@ -1,25 +1,103 @@
 {
-	"Index" : 2071,
-	"Name" : "57",
-	"Description" : "Weapon Merchant",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 90,
-	"Position" : [3495,706],
-	"Equip" : [248,0,0,0,0,0,1447,0],
-	"Inventory" : [1035,1036,1037,0,0,1000,1001,1002,0,0,1175,1176,1177,0,0,1140,1141,1142,0,0,1245,1246,1247,0,0,1210,1211,1212,0,0,1280,1281,1282,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Consertar", "type": 31 },
-		"3" : {"text": "Consertar Tudo", "type": 32 },
-		"4" : {"text": "Loja", "type": 5 },
-		"5" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2071,
+    "Name": "57",
+    "Description": "Weapon Merchant",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 90,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 24
+    },
+    "Position": [
+        3495.39990234375,
+        706.400024414062
+    ],
+    "Equip": [
+        248,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1447,
+        0
+    ],
+    "Inventory": [
+        1035,
+        1036,
+        1037,
+        0,
+        0,
+        1000,
+        1001,
+        1002,
+        0,
+        0,
+        1175,
+        1176,
+        1177,
+        0,
+        0,
+        1140,
+        1141,
+        1142,
+        0,
+        0,
+        1245,
+        1246,
+        1247,
+        0,
+        0,
+        1210,
+        1211,
+        1212,
+        0,
+        0,
+        1280,
+        1281,
+        1282,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Consertar",
+            "type": 31,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Consertar Tudo",
+            "type": 32,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

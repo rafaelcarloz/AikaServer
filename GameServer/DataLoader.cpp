@@ -13,8 +13,11 @@
 #include "SkillData.h"
 #include "ReinforceData.h"
 #include "TitleList.h"
-#include "NPC.h"
 #include "MapData.h"
+#include "MobPos.h"
+#include "NPC.h"
+#include "Mob.h"
+
 
 bool DataLoader::Startup(ServerInstance* server) {
 	this->_server = server;
@@ -65,6 +68,10 @@ bool DataLoader::Startup(ServerInstance* server) {
 	}
 
 	if (!this->LoadNPCs()) {
+		return false;
+	}
+
+	if (!this->LoadMobs()) {
 		return false;
 	}
 
@@ -383,6 +390,7 @@ bool DataLoader::LoadItemConsumeFunctions() {
 	return true;
 }
 
+
 bool ProcessItemConsumeEffect(std::string workingrPath, std::string fileName) {
 	std::string fullFileName = Logger::Format(R"(%s\Scripts\Itens\ConsumeEffects\%s)", workingrPath.c_str(), fileName.c_str());
 
@@ -411,7 +419,6 @@ bool ProcessItemConsumeEffect(std::string workingrPath, std::string fileName) {
 
 	return true;
 }
-
 
 bool DataLoader::LoadItemConsumeEffects() {
 	std::string folderPathFilter = Logger::Format(R"(%s\Scripts\Itens\ConsumeEffects\*.lua)", this->_currentDir.c_str());
@@ -663,7 +670,7 @@ bool ProcessNPC(std::string workingrPath, std::string fileName) {
 		npc->Initialize(entityId, npcData);
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[ProcessInitialCharacterFile] error: %s", e.what());
+		Logger::Write(Error, "[ProcessNPC] file=%s error: %s", fileName.c_str(), e.what());
 		return false;
 	}
 
@@ -682,6 +689,125 @@ bool DataLoader::LoadNPCs(){
 	}
 
 	Logger::Write(Status, "loaded %d NPCs data files!", loadedFiles);
+
+	return true;
+}
+
+#pragma endregion
+#pragma region "Mobs"
+
+bool DataLoader::LoadMobPos() {
+	std::string fileName = Logger::Format(R"(%s\Data\MobPos.bin)", this->_currentDir.c_str());
+
+	std::ifstream ifs(fileName, std::ios::in | std::ios::binary);
+
+	if (!ifs.is_open()) {
+		Logger::Write("error loading Mob Positions, file not found!", LOG_TYPE::Error);
+		return false;
+	}
+
+	int itemsLoaded = 0;
+
+	try {
+		int bufferSize = sizeof(MobPosFromList);
+		char* buffer = new char[bufferSize];
+
+		size_t bytesRead{ 0 };
+
+		MobPos* mobPos = MobPos::GetInstance();
+
+		do {
+			bytesRead = ifs.read(buffer, bufferSize).gcount();
+
+			if (bytesRead == 0) {
+				continue;
+			}
+
+			MobPosFromList item = MobPosFromList();
+			memcpy(&item, &buffer[0], bufferSize);
+
+			mobPos->Add(item, item.MobIndex);
+
+			if (item.MobIndex == 0) {
+				continue;
+			}
+
+			itemsLoaded++;
+		} while (bytesRead == bufferSize);
+
+		mobPos->SaveToJSON();
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[DataLoader::LoadMobPos] error: %s", e.what());
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d items from MobPos.bin", itemsLoaded);
+
+	return true;
+}
+
+
+bool ProcessMobFile(std::string workingrPath, std::string fileName) {
+	std::string fullFileName = Logger::Format(R"(%s\Mobs\%s)", workingrPath.c_str(), fileName.c_str());
+
+	try {
+		std::ifstream ifs(fullFileName);
+		std::string	input(std::istreambuf_iterator<char>(ifs), {});
+		ifs.close();
+
+		json::value mobData = json::parse(input);
+
+		if (mobData.is_null()) {
+			return false;
+		}
+
+		UINT32 index = json::value_to<int>(mobData.at("Index"));
+
+		if (index == 0) {
+			return false;
+		}
+
+		ServerInstance* instance = ServerInstance::GetInstance();
+
+		uint16_t positionId = 0;
+		for (auto& position : mobData.at("Positions").as_array()) {
+
+			int posX = json::value_to<int>(mobData.at("Positions").at(positionId).at("StartPosX"));
+
+			if (posX <= 0) {
+				continue;
+			}
+
+			UINT32 entityId = 0;
+
+			instance->entityHandler->AddEntity(new Mob(), EntityMob, &entityId);
+
+			PMob mob = (PMob)instance->entityHandler->GetEntity(entityId);
+			mob->Initialize(entityId, mobData, positionId);
+
+			positionId++;
+		}
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[ProcessMobFile] file=%s error: %s", fullFileName.c_str(), e.what());
+		return false;
+	}
+
+	return true;
+}
+
+bool DataLoader::LoadMobs() {
+	std::string folderPathFilter = Logger::Format(R"(%s\Mobs\*.json)", this->_currentDir.c_str());
+
+	int loadedFiles = 0;
+
+	if (!this->ForEachFileInFolder(folderPathFilter, &ProcessMobFile, &loadedFiles)) {
+		Logger::Write(Error, "error loading Mobs data!");
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d Mobs data files!", loadedFiles);
 
 	return true;
 }

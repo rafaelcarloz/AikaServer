@@ -1,0 +1,108 @@
+{
+    "Index": 291,
+    "Name": "Guarda-Costas do Clã Dread",
+    "Face": 235,
+    "Hair": 0,
+    "Weapon": 1431,
+    "Health": 1655,
+    "Rotation": 0,
+    "Level": 29,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3449,
+            "StartPosY": 3518,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3460,
+            "DestPosY": 3530,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3449,
+            "StartPosY": 3542,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3459,
+            "DestPosY": 3535,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3478,
+            "StartPosY": 3521,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3467,
+            "DestPosY": 3521,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3478,
+            "StartPosY": 3539,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 3479,
+            "DestPosY": 3544,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3513,
+            "StartPosY": 3513,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3501,
+            "DestPosY": 3522,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3513,
+            "StartPosY": 3547,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3516,
+            "DestPosY": 3535,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3528,
+            "StartPosY": 3530,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3535,
+            "DestPosY": 3520,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3561,
+            "StartPosY": 3546,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3550,
+            "DestPosY": 3557,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3561,
+            "StartPosY": 3514,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3553,
+            "DestPosY": 3526,
+            "DestRange": 12,
+            "DestWait": 8
+        }
+    ]
+}

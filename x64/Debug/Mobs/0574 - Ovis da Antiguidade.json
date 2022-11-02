@@ -1,0 +1,128 @@
+{
+    "Index": 574,
+    "Name": "Ovis da Antiguidade",
+    "Face": 292,
+    "Hair": 0,
+    "Weapon": 1460,
+    "Health": 4009,
+    "Rotation": 0,
+    "Level": 46,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1540,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1762,
+            "StartPosY": 1910,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 1763,
+            "DestPosY": 1914,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1754,
+            "StartPosY": 1910,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 1749,
+            "DestPosY": 1898,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1756,
+            "StartPosY": 1894,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 1757,
+            "DestPosY": 1900,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1760,
+            "StartPosY": 1894,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 1759,
+            "DestPosY": 1906,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1745,
+            "StartPosY": 1863,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 1734,
+            "DestPosY": 1864,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1767,
+            "StartPosY": 1876,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 1756,
+            "DestPosY": 1871,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1771,
+            "StartPosY": 1863,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 1765,
+            "DestPosY": 1863,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1757,
+            "StartPosY": 1837,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 1769,
+            "DestPosY": 1847,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1737,
+            "StartPosY": 1850,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 1734,
+            "DestPosY": 1841,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1750,
+            "StartPosY": 1876,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 1759,
+            "DestPosY": 1876,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1758,
+            "StartPosY": 1852,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 1769,
+            "DestPosY": 1849,
+            "DestRange": 12,
+            "DestWait": 6
+        }
+    ]
+}

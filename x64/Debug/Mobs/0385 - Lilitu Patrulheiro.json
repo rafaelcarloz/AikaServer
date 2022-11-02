@@ -1,0 +1,218 @@
+{
+    "Index": 385,
+    "Name": "Lilitu Patrulheiro",
+    "Face": 287,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2043,
+    "Rotation": 116,
+    "Level": 33,
+    "Height": 6,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2635,
+            "StartPosY": 2029,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2640,
+            "DestPosY": 2035,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2604,
+            "StartPosY": 2039,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2600,
+            "DestPosY": 2046,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2708,
+            "StartPosY": 2105,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2705,
+            "DestPosY": 2095,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2694,
+            "StartPosY": 2129,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 2683,
+            "DestPosY": 2131,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2680,
+            "StartPosY": 2152,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2692,
+            "DestPosY": 2157,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2654,
+            "StartPosY": 2154,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 2666,
+            "DestPosY": 2158,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2702,
+            "StartPosY": 2221,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 2692,
+            "DestPosY": 2231,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2720,
+            "StartPosY": 2208,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 2709,
+            "DestPosY": 2216,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2716,
+            "StartPosY": 2227,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 2719,
+            "DestPosY": 2221,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2736,
+            "StartPosY": 2184,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2733,
+            "DestPosY": 2172,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2752,
+            "StartPosY": 2191,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 2764,
+            "DestPosY": 2200,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2699,
+            "StartPosY": 2192,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 2701,
+            "DestPosY": 2200,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2676,
+            "StartPosY": 2216,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 2670,
+            "DestPosY": 2224,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2684,
+            "StartPosY": 2234,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 2689,
+            "DestPosY": 2234,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2712,
+            "StartPosY": 2162,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 2713,
+            "DestPosY": 2158,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2628,
+            "StartPosY": 2142,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 2637,
+            "DestPosY": 2132,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2606,
+            "StartPosY": 2126,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2607,
+            "DestPosY": 2138,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2593,
+            "StartPosY": 2101,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2588,
+            "DestPosY": 2091,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2591,
+            "StartPosY": 2080,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 2598,
+            "DestPosY": 2086,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2593,
+            "StartPosY": 2064,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 2588,
+            "DestPosY": 2060,
+            "DestRange": 6,
+            "DestWait": 6
+        }
+    ]
+}

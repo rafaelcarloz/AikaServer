@@ -135,6 +135,8 @@
     <ClCompile Include="ItemData.cpp" />
     <ClCompile Include="MapData.cpp" />
     <ClCompile Include="MiscData.cpp" />
+    <ClCompile Include="Mob.cpp" />
+    <ClCompile Include="MobPos.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="NPCHandler.cpp" />
     <ClCompile Include="PlayerData.cpp" />
@@ -155,6 +157,7 @@
     <ClCompile Include="ServerInstance.cpp" />
     <ClCompile Include="SetItem.cpp" />
     <ClCompile Include="SkillData.cpp" />
+    <ClCompile Include="SkillHandler.cpp" />
     <ClCompile Include="StatusController.cpp" />
     <ClCompile Include="TitleList.cpp" />
     <ClCompile Include="UseItemHandler.cpp" />
@@ -179,6 +182,8 @@
     <ClInclude Include="ItemList.h" />
     <ClInclude Include="MapData.h" />
     <ClInclude Include="MiscData.h" />
+    <ClInclude Include="Mob.h" />
+    <ClInclude Include="MobPos.h" />
     <ClInclude Include="NPC.h" />
     <ClInclude Include="NPCHandler.h" />
     <ClInclude Include="Packets.h" />
@@ -194,6 +199,7 @@
     <ClInclude Include="ServerSocket.h" />
     <ClInclude Include="SetItem.h" />
     <ClInclude Include="SkillData.h" />
+    <ClInclude Include="SkillHandler.h" />
     <ClInclude Include="StatusController.h" />
     <ClInclude Include="TitleList.h" />
     <ClInclude Include="UseItemHandler.h" />

@@ -1,0 +1,28 @@
+{
+    "Index": 267,
+    "Name": "Guru Apocalíptico",
+    "Face": 269,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 3537,
+    "Rotation": 290,
+    "Level": 28,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1027,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3657,
+            "StartPosY": 1798,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 3646,
+            "DestPosY": 1799,
+            "DestRange": 9,
+            "DestWait": 7
+        }
+    ]
+}

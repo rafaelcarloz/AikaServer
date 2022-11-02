@@ -1,0 +1,138 @@
+{
+    "Index": 692,
+    "Name": "Lilitu Nova Guerreiro",
+    "Face": 315,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 4856,
+    "Rotation": 30,
+    "Level": 51,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1992,
+            "StartPosY": 1367,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 1985,
+            "DestPosY": 1379,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2001,
+            "StartPosY": 1372,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2007,
+            "DestPosY": 1382,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1978,
+            "StartPosY": 1382,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 1981,
+            "DestPosY": 1390,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1990,
+            "StartPosY": 1399,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 2001,
+            "DestPosY": 1392,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1953,
+            "StartPosY": 1398,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 1955,
+            "DestPosY": 1395,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1971,
+            "StartPosY": 1421,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 1978,
+            "DestPosY": 1416,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1939,
+            "StartPosY": 1422,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 1947,
+            "DestPosY": 1418,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1958,
+            "StartPosY": 1432,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 1956,
+            "DestPosY": 1441,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1970,
+            "StartPosY": 1451,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 1981,
+            "DestPosY": 1443,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1938,
+            "StartPosY": 1446,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 1943,
+            "DestPosY": 1457,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1949,
+            "StartPosY": 1441,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 1948,
+            "DestPosY": 1434,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1981,
+            "StartPosY": 1438,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 1978,
+            "DestPosY": 1428,
+            "DestRange": 9,
+            "DestWait": 4
+        }
+    ]
+}

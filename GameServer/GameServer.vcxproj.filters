@@ -33,7 +33,7 @@
       <Filter>Handlers</Filter>
     </ClCompile>
     <ClCompile Include="Nation.cpp">
-      <Filter>Nation</Filter>
+      <Filter>Core\Nation</Filter>
     </ClCompile>
     <ClCompile Include="DateFunctions.cpp">
       <Filter>Functions</Filter>
@@ -98,6 +98,15 @@
     <ClCompile Include="NPCHandler.cpp">
       <Filter>Handlers</Filter>
     </ClCompile>
+    <ClCompile Include="MobPos.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mob.cpp">
+      <Filter>Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="SkillHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Network">
@@ -121,9 +130,6 @@
     <Filter Include="Entities">
       <UniqueIdentifier>{d141179c-d3d6-4ae7-994e-5c8a3367437b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Nation">
-      <UniqueIdentifier>{38215148-5ac2-418f-b172-4355591d5b89}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Data">
       <UniqueIdentifier>{09a9024e-2876-4853-a5f4-1e756c20a8af}</UniqueIdentifier>
     </Filter>
@@ -132,6 +138,9 @@
     </Filter>
     <Filter Include="Data\Files">
       <UniqueIdentifier>{b56bc203-564c-4312-a719-f8fc8fa14da9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Nation">
+      <UniqueIdentifier>{38215148-5ac2-418f-b172-4355591d5b89}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -169,7 +178,7 @@
       <Filter>Handlers</Filter>
     </ClInclude>
     <ClInclude Include="Nation.h">
-      <Filter>Nation</Filter>
+      <Filter>Core\Nation</Filter>
     </ClInclude>
     <ClInclude Include="DateFunctions.h">
       <Filter>Functions</Filter>
@@ -244,6 +253,15 @@
       <Filter>Entities</Filter>
     </ClInclude>
     <ClInclude Include="NPCHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="Mob.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="MobPos.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SkillHandler.h">
       <Filter>Handlers</Filter>
     </ClInclude>
   </ItemGroup>

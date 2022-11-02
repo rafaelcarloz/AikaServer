@@ -1,0 +1,238 @@
+{
+    "Index": 576,
+    "Name": "Ovis do Grito",
+    "Face": 292,
+    "Hair": 0,
+    "Weapon": 1460,
+    "Health": 4381,
+    "Rotation": 65447,
+    "Level": 48,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1540,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1657,
+            "StartPosY": 1811,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 1645,
+            "DestPosY": 1812,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1653,
+            "StartPosY": 1964,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 1645,
+            "DestPosY": 1953,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1661,
+            "StartPosY": 1964,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 1667,
+            "DestPosY": 1965,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1660,
+            "StartPosY": 1918,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 1655,
+            "DestPosY": 1928,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1654,
+            "StartPosY": 1918,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 1662,
+            "DestPosY": 1918,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1657,
+            "StartPosY": 1945,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 1656,
+            "DestPosY": 1933,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1653,
+            "StartPosY": 1888,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 1641,
+            "DestPosY": 1876,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1661,
+            "StartPosY": 1888,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 1653,
+            "DestPosY": 1887,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1657,
+            "StartPosY": 1904,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 1659,
+            "DestPosY": 1892,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1654,
+            "StartPosY": 1859,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 1666,
+            "DestPosY": 1852,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1659,
+            "StartPosY": 1869,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 1670,
+            "DestPosY": 1875,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1669,
+            "StartPosY": 1819,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 1679,
+            "DestPosY": 1807,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1688,
+            "StartPosY": 1827,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 1695,
+            "DestPosY": 1836,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1629,
+            "StartPosY": 1835,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 1635,
+            "DestPosY": 1826,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1652,
+            "StartPosY": 1837,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 1652,
+            "DestPosY": 1847,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1677,
+            "StartPosY": 1792,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1682,
+            "DestPosY": 1781,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1630,
+            "StartPosY": 1886,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 1622,
+            "DestPosY": 1882,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1632,
+            "StartPosY": 1895,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 1627,
+            "DestPosY": 1887,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1636,
+            "StartPosY": 1925,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 1639,
+            "DestPosY": 1913,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1687,
+            "StartPosY": 1809,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 1678,
+            "DestPosY": 1803,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1654,
+            "StartPosY": 1980,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 1653,
+            "DestPosY": 1992,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1659,
+            "StartPosY": 1980,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 1669,
+            "DestPosY": 1970,
+            "DestRange": 11,
+            "DestWait": 5
+        }
+    ]
+}

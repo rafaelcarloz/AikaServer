@@ -1,25 +1,103 @@
 {
-	"Index" : 2400,
-	"Name" : "1886",
-	"Description" : "Advanced Leather Merchant",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 90,
-	"Position" : [882,3640],
-	"Equip" : [234,0,0,0,0,0,1505,0],
-	"Inventory" : [1909,1939,1969,1999,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2029,2059,2089,2119,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Consertar", "type": 31 },
-		"3" : {"text": "Consertar Tudo", "type": 32 },
-		"4" : {"text": "Loja", "type": 5 },
-		"5" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2400,
+    "Name": "1886",
+    "Description": "Advanced Leather Merchant",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 90,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 117
+    },
+    "Position": [
+        882.400024414062,
+        3640.39990234375
+    ],
+    "Equip": [
+        234,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1505,
+        0
+    ],
+    "Inventory": [
+        1909,
+        1939,
+        1969,
+        1999,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2029,
+        2059,
+        2089,
+        2119,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Consertar",
+            "type": 31,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Consertar Tudo",
+            "type": 32,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

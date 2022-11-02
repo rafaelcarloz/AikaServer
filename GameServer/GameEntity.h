@@ -13,6 +13,8 @@
 #include "Packets.h"
 
 class GameEntity {
+private:
+	
 public:
 	uint16_t index;
 
@@ -36,16 +38,25 @@ public:
 
 	std::string textTitle;
 
+	uint16_t entityMobType;
+	uint16_t serviceId;
+
 	virtual ~GameEntity() {};
 
 	bool IsDead();
-
+	void DisplayDamage(uint16_t skill, uint16_t animation, uint64_t damage, packets::DamageType damageType, GameEntity* attacker);
 	void GetCreateMobPacket(packets::PacketCreateMob& packet, int targetId);
 	void SendCreateMob(uint16_t spawnType, int targetId);
-	void SendSpawnMob(int targetId);
+	void GetSpawnMobPacket(packets::PacketSpawnMob& packet, int targetId);
+	void SendSpawnMob(uint16_t spawnType, int targetId);
 
 	void SendRemoveMob(int targetId, uint16_t deleteType);
 	void SendUnspawnEntity(int entityId, DeleteType deleteType = DeleteNormal);
+
+	void SendRotation();
+	void SendAction(WORD actionId);
+	void SendMovemment(Position position, BYTE moveType, BYTE speed);
+	void SendEffect(WORD effectId);
 };
 
 #endif

@@ -1,0 +1,98 @@
+{
+    "Index": 437,
+    "Name": "Fanático Leão Branco",
+    "Face": 312,
+    "Hair": 0,
+    "Weapon": 1465,
+    "Health": 9666,
+    "Rotation": 0,
+    "Level": 1329,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2368,
+            "StartPosY": 1596,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 2376,
+            "DestPosY": 1586,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2362,
+            "StartPosY": 1596,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 2367,
+            "DestPosY": 1593,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2366,
+            "StartPosY": 1629,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2354,
+            "DestPosY": 1634,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2363,
+            "StartPosY": 1629,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 2351,
+            "DestPosY": 1632,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2347,
+            "StartPosY": 1617,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 2352,
+            "DestPosY": 1621,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2360,
+            "StartPosY": 1653,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 2355,
+            "DestPosY": 1648,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2371,
+            "StartPosY": 1665,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 2364,
+            "DestPosY": 1662,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2336,
+            "StartPosY": 1640,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 2327,
+            "DestPosY": 1633,
+            "DestRange": 10,
+            "DestWait": 5
+        }
+    ]
+}

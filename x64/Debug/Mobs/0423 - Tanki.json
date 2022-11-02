@@ -1,0 +1,28 @@
+{
+    "Index": 423,
+    "Name": "Tanki",
+    "Face": 265,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 3048,
+    "Rotation": 65387,
+    "Level": 24,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3270,
+            "StartPosY": 3538,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3280,
+            "DestPosY": 3545,
+            "DestRange": 10,
+            "DestWait": 8
+        }
+    ]
+}

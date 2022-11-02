@@ -41,6 +41,11 @@ void CharacterController::Initialize(long characterId, PPlayer player) {
 		return;
 	}
 
+	if (!this->GetTitlesData()) {
+		this->_player->isActive = false;
+		return;
+	}
+
 	if (!this->_player->inventoryController.Initialize(&this->_player->character, _player)) {
 		this->_player->isActive = false;
 		return;
@@ -113,7 +118,9 @@ bool CharacterController::GetCharacterData() {
 		this->_player->character.Status.Attributes.Constitution = character.at("addinitionalConstituion").is_null() ? 0u : json::value_to<int>(character.at("addinitionalConstituion"));
 		this->_player->character.Status.Attributes.Spirit = character.at("addinitionalLuck").is_null() ? 0u : json::value_to<int>(character.at("addinitionalLuck"));
 
-		this->activeTitle.Index = character.at("characterActiveTitleID").is_null() ? 0u : json::value_to<int>(character.at("characterActiveTitleID"));
+		this->activeTitle = new Title();
+
+		this->activeTitle->Index = character.at("characterActiveTitleID").is_null() ? 0u : json::value_to<int>(character.at("characterActiveTitleID"));
 
 		this->_player->rotation = character.at("characterLastRoration").is_null() ? 0u : json::value_to<int>(character.at("characterLastRoration"));
 
@@ -185,6 +192,44 @@ bool CharacterController::GetHotBarData() {
 	return false;
 }
 
+bool CharacterController::GetTitlesData() {
+	WebHandler webHandler;
+
+	try {
+		json::value items = json::value();
+
+		if (!webHandler.GetCharacterTitles(this->_characterId, &items)) {
+			Logger::Write(Error, "[CharacterController::GetTitlesData] request error");
+			return false;
+		}
+
+		BYTE slot = 0;
+		for (auto& item : items.as_array()) {
+			uint64_t databaseID = json::value_to<int>(item.at("characterTitleID"));
+
+			this->_player->character.Titles[slot].databaseID = databaseID;
+
+			this->_player->character.Titles[slot].title.Index = json::value_to<int>(item.at("titleID"));
+			this->_player->character.Titles[slot].title.Level = json::value_to<int>(item.at("titleLevel"));
+			this->_player->character.Titles[slot].title.Progress = json::value_to<int>(item.at("titleProgress"));
+
+			if (this->_player->character.Titles[slot].title.Index == this->activeTitle->Index) {
+				this->activeTitle = &this->_player->character.Titles[slot].title;
+			}
+
+			slot++;
+		}
+
+		return true;
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[CharacterController::GetTitlesData] error: %s", e.what());
+	}
+
+	return false;
+}
+
+
 #pragma endregion
 #pragma region "Save Data" 
 
@@ -231,7 +276,7 @@ boost::json::value CharacterController::CharacterToJSON() {
 		_character.emplace("AddinitionalConstituion", this->_player->character.Status.Attributes.Constitution);
 		_character.emplace("AddinitionalLuck", this->_player->character.Status.Attributes.Spirit);
 
-		_character.emplace("CharacterActiveTitleID", this->activeTitle.Index);
+		_character.emplace("CharacterActiveTitleID", this->activeTitle->Index);
 
 		return characterData;
 	}
@@ -262,9 +307,14 @@ bool CharacterController::SaveCharacter() {
 		Logger::Write(Error, "[CharacterController::SaveHotBarData] error while saving data!");
 		return false;
 	}
-
+	
 	if (!this->SaveBuffsData()) {
 		Logger::Write(Error, "[CharacterController::SaveBuffsData] error while saving data!");
+		return false;
+	}
+
+	if (!this->SaveTitlesData()) {
+		Logger::Write(Error, "[CharacterController::SaveTitlesData] error while saving data!");
 		return false;
 	}
 
@@ -389,6 +439,46 @@ bool CharacterController::SaveBuffsData() {
 	return true;
 }
 
+bool CharacterController::SaveTitlesData() {
+	json::value data = json::value();
+
+	json::array& items = data.emplace_array();
+
+	try {
+
+		for (int i = 0; i < 96; i++) {
+			json::value _holder;
+			json::object& item = _holder.emplace_object();
+
+			item.emplace("CharacterTitleID", this->_player->character.Titles[i].databaseID);
+
+			item.emplace("TitleStatus", 1);
+			item.emplace("CharacterID", this->_characterId);
+			item.emplace("TitleID", this->_player->character.Titles[i].title.Index);
+			item.emplace("TitleLevel", this->_player->character.Titles[i].title.Level);
+			item.emplace("TitleProgress", this->_player->character.Titles[i].title.Progress);
+			
+			items.emplace_back(item);
+		}
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[CharacterController::SaveTitlesData] error: %s", e.what());
+		return false;
+	}
+
+
+	WebHandler webHandler;
+
+	json::value response;
+
+	if (!webHandler.PostCharacterTitles(this->_characterId, data, &response)) {
+		return false;
+	}
+
+	return true;
+}
+
+
 #pragma endregion
 
 bool CharacterController::SendToWorld() {
@@ -457,17 +547,17 @@ bool CharacterController::SendToWorld() {
 #pragma endregion
 #pragma region "Set Titles List"
 
-	Packet.ActiveTitle = this->activeTitle.Index;
+	Packet.ActiveTitle = this->activeTitle->Index;
 
 	for (BYTE i = 0; i < 96; i++) {
-		PTITLE CurrentTitle = &this->_player->character.Titles[i].title;
+		PTitle CurrentTitle = &this->_player->character.Titles[i].title;
 
 		if (CurrentTitle->Index == 0) { continue; }
 
 		BYTE TitleCategory = (BYTE)trunc(CurrentTitle->Index / 8);
 		BYTE TitleSlot = CurrentTitle->Index % 8;
 
-		Packet.TitleCategoryLevel[TitleCategory] += CurrentTitle->GetLevelValue(TitleSlot);
+		Packet.TitleCategoryLevel[TitleCategory] += CurrentTitle->GetLevelValue(TitleSlot, CurrentTitle->Level);
 
 		switch (TitleList::Get(CurrentTitle->Index).Level[CurrentTitle->Level - 1].TitleType)
 		{
@@ -537,23 +627,29 @@ bool CharacterController::EnterIngame() {
 
 	this->_LoggedOn = time(0);
 
+	this->_player->SendEffect(0);
+
 	this->_player->timeLastBasicAttack = time(0);
 	this->_player->timeLastReceivedAttack = time(0);
 
 	this->_player->timeLastBuffTick = time(0);
 	this->_player->timeLastRegenerationTick = time(0);
 
+	this->_player->character.ExpPoints++;
+
 	return true;
 }
 
 void CharacterController::RespawnCharacter(bool sendSelf, SpawnType spawnType) {
-	auto procedureCall = std::bind(&GameEntity::SendCreateMob, this->_player, std::placeholders::_1, std::placeholders::_1);
-
 	if (sendSelf) {
 		this->_player->SendCreateMob(spawnType, this->_player->index);
 	}
 
-	this->_player->visibleController->ForEach(procedureCall, spawnType);
+	auto visibles = this->_player->visibleController->GetEntities();
+
+	for (auto entity : visibles) {
+		this->_player->SendCreateMob(spawnType, entity);
+	}
 }
 
 void CharacterController::UnspawnCharacter(bool sendSelf, DeleteType deleteType) {
@@ -623,4 +719,36 @@ void CharacterController::SendItemBarSlot(BYTE slot, BYTE destType, WORD index) 
 	packet.index = (index == 0) ? this->_player->character.ItemBar[slot].itemID : index;
 
 	this->_player->SendPacket(&packet, packet.header.Size);
+}
+
+void CharacterController::SendActiveTitle() {
+	PacketUpdateActiveTitle packet;
+
+	ZeroMemory(&packet, sizeof(PacketUpdateActiveTitle));
+
+	packet.Header.Size = sizeof(PacketUpdateActiveTitle);
+	packet.Header.Index = this->_player->index;
+	packet.Header.Code = PacketCode::PacketActiveTitle;
+
+	if (this->activeTitle != nullptr) {
+		packet.TitleIndex = this->activeTitle->Index;
+		packet.TitleLevel = this->activeTitle->Level - 1;
+	}
+
+	this->_player->visibleController->SendToVisible(&packet, packet.Header.Size);
+}
+
+void CharacterController::SendRefreshExperience() {
+	PacketCharacterLevel Packet;
+
+	ZeroMemory(&Packet, sizeof(Packet));
+
+	Packet.Header.Size = sizeof(Packet);
+	Packet.Header.Index = this->_player->index;
+	Packet.Header.Code = PacketCode::PacketCharacterLevel;
+
+	Packet.ExpPoints = this->_player->character.ExpPoints;
+	Packet.Level = this->_player->character.Level;
+
+	this->_player->SendPacket(&Packet, Packet.Header.Size);
 }

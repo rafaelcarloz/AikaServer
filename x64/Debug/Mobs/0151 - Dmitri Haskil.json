@@ -1,0 +1,28 @@
+{
+    "Index": 151,
+    "Name": "Dmitri Haskil",
+    "Face": 10,
+    "Hair": 151,
+    "Weapon": 1037,
+    "Health": 1360,
+    "Rotation": 65522,
+    "Level": 12,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1024,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3207,
+            "StartPosY": 1092,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3199,
+            "DestPosY": 1084,
+            "DestRange": 11,
+            "DestWait": 5
+        }
+    ]
+}

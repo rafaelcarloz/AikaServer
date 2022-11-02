@@ -1,0 +1,118 @@
+{
+    "Index": 238,
+    "Name": "Imago de Guru Violento",
+    "Face": 243,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1490,
+    "Rotation": 65428,
+    "Level": 29,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1027,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3256,
+            "StartPosY": 2043,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3255,
+            "DestPosY": 2050,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3266,
+            "StartPosY": 2040,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3273,
+            "DestPosY": 2050,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3256,
+            "StartPosY": 2045,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 3252,
+            "DestPosY": 2055,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3297,
+            "StartPosY": 2139,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3305,
+            "DestPosY": 2132,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3287,
+            "StartPosY": 2140,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3289,
+            "DestPosY": 2141,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3227,
+            "StartPosY": 2071,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3236,
+            "DestPosY": 2066,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3227,
+            "StartPosY": 2050,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3229,
+            "DestPosY": 2056,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3229,
+            "StartPosY": 2063,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3224,
+            "DestPosY": 2063,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3278,
+            "StartPosY": 2093,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 3275,
+            "DestPosY": 2096,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3270,
+            "StartPosY": 2062,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3263,
+            "DestPosY": 2064,
+            "DestRange": 8,
+            "DestWait": 8
+        }
+    ]
+}

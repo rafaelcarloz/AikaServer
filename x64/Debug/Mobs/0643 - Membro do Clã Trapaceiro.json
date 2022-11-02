@@ -1,0 +1,208 @@
+{
+    "Index": 643,
+    "Name": "Membro do Clã Trapaceiro",
+    "Face": 329,
+    "Hair": 0,
+    "Weapon": 1472,
+    "Health": 3499,
+    "Rotation": 65473,
+    "Level": 44,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1024,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1995,
+            "StartPosY": 1855,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 1995,
+            "DestPosY": 1856,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1986,
+            "StartPosY": 1845,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1979,
+            "DestPosY": 1839,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1979,
+            "StartPosY": 1859,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 1986,
+            "DestPosY": 1857,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1964,
+            "StartPosY": 1864,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 1970,
+            "DestPosY": 1859,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1967,
+            "StartPosY": 1878,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 1958,
+            "DestPosY": 1868,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1973,
+            "StartPosY": 1847,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 1967,
+            "DestPosY": 1852,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1957,
+            "StartPosY": 1893,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 1966,
+            "DestPosY": 1891,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1949,
+            "StartPosY": 1877,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 1954,
+            "DestPosY": 1877,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1938,
+            "StartPosY": 1894,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 1926,
+            "DestPosY": 1885,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1939,
+            "StartPosY": 1909,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 1939,
+            "DestPosY": 1908,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1917,
+            "StartPosY": 1900,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 1906,
+            "DestPosY": 1899,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1909,
+            "StartPosY": 1919,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1898,
+            "DestPosY": 1919,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1887,
+            "StartPosY": 1912,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 1896,
+            "DestPosY": 1921,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1883,
+            "StartPosY": 1930,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 1889,
+            "DestPosY": 1935,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1859,
+            "StartPosY": 1936,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 1867,
+            "DestPosY": 1942,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1847,
+            "StartPosY": 1953,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 1843,
+            "DestPosY": 1947,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1830,
+            "StartPosY": 1945,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 1828,
+            "DestPosY": 1953,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1821,
+            "StartPosY": 1953,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 1818,
+            "DestPosY": 1958,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1799,
+            "StartPosY": 1938,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 1800,
+            "DestPosY": 1942,
+            "DestRange": 11,
+            "DestWait": 8
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "Index": 149,
+    "Name": "Kerker da Morte Súbita",
+    "Face": 204,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2438,
+    "Rotation": 65510,
+    "Level": 23,
+    "Height": 11,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3185,
+            "StartPosY": 1141,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3194,
+            "DestPosY": 1140,
+            "DestRange": 12,
+            "DestWait": 5
+        }
+    ]
+}

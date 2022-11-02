@@ -1,0 +1,148 @@
+{
+    "Index": 389,
+    "Name": "Sharpy de Aréia",
+    "Face": 298,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2269,
+    "Rotation": 108,
+    "Level": 35,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2859,
+            "StartPosY": 2083,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2850,
+            "DestPosY": 2085,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2843,
+            "StartPosY": 2074,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2849,
+            "DestPosY": 2075,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2820,
+            "StartPosY": 2098,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 2827,
+            "DestPosY": 2086,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2981,
+            "StartPosY": 2059,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2983,
+            "DestPosY": 2069,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2950,
+            "StartPosY": 2075,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2961,
+            "DestPosY": 2082,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2924,
+            "StartPosY": 2065,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2925,
+            "DestPosY": 2064,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2890,
+            "StartPosY": 2054,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2891,
+            "DestPosY": 2059,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2875,
+            "StartPosY": 2070,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 2886,
+            "DestPosY": 2070,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2880,
+            "StartPosY": 2098,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2878,
+            "DestPosY": 2088,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2854,
+            "StartPosY": 2097,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 2846,
+            "DestPosY": 2094,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2821,
+            "StartPosY": 2069,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 2824,
+            "DestPosY": 2072,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2914,
+            "StartPosY": 2105,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 2919,
+            "DestPosY": 2106,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2899,
+            "StartPosY": 2078,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 2910,
+            "DestPosY": 2073,
+            "DestRange": 8,
+            "DestWait": 5
+        }
+    ]
+}

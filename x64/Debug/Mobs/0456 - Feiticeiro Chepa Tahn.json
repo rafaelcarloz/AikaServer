@@ -1,0 +1,158 @@
+{
+    "Index": 456,
+    "Name": "Feiticeiro Chepa Tahn",
+    "Face": 327,
+    "Hair": 0,
+    "Weapon": 1471,
+    "Health": 2677,
+    "Rotation": 0,
+    "Level": 43,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2047,
+            "StartPosY": 2016,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2050,
+            "DestPosY": 2014,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2046,
+            "StartPosY": 2001,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2042,
+            "DestPosY": 1998,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2040,
+            "StartPosY": 1988,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 2050,
+            "DestPosY": 1996,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2025,
+            "StartPosY": 2040,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2036,
+            "DestPosY": 2034,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2018,
+            "StartPosY": 2028,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2011,
+            "DestPosY": 2039,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2008,
+            "StartPosY": 2008,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2000,
+            "DestPosY": 2020,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1983,
+            "StartPosY": 2045,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 1974,
+            "DestPosY": 2040,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1958,
+            "StartPosY": 2013,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 1956,
+            "DestPosY": 2001,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1963,
+            "StartPosY": 2067,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 1971,
+            "DestPosY": 2060,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1939,
+            "StartPosY": 2059,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 1948,
+            "DestPosY": 2052,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1941,
+            "StartPosY": 2049,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 1951,
+            "DestPosY": 2046,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2089,
+            "StartPosY": 1949,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2091,
+            "DestPosY": 1950,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2086,
+            "StartPosY": 1979,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2074,
+            "DestPosY": 1986,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2082,
+            "StartPosY": 1964,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 2091,
+            "DestPosY": 1956,
+            "DestRange": 11,
+            "DestWait": 7
+        }
+    ]
+}

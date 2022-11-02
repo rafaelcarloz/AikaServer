@@ -6,3 +6,4 @@
 /.vs
 /Debug
 /*.pdb
+/x64/debug/*.pdd

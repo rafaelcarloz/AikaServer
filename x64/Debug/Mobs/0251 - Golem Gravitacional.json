@@ -1,0 +1,238 @@
+{
+    "Index": 251,
+    "Name": "Golem Gravitacional",
+    "Face": 270,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2606,
+    "Rotation": 65518,
+    "Level": 30,
+    "Height": 11,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1030,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3425,
+            "StartPosY": 2063,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 3433,
+            "DestPosY": 2061,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3451,
+            "StartPosY": 2066,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3445,
+            "DestPosY": 2078,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3497,
+            "StartPosY": 2061,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3501,
+            "DestPosY": 2055,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3335,
+            "StartPosY": 2054,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3345,
+            "DestPosY": 2059,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3344,
+            "StartPosY": 2051,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 3354,
+            "DestPosY": 2062,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3556,
+            "StartPosY": 2081,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 3550,
+            "DestPosY": 2080,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3519,
+            "StartPosY": 2124,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 3511,
+            "DestPosY": 2133,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3562,
+            "StartPosY": 2115,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3556,
+            "DestPosY": 2106,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3542,
+            "StartPosY": 2128,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3543,
+            "DestPosY": 2129,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3611,
+            "StartPosY": 1966,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3604,
+            "DestPosY": 1966,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3615,
+            "StartPosY": 1999,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3611,
+            "DestPosY": 1998,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3598,
+            "StartPosY": 1987,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3590,
+            "DestPosY": 1989,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3470,
+            "StartPosY": 2062,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 3462,
+            "DestPosY": 2051,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3374,
+            "StartPosY": 2106,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3382,
+            "DestPosY": 2108,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3376,
+            "StartPosY": 2113,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3386,
+            "DestPosY": 2115,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3543,
+            "StartPosY": 2103,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3553,
+            "DestPosY": 2115,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3572,
+            "StartPosY": 2079,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 3573,
+            "DestPosY": 2082,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3571,
+            "StartPosY": 2113,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3573,
+            "DestPosY": 2124,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3546,
+            "StartPosY": 2130,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3545,
+            "DestPosY": 2125,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3428,
+            "StartPosY": 2070,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3421,
+            "DestPosY": 2071,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3608,
+            "StartPosY": 1973,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 3614,
+            "DestPosY": 1961,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3617,
+            "StartPosY": 1995,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3624,
+            "DestPosY": 1990,
+            "DestRange": 6,
+            "DestWait": 7
+        }
+    ]
+}

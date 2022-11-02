@@ -1,0 +1,28 @@
+{
+    "Index": 33,
+    "Name": "Sentamu",
+    "Face": 255,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1612,
+    "Rotation": 240,
+    "Level": 17,
+    "Height": 11,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 63744,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3534,
+            "StartPosY": 1299,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 3535,
+            "DestPosY": 1301,
+            "DestRange": 8,
+            "DestWait": 8
+        }
+    ]
+}

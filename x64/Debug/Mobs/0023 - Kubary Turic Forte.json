@@ -1,0 +1,418 @@
+{
+    "Index": 23,
+    "Name": "Kubary Turic Forte",
+    "Face": 212,
+    "Hair": 0,
+    "Weapon": 1434,
+    "Health": 544,
+    "Rotation": 44,
+    "Level": 12,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 63488,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3412,
+            "StartPosY": 1211,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3418,
+            "DestPosY": 1215,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3413,
+            "StartPosY": 1225,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3410,
+            "DestPosY": 1236,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3488,
+            "StartPosY": 1107,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3487,
+            "DestPosY": 1100,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3480,
+            "StartPosY": 1115,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3492,
+            "DestPosY": 1107,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3464,
+            "StartPosY": 1144,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3460,
+            "DestPosY": 1146,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3449,
+            "StartPosY": 1136,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3451,
+            "DestPosY": 1142,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3433,
+            "StartPosY": 1139,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 3433,
+            "DestPosY": 1143,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3403,
+            "StartPosY": 1130,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3402,
+            "DestPosY": 1134,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3417,
+            "StartPosY": 1137,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3420,
+            "DestPosY": 1135,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3374,
+            "StartPosY": 1149,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3364,
+            "DestPosY": 1140,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3400,
+            "StartPosY": 1143,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3395,
+            "DestPosY": 1153,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3418,
+            "StartPosY": 1150,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3414,
+            "DestPosY": 1141,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3406,
+            "StartPosY": 1158,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3415,
+            "DestPosY": 1149,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3412,
+            "StartPosY": 1123,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3401,
+            "DestPosY": 1120,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3476,
+            "StartPosY": 1122,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 3474,
+            "DestPosY": 1122,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3378,
+            "StartPosY": 1084,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3376,
+            "DestPosY": 1077,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3353,
+            "StartPosY": 1099,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3353,
+            "DestPosY": 1110,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3383,
+            "StartPosY": 1122,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3388,
+            "DestPosY": 1127,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3377,
+            "StartPosY": 1136,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3380,
+            "DestPosY": 1130,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3377,
+            "StartPosY": 1139,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3389,
+            "DestPosY": 1146,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3347,
+            "StartPosY": 1142,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3358,
+            "DestPosY": 1152,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3358,
+            "StartPosY": 1214,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3349,
+            "DestPosY": 1210,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3394,
+            "StartPosY": 1155,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3389,
+            "DestPosY": 1146,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3391,
+            "StartPosY": 1085,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3400,
+            "DestPosY": 1086,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3375,
+            "StartPosY": 1204,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3369,
+            "DestPosY": 1216,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3366,
+            "StartPosY": 1200,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3374,
+            "DestPosY": 1211,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3396,
+            "StartPosY": 1192,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3393,
+            "DestPosY": 1198,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3392,
+            "StartPosY": 1248,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3398,
+            "DestPosY": 1254,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3367,
+            "StartPosY": 1221,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3369,
+            "DestPosY": 1225,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3412,
+            "StartPosY": 1260,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3415,
+            "DestPosY": 1264,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3416,
+            "StartPosY": 1251,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3406,
+            "DestPosY": 1239,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3381,
+            "StartPosY": 1248,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3392,
+            "DestPosY": 1238,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3399,
+            "StartPosY": 1241,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3400,
+            "DestPosY": 1239,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3402,
+            "StartPosY": 1199,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3393,
+            "DestPosY": 1196,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3414,
+            "StartPosY": 1197,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 3407,
+            "DestPosY": 1203,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3376,
+            "StartPosY": 1259,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3373,
+            "DestPosY": 1249,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3404,
+            "StartPosY": 1186,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3402,
+            "DestPosY": 1195,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3420,
+            "StartPosY": 1179,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3426,
+            "DestPosY": 1178,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3430,
+            "StartPosY": 1187,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3437,
+            "DestPosY": 1179,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3414,
+            "StartPosY": 1207,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3404,
+            "DestPosY": 1211,
+            "DestRange": 8,
+            "DestWait": 4
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "Index": 39,
+    "Name": "Albateron Pele Apodrecida",
+    "Face": 204,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1988,
+    "Rotation": 44,
+    "Level": 19,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3248,
+            "StartPosY": 1427,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3237,
+            "DestPosY": 1423,
+            "DestRange": 12,
+            "DestWait": 8
+        }
+    ]
+}

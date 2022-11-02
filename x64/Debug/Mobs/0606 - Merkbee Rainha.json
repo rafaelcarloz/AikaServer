@@ -1,0 +1,28 @@
+{
+    "Index": 606,
+    "Name": "Merkbee Rainha",
+    "Face": 302,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 6943,
+    "Rotation": 290,
+    "Level": 39,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2757,
+            "StartPosY": 1743,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 2762,
+            "DestPosY": 1740,
+            "DestRange": 6,
+            "DestWait": 8
+        }
+    ]
+}

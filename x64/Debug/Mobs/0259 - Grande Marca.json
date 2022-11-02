@@ -1,0 +1,28 @@
+{
+    "Index": 259,
+    "Name": "Grande Marca",
+    "Face": 269,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 12342,
+    "Rotation": 116,
+    "Level": 23,
+    "Height": 16,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1027,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3311,
+            "StartPosY": 1594,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3314,
+            "DestPosY": 1587,
+            "DestRange": 10,
+            "DestWait": 8
+        }
+    ]
+}

@@ -1,0 +1,168 @@
+{
+    "Index": 580,
+    "Name": "Espectador do Espírito Malígno",
+    "Face": 317,
+    "Hair": 0,
+    "Weapon": 1504,
+    "Health": 4195,
+    "Rotation": 44,
+    "Level": 47,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1028,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1753,
+            "StartPosY": 1783,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 1744,
+            "DestPosY": 1772,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1726,
+            "StartPosY": 1755,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 1737,
+            "DestPosY": 1762,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1726,
+            "StartPosY": 1769,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 1737,
+            "DestPosY": 1770,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1736,
+            "StartPosY": 1750,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 1737,
+            "DestPosY": 1761,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1749,
+            "StartPosY": 1804,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 1757,
+            "DestPosY": 1808,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1763,
+            "StartPosY": 1814,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 1765,
+            "DestPosY": 1811,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1781,
+            "StartPosY": 1803,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 1773,
+            "DestPosY": 1800,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1757,
+            "StartPosY": 1806,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 1769,
+            "DestPosY": 1798,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1763,
+            "StartPosY": 1812,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 1773,
+            "DestPosY": 1809,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1779,
+            "StartPosY": 1800,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 1778,
+            "DestPosY": 1797,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1754,
+            "StartPosY": 1781,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 1746,
+            "DestPosY": 1781,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1725,
+            "StartPosY": 1763,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 1713,
+            "DestPosY": 1762,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1734,
+            "StartPosY": 1749,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 1735,
+            "DestPosY": 1748,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1779,
+            "StartPosY": 1760,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 1772,
+            "DestPosY": 1749,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1770,
+            "StartPosY": 1778,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 1774,
+            "DestPosY": 1775,
+            "DestRange": 8,
+            "DestWait": 8
+        }
+    ]
+}

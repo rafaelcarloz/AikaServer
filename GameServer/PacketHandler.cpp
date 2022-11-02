@@ -8,6 +8,8 @@
 #include "ServerInstance.h"
 #include "UseItemHandler.h"
 #include "NPCHandler.h"
+#include "TitleList.h"
+#include "SkillHandler.h"
 
 
 namespace json = boost::json;
@@ -21,8 +23,10 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 		return false;
 	}
 
-	if (receivedBytes != (WORD)buffer[0]) {
-		printf("received different sizes: 0x%x || pSize: 0x%x \n", receivedBytes, (WORD)buffer[0]);
+	WORD receivedHeaderSize = reinterpret_cast<WORD&>(buffer[0]);
+
+	if (receivedBytes != receivedHeaderSize) {
+		Logger::Write(Warnings, "received different sizes: 0x%x || pSize: 0x%x \n", receivedBytes, receivedHeaderSize);
 	}
 
 	if (initialOffset > 0) {
@@ -39,26 +43,34 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 	switch (header.Code) {
 
 	case PacketCode::PacketMovemment: {
-		PacketHandler::RecvMovementPacket(player, buffer);
+		PacketHandler::OnMovementPacket(player, buffer);
+		break;
+	}
+	case PacketCode::PacketAttackTarget: {
+		SkillHandler::OnAttackTarget(player, buffer);
+		break;
+	}
+	case PacketCode::PacketSkillUse: {
+		SkillHandler::OnSkillUse(player, buffer);
 		break;
 	}
 
 	case PacketCode::PacketLoginRequest:
-		PacketHandler::RecvLoginRequest(player, buffer);
+		PacketHandler::OnLoginRequest(player, buffer);
 		break;
 	case PacketCode::PacketCharacterCreate:
-		PacketHandler::RecvCreateCharacter(player, buffer);
+		PacketHandler::OnCreateCharacter(player, buffer);
 		break;
 
 	case PacketCode::PacketCharacterDelete:
-		PacketHandler::RecvDeleteCharacter(player, buffer);
+		PacketHandler::OnDeleteCharacter(player, buffer);
 		break;
 	case PacketCode::PacketCharacterDeletePermanent:
-		PacketHandler::RecvDeleteCharacterPermanent(player, buffer);
+		PacketHandler::OnDeleteCharacterPermanent(player, buffer);
 		break;
 
 	case PacketCode::PacketNumericToken:
-		PacketHandler::RecvNumericTokenRequest(player, buffer);
+		PacketHandler::OnNumericTokenRequest(player, buffer);
 		break;
 
 	case PacketCode::PacketAHackStatusCheck:
@@ -69,48 +81,49 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 		break;
 
 	case PacketCode::PacketRevive:
-		PacketHandler::RecvRevivePlayerPacket(player, buffer);
+		PacketHandler::OnRevivePlayerPacket(player, buffer);
 		break;
 	case PacketCode::PacketCharacterAction:
-		PacketHandler::RecvCharacterActionPacket(player, buffer);
+		PacketHandler::OnCharacterActionPacket(player, buffer);
 		break;
 	case PacketCode::PacketCharacterRotation:
-		PacketHandler::RecvRotationPacket(player, buffer);
+		PacketHandler::OnRotationPacket(player, buffer);
 		break;
 
 	case PacketCode::PacketOpenNPC:
-		PacketHandler::RecvOpenNPCPacket(player, buffer);
+		PacketHandler::OnOpenNPCPacket(player, buffer);
 		break;
 
 	case PacketCode::PacketMoveItem:
-		PacketHandler::RecvMoveItemPacket(player, buffer);
+		PacketHandler::OnMoveItemPacket(player, buffer);
 		break;
 	case PacketCode::PacketUseItem:
-		PacketHandler::RecvUseItemPacket(player, buffer);
+		PacketHandler::OnUseItemPacket(player, buffer);
 		break;
 	case PacketCode::PacketItemBar:
-		PacketHandler::RecvItemBarPacket(player, buffer);
+		PacketHandler::OnItemBarPacket(player, buffer);
 		break;
 	case PacketCode::PacketDeleteItem:
-		PacketHandler::RecvDeleteItemPacket(player, buffer);
+		PacketHandler::OnDeleteItemPacket(player, buffer);
 		break;
 	case PacketCode::PacketJoinItems:
-		PacketHandler::RecvGroupItemsPacket(player, buffer);
+		PacketHandler::OnGroupItemsPacket(player, buffer);
 		break;
 	case PacketCode::PacketSplitItem:
-		PacketHandler::RecvUngroupItemsPacket(player, buffer);
+		PacketHandler::OnUngroupItemsPacket(player, buffer);
 		break;
 
 	case PacketCode::PacketCloseUsingNPC:
-		PacketHandler::RecvCloseNPC(player, buffer);
+		PacketHandler::OnCloseNPC(player, buffer);
 		break;
-	case PacketCode::PacketChat:
-		player->SendSignalData(PacketCode::PacketDevirInfoRequest, 01);
+
+	case PacketCode::PacketActiveTitle:
+		PacketHandler::OnUpdateActiveTitlePacket(player, buffer);
 		break;
 	
 
 	default:
-		Logger::Write(Logger::Format("recv unknown packet => size: %x - opcode: %x", header.Size, header.Code), Packets);
+		Logger::Write(Logger::Format("On unknown packet => size: %x - opcode: %x", header.Size, header.Code), Packets);
 
 		if (LOG_PACKETS == 1) {
 			Logger::WritePackets(buffer, header.Size);
@@ -122,7 +135,7 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 	return true;
 }
 
-bool PacketHandler::RecvLoginRequest(PPlayer player, char* buffer) {
+bool PacketHandler::OnLoginRequest(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketLoginRequest&>(buffer[0]);
 
 	std::string username(packet.Username);
@@ -152,7 +165,7 @@ bool PacketHandler::RecvLoginRequest(PPlayer player, char* buffer) {
 }
 
 
-bool PacketHandler::RecvCreateCharacter(PPlayer player, char* buffer) {
+bool PacketHandler::OnCreateCharacter(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketCharacterCreate&>(buffer[0]);
 
 	ItemList* itemList = ItemList::GetInstance();
@@ -214,7 +227,7 @@ bool PacketHandler::RecvCreateCharacter(PPlayer player, char* buffer) {
 		}
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvCreateCharacter_Character] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnCreateCharacter_Character] error: %s", e.what());
 	}
 
 #pragma endregion
@@ -309,7 +322,7 @@ bool PacketHandler::RecvCreateCharacter(PPlayer player, char* buffer) {
 		}
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvCreateCharacter_Items] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnCreateCharacter_Items] error: %s", e.what());
 	}
 
 #pragma endregion
@@ -346,7 +359,7 @@ bool PacketHandler::RecvCreateCharacter(PPlayer player, char* buffer) {
 		}
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvCreateCharacter_Skills] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnCreateCharacter_Skills] error: %s", e.what());
 	}
 
 #pragma endregion
@@ -383,7 +396,7 @@ bool PacketHandler::RecvCreateCharacter(PPlayer player, char* buffer) {
 		}
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvCreateCharacter_Skills] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnCreateCharacter_Skills] error: %s", e.what());
 	}
 
 #pragma endregion
@@ -401,7 +414,7 @@ bool PacketHandler::RecvCreateCharacter(PPlayer player, char* buffer) {
 	return true;
 }
 
-bool PacketHandler::RecvDeleteCharacter(PPlayer player, char* buffer) {
+bool PacketHandler::OnDeleteCharacter(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketCharacterDelete&>(buffer[0]);
 
 	if (packet.AcountIndex != player->account->accountId) {
@@ -423,7 +436,7 @@ bool PacketHandler::RecvDeleteCharacter(PPlayer player, char* buffer) {
 		}
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvDeleteCharacter] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnDeleteCharacter] error: %s", e.what());
 		return true;
 	}
 
@@ -440,7 +453,7 @@ bool PacketHandler::RecvDeleteCharacter(PPlayer player, char* buffer) {
 		characterId = json::value_to<int>(player->_characterList[packet.SlotIndex].at("characterID"));
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvDeleteCharacter] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnDeleteCharacter] error: %s", e.what());
 		return true;
 	}
 
@@ -466,7 +479,7 @@ bool PacketHandler::RecvDeleteCharacter(PPlayer player, char* buffer) {
 	return true;
 }
 
-bool PacketHandler::RecvDeleteCharacterPermanent(PPlayer player, char* buffer) {
+bool PacketHandler::OnDeleteCharacterPermanent(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketCharacterDeletePermanent&>(buffer[0]);
 
 	if (packet.AcountIndex != player->account->accountId) {
@@ -488,7 +501,7 @@ bool PacketHandler::RecvDeleteCharacterPermanent(PPlayer player, char* buffer) {
 		}
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvDeleteCharacterPermanent] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnDeleteCharacterPermanent] error: %s", e.what());
 		return true;
 	}
 
@@ -505,7 +518,7 @@ bool PacketHandler::RecvDeleteCharacterPermanent(PPlayer player, char* buffer) {
 		characterId = json::value_to<int>(player->_characterList[packet.SlotIndex].at("characterID"));
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvDeleteCharacterPermanent] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnDeleteCharacterPermanent] error: %s", e.what());
 		return true;
 	}
 
@@ -518,7 +531,7 @@ bool PacketHandler::RecvDeleteCharacterPermanent(PPlayer player, char* buffer) {
 		}
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvDeleteCharacterPermanent] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnDeleteCharacterPermanent] error: %s", e.what());
 		return true;
 	}
 
@@ -545,7 +558,7 @@ bool PacketHandler::RecvDeleteCharacterPermanent(PPlayer player, char* buffer) {
 }
 
 
-bool PacketHandler::RecvNumericTokenRequest(PPlayer player, char* buffer) {
+bool PacketHandler::OnNumericTokenRequest(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketNumericToken&>(buffer[0]);
 
 	if (packet.SlotIndex > 2) {
@@ -565,7 +578,7 @@ bool PacketHandler::RecvNumericTokenRequest(PPlayer player, char* buffer) {
 		}
 	}
 	catch (std::exception e) {
-		Logger::Write(Error, "[PacketHandler::RecvNumericTokenRequest] error: %s", e.what());
+		Logger::Write(Error, "[PacketHandler::OnNumericTokenRequest] error: %s", e.what());
 		return true;
 	}
 
@@ -630,38 +643,38 @@ bool PacketHandler::RecvNumericTokenRequest(PPlayer player, char* buffer) {
 }
 
 
-bool PacketHandler::RecvMovementPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnMovementPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketMovemment&>(buffer[0]);
 
 	player->position = packet.Destination;
 
-	player->visibleController->SendToVisible(&packet, packet.Header.Size, false);
+	player->SendMovemment(player->position, packet.MoveType, packet.Speed);
 
 	return true;
 }
 
-bool PacketHandler::RecvRotationPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnRotationPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketSignalData&>(buffer[0]);
 
 	player->rotation = packet.Data;
 
 
-	player->visibleController->SendToVisible(&packet, packet.Header.Size, false);
+	player->SendRotation();
 
 	return true;
 }
 
-bool PacketHandler::RecvCharacterActionPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnCharacterActionPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketCharacterAction&>(buffer[0]);
 
-	player->visibleController->SendToVisible(&packet, packet.Header.Size, false);
+	player->SendAction(packet.actionId);
 
 	return true;
 }
 
 
 
-bool PacketHandler::RecvMoveItemPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnMoveItemPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketMoveItem&>(buffer[0]);
 
 	if (!player->inventoryController.MoveItem(packet.SrcType, packet.SrcSlot, packet.DestType, packet.DestSlot)) {
@@ -676,13 +689,13 @@ bool PacketHandler::RecvMoveItemPacket(PPlayer player, char* buffer) {
 	return true;
 }
 
-bool PacketHandler::RecvDeleteItemPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnDeleteItemPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketDeleteItem&>(buffer[0]);
 
 	return player->inventoryController.DeleteItem((SlotType)packet.SlotType, packet.Slot);
 }
 
-bool PacketHandler::RecvGroupItemsPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnGroupItemsPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketJoinItems&>(buffer[0]);
 
 	if (packet.SrcSlot > 59 || packet.DestSlot > 59) {
@@ -700,13 +713,13 @@ bool PacketHandler::RecvGroupItemsPacket(PPlayer player, char* buffer) {
 	player->inventoryController.SendRefreshSlot(SlotInventory, packet.DestSlot, *destItem);
 }
 
-bool PacketHandler::RecvUngroupItemsPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnUngroupItemsPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketSplitItem&>(buffer[0]);
 
 	return player->inventoryController.UngroupItems((SlotType)packet.SlotType, (BYTE)packet.Slot, (WORD)packet.Amount);
 }
 
-bool PacketHandler::RecvRevivePlayerPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnRevivePlayerPacket(PPlayer player, char* buffer) {
 	if (!player->IsDead()) {
 		return true;
 	}
@@ -730,7 +743,7 @@ bool PacketHandler::RecvRevivePlayerPacket(PPlayer player, char* buffer) {
 }
 
 
-bool PacketHandler::RecvUseItemPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnUseItemPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketUseItem&>(buffer[0]);
 
 	if (player->IsDead()) {
@@ -758,7 +771,7 @@ bool PacketHandler::RecvUseItemPacket(PPlayer player, char* buffer) {
 }
 
 
-bool PacketHandler::RecvOpenNPCPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnOpenNPCPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketOpenNPC&>(buffer[0]);
 
 	if (packet.Index == 0 && packet.Type1 == 8) {
@@ -785,7 +798,7 @@ bool PacketHandler::RecvOpenNPCPacket(PPlayer player, char* buffer) {
 	return true;
 }
 
-bool PacketHandler::RecvCloseNPC(PPlayer player, char* buffer) {
+bool PacketHandler::OnCloseNPC(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketSignalData&>(buffer[0]);
 
 	if (player->usingNPC == nullptr) {
@@ -799,7 +812,7 @@ bool PacketHandler::RecvCloseNPC(PPlayer player, char* buffer) {
 }
 
 
-bool PacketHandler::RecvItemBarPacket(PPlayer player, char* buffer) {
+bool PacketHandler::OnItemBarPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketItemBar&>(buffer[0]);
 
 	if (packet.destSlot >= 24) {
@@ -820,5 +833,35 @@ bool PacketHandler::RecvItemBarPacket(PPlayer player, char* buffer) {
 
 	player->characterController->SendItemBarSlot(packet.destSlot);
 
+	return true;
+}
+
+
+bool PacketHandler::OnUpdateActiveTitlePacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketUpdateActiveTitle&>(buffer[0]);
+
+	if (packet.TitleIndex == 0) {
+		player->characterController->activeTitle = nullptr;
+
+		player->characterController->SendActiveTitle();
+		return true;
+	}
+
+	try {
+		for (int i = 0; i < 96; i++) {
+			if (player->character.Titles[i].title.Index != packet.TitleIndex) {
+				continue;
+			}
+
+			player->characterController->activeTitle = &player->character.Titles[i].title;
+			break;
+		}
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[PacketHandler::OnUpdateActiveTitlePacket] invalid title data -> titleId: %d", packet.TitleIndex);
+		return false;
+	}
+
+	player->characterController->SendActiveTitle();
 	return true;
 }

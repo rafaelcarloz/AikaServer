@@ -23,7 +23,7 @@ namespace {
 	const UINT32 NPC_ID_END = 3047;
 
 	const UINT32 MOB_ID_START = 3048;
-	const UINT32 MOB_ID_END = 6099;
+	const UINT32 MOB_ID_END = 9147;
 }
 
 enum EntityType { INVALID_ENTITY = 0, EntityPlayer = 1, EntityNPC = 2048, EntityMob = 3048 };

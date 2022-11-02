@@ -1,23 +1,93 @@
 {
-	"Index" : 2477,
-	"Name" : "2497",
-	"Description" : "Honor Cloth Merchant",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 90,
-	"Position" : [1827,3745],
-	"Equip" : [114,13,0,13135,0,13110,156,0],
-	"Inventory" : [12850,12880,12910,12940,0,12970,13000,13030,13060,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Nothing_25", "type": 64 },
-		"3" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2477,
+    "Name": "2497",
+    "Description": "Honor Cloth Merchant",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 90,
+    "Sizes": {
+        "Height": 6,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 204
+    },
+    "Position": [
+        1827.40002441406,
+        3745.39990234375
+    ],
+    "Equip": [
+        114,
+        13,
+        0,
+        13135,
+        0,
+        13110,
+        156,
+        0
+    ],
+    "Inventory": [
+        12850,
+        12880,
+        12910,
+        12940,
+        0,
+        12970,
+        13000,
+        13030,
+        13060,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Nothing_25",
+            "type": 64,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

@@ -49,7 +49,7 @@ bool SkillData::Get(const WORD itemId, SkillFromList* item) {
 SkillFromList SkillData::Get(const WORD itemId) {
 	SkillFromList item = SkillFromList();
 
-	if (!this->Get(itemId, &item)) {
+	if (!SkillData::GetInstance()->Get(itemId, &item)) {
 		throw std::exception(Logger::Format("skill [%d] not found", itemId).c_str());
 	}
 
@@ -59,7 +59,7 @@ SkillFromList SkillData::Get(const WORD itemId) {
 SkillFromList SkillData::operator[](const WORD itemId) {
 	SkillFromList item = SkillFromList();
 
-	if (!this->Get(itemId, &item)) {
+	if (!SkillData::GetInstance()->Get(itemId, &item)) {
 		throw std::exception("skill not found");
 	}
 

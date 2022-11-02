@@ -283,5 +283,35 @@ bool WebHandler::PostCharacterBuffs(int characterId, const json::value items, js
 }
 
 #pragma endregion
+#pragma region "Titles"
+
+bool WebHandler::GetCharacterTitles(int characterId, json::value* response) {
+	HttpRequest reqquest(this->_domain, this->_port, this->_https);
+	HttpResponse httpResponse;
+
+	std::wstring url = L"/characters/" + std::to_wstring(characterId) + L"/titles";
+
+	reqquest.Get(url,
+		this->_requestHeader,
+		httpResponse);
+
+	return this->ProcessResponse(httpResponse, response);
+}
+
+bool WebHandler::PostCharacterTitles(int characterId, const json::value items, json::value* response) {
+	HttpRequest reqquest(this->_domain, this->_port, this->_https);
+	HttpResponse httpResponse;
+
+	std::wstring url = L"/characters/" + std::to_wstring(characterId) + L"/titles";
+
+	reqquest.Post(url,
+		this->_requestHeader,
+		json::serialize(items),
+		httpResponse);
+
+	return this->ProcessResponse(httpResponse, response);
+}
+
+#pragma endregion
 
 

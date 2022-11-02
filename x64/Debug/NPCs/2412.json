@@ -1,22 +1,88 @@
 {
-	"Index" : 2412,
-	"Name" : "2204",
-	"Description" : "Return to Epheso",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 270,
-	"Position" : [1657,3685],
-	"Equip" : [445,0,0,0,0,0,1514,0],
-	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Missao", "type": 2 },
-		"1" : {"text": "Teleportar", "type": 3 },
-		"2" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2412,
+    "Name": "2204",
+    "Description": "Return to Epheso",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 270,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 132
+    },
+    "Position": [
+        1657.40002441406,
+        3685.39990234375
+    ],
+    "Equip": [
+        445,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1514,
+        0
+    ],
+    "Inventory": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Teleportar",
+            "type": 3,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

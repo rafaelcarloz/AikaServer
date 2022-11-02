@@ -1,0 +1,78 @@
+{
+    "Index": 438,
+    "Name": "Juíz Pagão Leão Branco",
+    "Face": 311,
+    "Hair": 0,
+    "Weapon": 1467,
+    "Health": 7732,
+    "Rotation": 0,
+    "Level": 1329,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2364,
+            "StartPosY": 1614,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2376,
+            "DestPosY": 1623,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2344,
+            "StartPosY": 1615,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 2339,
+            "DestPosY": 1626,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2387,
+            "StartPosY": 1636,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2390,
+            "DestPosY": 1627,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2323,
+            "StartPosY": 1647,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 2324,
+            "DestPosY": 1646,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2322,
+            "StartPosY": 1642,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2312,
+            "DestPosY": 1649,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2348,
+            "StartPosY": 1634,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 2356,
+            "DestPosY": 1627,
+            "DestRange": 8,
+            "DestWait": 5
+        }
+    ]
+}

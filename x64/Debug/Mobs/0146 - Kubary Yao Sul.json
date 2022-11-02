@@ -1,0 +1,288 @@
+{
+    "Index": 146,
+    "Name": "Kubary Yao Sul",
+    "Face": 211,
+    "Hair": 0,
+    "Weapon": 1432,
+    "Health": 882,
+    "Rotation": 44,
+    "Level": 21,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64256,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3173,
+            "StartPosY": 1245,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3183,
+            "DestPosY": 1256,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3168,
+            "StartPosY": 1245,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3159,
+            "DestPosY": 1253,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3179,
+            "StartPosY": 1234,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3175,
+            "DestPosY": 1246,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3180,
+            "StartPosY": 1240,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3184,
+            "DestPosY": 1245,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3172,
+            "StartPosY": 1226,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 3179,
+            "DestPosY": 1218,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3171,
+            "StartPosY": 1234,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3174,
+            "DestPosY": 1232,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3173,
+            "StartPosY": 1221,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3173,
+            "DestPosY": 1227,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3163,
+            "StartPosY": 1219,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3169,
+            "DestPosY": 1208,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3139,
+            "StartPosY": 1191,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3130,
+            "DestPosY": 1192,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3139,
+            "StartPosY": 1200,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3133,
+            "DestPosY": 1210,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3164,
+            "StartPosY": 1200,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3168,
+            "DestPosY": 1197,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3178,
+            "StartPosY": 1193,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3184,
+            "DestPosY": 1192,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3238,
+            "StartPosY": 1155,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3247,
+            "DestPosY": 1166,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3171,
+            "StartPosY": 1191,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3164,
+            "DestPosY": 1179,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3163,
+            "StartPosY": 1166,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3161,
+            "DestPosY": 1168,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3163,
+            "StartPosY": 1162,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3170,
+            "DestPosY": 1170,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3185,
+            "StartPosY": 1158,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3196,
+            "DestPosY": 1166,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3184,
+            "StartPosY": 1155,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3181,
+            "DestPosY": 1152,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3205,
+            "StartPosY": 1166,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3205,
+            "DestPosY": 1175,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3205,
+            "StartPosY": 1158,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3206,
+            "DestPosY": 1161,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3204,
+            "StartPosY": 1150,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 3212,
+            "DestPosY": 1141,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3204,
+            "StartPosY": 1143,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3193,
+            "DestPosY": 1143,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3218,
+            "StartPosY": 1163,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3223,
+            "DestPosY": 1171,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3246,
+            "StartPosY": 1183,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 3257,
+            "DestPosY": 1188,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3234,
+            "StartPosY": 1189,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3246,
+            "DestPosY": 1192,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3240,
+            "StartPosY": 1166,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3246,
+            "DestPosY": 1157,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3247,
+            "StartPosY": 1190,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3246,
+            "DestPosY": 1198,
+            "DestRange": 12,
+            "DestWait": 5
+        }
+    ]
+}

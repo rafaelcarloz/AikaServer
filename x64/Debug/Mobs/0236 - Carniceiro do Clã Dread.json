@@ -1,0 +1,118 @@
+{
+    "Index": 236,
+    "Name": "Carniceiro do Clã Dread",
+    "Face": 235,
+    "Hair": 0,
+    "Weapon": 1431,
+    "Health": 1572,
+    "Rotation": 44,
+    "Level": 28,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3438,
+            "StartPosY": 2161,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 3439,
+            "DestPosY": 2151,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3457,
+            "StartPosY": 2167,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3466,
+            "DestPosY": 2177,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3501,
+            "StartPosY": 2164,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3490,
+            "DestPosY": 2172,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3526,
+            "StartPosY": 2226,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3527,
+            "DestPosY": 2230,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3534,
+            "StartPosY": 2167,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3535,
+            "DestPosY": 2176,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3537,
+            "StartPosY": 2166,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3532,
+            "DestPosY": 2158,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3329,
+            "StartPosY": 2177,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3340,
+            "DestPosY": 2171,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3352,
+            "StartPosY": 2208,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3341,
+            "DestPosY": 2199,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3657,
+            "StartPosY": 2121,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 3654,
+            "DestPosY": 2112,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3660,
+            "StartPosY": 2121,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3661,
+            "DestPosY": 2122,
+            "DestRange": 6,
+            "DestWait": 5
+        }
+    ]
+}

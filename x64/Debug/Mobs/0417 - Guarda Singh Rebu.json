@@ -1,0 +1,238 @@
+{
+    "Index": 417,
+    "Name": "Guarda Singh Rebu",
+    "Face": 297,
+    "Hair": 0,
+    "Weapon": 1458,
+    "Health": 2517,
+    "Rotation": 65383,
+    "Level": 37,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2771,
+            "StartPosY": 1884,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 2774,
+            "DestPosY": 1881,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2754,
+            "StartPosY": 1860,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2750,
+            "DestPosY": 1850,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2725,
+            "StartPosY": 1834,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 2733,
+            "DestPosY": 1826,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2730,
+            "StartPosY": 1888,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2739,
+            "DestPosY": 1876,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2695,
+            "StartPosY": 1804,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2689,
+            "DestPosY": 1801,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2700,
+            "StartPosY": 1804,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2705,
+            "DestPosY": 1798,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2671,
+            "StartPosY": 1899,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2662,
+            "DestPosY": 1887,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2683,
+            "StartPosY": 1908,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 2684,
+            "DestPosY": 1917,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2740,
+            "StartPosY": 1912,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 2739,
+            "DestPosY": 1906,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2755,
+            "StartPosY": 1908,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 2753,
+            "DestPosY": 1908,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2657,
+            "StartPosY": 1933,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 2653,
+            "DestPosY": 1929,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2714,
+            "StartPosY": 1866,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2706,
+            "DestPosY": 1878,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2695,
+            "StartPosY": 1851,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2683,
+            "DestPosY": 1842,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2690,
+            "StartPosY": 1878,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 2690,
+            "DestPosY": 1869,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2706,
+            "StartPosY": 1916,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 2716,
+            "DestPosY": 1924,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2766,
+            "StartPosY": 1925,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2771,
+            "DestPosY": 1930,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2697,
+            "StartPosY": 1938,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 2686,
+            "DestPosY": 1946,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2660,
+            "StartPosY": 1802,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 2662,
+            "DestPosY": 1795,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2646,
+            "StartPosY": 1812,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2644,
+            "DestPosY": 1803,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2638,
+            "StartPosY": 1958,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 2636,
+            "DestPosY": 1961,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2693,
+            "StartPosY": 1892,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 2689,
+            "DestPosY": 1899,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2622,
+            "StartPosY": 1914,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 2613,
+            "DestPosY": 1904,
+            "DestRange": 7,
+            "DestWait": 4
+        }
+    ]
+}

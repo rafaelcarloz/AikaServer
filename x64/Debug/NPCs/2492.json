@@ -1,22 +1,88 @@
 {
-	"Index" : 2492,
-	"Name" : "806",
-	"Description" : "Lead Observation Commander",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 0,
-	"Position" : [2224,590],
-	"Equip" : [20,7700,2955,2985,3015,3045,2514,2805],
-	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2492,
+    "Name": "806",
+    "Description": "Lead Observation Commander",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 0,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 219
+    },
+    "Position": [
+        2224.39990234375,
+        590.400024414062
+    ],
+    "Equip": [
+        20,
+        7700,
+        2955,
+        2985,
+        3015,
+        3045,
+        2514,
+        2805
+    ],
+    "Inventory": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

@@ -22,8 +22,6 @@ private:
 
 	std::mutex* _rwlock;
 
-	std::list<uint16_t> GetEntities();
-
 	bool AddToVisible(const WORD entityId);
 	void RemoveFromVisible(const WORD entityId);
 
@@ -35,6 +33,8 @@ public:
 
 	bool IsVisible();
 	void SetVisible(bool visivility);
+
+	std::list<uint16_t> GetEntities();
 
 	bool SendToVisible(LPVOID packet, WORD packetSize, bool sendSelf = true);
 	void ForEach(std::function<void(uint16_t, uint16_t)> procedure, uint16_t handleType = 0);

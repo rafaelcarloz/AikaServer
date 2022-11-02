@@ -1,23 +1,93 @@
 {
-	"Index" : 2340,
-	"Name" : "1844",
-	"Description" : "Lycan Cave Administrator",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 90,
-	"Position" : [521,2843],
-	"Equip" : [249,0,0,0,0,0,1509,0],
-	"Inventory" : [8348,8349,8350,8671,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Missao", "type": 2 },
-		"1" : {"text": "Entrar na Dungeon", "type": 26 },
-		"2" : {"text": "Loja", "type": 5 },
-		"3" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2340,
+    "Name": "1844",
+    "Description": "Lycan Cave Administrator",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 90,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 55
+    },
+    "Position": [
+        521.400024414063,
+        2843.39990234375
+    ],
+    "Equip": [
+        249,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1509,
+        0
+    ],
+    "Inventory": [
+        8348,
+        8349,
+        8350,
+        8671,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Entrar na Dungeon",
+            "type": 26,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

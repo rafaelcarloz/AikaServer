@@ -1,22 +1,88 @@
 {
-	"Index" : 2481,
-	"Name" : "2589",
-	"Description" : "Aitan Rescue Officer",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 90,
-	"Position" : [1222,857],
-	"Equip" : [226,0,0,0,0,0,1505,0],
-	"Inventory" : [6101,6102,6103,6104,6105,6106,6107,6108,6141,6109,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2481,
+    "Name": "2589",
+    "Description": "Aitan Rescue Officer",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 90,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 208
+    },
+    "Position": [
+        1222.40002441406,
+        857.400024414062
+    ],
+    "Equip": [
+        226,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1505,
+        0
+    ],
+    "Inventory": [
+        6101,
+        6102,
+        6103,
+        6104,
+        6105,
+        6106,
+        6107,
+        6108,
+        6141,
+        6109,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

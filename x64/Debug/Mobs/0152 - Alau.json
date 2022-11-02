@@ -1,0 +1,148 @@
+{
+    "Index": 152,
+    "Name": "Alau",
+    "Face": 237,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 408,
+    "Rotation": 179,
+    "Level": 11,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1026,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3174,
+            "StartPosY": 1001,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3162,
+            "DestPosY": 1003,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3177,
+            "StartPosY": 994,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3173,
+            "DestPosY": 989,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3184,
+            "StartPosY": 1003,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3184,
+            "DestPosY": 1000,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3181,
+            "StartPosY": 1010,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3192,
+            "DestPosY": 1008,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3175,
+            "StartPosY": 1066,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3178,
+            "DestPosY": 1055,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3207,
+            "StartPosY": 1028,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3217,
+            "DestPosY": 1039,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3176,
+            "StartPosY": 1049,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3166,
+            "DestPosY": 1044,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3191,
+            "StartPosY": 1055,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3191,
+            "DestPosY": 1045,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3212,
+            "StartPosY": 1031,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3206,
+            "DestPosY": 1036,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3201,
+            "StartPosY": 1034,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3211,
+            "DestPosY": 1037,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3185,
+            "StartPosY": 1052,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3178,
+            "DestPosY": 1047,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3208,
+            "StartPosY": 1037,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3203,
+            "DestPosY": 1042,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3212,
+            "StartPosY": 1024,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3201,
+            "DestPosY": 1027,
+            "DestRange": 11,
+            "DestWait": 4
+        }
+    ]
+}

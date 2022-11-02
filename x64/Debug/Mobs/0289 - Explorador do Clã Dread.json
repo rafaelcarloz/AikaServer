@@ -1,0 +1,98 @@
+{
+    "Index": 289,
+    "Name": "Explorador do Clã Dread",
+    "Face": 235,
+    "Hair": 0,
+    "Weapon": 1430,
+    "Health": 1572,
+    "Rotation": 71,
+    "Level": 28,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3424,
+            "StartPosY": 3518,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3418,
+            "DestPosY": 3512,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3424,
+            "StartPosY": 3542,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3418,
+            "DestPosY": 3534,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3478,
+            "StartPosY": 3517,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3488,
+            "DestPosY": 3523,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3478,
+            "StartPosY": 3548,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3470,
+            "DestPosY": 3543,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3513,
+            "StartPosY": 3519,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 3520,
+            "DestPosY": 3516,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3513,
+            "StartPosY": 3540,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 3523,
+            "DestPosY": 3542,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3561,
+            "StartPosY": 3539,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3562,
+            "DestPosY": 3549,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3561,
+            "StartPosY": 3521,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3558,
+            "DestPosY": 3514,
+            "DestRange": 9,
+            "DestWait": 4
+        }
+    ]
+}

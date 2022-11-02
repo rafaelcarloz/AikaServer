@@ -1,24 +1,98 @@
 {
-	"Index" : 2382,
-	"Name" : "1804",
-	"Description" : "Reinforcement",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 180,
-	"Position" : [848,1713],
-	"Equip" : [451,0,0,0,0,0,1494,0],
-	"Inventory" : [9035,9036,9037,9038,9039,9040,9041,0,0,0,9044,9045,9046,9047,9048,9049,9050,0,0,0,9063,9350,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Refinar", "type": 16 },
-		"2" : {"text": "Missao", "type": 2 },
-		"3" : {"text": "Loja", "type": 5 },
-		"4" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2382,
+    "Name": "1804",
+    "Description": "Reinforcement",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 180,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 99
+    },
+    "Position": [
+        848.400024414062,
+        1713.40002441406
+    ],
+    "Equip": [
+        451,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1494,
+        0
+    ],
+    "Inventory": [
+        9035,
+        9036,
+        9037,
+        9038,
+        9039,
+        9040,
+        9041,
+        0,
+        0,
+        0,
+        9044,
+        9045,
+        9046,
+        9047,
+        9048,
+        9049,
+        9050,
+        0,
+        0,
+        0,
+        9063,
+        9350,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Refinar",
+            "type": 16,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

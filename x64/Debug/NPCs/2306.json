@@ -1,22 +1,88 @@
 {
-	"Index" : 2306,
-	"Name" : "1954",
-	"Description" : "Dark Merchant",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 0,
-	"Position" : [3301,3147],
-	"Equip" : [235,0,0,0,0,0,1430,0],
-	"Inventory" : [4685,4676,4677,4678,4679,4545,4565,5113,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Missao", "type": 2 },
-		"1" : {"text": "Loja", "type": 5 },
-		"2" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2306,
+    "Name": "1954",
+    "Description": "Dark Merchant",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 0,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 18
+    },
+    "Position": [
+        3301.39990234375,
+        3147.39990234375
+    ],
+    "Equip": [
+        235,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1430,
+        0
+    ],
+    "Inventory": [
+        4685,
+        4676,
+        4677,
+        4678,
+        4679,
+        4545,
+        4565,
+        5113,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

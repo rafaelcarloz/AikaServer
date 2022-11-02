@@ -1,0 +1,28 @@
+{
+    "Index": 10,
+    "Name": "Lazil",
+    "Face": 253,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 640,
+    "Rotation": 65447,
+    "Level": 4,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3683,
+            "StartPosY": 896,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3694,
+            "DestPosY": 904,
+            "DestRange": 6,
+            "DestWait": 5
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "Index": 646,
+    "Name": "Lubna Fabian",
+    "Face": 41,
+    "Hair": 7709,
+    "Weapon": 1146,
+    "Health": 10430,
+    "Rotation": 44,
+    "Level": 48,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1620,
+            "StartPosY": 1860,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 1632,
+            "DestPosY": 1851,
+            "DestRange": 9,
+            "DestWait": 7
+        }
+    ]
+}

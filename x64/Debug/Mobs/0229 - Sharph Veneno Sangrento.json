@@ -1,0 +1,208 @@
+{
+    "Index": 229,
+    "Name": "Sharph Veneno Sangrento",
+    "Face": 240,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1502,
+    "Rotation": 134,
+    "Level": 27,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3604,
+            "StartPosY": 1800,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3603,
+            "DestPosY": 1790,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3660,
+            "StartPosY": 1927,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 3672,
+            "DestPosY": 1917,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3652,
+            "StartPosY": 1886,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3641,
+            "DestPosY": 1883,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3696,
+            "StartPosY": 1897,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3684,
+            "DestPosY": 1907,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3709,
+            "StartPosY": 1914,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3702,
+            "DestPosY": 1921,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3727,
+            "StartPosY": 1922,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3731,
+            "DestPosY": 1921,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3656,
+            "StartPosY": 1857,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3667,
+            "DestPosY": 1855,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3639,
+            "StartPosY": 1892,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3630,
+            "DestPosY": 1892,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3668,
+            "StartPosY": 1893,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 3658,
+            "DestPosY": 1894,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3604,
+            "StartPosY": 1803,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3616,
+            "DestPosY": 1805,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3621,
+            "StartPosY": 1827,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3627,
+            "DestPosY": 1830,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3621,
+            "StartPosY": 1812,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3632,
+            "DestPosY": 1809,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3594,
+            "StartPosY": 1821,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3603,
+            "DestPosY": 1811,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3617,
+            "StartPosY": 1812,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3614,
+            "DestPosY": 1808,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3592,
+            "StartPosY": 1822,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3588,
+            "DestPosY": 1826,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3727,
+            "StartPosY": 1983,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 3732,
+            "DestPosY": 1986,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3690,
+            "StartPosY": 1885,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3688,
+            "DestPosY": 1874,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3742,
+            "StartPosY": 1958,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3731,
+            "DestPosY": 1964,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3742,
+            "StartPosY": 1962,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3742,
+            "DestPosY": 1963,
+            "DestRange": 6,
+            "DestWait": 4
+        }
+    ]
+}

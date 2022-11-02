@@ -1,0 +1,148 @@
+{
+    "Index": 415,
+    "Name": "Tar Crenon",
+    "Face": 288,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1714,
+    "Rotation": 30,
+    "Level": 36,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1026,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2951,
+            "StartPosY": 1884,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2951,
+            "DestPosY": 1883,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3005,
+            "StartPosY": 1895,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 3015,
+            "DestPosY": 1898,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2980,
+            "StartPosY": 1937,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2971,
+            "DestPosY": 1948,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2945,
+            "StartPosY": 1965,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 2946,
+            "DestPosY": 1975,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2971,
+            "StartPosY": 1981,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2959,
+            "DestPosY": 1989,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2995,
+            "StartPosY": 1984,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3003,
+            "DestPosY": 1996,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3030,
+            "StartPosY": 1991,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3027,
+            "DestPosY": 1997,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3022,
+            "StartPosY": 1985,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3033,
+            "DestPosY": 1996,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3018,
+            "StartPosY": 2040,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3017,
+            "DestPosY": 2037,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3022,
+            "StartPosY": 2029,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3019,
+            "DestPosY": 2022,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3008,
+            "StartPosY": 2012,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 3000,
+            "DestPosY": 2011,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2998,
+            "StartPosY": 2030,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2987,
+            "DestPosY": 2042,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2973,
+            "StartPosY": 2002,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 2963,
+            "DestPosY": 2012,
+            "DestRange": 9,
+            "DestWait": 5
+        }
+    ]
+}

@@ -1,0 +1,148 @@
+{
+    "Index": 451,
+    "Name": "Mosqueteiro Leão Vermelho",
+    "Face": 308,
+    "Hair": 0,
+    "Weapon": 1464,
+    "Health": 2874,
+    "Rotation": 350,
+    "Level": 42,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2366,
+            "StartPosY": 2012,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 2361,
+            "DestPosY": 2006,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2368,
+            "StartPosY": 2045,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 2374,
+            "DestPosY": 2038,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2392,
+            "StartPosY": 2047,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2382,
+            "DestPosY": 2042,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2451,
+            "StartPosY": 2041,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2446,
+            "DestPosY": 2053,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2364,
+            "StartPosY": 2065,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 2355,
+            "DestPosY": 2076,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2392,
+            "StartPosY": 2110,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 2380,
+            "DestPosY": 2114,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2390,
+            "StartPosY": 2126,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2384,
+            "DestPosY": 2129,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2394,
+            "StartPosY": 2092,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 2403,
+            "DestPosY": 2085,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2373,
+            "StartPosY": 2082,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 2369,
+            "DestPosY": 2072,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2359,
+            "StartPosY": 2117,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2350,
+            "DestPosY": 2123,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2329,
+            "StartPosY": 2090,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2326,
+            "DestPosY": 2083,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2347,
+            "StartPosY": 2132,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2346,
+            "DestPosY": 2144,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2327,
+            "StartPosY": 2158,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2333,
+            "DestPosY": 2164,
+            "DestRange": 9,
+            "DestWait": 5
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+{
+    "Index": 416,
+    "Name": "Patrulha Singh Rebu",
+    "Face": 297,
+    "Hair": 0,
+    "Weapon": 1458,
+    "Health": 2517,
+    "Rotation": 44,
+    "Level": 37,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2741,
+            "StartPosY": 1863,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2750,
+            "DestPosY": 1852,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2710,
+            "StartPosY": 1893,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 2703,
+            "DestPosY": 1903,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2648,
+            "StartPosY": 1894,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 2638,
+            "DestPosY": 1886,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2661,
+            "StartPosY": 1893,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 2650,
+            "DestPosY": 1884,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2670,
+            "StartPosY": 1877,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 2670,
+            "DestPosY": 1879,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2649,
+            "StartPosY": 1912,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2637,
+            "DestPosY": 1906,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2667,
+            "StartPosY": 1944,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2674,
+            "DestPosY": 1941,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2662,
+            "StartPosY": 1978,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2651,
+            "DestPosY": 1976,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2701,
+            "StartPosY": 1852,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2713,
+            "DestPosY": 1846,
+            "DestRange": 7,
+            "DestWait": 6
+        }
+    ]
+}

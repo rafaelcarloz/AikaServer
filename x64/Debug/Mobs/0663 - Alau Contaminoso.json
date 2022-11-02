@@ -1,0 +1,178 @@
+{
+    "Index": 663,
+    "Name": "Alau Contaminoso",
+    "Face": 237,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 3196,
+    "Rotation": 44,
+    "Level": 47,
+    "Height": 11,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1026,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1887,
+            "StartPosY": 2122,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 1893,
+            "DestPosY": 2116,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1896,
+            "StartPosY": 2126,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 1905,
+            "DestPosY": 2120,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1892,
+            "StartPosY": 2124,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 1898,
+            "DestPosY": 2124,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1895,
+            "StartPosY": 2113,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 1889,
+            "DestPosY": 2108,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1867,
+            "StartPosY": 2174,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 1867,
+            "DestPosY": 2176,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1873,
+            "StartPosY": 2196,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 1876,
+            "DestPosY": 2188,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1897,
+            "StartPosY": 2160,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 1907,
+            "DestPosY": 2153,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1888,
+            "StartPosY": 2178,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1888,
+            "DestPosY": 2176,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1886,
+            "StartPosY": 2200,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 1883,
+            "DestPosY": 2196,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1917,
+            "StartPosY": 2171,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 1917,
+            "DestPosY": 2169,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1895,
+            "StartPosY": 2206,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 1902,
+            "DestPosY": 2198,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1876,
+            "StartPosY": 2203,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 1867,
+            "DestPosY": 2208,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1898,
+            "StartPosY": 2122,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 1900,
+            "DestPosY": 2119,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1872,
+            "StartPosY": 2119,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 1875,
+            "DestPosY": 2112,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1874,
+            "StartPosY": 2108,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 1879,
+            "DestPosY": 2096,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1870,
+            "StartPosY": 2124,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1882,
+            "DestPosY": 2128,
+            "DestRange": 11,
+            "DestWait": 7
+        }
+    ]
+}

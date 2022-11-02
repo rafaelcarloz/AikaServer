@@ -1,0 +1,28 @@
+{
+    "Index": 696,
+    "Name": "Scher",
+    "Face": 336,
+    "Hair": 0,
+    "Weapon": 1474,
+    "Health": 12140,
+    "Rotation": 44,
+    "Level": 51,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2015,
+            "StartPosY": 1463,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2024,
+            "DestPosY": 1460,
+            "DestRange": 11,
+            "DestWait": 5
+        }
+    ]
+}

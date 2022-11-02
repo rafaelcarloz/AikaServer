@@ -1,0 +1,148 @@
+{
+    "Index": 170,
+    "Name": "Golem",
+    "Face": 238,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2024,
+    "Rotation": 108,
+    "Level": 25,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1030,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3565,
+            "StartPosY": 1748,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3568,
+            "DestPosY": 1742,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3404,
+            "StartPosY": 1757,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3392,
+            "DestPosY": 1752,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3434,
+            "StartPosY": 1735,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3430,
+            "DestPosY": 1741,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3465,
+            "StartPosY": 1683,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 3461,
+            "DestPosY": 1679,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3476,
+            "StartPosY": 1700,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3476,
+            "DestPosY": 1690,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3500,
+            "StartPosY": 1695,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3496,
+            "DestPosY": 1706,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3491,
+            "StartPosY": 1698,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3479,
+            "DestPosY": 1692,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3456,
+            "StartPosY": 1691,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3460,
+            "DestPosY": 1688,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3448,
+            "StartPosY": 1874,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3451,
+            "DestPosY": 1868,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3475,
+            "StartPosY": 1840,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 3487,
+            "DestPosY": 1839,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3478,
+            "StartPosY": 1865,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3489,
+            "DestPosY": 1865,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3556,
+            "StartPosY": 1813,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3561,
+            "DestPosY": 1821,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3563,
+            "StartPosY": 1799,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3562,
+            "DestPosY": 1793,
+            "DestRange": 9,
+            "DestWait": 6
+        }
+    ]
+}

@@ -4,6 +4,7 @@
 #include "Player.h" 
 #include "ServerSocket.h"
 #include <Winsock2.h>
+#include "Mob.h"
 
 using namespace std;
 namespace json = boost::json;
@@ -192,6 +193,10 @@ bool ServerInstance::SetNationData(int nationId) {
 
 
 bool ServerInstance::SendPacketToClient(WORD clientId, LPVOID packet, WORD packetSize) {
+	if (EntityHandler::GetEntityType(clientId) != EntityPlayer) {
+		return true;
+	}
+	
 	PPlayer client;
 
 	if (!this->entityHandler->GetPlayerById(clientId, client)) {
@@ -219,6 +224,9 @@ bool ServerInstance::StartRoutines() {
 
 	this->_threadUpdateBuffsAndStatus = std::thread(&ServerInstance::RoutineUpdateBuffsAndStatus, this);
 	this->_threadUpdateBuffsAndStatus.detach();
+
+	this->_threadMobActions = std::thread(&ServerInstance::RoutineUpdateMobActions, this);
+	this->_threadMobActions.detach();
 
 	return true;
 }
@@ -271,5 +279,27 @@ void ServerInstance::RoutineUpdateBuffsAndStatus() {
 	}
 }
 
+void ServerInstance::RoutineUpdateMobActions() {
+	while (this->isActive)
+	{
+		auto entities = this->entityHandler->GetEntities();
+
+		for (auto& entity : entities) {
+			if (EntityHandler::GetEntityType(entity.first) != EntityMob) {
+				continue;
+			}
+
+			PMob mob = (PMob)this->entityHandler->GetEntity(entity.first);
+
+			if (mob->index <= 0) {
+				continue;
+			}
+
+			mob->PerformUpdate();
+		}
+
+		Sleep(100);
+	}
+}
 
 #pragma endregion

@@ -1,0 +1,28 @@
+{
+    "Index": 268,
+    "Name": "Maldonado",
+    "Face": 235,
+    "Hair": 0,
+    "Weapon": 1430,
+    "Health": 4343,
+    "Rotation": 60,
+    "Level": 30,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3392,
+            "StartPosY": 2170,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3392,
+            "DestPosY": 2171,
+            "DestRange": 12,
+            "DestWait": 4
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "Index": 577,
+    "Name": "Asafa",
+    "Face": 292,
+    "Hair": 0,
+    "Weapon": 1460,
+    "Health": 11419,
+    "Rotation": 180,
+    "Level": 49,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1540,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1657,
+            "StartPosY": 1984,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 1645,
+            "DestPosY": 1989,
+            "DestRange": 8,
+            "DestWait": 8
+        }
+    ]
+}

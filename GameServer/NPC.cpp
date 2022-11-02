@@ -2,6 +2,9 @@
 #include "Logger.h"
 #include "ItemList.h"
 
+#include <sstream>
+#include <iostream>
+
 namespace json = boost::json;
 
 bool NPC::Initialize(uint16_t entityId, boost::json::value data) {
@@ -41,12 +44,14 @@ bool NPC::FromJSON(boost::json::value data) {
 		this->textTitle = json::value_to<std::string>(data.at("Description"));
 
 		this->rotation = json::value_to<int>(data.at("Rotation"));
-		this->position.X = static_cast<float>(json::value_to<int>(data.at("Position").at(0)));
-		this->position.Y = static_cast<float>(json::value_to<int>(data.at("Position").at(1)));
+		this->position.X = json::value_to<float>(data.at("Position").at(0));
+		this->position.Y = json::value_to<float>(data.at("Position").at(1));
 
 		slot = 0;
 		for (auto& item : data.at("Equip").as_array()) {
 			PItem _item = &this->character.Equipaments[slot];
+			slot++;
+
 			_item->Index = json::value_to<unsigned int>(item);
 			_item->Apparence = _item->Index;
 
@@ -62,13 +67,12 @@ bool NPC::FromJSON(boost::json::value data) {
 			_item->MaxDurability = _item->MinDurability;
 
 			_item->Amount = 1;
-
-			slot++;
 		}
 
 		slot = 0;
 		for (auto& item : data.at("Inventory").as_array()) {
 			PItem _item = &this->character.Inventory[slot];
+			slot++;
 
 			_item->Index = (WORD)json::value_to<unsigned int>(item);
 			_item->Apparence = _item->Index;
@@ -85,21 +89,31 @@ bool NPC::FromJSON(boost::json::value data) {
 			_item->MaxDurability = _item->MinDurability;
 
 			_item->Amount = 1;
-
-			slot++;
 		}
 
-		for (auto& option : data.at("options").as_object()) {
-			uint16_t optionType = (uint16_t)json::value_to<int>(option.value().at("type"));
-			std::string optionText = json::value_to<std::string>(option.value().at("text"));
+		for (auto& option : data.at("options").as_array()) {
+			NPCMenuOption optionMenu;
 
-			this->options.insert(std::make_pair(optionType, optionText));
+			optionMenu.Index = (uint16_t)json::value_to<int>(option.at("type"));
+			optionMenu.Name = json::value_to<std::string>(option.at("text"));
+
+			std::stringstream ss;
+			ss << std::hex << json::value_to<std::string>(option.at("color"));
+			ss >> optionMenu.Color;
+
+			this->options.insert(std::make_pair(optionMenu.Index, optionMenu));
 		}
 
 		this->character.Status.Life.MaxHP = 20000;
 		this->character.Status.Life.CurHP = 20000;
 
-		this->baseCharacter.Status.Sizes = {0x7, 0x77, 0x77, 0};
+		this->character.Status.Life.MaxMP = 20000;
+		this->character.Status.Life.CurMP = 20000;
+
+		this->baseCharacter.Status.Sizes.Altura = json::value_to<int>(data.at("Sizes").at("Height"));
+		this->baseCharacter.Status.Sizes.Tronco = json::value_to<int>(data.at("Sizes").at("UpperBody"));
+		this->baseCharacter.Status.Sizes.Perna = json::value_to<int>(data.at("Sizes").at("Leg"));
+		this->baseCharacter.Status.Sizes.Corpo = json::value_to<int>(data.at("Sizes").at("Body"));
 
 		return true;
 	}

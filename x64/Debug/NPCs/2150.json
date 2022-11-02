@@ -1,23 +1,93 @@
 {
-	"Index" : 2150,
-	"Name" : "898",
-	"Description" : "Honor Weapon Dealer",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 0,
-	"Position" : [3420,543],
-	"Equip" : [228,0,0,0,0,0,1502,0],
-	"Inventory" : [6723,6724,6688,6689,0,6863,6864,6828,6829,0,6933,6934,6898,6899,0,0,0,0,0,0,2554,2557,2519,2522,0,2694,2697,2659,2662,0,2764,2767,2729,2732,0,4353,4354,4393,4394,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Loja", "type": 5 },
-		"3" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2150,
+    "Name": "898",
+    "Description": "Honor Weapon Dealer",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 0,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 103
+    },
+    "Position": [
+        3420.39990234375,
+        543.400024414063
+    ],
+    "Equip": [
+        228,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1502,
+        0
+    ],
+    "Inventory": [
+        6723,
+        6724,
+        6688,
+        6689,
+        0,
+        6863,
+        6864,
+        6828,
+        6829,
+        0,
+        6933,
+        6934,
+        6898,
+        6899,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2554,
+        2557,
+        2519,
+        2522,
+        0,
+        2694,
+        2697,
+        2659,
+        2662,
+        0,
+        2764,
+        2767,
+        2729,
+        2732,
+        0,
+        4353,
+        4354,
+        4393,
+        4394,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

@@ -1,0 +1,168 @@
+{
+    "Index": 391,
+    "Name": "Singh Exótico Clã Kinga",
+    "Face": 286,
+    "Hair": 0,
+    "Weapon": 1458,
+    "Health": 2381,
+    "Rotation": 65473,
+    "Level": 36,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1536,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2848,
+            "StartPosY": 2154,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2859,
+            "DestPosY": 2150,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2851,
+            "StartPosY": 2158,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2847,
+            "DestPosY": 2163,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2823,
+            "StartPosY": 2157,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 2816,
+            "DestPosY": 2159,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2877,
+            "StartPosY": 2169,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 2869,
+            "DestPosY": 2159,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2837,
+            "StartPosY": 2175,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2827,
+            "DestPosY": 2184,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2858,
+            "StartPosY": 2200,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 2868,
+            "DestPosY": 2194,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2862,
+            "StartPosY": 2182,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 2870,
+            "DestPosY": 2194,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2831,
+            "StartPosY": 2195,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 2828,
+            "DestPosY": 2195,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2858,
+            "StartPosY": 2218,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2846,
+            "DestPosY": 2225,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2843,
+            "StartPosY": 2231,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2833,
+            "DestPosY": 2221,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2871,
+            "StartPosY": 2231,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 2871,
+            "DestPosY": 2232,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2873,
+            "StartPosY": 2242,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 2878,
+            "DestPosY": 2254,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2893,
+            "StartPosY": 2207,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2885,
+            "DestPosY": 2199,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2901,
+            "StartPosY": 2221,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 2903,
+            "DestPosY": 2220,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2904,
+            "StartPosY": 2204,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2898,
+            "DestPosY": 2209,
+            "DestRange": 6,
+            "DestWait": 4
+        }
+    ]
+}

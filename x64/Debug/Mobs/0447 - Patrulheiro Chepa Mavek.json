@@ -1,0 +1,118 @@
+{
+    "Index": 447,
+    "Name": "Patrulheiro Chepa Mavek",
+    "Face": 324,
+    "Hair": 0,
+    "Weapon": 1470,
+    "Health": 3052,
+    "Rotation": 10,
+    "Level": 41,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1536,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2258,
+            "StartPosY": 1928,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2263,
+            "DestPosY": 1924,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2224,
+            "StartPosY": 1926,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 2228,
+            "DestPosY": 1933,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2244,
+            "StartPosY": 1920,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 2255,
+            "DestPosY": 1922,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2234,
+            "StartPosY": 1908,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 2237,
+            "DestPosY": 1900,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2239,
+            "StartPosY": 1896,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2238,
+            "DestPosY": 1884,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2221,
+            "StartPosY": 1904,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 2225,
+            "DestPosY": 1899,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2224,
+            "StartPosY": 1884,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 2221,
+            "DestPosY": 1877,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2193,
+            "StartPosY": 1859,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 2187,
+            "DestPosY": 1848,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2139,
+            "StartPosY": 1875,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2149,
+            "DestPosY": 1883,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2128,
+            "StartPosY": 1833,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2126,
+            "DestPosY": 1829,
+            "DestRange": 8,
+            "DestWait": 8
+        }
+    ]
+}

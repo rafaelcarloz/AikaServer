@@ -46,6 +46,10 @@ public:
 	//Buffs
 	bool GetCharacterBuffs(int characterId, json::value* response);
 	bool PostCharacterBuffs(int characterId, const json::value items, json::value* response);
+
+	//Titles
+	bool GetCharacterTitles(int characterId, json::value* response);
+	bool PostCharacterTitles(int characterId, const json::value items, json::value* response);
 };
 
 #endif

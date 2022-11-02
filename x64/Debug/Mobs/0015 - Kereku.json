@@ -1,0 +1,28 @@
+{
+    "Index": 15,
+    "Name": "Kereku",
+    "Face": 244,
+    "Hair": 0,
+    "Weapon": 1432,
+    "Health": 864,
+    "Rotation": 153,
+    "Level": 8,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3550,
+            "StartPosY": 1116,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3549,
+            "DestPosY": 1106,
+            "DestRange": 12,
+            "DestWait": 8
+        }
+    ]
+}

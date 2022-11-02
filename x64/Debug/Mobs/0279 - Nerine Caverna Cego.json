@@ -1,0 +1,178 @@
+{
+    "Index": 279,
+    "Name": "Nerine Caverna Cego",
+    "Face": 268,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1278,
+    "Rotation": 134,
+    "Level": 24,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3143,
+            "StartPosY": 3520,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3146,
+            "DestPosY": 3517,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3086,
+            "StartPosY": 3528,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3090,
+            "DestPosY": 3538,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3098,
+            "StartPosY": 3518,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3107,
+            "DestPosY": 3527,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3128,
+            "StartPosY": 3546,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3131,
+            "DestPosY": 3542,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3159,
+            "StartPosY": 3357,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3150,
+            "DestPosY": 3365,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3157,
+            "StartPosY": 3359,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3161,
+            "DestPosY": 3355,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3144,
+            "StartPosY": 3378,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3144,
+            "DestPosY": 3367,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3136,
+            "StartPosY": 3387,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3146,
+            "DestPosY": 3386,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3290,
+            "StartPosY": 3403,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3284,
+            "DestPosY": 3406,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3263,
+            "StartPosY": 3411,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 3261,
+            "DestPosY": 3422,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3273,
+            "StartPosY": 3398,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 3273,
+            "DestPosY": 3398,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3289,
+            "StartPosY": 3397,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3281,
+            "DestPosY": 3395,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3279,
+            "StartPosY": 3570,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3270,
+            "DestPosY": 3579,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3275,
+            "StartPosY": 3566,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3266,
+            "DestPosY": 3569,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3268,
+            "StartPosY": 3557,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3267,
+            "DestPosY": 3554,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3256,
+            "StartPosY": 3550,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3261,
+            "DestPosY": 3548,
+            "DestRange": 8,
+            "DestWait": 4
+        }
+    ]
+}

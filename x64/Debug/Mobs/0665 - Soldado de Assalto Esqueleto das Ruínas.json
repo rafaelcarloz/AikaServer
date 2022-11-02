@@ -1,0 +1,168 @@
+{
+    "Index": 665,
+    "Name": "Soldado de Assalto Esqueleto das Ruínas",
+    "Face": 277,
+    "Hair": 0,
+    "Weapon": 1455,
+    "Health": 4381,
+    "Rotation": 44,
+    "Level": 48,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 65029,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2030,
+            "StartPosY": 2132,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 2020,
+            "DestPosY": 2131,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2047,
+            "StartPosY": 2139,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 2042,
+            "DestPosY": 2141,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2063,
+            "StartPosY": 2114,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 2065,
+            "DestPosY": 2118,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2069,
+            "StartPosY": 2135,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 2058,
+            "DestPosY": 2140,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2091,
+            "StartPosY": 2118,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 2090,
+            "DestPosY": 2107,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2094,
+            "StartPosY": 2137,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 2105,
+            "DestPosY": 2146,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2100,
+            "StartPosY": 2153,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 2111,
+            "DestPosY": 2142,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2115,
+            "StartPosY": 2124,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 2126,
+            "DestPosY": 2116,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2134,
+            "StartPosY": 2140,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 2141,
+            "DestPosY": 2143,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2030,
+            "StartPosY": 2130,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2023,
+            "DestPosY": 2138,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2046,
+            "StartPosY": 2140,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 2044,
+            "DestPosY": 2142,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2065,
+            "StartPosY": 2114,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 2076,
+            "DestPosY": 2124,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2068,
+            "StartPosY": 2135,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 2058,
+            "DestPosY": 2146,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2090,
+            "StartPosY": 2119,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 2094,
+            "DestPosY": 2121,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2136,
+            "StartPosY": 2140,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 2128,
+            "DestPosY": 2152,
+            "DestRange": 7,
+            "DestWait": 5
+        }
+    ]
+}

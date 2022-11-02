@@ -1,0 +1,188 @@
+{
+    "Index": 166,
+    "Name": "Garubian",
+    "Face": 242,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1349,
+    "Rotation": 0,
+    "Level": 25,
+    "Height": 5,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3403,
+            "StartPosY": 1701,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3413,
+            "DestPosY": 1712,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3535,
+            "StartPosY": 1654,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3524,
+            "DestPosY": 1657,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3545,
+            "StartPosY": 1689,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3549,
+            "DestPosY": 1678,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3383,
+            "StartPosY": 1722,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3383,
+            "DestPosY": 1733,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3387,
+            "StartPosY": 1719,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3399,
+            "DestPosY": 1712,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3518,
+            "StartPosY": 1739,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3515,
+            "DestPosY": 1727,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3492,
+            "StartPosY": 1721,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3498,
+            "DestPosY": 1733,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3398,
+            "StartPosY": 1662,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3394,
+            "DestPosY": 1669,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3406,
+            "StartPosY": 1664,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3399,
+            "DestPosY": 1674,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3540,
+            "StartPosY": 1709,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3543,
+            "DestPosY": 1704,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3545,
+            "StartPosY": 1685,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3555,
+            "DestPosY": 1688,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3442,
+            "StartPosY": 1705,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 3452,
+            "DestPosY": 1700,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3424,
+            "StartPosY": 1677,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3418,
+            "DestPosY": 1669,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3462,
+            "StartPosY": 1650,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3470,
+            "DestPosY": 1655,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3465,
+            "StartPosY": 1648,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 3460,
+            "DestPosY": 1652,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3362,
+            "StartPosY": 1699,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3364,
+            "DestPosY": 1709,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3445,
+            "StartPosY": 1711,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3453,
+            "DestPosY": 1708,
+            "DestRange": 9,
+            "DestWait": 6
+        }
+    ]
+}

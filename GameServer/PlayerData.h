@@ -105,8 +105,8 @@ typedef struct Title {
 	BYTE Level;
 	WORD Progress;
 
-	DWORD GetLevelValue(BYTE slot);
-}*PTITLE;
+	DWORD GetLevelValue(BYTE slot, BYTE level);
+}*PTitle;
 
 #pragma endregion
 #pragma region "Character Data"

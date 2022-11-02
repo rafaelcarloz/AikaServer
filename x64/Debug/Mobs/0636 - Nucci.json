@@ -1,0 +1,28 @@
+{
+    "Index": 636,
+    "Name": "Nucci",
+    "Face": 243,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 21554,
+    "Rotation": 170,
+    "Level": 42,
+    "Height": 16,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1027,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2222,
+            "StartPosY": 2034,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 2218,
+            "DestPosY": 2041,
+            "DestRange": 6,
+            "DestWait": 5
+        }
+    ]
+}

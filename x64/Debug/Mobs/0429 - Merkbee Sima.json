@@ -1,0 +1,158 @@
+{
+    "Index": 429,
+    "Name": "Merkbee Sima",
+    "Face": 304,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2777,
+    "Rotation": 44,
+    "Level": 39,
+    "Height": 4,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2556,
+            "StartPosY": 1646,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 2546,
+            "DestPosY": 1645,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2546,
+            "StartPosY": 1658,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 2554,
+            "DestPosY": 1666,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2545,
+            "StartPosY": 1643,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 2541,
+            "DestPosY": 1632,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2531,
+            "StartPosY": 1651,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 2521,
+            "DestPosY": 1653,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2520,
+            "StartPosY": 1647,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 2518,
+            "DestPosY": 1644,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2598,
+            "StartPosY": 1619,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2597,
+            "DestPosY": 1631,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2621,
+            "StartPosY": 1637,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 2620,
+            "DestPosY": 1628,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2616,
+            "StartPosY": 1619,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2614,
+            "DestPosY": 1621,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2603,
+            "StartPosY": 1639,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 2606,
+            "DestPosY": 1627,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2590,
+            "StartPosY": 1638,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 2602,
+            "DestPosY": 1631,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2570,
+            "StartPosY": 1639,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2581,
+            "DestPosY": 1637,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2572,
+            "StartPosY": 1649,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2583,
+            "DestPosY": 1646,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2593,
+            "StartPosY": 1647,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 2581,
+            "DestPosY": 1635,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2629,
+            "StartPosY": 1628,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 2634,
+            "DestPosY": 1618,
+            "DestRange": 12,
+            "DestWait": 6
+        }
+    ]
+}

@@ -1,25 +1,103 @@
 {
-	"Index" : 2321,
-	"Name" : "1881",
-	"Description" : "Superior Metal Merchant",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 90,
-	"Position" : [1678,2202],
-	"Equip" : [224,0,0,0,0,0,1503,0],
-	"Inventory" : [1666,1696,1726,1756,0,1667,1697,1727,1757,0,1668,1698,1728,1758,0,0,0,0,0,0,1786,1816,1846,1876,0,1787,1817,1847,1877,0,1788,1818,1848,1878,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Consertar", "type": 31 },
-		"3" : {"text": "Consertar Tudo", "type": 32 },
-		"4" : {"text": "Loja", "type": 5 },
-		"5" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2321,
+    "Name": "1881",
+    "Description": "Superior Metal Merchant",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 90,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 34
+    },
+    "Position": [
+        1678.40002441406,
+        2202.39990234375
+    ],
+    "Equip": [
+        224,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1503,
+        0
+    ],
+    "Inventory": [
+        1666,
+        1696,
+        1726,
+        1756,
+        0,
+        1667,
+        1697,
+        1727,
+        1757,
+        0,
+        1668,
+        1698,
+        1728,
+        1758,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1786,
+        1816,
+        1846,
+        1876,
+        0,
+        1787,
+        1817,
+        1847,
+        1877,
+        0,
+        1788,
+        1818,
+        1848,
+        1878,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Consertar",
+            "type": 31,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Consertar Tudo",
+            "type": 32,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

@@ -1,0 +1,168 @@
+{
+    "Index": 143,
+    "Name": "Kubary Yao Norte Guerreiro",
+    "Face": 211,
+    "Hair": 0,
+    "Weapon": 1434,
+    "Health": 882,
+    "Rotation": 65402,
+    "Level": 21,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64256,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3126,
+            "StartPosY": 1408,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3137,
+            "DestPosY": 1405,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3270,
+            "StartPosY": 1268,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3281,
+            "DestPosY": 1271,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3261,
+            "StartPosY": 1273,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3256,
+            "DestPosY": 1271,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3281,
+            "StartPosY": 1277,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3288,
+            "DestPosY": 1265,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3270,
+            "StartPosY": 1277,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3258,
+            "DestPosY": 1272,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3146,
+            "StartPosY": 1407,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3147,
+            "DestPosY": 1409,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3125,
+            "StartPosY": 1416,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3137,
+            "DestPosY": 1426,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3134,
+            "StartPosY": 1414,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3127,
+            "DestPosY": 1406,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3155,
+            "StartPosY": 1360,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3157,
+            "DestPosY": 1358,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3145,
+            "StartPosY": 1345,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3156,
+            "DestPosY": 1337,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3154,
+            "StartPosY": 1333,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3156,
+            "DestPosY": 1337,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3171,
+            "StartPosY": 1349,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3167,
+            "DestPosY": 1341,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3179,
+            "StartPosY": 1346,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3173,
+            "DestPosY": 1350,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3273,
+            "StartPosY": 1281,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3279,
+            "DestPosY": 1283,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3280,
+            "StartPosY": 1284,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3279,
+            "DestPosY": 1284,
+            "DestRange": 8,
+            "DestWait": 6
+        }
+    ]
+}

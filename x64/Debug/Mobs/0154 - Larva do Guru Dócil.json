@@ -1,0 +1,178 @@
+{
+    "Index": 154,
+    "Name": "Larva do Guru Dócil",
+    "Face": 243,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1043,
+    "Rotation": 90,
+    "Level": 22,
+    "Height": 4,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1027,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3361,
+            "StartPosY": 1601,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3363,
+            "DestPosY": 1605,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3363,
+            "StartPosY": 1611,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3374,
+            "DestPosY": 1600,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3393,
+            "StartPosY": 1594,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3395,
+            "DestPosY": 1599,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3511,
+            "StartPosY": 1781,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 3522,
+            "DestPosY": 1792,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3371,
+            "StartPosY": 1583,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3373,
+            "DestPosY": 1587,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3376,
+            "StartPosY": 1593,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3385,
+            "DestPosY": 1587,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3432,
+            "StartPosY": 1610,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3425,
+            "DestPosY": 1607,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3425,
+            "StartPosY": 1631,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3430,
+            "DestPosY": 1642,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3441,
+            "StartPosY": 1620,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3452,
+            "DestPosY": 1614,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3342,
+            "StartPosY": 1565,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3344,
+            "DestPosY": 1566,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3399,
+            "StartPosY": 1587,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3409,
+            "DestPosY": 1585,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3462,
+            "StartPosY": 1622,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3453,
+            "DestPosY": 1619,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3398,
+            "StartPosY": 1619,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3399,
+            "DestPosY": 1625,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3405,
+            "StartPosY": 1612,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3413,
+            "DestPosY": 1618,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3340,
+            "StartPosY": 1591,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3339,
+            "DestPosY": 1599,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3399,
+            "StartPosY": 1577,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3390,
+            "DestPosY": 1573,
+            "DestRange": 12,
+            "DestWait": 7
+        }
+    ]
+}

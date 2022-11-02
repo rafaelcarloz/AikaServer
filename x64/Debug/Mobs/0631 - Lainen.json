@@ -1,0 +1,28 @@
+{
+    "Index": 631,
+    "Name": "Lainen",
+    "Face": 319,
+    "Hair": 0,
+    "Weapon": 1502,
+    "Health": 7185,
+    "Rotation": 65518,
+    "Level": 42,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1027,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2073,
+            "StartPosY": 1660,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2062,
+            "DestPosY": 1654,
+            "DestRange": 6,
+            "DestWait": 8
+        }
+    ]
+}

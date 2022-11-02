@@ -1,22 +1,88 @@
 {
-	"Index" : 2311,
-	"Name" : "108",
-	"Description" : "Save Point",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 180,
-	"Position" : [2628,1793],
-	"Equip" : [232,0,0,0,0,0,1442,0],
-	"Inventory" : [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Salvar Localizacao", "type": 25 },
-		"2" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2311,
+    "Name": "108",
+    "Description": "Save Point",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 180,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 24
+    },
+    "Position": [
+        2628.39990234375,
+        1793.40002441406
+    ],
+    "Equip": [
+        232,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1442,
+        0
+    ],
+    "Inventory": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Salvar Localizacao",
+            "type": 25,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

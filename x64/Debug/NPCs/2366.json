@@ -1,23 +1,93 @@
 {
-	"Index" : 2366,
-	"Name" : "1813",
-	"Description" : "Obsidian Honor Metal Merchant",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 95,
-	"Position" : [1566,2254],
-	"Equip" : [228,0,0,0,0,0,1502,0],
-	"Inventory" : [2848,2878,2908,2938,0,2818,2968,2998,3028,3058,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Loja", "type": 5 },
-		"3" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2366,
+    "Name": "1813",
+    "Description": "Obsidian Honor Metal Merchant",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 95,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 83
+    },
+    "Position": [
+        1566.40002441406,
+        2254.39990234375
+    ],
+    "Equip": [
+        228,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1502,
+        0
+    ],
+    "Inventory": [
+        2848,
+        2878,
+        2908,
+        2938,
+        0,
+        2818,
+        2968,
+        2998,
+        3028,
+        3058,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

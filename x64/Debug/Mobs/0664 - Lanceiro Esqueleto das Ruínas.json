@@ -1,0 +1,178 @@
+{
+    "Index": 664,
+    "Name": "Lanceiro Esqueleto das Ruínas",
+    "Face": 277,
+    "Hair": 0,
+    "Weapon": 1455,
+    "Health": 4381,
+    "Rotation": 0,
+    "Level": 48,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 65029,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2029,
+            "StartPosY": 2137,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 2025,
+            "DestPosY": 2128,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2049,
+            "StartPosY": 2136,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 2049,
+            "DestPosY": 2129,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2060,
+            "StartPosY": 2115,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 2049,
+            "DestPosY": 2125,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2072,
+            "StartPosY": 2132,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2072,
+            "DestPosY": 2140,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2090,
+            "StartPosY": 2114,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2092,
+            "DestPosY": 2123,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2096,
+            "StartPosY": 2134,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2104,
+            "DestPosY": 2144,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2134,
+            "StartPosY": 2137,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2140,
+            "DestPosY": 2125,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2104,
+            "StartPosY": 2154,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 2112,
+            "DestPosY": 2155,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2119,
+            "StartPosY": 2123,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 2114,
+            "DestPosY": 2115,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2030,
+            "StartPosY": 2136,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 2040,
+            "DestPosY": 2128,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2050,
+            "StartPosY": 2137,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2061,
+            "DestPosY": 2127,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2059,
+            "StartPosY": 2114,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2050,
+            "DestPosY": 2108,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2071,
+            "StartPosY": 2133,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 2080,
+            "DestPosY": 2134,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2091,
+            "StartPosY": 2115,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2083,
+            "DestPosY": 2109,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2097,
+            "StartPosY": 2136,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2105,
+            "DestPosY": 2128,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2103,
+            "StartPosY": 2155,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2102,
+            "DestPosY": 2146,
+            "DestRange": 9,
+            "DestWait": 7
+        }
+    ]
+}

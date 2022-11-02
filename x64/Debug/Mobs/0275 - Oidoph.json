@@ -1,0 +1,28 @@
+{
+    "Index": 275,
+    "Name": "Oidoph",
+    "Face": 260,
+    "Hair": 0,
+    "Weapon": 1452,
+    "Health": 8938,
+    "Rotation": 44,
+    "Level": 33,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3271,
+            "StartPosY": 1836,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3279,
+            "DestPosY": 1826,
+            "DestRange": 9,
+            "DestWait": 8
+        }
+    ]
+}

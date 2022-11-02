@@ -1,0 +1,28 @@
+{
+    "Index": 273,
+    "Name": "Guzman",
+    "Face": 235,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 3908,
+    "Rotation": 116,
+    "Level": 30,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3212,
+            "StartPosY": 1941,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3209,
+            "DestPosY": 1952,
+            "DestRange": 12,
+            "DestWait": 7
+        }
+    ]
+}

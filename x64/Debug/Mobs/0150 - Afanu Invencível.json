@@ -1,0 +1,28 @@
+{
+    "Index": 150,
+    "Name": "Afanu Invencível",
+    "Face": 245,
+    "Hair": 0,
+    "Weapon": 1444,
+    "Health": 2438,
+    "Rotation": 44,
+    "Level": 23,
+    "Height": 11,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64256,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3210,
+            "StartPosY": 1158,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3222,
+            "DestPosY": 1162,
+            "DestRange": 7,
+            "DestWait": 7
+        }
+    ]
+}

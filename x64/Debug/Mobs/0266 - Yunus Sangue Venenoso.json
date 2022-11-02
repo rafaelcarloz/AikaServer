@@ -1,0 +1,28 @@
+{
+    "Index": 266,
+    "Name": "Yunus Sangue Venenoso",
+    "Face": 240,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 3930,
+    "Rotation": 44,
+    "Level": 28,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3713,
+            "StartPosY": 1892,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3712,
+            "DestPosY": 1889,
+            "DestRange": 7,
+            "DestWait": 6
+        }
+    ]
+}

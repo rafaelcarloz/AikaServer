@@ -1,0 +1,178 @@
+{
+    "Index": 485,
+    "Name": "Guarda Real de Regenshein",
+    "Face": 233,
+    "Hair": 0,
+    "Weapon": 1442,
+    "Health": 97853,
+    "Rotation": 30,
+    "Level": 80,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 0,
+    "SpawnType": 0,
+    "IsService": 1,
+    "Positions": [
+        {
+            "StartPosX": 3464,
+            "StartPosY": 847,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3465,
+            "DestPosY": 847,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3459,
+            "StartPosY": 852,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3463,
+            "DestPosY": 864,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3463,
+            "StartPosY": 818,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3461,
+            "DestPosY": 830,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3441,
+            "StartPosY": 818,
+            "StartRange": 8,
+            "StartWait": 5,
+            "DestPosX": 3448,
+            "DestPosY": 814,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3459,
+            "StartPosY": 818,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 3459,
+            "DestPosY": 810,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3445,
+            "StartPosY": 818,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3452,
+            "DestPosY": 807,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3466,
+            "StartPosY": 850,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3458,
+            "DestPosY": 843,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3462,
+            "StartPosY": 854,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 3456,
+            "DestPosY": 865,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3475,
+            "StartPosY": 854,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3471,
+            "DestPosY": 842,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3454,
+            "StartPosY": 842,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3461,
+            "DestPosY": 843,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3471,
+            "StartPosY": 855,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3470,
+            "DestPosY": 857,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3467,
+            "StartPosY": 859,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3468,
+            "DestPosY": 850,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3479,
+            "StartPosY": 868,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3469,
+            "DestPosY": 867,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3471,
+            "StartPosY": 868,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3463,
+            "DestPosY": 863,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3470,
+            "StartPosY": 888,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 3459,
+            "DestPosY": 893,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3474,
+            "StartPosY": 892,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3471,
+            "DestPosY": 903,
+            "DestRange": 7,
+            "DestWait": 7
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "Index": 40,
+    "Name": "Kitol Queixo de Ferro",
+    "Face": 254,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2096,
+    "Rotation": 200,
+    "Level": 20,
+    "Height": 12,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3289,
+            "StartPosY": 1414,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3291,
+            "DestPosY": 1412,
+            "DestRange": 10,
+            "DestWait": 6
+        }
+    ]
+}

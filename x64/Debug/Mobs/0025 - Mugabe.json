@@ -1,0 +1,28 @@
+{
+    "Index": 25,
+    "Name": "Mugabe",
+    "Face": 246,
+    "Hair": 0,
+    "Weapon": 1434,
+    "Health": 1512,
+    "Rotation": 0,
+    "Level": 14,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 63488,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3395,
+            "StartPosY": 1210,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3398,
+            "DestPosY": 1214,
+            "DestRange": 9,
+            "DestWait": 6
+        }
+    ]
+}

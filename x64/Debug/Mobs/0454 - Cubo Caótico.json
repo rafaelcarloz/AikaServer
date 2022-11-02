@@ -1,0 +1,238 @@
+{
+    "Index": 454,
+    "Name": "Cubo Caótico",
+    "Face": 305,
+    "Hair": 0,
+    "Weapon": 1502,
+    "Health": 3613,
+    "Rotation": 0,
+    "Level": 43,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1031,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2298,
+            "StartPosY": 2118,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2301,
+            "DestPosY": 2128,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2393,
+            "StartPosY": 2016,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2393,
+            "DestPosY": 2007,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2322,
+            "StartPosY": 2178,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2327,
+            "DestPosY": 2188,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2315,
+            "StartPosY": 2105,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 2324,
+            "DestPosY": 2113,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2330,
+            "StartPosY": 2050,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 2339,
+            "DestPosY": 2057,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2376,
+            "StartPosY": 2129,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2373,
+            "DestPosY": 2140,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2424,
+            "StartPosY": 2080,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 2418,
+            "DestPosY": 2075,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2403,
+            "StartPosY": 2118,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 2396,
+            "DestPosY": 2129,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2396,
+            "StartPosY": 2090,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 2401,
+            "DestPosY": 2083,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2413,
+            "StartPosY": 2060,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2422,
+            "DestPosY": 2065,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2364,
+            "StartPosY": 2067,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 2376,
+            "DestPosY": 2063,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2333,
+            "StartPosY": 2120,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 2345,
+            "DestPosY": 2129,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2735,
+            "StartPosY": 1398,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 2733,
+            "DestPosY": 1401,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2761,
+            "StartPosY": 1427,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 2759,
+            "DestPosY": 1424,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2698,
+            "StartPosY": 1427,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2692,
+            "DestPosY": 1426,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2681,
+            "StartPosY": 1397,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 2669,
+            "DestPosY": 1390,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2636,
+            "StartPosY": 1359,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 2633,
+            "DestPosY": 1354,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2618,
+            "StartPosY": 1309,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 2628,
+            "DestPosY": 1320,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2642,
+            "StartPosY": 1316,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2651,
+            "DestPosY": 1313,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2691,
+            "StartPosY": 1303,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 2691,
+            "DestPosY": 1305,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2719,
+            "StartPosY": 1363,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2708,
+            "DestPosY": 1367,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2768,
+            "StartPosY": 1334,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 2756,
+            "DestPosY": 1343,
+            "DestRange": 10,
+            "DestWait": 5
+        }
+    ]
+}

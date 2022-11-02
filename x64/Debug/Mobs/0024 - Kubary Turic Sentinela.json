@@ -1,0 +1,118 @@
+{
+    "Index": 24,
+    "Name": "Kubary Turic Sentinela",
+    "Face": 212,
+    "Hair": 0,
+    "Weapon": 1435,
+    "Health": 570,
+    "Rotation": 26,
+    "Level": 13,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 63488,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3395,
+            "StartPosY": 1210,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3392,
+            "DestPosY": 1213,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3339,
+            "StartPosY": 1225,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3341,
+            "DestPosY": 1216,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3424,
+            "StartPosY": 1250,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3416,
+            "DestPosY": 1240,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3424,
+            "StartPosY": 1247,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3433,
+            "DestPosY": 1237,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3436,
+            "StartPosY": 1197,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 3432,
+            "DestPosY": 1193,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3439,
+            "StartPosY": 1194,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3444,
+            "DestPosY": 1192,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3379,
+            "StartPosY": 1186,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3370,
+            "DestPosY": 1192,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3381,
+            "StartPosY": 1186,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3384,
+            "DestPosY": 1183,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3424,
+            "StartPosY": 1218,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3413,
+            "DestPosY": 1215,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3425,
+            "StartPosY": 1216,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3422,
+            "DestPosY": 1211,
+            "DestRange": 9,
+            "DestWait": 5
+        }
+    ]
+}

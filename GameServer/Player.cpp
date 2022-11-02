@@ -152,6 +152,8 @@ bool Player::SendPacket(LPVOID packet, WORD size) {
 	char* bufferDest = new char[size];
 
 	memcpy(&buffer[0], packet, size);
+	ZeroMemory(&buffer[2], sizeof(WORD));
+	ZeroMemory(&buffer[8], sizeof(DWORD));
 
 	if (Encryptation::Encrypt(bufferDest, buffer, size) <= 0) {
 		return false;
@@ -160,8 +162,6 @@ bool Player::SendPacket(LPVOID packet, WORD size) {
 	if (send(this->_socket, bufferDest, size, 0) <= 0) {
 		return false;
 	}
-
-	//printf("sent packet size: %d \n", size);
 
 	return true;
 }

@@ -1,0 +1,128 @@
+{
+    "Index": 452,
+    "Name": "Mago Negro Leão Vermelho",
+    "Face": 307,
+    "Hair": 0,
+    "Weapon": 1463,
+    "Health": 2554,
+    "Rotation": 0,
+    "Level": 42,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2300,
+            "StartPosY": 2118,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 2290,
+            "DestPosY": 2111,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2354,
+            "StartPosY": 2029,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 2362,
+            "DestPosY": 2026,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2391,
+            "StartPosY": 2016,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 2388,
+            "DestPosY": 2025,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2446,
+            "StartPosY": 2038,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2443,
+            "DestPosY": 2043,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2403,
+            "StartPosY": 2033,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2408,
+            "DestPosY": 2043,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2431,
+            "StartPosY": 2032,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2441,
+            "DestPosY": 2033,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2450,
+            "StartPosY": 2061,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2448,
+            "DestPosY": 2070,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2430,
+            "StartPosY": 2058,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 2424,
+            "DestPosY": 2069,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2340,
+            "StartPosY": 2147,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 2348,
+            "DestPosY": 2156,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2333,
+            "StartPosY": 2163,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 2344,
+            "DestPosY": 2175,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2308,
+            "StartPosY": 2163,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2312,
+            "DestPosY": 2171,
+            "DestRange": 10,
+            "DestWait": 6
+        }
+    ]
+}

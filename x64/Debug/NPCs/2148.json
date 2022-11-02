@@ -1,23 +1,93 @@
 {
-	"Index" : 2148,
-	"Name" : "130",
-	"Description" : "Scorpion Monster Hunter",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 0,
-	"Position" : [3382,3451],
-	"Equip" : [234,0,0,0,0,0,1505,0],
-	"Inventory" : [4351,4391,4352,4392,0,4616,4617,4618,4619,4620,4621,4622,4623,0,0,4601,4602,4603,4604,4605,4606,4607,4608,0,0,5502,5503,5504,5505,5506,0,0,0,0,0,4522,4470,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Loja", "type": 5 },
-		"3" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2148,
+    "Name": "130",
+    "Description": "Scorpion Monster Hunter",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 0,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 101
+    },
+    "Position": [
+        3382.39990234375,
+        3451.39990234375
+    ],
+    "Equip": [
+        234,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1505,
+        0
+    ],
+    "Inventory": [
+        4351,
+        4391,
+        4352,
+        4392,
+        0,
+        4616,
+        4617,
+        4618,
+        4619,
+        4620,
+        4621,
+        4622,
+        4623,
+        0,
+        0,
+        4601,
+        4602,
+        4603,
+        4604,
+        4605,
+        4606,
+        4607,
+        4608,
+        0,
+        0,
+        5502,
+        5503,
+        5504,
+        5505,
+        5506,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4522,
+        4470,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

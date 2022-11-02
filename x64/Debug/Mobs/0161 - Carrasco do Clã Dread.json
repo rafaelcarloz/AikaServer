@@ -1,0 +1,138 @@
+{
+    "Index": 161,
+    "Name": "Carrasco do Clã Dread",
+    "Face": 235,
+    "Hair": 0,
+    "Weapon": 1431,
+    "Health": 1278,
+    "Rotation": 65402,
+    "Level": 24,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3621,
+            "StartPosY": 1594,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3614,
+            "DestPosY": 1594,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3638,
+            "StartPosY": 1690,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3636,
+            "DestPosY": 1690,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3632,
+            "StartPosY": 1626,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3643,
+            "DestPosY": 1618,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3611,
+            "StartPosY": 1673,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3608,
+            "DestPosY": 1685,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3623,
+            "StartPosY": 1705,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3627,
+            "DestPosY": 1694,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3657,
+            "StartPosY": 1704,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3660,
+            "DestPosY": 1704,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3633,
+            "StartPosY": 1726,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3637,
+            "DestPosY": 1733,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3631,
+            "StartPosY": 1615,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3623,
+            "DestPosY": 1606,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3644,
+            "StartPosY": 1656,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3652,
+            "DestPosY": 1649,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3652,
+            "StartPosY": 1669,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3652,
+            "DestPosY": 1667,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3612,
+            "StartPosY": 1696,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3618,
+            "DestPosY": 1701,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3668,
+            "StartPosY": 1709,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3664,
+            "DestPosY": 1717,
+            "DestRange": 10,
+            "DestWait": 6
+        }
+    ]
+}

@@ -1,0 +1,168 @@
+{
+    "Index": 244,
+    "Name": "Cavalariço do Clã Dread",
+    "Face": 235,
+    "Hair": 0,
+    "Weapon": 1430,
+    "Health": 1830,
+    "Rotation": 44,
+    "Level": 31,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3234,
+            "StartPosY": 2028,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 3230,
+            "DestPosY": 2029,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3175,
+            "StartPosY": 1957,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3172,
+            "DestPosY": 1947,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3211,
+            "StartPosY": 1927,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3208,
+            "DestPosY": 1932,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3205,
+            "StartPosY": 1965,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 3199,
+            "DestPosY": 1954,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3207,
+            "StartPosY": 1965,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3200,
+            "DestPosY": 1954,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3218,
+            "StartPosY": 1985,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3230,
+            "DestPosY": 1996,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3245,
+            "StartPosY": 1978,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3245,
+            "DestPosY": 1980,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3226,
+            "StartPosY": 1958,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3231,
+            "DestPosY": 1968,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3221,
+            "StartPosY": 1915,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3222,
+            "DestPosY": 1925,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3231,
+            "StartPosY": 1932,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3240,
+            "DestPosY": 1920,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3231,
+            "StartPosY": 1935,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 3225,
+            "DestPosY": 1947,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3231,
+            "StartPosY": 2026,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3238,
+            "DestPosY": 2023,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3247,
+            "StartPosY": 1909,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3239,
+            "DestPosY": 1910,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3193,
+            "StartPosY": 1959,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3183,
+            "DestPosY": 1966,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3218,
+            "StartPosY": 2000,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3227,
+            "DestPosY": 1995,
+            "DestRange": 7,
+            "DestWait": 6
+        }
+    ]
+}

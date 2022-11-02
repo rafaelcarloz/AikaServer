@@ -1,0 +1,28 @@
+{
+    "Index": 260,
+    "Name": "Cicco Braga",
+    "Face": 31,
+    "Hair": 151,
+    "Weapon": 1178,
+    "Health": 2875,
+    "Rotation": 330,
+    "Level": 24,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1024,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3605,
+            "StartPosY": 1561,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 3617,
+            "DestPosY": 1552,
+            "DestRange": 8,
+            "DestWait": 5
+        }
+    ]
+}

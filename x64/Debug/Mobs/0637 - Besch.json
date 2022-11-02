@@ -1,0 +1,28 @@
+{
+    "Index": 637,
+    "Name": "Besch",
+    "Face": 316,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 7185,
+    "Rotation": 134,
+    "Level": 42,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1027,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2271,
+            "StartPosY": 2025,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2272,
+            "DestPosY": 2020,
+            "DestRange": 11,
+            "DestWait": 8
+        }
+    ]
+}

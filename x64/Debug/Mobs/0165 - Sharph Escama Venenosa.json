@@ -1,0 +1,158 @@
+{
+    "Index": 165,
+    "Name": "Sharph Escama Venenosa",
+    "Face": 240,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1349,
+    "Rotation": 0,
+    "Level": 25,
+    "Height": 5,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3310,
+            "StartPosY": 1716,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3305,
+            "DestPosY": 1718,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3274,
+            "StartPosY": 1703,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3277,
+            "DestPosY": 1704,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3245,
+            "StartPosY": 1745,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3254,
+            "DestPosY": 1753,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3294,
+            "StartPosY": 1730,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3302,
+            "DestPosY": 1739,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3192,
+            "StartPosY": 1764,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3182,
+            "DestPosY": 1762,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3264,
+            "StartPosY": 1750,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3270,
+            "DestPosY": 1742,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3255,
+            "StartPosY": 1757,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3264,
+            "DestPosY": 1749,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3265,
+            "StartPosY": 1776,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3275,
+            "DestPosY": 1774,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3226,
+            "StartPosY": 1768,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 3230,
+            "DestPosY": 1776,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3213,
+            "StartPosY": 1743,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 3222,
+            "DestPosY": 1746,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3214,
+            "StartPosY": 1760,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3209,
+            "DestPosY": 1760,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3242,
+            "StartPosY": 1761,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3240,
+            "DestPosY": 1766,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3276,
+            "StartPosY": 1757,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3288,
+            "DestPosY": 1758,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3259,
+            "StartPosY": 1768,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3254,
+            "DestPosY": 1778,
+            "DestRange": 11,
+            "DestWait": 4
+        }
+    ]
+}

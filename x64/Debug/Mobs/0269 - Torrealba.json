@@ -1,0 +1,28 @@
+{
+    "Index": 269,
+    "Name": "Torrealba",
+    "Face": 260,
+    "Hair": 0,
+    "Weapon": 1452,
+    "Health": 3908,
+    "Rotation": 116,
+    "Level": 30,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3524,
+            "StartPosY": 2177,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3529,
+            "DestPosY": 2180,
+            "DestRange": 7,
+            "DestWait": 6
+        }
+    ]
+}

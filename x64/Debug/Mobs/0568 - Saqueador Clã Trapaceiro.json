@@ -1,0 +1,248 @@
+{
+    "Index": 568,
+    "Name": "Saqueador Clã Trapaceiro",
+    "Face": 329,
+    "Hair": 0,
+    "Weapon": 1472,
+    "Health": 3652,
+    "Rotation": 65492,
+    "Level": 45,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1743,
+            "StartPosY": 1977,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 1752,
+            "DestPosY": 1982,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1750,
+            "StartPosY": 1950,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 1758,
+            "DestPosY": 1952,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1771,
+            "StartPosY": 1959,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 1772,
+            "DestPosY": 1955,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1781,
+            "StartPosY": 1979,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 1778,
+            "DestPosY": 1975,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1688,
+            "StartPosY": 1981,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 1676,
+            "DestPosY": 1985,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1689,
+            "StartPosY": 1993,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 1680,
+            "DestPosY": 1999,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1704,
+            "StartPosY": 1996,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 1701,
+            "DestPosY": 1995,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1792,
+            "StartPosY": 1920,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 1790,
+            "DestPosY": 1909,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1785,
+            "StartPosY": 1909,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 1780,
+            "DestPosY": 1916,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1922,
+            "StartPosY": 1980,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 1934,
+            "DestPosY": 1982,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1923,
+            "StartPosY": 1950,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 1934,
+            "DestPosY": 1960,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1902,
+            "StartPosY": 1956,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 1899,
+            "DestPosY": 1958,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1900,
+            "StartPosY": 1983,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 1902,
+            "DestPosY": 1992,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1872,
+            "StartPosY": 1966,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 1873,
+            "DestPosY": 1964,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1875,
+            "StartPosY": 1993,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 1880,
+            "DestPosY": 1988,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1853,
+            "StartPosY": 2002,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 1849,
+            "DestPosY": 2001,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1849,
+            "StartPosY": 2006,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 1854,
+            "DestPosY": 1996,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1826,
+            "StartPosY": 2009,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 1835,
+            "DestPosY": 2019,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1807,
+            "StartPosY": 2003,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 1809,
+            "DestPosY": 2006,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1808,
+            "StartPosY": 1924,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1799,
+            "DestPosY": 1934,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1847,
+            "StartPosY": 1920,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 1840,
+            "DestPosY": 1924,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1820,
+            "StartPosY": 1914,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 1818,
+            "DestPosY": 1921,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1835,
+            "StartPosY": 1909,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 1824,
+            "DestPosY": 1920,
+            "DestRange": 11,
+            "DestWait": 5
+        }
+    ]
+}

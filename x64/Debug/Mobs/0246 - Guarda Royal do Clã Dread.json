@@ -1,0 +1,98 @@
+{
+    "Index": 246,
+    "Name": "Guarda Royal do Clã Dread",
+    "Face": 235,
+    "Hair": 0,
+    "Weapon": 1431,
+    "Health": 1830,
+    "Rotation": 44,
+    "Level": 31,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3174,
+            "StartPosY": 1960,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 3181,
+            "DestPosY": 1970,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3203,
+            "StartPosY": 2006,
+            "StartRange": 6,
+            "StartWait": 6,
+            "DestPosX": 3199,
+            "DestPosY": 2012,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3205,
+            "StartPosY": 2008,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 3215,
+            "DestPosY": 2010,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3255,
+            "StartPosY": 1931,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 3260,
+            "DestPosY": 1935,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3250,
+            "StartPosY": 1953,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3238,
+            "DestPosY": 1941,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3195,
+            "StartPosY": 1939,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3198,
+            "DestPosY": 1939,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3210,
+            "StartPosY": 2026,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3209,
+            "DestPosY": 2025,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3255,
+            "StartPosY": 2009,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 3247,
+            "DestPosY": 1997,
+            "DestRange": 9,
+            "DestWait": 6
+        }
+    ]
+}

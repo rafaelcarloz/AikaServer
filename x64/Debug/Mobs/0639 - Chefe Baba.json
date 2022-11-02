@@ -1,0 +1,28 @@
+{
+    "Index": 639,
+    "Name": "Chefe Baba",
+    "Face": 324,
+    "Hair": 0,
+    "Weapon": 1470,
+    "Health": 8748,
+    "Rotation": 90,
+    "Level": 44,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1965,
+            "StartPosY": 2019,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 1965,
+            "DestPosY": 2019,
+            "DestRange": 10,
+            "DestWait": 7
+        }
+    ]
+}

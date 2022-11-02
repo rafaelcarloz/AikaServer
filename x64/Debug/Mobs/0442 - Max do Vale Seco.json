@@ -1,0 +1,238 @@
+{
+    "Index": 442,
+    "Name": "Max do Vale Seco",
+    "Face": 252,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2777,
+    "Rotation": 65447,
+    "Level": 39,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2302,
+            "StartPosY": 1877,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 2312,
+            "DestPosY": 1888,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2300,
+            "StartPosY": 1890,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 2307,
+            "DestPosY": 1893,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2439,
+            "StartPosY": 1932,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 2441,
+            "DestPosY": 1920,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2431,
+            "StartPosY": 1913,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2440,
+            "DestPosY": 1925,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2411,
+            "StartPosY": 1902,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 2409,
+            "DestPosY": 1898,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2410,
+            "StartPosY": 1916,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2414,
+            "DestPosY": 1913,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2377,
+            "StartPosY": 1907,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 2377,
+            "DestPosY": 1895,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2342,
+            "StartPosY": 1911,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2353,
+            "DestPosY": 1908,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2321,
+            "StartPosY": 1916,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2320,
+            "DestPosY": 1909,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2314,
+            "StartPosY": 1896,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 2319,
+            "DestPosY": 1897,
+            "DestRange": 9,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2336,
+            "StartPosY": 1906,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2333,
+            "DestPosY": 1910,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2365,
+            "StartPosY": 1891,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2355,
+            "DestPosY": 1879,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2357,
+            "StartPosY": 1929,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 2365,
+            "DestPosY": 1931,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2341,
+            "StartPosY": 1927,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 2341,
+            "DestPosY": 1939,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2349,
+            "StartPosY": 1939,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 2340,
+            "DestPosY": 1938,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2366,
+            "StartPosY": 1913,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 2356,
+            "DestPosY": 1907,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2327,
+            "StartPosY": 1940,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2339,
+            "DestPosY": 1951,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2336,
+            "StartPosY": 1947,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 2326,
+            "DestPosY": 1936,
+            "DestRange": 12,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2342,
+            "StartPosY": 1956,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2351,
+            "DestPosY": 1945,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2316,
+            "StartPosY": 1878,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 2322,
+            "DestPosY": 1880,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2353,
+            "StartPosY": 1904,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 2344,
+            "DestPosY": 1906,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2332,
+            "StartPosY": 1987,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2321,
+            "DestPosY": 1990,
+            "DestRange": 8,
+            "DestWait": 4
+        }
+    ]
+}

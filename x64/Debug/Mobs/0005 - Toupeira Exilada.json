@@ -1,0 +1,318 @@
+{
+    "Index": 5,
+    "Name": "Toupeira Exilada",
+    "Face": 209,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 249,
+    "Rotation": 65402,
+    "Level": 5,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1024,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3640,
+            "StartPosY": 897,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 3651,
+            "DestPosY": 887,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3581,
+            "StartPosY": 900,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3575,
+            "DestPosY": 911,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3588,
+            "StartPosY": 860,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3583,
+            "DestPosY": 855,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3587,
+            "StartPosY": 848,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3584,
+            "DestPosY": 850,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3594,
+            "StartPosY": 899,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3584,
+            "DestPosY": 908,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3637,
+            "StartPosY": 857,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 3637,
+            "DestPosY": 861,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3404,
+            "StartPosY": 973,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3396,
+            "DestPosY": 983,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3416,
+            "StartPosY": 974,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3427,
+            "DestPosY": 975,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3416,
+            "StartPosY": 949,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 3425,
+            "DestPosY": 948,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3402,
+            "StartPosY": 977,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3407,
+            "DestPosY": 986,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3436,
+            "StartPosY": 979,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3431,
+            "DestPosY": 969,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3544,
+            "StartPosY": 844,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3556,
+            "DestPosY": 835,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3533,
+            "StartPosY": 860,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 3521,
+            "DestPosY": 863,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3641,
+            "StartPosY": 855,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3651,
+            "DestPosY": 861,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3630,
+            "StartPosY": 875,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3618,
+            "DestPosY": 887,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3633,
+            "StartPosY": 897,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3643,
+            "DestPosY": 895,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3639,
+            "StartPosY": 892,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3631,
+            "DestPosY": 891,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3649,
+            "StartPosY": 897,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3656,
+            "DestPosY": 898,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3637,
+            "StartPosY": 951,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3625,
+            "DestPosY": 960,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3611,
+            "StartPosY": 882,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 3613,
+            "DestPosY": 875,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3592,
+            "StartPosY": 892,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 3599,
+            "DestPosY": 904,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3660,
+            "StartPosY": 896,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3658,
+            "DestPosY": 884,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3637,
+            "StartPosY": 941,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 3636,
+            "DestPosY": 947,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3651,
+            "StartPosY": 931,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 3644,
+            "DestPosY": 929,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3627,
+            "StartPosY": 930,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3635,
+            "DestPosY": 932,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3616,
+            "StartPosY": 879,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3627,
+            "DestPosY": 869,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3638,
+            "StartPosY": 865,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3648,
+            "DestPosY": 874,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3654,
+            "StartPosY": 893,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3653,
+            "DestPosY": 899,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3669,
+            "StartPosY": 899,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3667,
+            "DestPosY": 892,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3675,
+            "StartPosY": 890,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 3679,
+            "DestPosY": 892,
+            "DestRange": 8,
+            "DestWait": 8
+        }
+    ]
+}

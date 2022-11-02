@@ -1,0 +1,28 @@
+{
+    "Index": 638,
+    "Name": "Chefe Anmorra",
+    "Face": 327,
+    "Hair": 0,
+    "Weapon": 1471,
+    "Health": 6693,
+    "Rotation": 180,
+    "Level": 43,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1536,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2108,
+            "StartPosY": 1879,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 2114,
+            "DestPosY": 1889,
+            "DestRange": 8,
+            "DestWait": 8
+        }
+    ]
+}

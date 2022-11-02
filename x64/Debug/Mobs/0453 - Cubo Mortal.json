@@ -1,0 +1,128 @@
+{
+    "Index": 453,
+    "Name": "Cubo Mortal",
+    "Face": 305,
+    "Hair": 0,
+    "Weapon": 1502,
+    "Health": 3449,
+    "Rotation": 44,
+    "Level": 42,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1031,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2328,
+            "StartPosY": 2014,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 2316,
+            "DestPosY": 2020,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2356,
+            "StartPosY": 2032,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 2357,
+            "DestPosY": 2032,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2376,
+            "StartPosY": 2031,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2382,
+            "DestPosY": 2022,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2374,
+            "StartPosY": 2115,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 2381,
+            "DestPosY": 2121,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2357,
+            "StartPosY": 2116,
+            "StartRange": 11,
+            "StartWait": 7,
+            "DestPosX": 2348,
+            "DestPosY": 2116,
+            "DestRange": 8,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2349,
+            "StartPosY": 2133,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 2346,
+            "DestPosY": 2145,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2312,
+            "StartPosY": 2138,
+            "StartRange": 9,
+            "StartWait": 5,
+            "DestPosX": 2302,
+            "DestPosY": 2133,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2355,
+            "StartPosY": 2085,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2356,
+            "DestPosY": 2076,
+            "DestRange": 6,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2376,
+            "StartPosY": 2099,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 2365,
+            "DestPosY": 2104,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2388,
+            "StartPosY": 2074,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 2381,
+            "DestPosY": 2073,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2309,
+            "StartPosY": 2160,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 2315,
+            "DestPosY": 2152,
+            "DestRange": 9,
+            "DestWait": 8
+        }
+    ]
+}

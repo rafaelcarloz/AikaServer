@@ -1,0 +1,148 @@
+{
+    "Index": 384,
+    "Name": "Sharph do Deserto",
+    "Face": 299,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 2145,
+    "Rotation": 65402,
+    "Level": 34,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2893,
+            "StartPosY": 1956,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 2892,
+            "DestPosY": 1967,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2920,
+            "StartPosY": 1959,
+            "StartRange": 8,
+            "StartWait": 7,
+            "DestPosX": 2918,
+            "DestPosY": 1964,
+            "DestRange": 11,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 2872,
+            "StartPosY": 1945,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 2861,
+            "DestPosY": 1948,
+            "DestRange": 6,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2849,
+            "StartPosY": 1948,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 2856,
+            "DestPosY": 1936,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2882,
+            "StartPosY": 1977,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 2885,
+            "DestPosY": 1987,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2823,
+            "StartPosY": 1929,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 2829,
+            "DestPosY": 1927,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2834,
+            "StartPosY": 1944,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 2837,
+            "DestPosY": 1932,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 2860,
+            "StartPosY": 1970,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2851,
+            "DestPosY": 1974,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2827,
+            "StartPosY": 1970,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 2815,
+            "DestPosY": 1974,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2820,
+            "StartPosY": 1962,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 2811,
+            "DestPosY": 1952,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2831,
+            "StartPosY": 1993,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 2831,
+            "DestPosY": 2005,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 2867,
+            "StartPosY": 1991,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 2877,
+            "DestPosY": 1996,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 2873,
+            "StartPosY": 1999,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 2873,
+            "DestPosY": 1988,
+            "DestRange": 7,
+            "DestWait": 5
+        }
+    ]
+}

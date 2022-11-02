@@ -1,25 +1,103 @@
 {
-	"Index" : 2195,
-	"Name" : "482",
-	"Description" : "Fancy Cloth Shop",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 90,
-	"Position" : [1583,2155],
-	"Equip" : [230,0,0,0,0,0,1503,0],
-	"Inventory" : [2143,2173,2203,2233,0,2144,2174,2204,2234,0,2145,2175,2205,2235,0,0,0,0,0,0,2263,2293,2323,2353,0,2264,2294,2324,2354,0,2265,2295,2325,2355,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Consertar", "type": 31 },
-		"3" : {"text": "Consertar Tudo", "type": 32 },
-		"4" : {"text": "Loja", "type": 5 },
-		"5" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2195,
+    "Name": "482",
+    "Description": "Fancy Cloth Shop",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 90,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 154
+    },
+    "Position": [
+        1583.40002441406,
+        2155.39990234375
+    ],
+    "Equip": [
+        230,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1503,
+        0
+    ],
+    "Inventory": [
+        2143,
+        2173,
+        2203,
+        2233,
+        0,
+        2144,
+        2174,
+        2204,
+        2234,
+        0,
+        2145,
+        2175,
+        2205,
+        2235,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2263,
+        2293,
+        2323,
+        2353,
+        0,
+        2264,
+        2294,
+        2324,
+        2354,
+        0,
+        2265,
+        2295,
+        2325,
+        2355,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Consertar",
+            "type": 31,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Consertar Tudo",
+            "type": 32,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

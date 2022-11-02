@@ -1,0 +1,28 @@
+{
+    "Index": 609,
+    "Name": "Ladia Gras",
+    "Face": 20,
+    "Hair": 7700,
+    "Weapon": 1003,
+    "Health": 7305,
+    "Rotation": 130,
+    "Level": 40,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2549,
+            "StartPosY": 1779,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2544,
+            "DestPosY": 1773,
+            "DestRange": 12,
+            "DestWait": 6
+        }
+    ]
+}

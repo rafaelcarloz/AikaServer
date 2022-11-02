@@ -1,0 +1,28 @@
+{
+    "Index": 698,
+    "Name": "Ozoli",
+    "Face": 335,
+    "Hair": 0,
+    "Weapon": 1502,
+    "Health": 10925,
+    "Rotation": 40,
+    "Level": 51,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2016,
+            "StartPosY": 1461,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 2023,
+            "DestPosY": 1451,
+            "DestRange": 11,
+            "DestWait": 5
+        }
+    ]
+}

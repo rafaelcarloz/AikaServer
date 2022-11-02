@@ -1,0 +1,28 @@
+{
+    "Index": 422,
+    "Name": "Azram",
+    "Face": 268,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 3048,
+    "Rotation": 90,
+    "Level": 24,
+    "Height": 10,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3085,
+            "StartPosY": 3525,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3084,
+            "DestPosY": 3533,
+            "DestRange": 7,
+            "DestWait": 6
+        }
+    ]
+}

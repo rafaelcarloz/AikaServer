@@ -1,0 +1,28 @@
+{
+    "Index": 277,
+    "Name": "Gamara",
+    "Face": 238,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 7241,
+    "Rotation": 65492,
+    "Level": 32,
+    "Height": 15,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1030,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3364,
+            "StartPosY": 2138,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3356,
+            "DestPosY": 2126,
+            "DestRange": 9,
+            "DestWait": 7
+        }
+    ]
+}

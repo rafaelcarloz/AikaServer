@@ -1,0 +1,28 @@
+{
+    "Index": 697,
+    "Name": "Bartis",
+    "Face": 334,
+    "Hair": 0,
+    "Weapon": 1473,
+    "Health": 12140,
+    "Rotation": 40,
+    "Level": 51,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2013,
+            "StartPosY": 1464,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 2020,
+            "DestPosY": 1469,
+            "DestRange": 8,
+            "DestWait": 8
+        }
+    ]
+}

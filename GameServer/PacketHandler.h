@@ -7,30 +7,32 @@
 
 class PacketHandler {
 private:
-	static bool RecvLoginRequest(PPlayer player, char* buffer);
+	static bool OnLoginRequest(PPlayer player, char* buffer);
 
-	static bool RecvCreateCharacter(PPlayer player, char* buffer);
-	static bool RecvDeleteCharacter(PPlayer player, char* buffer);
-	static bool RecvDeleteCharacterPermanent(PPlayer player, char* buffer);
+	static bool OnCreateCharacter(PPlayer player, char* buffer);
+	static bool OnDeleteCharacter(PPlayer player, char* buffer);
+	static bool OnDeleteCharacterPermanent(PPlayer player, char* buffer);
 
-	static bool RecvNumericTokenRequest(PPlayer player, char* buffer);
+	static bool OnNumericTokenRequest(PPlayer player, char* buffer);
 
-	static bool RecvMovementPacket(PPlayer player, char* buffer);
-	static bool RecvRotationPacket(PPlayer player, char* buffer); 
-	static bool RecvCharacterActionPacket(PPlayer player, char* buffer);
+	static bool OnMovementPacket(PPlayer player, char* buffer);
+	static bool OnRotationPacket(PPlayer player, char* buffer);
+	static bool OnCharacterActionPacket(PPlayer player, char* buffer);
 
-	static bool RecvMoveItemPacket(PPlayer player, char* buffer);
-	static bool RecvDeleteItemPacket(PPlayer player, char* buffer);
-	static bool RecvGroupItemsPacket(PPlayer player, char* buffer);
-	static bool RecvUngroupItemsPacket(PPlayer player, char* buffer);
-	static bool RecvUseItemPacket(PPlayer player, char* buffer);
+	static bool OnMoveItemPacket(PPlayer player, char* buffer);
+	static bool OnDeleteItemPacket(PPlayer player, char* buffer);
+	static bool OnGroupItemsPacket(PPlayer player, char* buffer);
+	static bool OnUngroupItemsPacket(PPlayer player, char* buffer);
+	static bool OnUseItemPacket(PPlayer player, char* buffer);
 
-	static bool RecvOpenNPCPacket(PPlayer player, char* buffer);
-	static bool RecvCloseNPC(PPlayer player, char* buffer);
+	static bool OnOpenNPCPacket(PPlayer player, char* buffer);
+	static bool OnCloseNPC(PPlayer player, char* buffer);
 
-	static bool RecvRevivePlayerPacket(PPlayer player, char* buffer);
+	static bool OnRevivePlayerPacket(PPlayer player, char* buffer);
 
-	static bool RecvItemBarPacket(PPlayer player, char* buffer);
+	static bool OnItemBarPacket(PPlayer player, char* buffer);
+
+	static bool OnUpdateActiveTitlePacket(PPlayer player, char* buffer);
 public:
 	static bool PacketControl(PPlayer player, char* buffer, int receivedBytes, int initialOffset);
 };

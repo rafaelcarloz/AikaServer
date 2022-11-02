@@ -88,7 +88,7 @@ public:
 
 	bool Add(const SkillFromList item);
 	bool Get(const WORD itemId, SkillFromList* item);
-	SkillFromList Get(const WORD itemId);
+	static SkillFromList Get(const WORD itemId);
 
 	SkillFromList operator[](const WORD itemId);
 

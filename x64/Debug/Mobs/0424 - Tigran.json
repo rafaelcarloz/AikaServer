@@ -1,0 +1,28 @@
+{
+    "Index": 424,
+    "Name": "Tigran",
+    "Face": 266,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 3195,
+    "Rotation": 44,
+    "Level": 25,
+    "Height": 17,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3157,
+            "StartPosY": 3372,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3150,
+            "DestPosY": 3364,
+            "DestRange": 10,
+            "DestWait": 5
+        }
+    ]
+}

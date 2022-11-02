@@ -1,23 +1,93 @@
 {
-	"Index" : 2406,
-	"Name" : "2123",
-	"Description" : "Cold Wave Crystal Collector",
-	"MobEffect" : 0,
-	"InitialDialog" : 0,
-	"Emote" : 0,
-	"Effect1" : 0,
-	"Effect2" : 0,
-	"Effect3" : 0,
-	"Effect4" : 0,
-	"WeaponGlow" : 0,
-	"Rotation" : 260,
-	"Position" : [855,3661],
-	"Equip" : [234,0,0,0,0,0,1505,0],
-	"Inventory" : [4686,4687,8534,0,0,1587,1588,1589,1590,0,4151,4152,4153,4154,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-	"options" : {
-		"0" : {"text": "Conversa", "type": 1 },
-		"1" : {"text": "Missao", "type": 2 },
-		"2" : {"text": "Loja", "type": 5 },
-		"3" : {"text": "Fechar", "type": 8 }
-	}
+    "Index": 2406,
+    "Name": "2123",
+    "Description": "Cold Wave Crystal Collector",
+    "MobEffect": 0,
+    "InitialDialog": 0,
+    "Emote": 0,
+    "Effect1": 0,
+    "Effect2": 0,
+    "Effect3": 0,
+    "Effect4": 0,
+    "WeaponGlow": 0,
+    "Rotation": 260,
+    "Sizes": {
+        "Height": 7,
+        "UpperBody": 119,
+        "Leg": 119,
+        "Body": 125
+    },
+    "Position": [
+        855.400024414062,
+        3661.39990234375
+    ],
+    "Equip": [
+        234,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1505,
+        0
+    ],
+    "Inventory": [
+        4686,
+        4687,
+        8534,
+        0,
+        0,
+        1587,
+        1588,
+        1589,
+        1590,
+        0,
+        4151,
+        4152,
+        4153,
+        4154,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "options": [
+        {
+            "text": "Conversa",
+            "type": 1,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Missao",
+            "type": 2,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Loja",
+            "type": 5,
+            "color": "0xFFFFFFFF"
+        }
+    ]
 }

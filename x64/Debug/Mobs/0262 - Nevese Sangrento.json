@@ -1,0 +1,28 @@
+{
+    "Index": 262,
+    "Name": "Nevese Sangrento",
+    "Face": 268,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 3373,
+    "Rotation": 65492,
+    "Level": 25,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3179,
+            "StartPosY": 1613,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3168,
+            "DestPosY": 1625,
+            "DestRange": 10,
+            "DestWait": 4
+        }
+    ]
+}

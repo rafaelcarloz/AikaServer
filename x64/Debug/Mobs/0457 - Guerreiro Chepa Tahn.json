@@ -1,0 +1,138 @@
+{
+    "Index": 457,
+    "Name": "Guerreiro Chepa Tahn",
+    "Face": 324,
+    "Hair": 0,
+    "Weapon": 1470,
+    "Health": 3499,
+    "Rotation": 153,
+    "Level": 44,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1792,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2042,
+            "StartPosY": 2026,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 2037,
+            "DestPosY": 2015,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2043,
+            "StartPosY": 2042,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 2045,
+            "DestPosY": 2050,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 2004,
+            "StartPosY": 2006,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 2004,
+            "DestPosY": 2018,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1998,
+            "StartPosY": 2029,
+            "StartRange": 9,
+            "StartWait": 6,
+            "DestPosX": 2001,
+            "DestPosY": 2037,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1924,
+            "StartPosY": 2024,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1923,
+            "DestPosY": 2012,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1932,
+            "StartPosY": 2022,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 1932,
+            "DestPosY": 2028,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1957,
+            "StartPosY": 2025,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 1947,
+            "DestPosY": 2019,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1921,
+            "StartPosY": 2051,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 1929,
+            "DestPosY": 2048,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1959,
+            "StartPosY": 2071,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 1969,
+            "DestPosY": 2067,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1970,
+            "StartPosY": 2057,
+            "StartRange": 10,
+            "StartWait": 4,
+            "DestPosX": 1982,
+            "DestPosY": 2066,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1952,
+            "StartPosY": 2054,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 1948,
+            "DestPosY": 2061,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1989,
+            "StartPosY": 2055,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 1992,
+            "DestPosY": 2046,
+            "DestRange": 8,
+            "DestWait": 8
+        }
+    ]
+}

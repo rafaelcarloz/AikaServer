@@ -1,0 +1,78 @@
+{
+    "Index": 183,
+    "Name": "Max Mutante",
+    "Face": 254,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 640,
+    "Rotation": 65492,
+    "Level": 3,
+    "Height": 11,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3501,
+            "StartPosY": 877,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3511,
+            "DestPosY": 877,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3509,
+            "StartPosY": 826,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3498,
+            "DestPosY": 832,
+            "DestRange": 10,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3523,
+            "StartPosY": 828,
+            "StartRange": 7,
+            "StartWait": 5,
+            "DestPosX": 3525,
+            "DestPosY": 821,
+            "DestRange": 6,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3519,
+            "StartPosY": 874,
+            "StartRange": 6,
+            "StartWait": 7,
+            "DestPosX": 3528,
+            "DestPosY": 866,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3539,
+            "StartPosY": 872,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3541,
+            "DestPosY": 862,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3518,
+            "StartPosY": 856,
+            "StartRange": 10,
+            "StartWait": 5,
+            "DestPosX": 3525,
+            "DestPosY": 858,
+            "DestRange": 11,
+            "DestWait": 6
+        }
+    ]
+}

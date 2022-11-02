@@ -1,0 +1,128 @@
+{
+    "Index": 239,
+    "Name": "Shaph Gravitacional",
+    "Face": 240,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1655,
+    "Rotation": 65473,
+    "Level": 29,
+    "Height": 9,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3291,
+            "StartPosY": 2042,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 3302,
+            "DestPosY": 2051,
+            "DestRange": 8,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3290,
+            "StartPosY": 2039,
+            "StartRange": 8,
+            "StartWait": 8,
+            "DestPosX": 3289,
+            "DestPosY": 2028,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3321,
+            "StartPosY": 2114,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 3309,
+            "DestPosY": 2113,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3303,
+            "StartPosY": 2080,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3313,
+            "DestPosY": 2076,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3296,
+            "StartPosY": 2062,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 3303,
+            "DestPosY": 2072,
+            "DestRange": 7,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3302,
+            "StartPosY": 2098,
+            "StartRange": 8,
+            "StartWait": 4,
+            "DestPosX": 3305,
+            "DestPosY": 2086,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3295,
+            "StartPosY": 2060,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3294,
+            "DestPosY": 2061,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3287,
+            "StartPosY": 2049,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 3275,
+            "DestPosY": 2039,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3302,
+            "StartPosY": 2083,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 3313,
+            "DestPosY": 2072,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3303,
+            "StartPosY": 2116,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3301,
+            "DestPosY": 2110,
+            "DestRange": 8,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3306,
+            "StartPosY": 2126,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3306,
+            "DestPosY": 2128,
+            "DestRange": 11,
+            "DestWait": 8
+        }
+    ]
+}

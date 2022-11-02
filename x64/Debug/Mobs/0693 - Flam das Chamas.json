@@ -1,0 +1,128 @@
+{
+    "Index": 693,
+    "Name": "Flam das Chamas",
+    "Face": 290,
+    "Hair": 0,
+    "Weapon": 1502,
+    "Health": 3933,
+    "Rotation": 97,
+    "Level": 50,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1029,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1861,
+            "StartPosY": 1334,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 1866,
+            "DestPosY": 1337,
+            "DestRange": 8,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1871,
+            "StartPosY": 1358,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 1863,
+            "DestPosY": 1346,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1843,
+            "StartPosY": 1350,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 1854,
+            "DestPosY": 1353,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1869,
+            "StartPosY": 1396,
+            "StartRange": 11,
+            "StartWait": 5,
+            "DestPosX": 1879,
+            "DestPosY": 1390,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1887,
+            "StartPosY": 1375,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 1876,
+            "DestPosY": 1375,
+            "DestRange": 6,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1926,
+            "StartPosY": 1310,
+            "StartRange": 6,
+            "StartWait": 4,
+            "DestPosX": 1918,
+            "DestPosY": 1309,
+            "DestRange": 11,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1863,
+            "StartPosY": 1319,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 1854,
+            "DestPosY": 1307,
+            "DestRange": 11,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1878,
+            "StartPosY": 1420,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1876,
+            "DestPosY": 1418,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1968,
+            "StartPosY": 1398,
+            "StartRange": 6,
+            "StartWait": 8,
+            "DestPosX": 1980,
+            "DestPosY": 1399,
+            "DestRange": 11,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1951,
+            "StartPosY": 1373,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 1955,
+            "DestPosY": 1361,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1929,
+            "StartPosY": 1433,
+            "StartRange": 8,
+            "StartWait": 6,
+            "DestPosX": 1939,
+            "DestPosY": 1437,
+            "DestRange": 7,
+            "DestWait": 5
+        }
+    ]
+}

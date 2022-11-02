@@ -140,10 +140,6 @@ bool NPCHandler::DisplayOptions(PPlayer player, PNpc npc) {
 	player->SendSignalData(PacketCode::PacketNPCTalk, npc->index);
 
 	for (auto& option : npc->options) {
-		if (option.first == 8) {
-			continue;
-		}
-
 		NPCHandler::SendOption(player, npc, (NpcUsingOption)option.first);
 	}
 
@@ -176,13 +172,18 @@ bool NPCHandler::SendOption(PPlayer player, PNpc npc, NpcUsingOption option, DWO
 
 	packet.Option = option;
 
-	strcpy_s(packet.Text, npc->options[option].c_str());
-
+	if (option == NpcOptionClose) {
+		strcpy_s(packet.Text, "Fechar");
+	}
+	else {
+		strcpy_s(packet.Text, npc->options[option].Name.c_str());
+	}
+	
 	if (option == NpcOptionMenu) {
 		packet.Show = 0xFF7FC1F4;
 	}
 	else {
-		packet.Show = color;
+		packet.Show = (color == 0xFFFFFFFF) ? npc->options[option].Color : color;
 	}
 
 	player->SendPacket(&packet, packet.Header.Size);

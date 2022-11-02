@@ -1,0 +1,28 @@
+{
+    "Index": 292,
+    "Name": "Freddy Bazardo",
+    "Face": 260,
+    "Hair": 0,
+    "Weapon": 1452,
+    "Health": 6514,
+    "Rotation": 44,
+    "Level": 30,
+    "Height": 8,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 64512,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3578,
+            "StartPosY": 3546,
+            "StartRange": 12,
+            "StartWait": 7,
+            "DestPosX": 3581,
+            "DestPosY": 3558,
+            "DestRange": 11,
+            "DestWait": 5
+        }
+    ]
+}

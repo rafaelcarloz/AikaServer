@@ -27,6 +27,7 @@ private:
 	bool GetCharacterData();
 	bool GetSkillsData();
 	bool GetHotBarData();
+	bool GetTitlesData();
 
 	boost::json::value CharacterToJSON();
 
@@ -35,9 +36,10 @@ private:
 	bool SaveSkillsData();
 	bool SaveHotBarData();
 	bool SaveBuffsData();
+	bool SaveTitlesData();
 public:
 
-	Title activeTitle;
+	PTitle activeTitle;
 
 	Position savedPosition;
 
@@ -58,6 +60,10 @@ public:
 	void SendToSavedPosition();
 
 	void SendItemBarSlot(BYTE slot, BYTE destType = 0, WORD index = 0);
+
+	void SendActiveTitle();
+
+	void SendRefreshExperience();
 };
 
 

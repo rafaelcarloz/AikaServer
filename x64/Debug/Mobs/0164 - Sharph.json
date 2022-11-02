@@ -1,0 +1,158 @@
+{
+    "Index": 164,
+    "Name": "Sharph",
+    "Face": 240,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1278,
+    "Rotation": 44,
+    "Level": 24,
+    "Height": 4,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1025,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 3302,
+            "StartPosY": 1706,
+            "StartRange": 12,
+            "StartWait": 8,
+            "DestPosX": 3305,
+            "DestPosY": 1705,
+            "DestRange": 12,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3278,
+            "StartPosY": 1730,
+            "StartRange": 9,
+            "StartWait": 7,
+            "DestPosX": 3276,
+            "DestPosY": 1724,
+            "DestRange": 10,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3261,
+            "StartPosY": 1724,
+            "StartRange": 12,
+            "StartWait": 5,
+            "DestPosX": 3273,
+            "DestPosY": 1726,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3256,
+            "StartPosY": 1736,
+            "StartRange": 10,
+            "StartWait": 8,
+            "DestPosX": 3246,
+            "DestPosY": 1733,
+            "DestRange": 10,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3275,
+            "StartPosY": 1740,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3266,
+            "DestPosY": 1728,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3270,
+            "StartPosY": 1765,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3273,
+            "DestPosY": 1757,
+            "DestRange": 10,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3225,
+            "StartPosY": 1744,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 3237,
+            "DestPosY": 1732,
+            "DestRange": 10,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 3247,
+            "StartPosY": 1770,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 3244,
+            "DestPosY": 1779,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3256,
+            "StartPosY": 1778,
+            "StartRange": 7,
+            "StartWait": 6,
+            "DestPosX": 3257,
+            "DestPosY": 1785,
+            "DestRange": 7,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 3295,
+            "StartPosY": 1717,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 3288,
+            "DestPosY": 1715,
+            "DestRange": 11,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 3271,
+            "StartPosY": 1717,
+            "StartRange": 11,
+            "StartWait": 4,
+            "DestPosX": 3273,
+            "DestPosY": 1717,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3195,
+            "StartPosY": 1758,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 3184,
+            "DestPosY": 1762,
+            "DestRange": 9,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 3227,
+            "StartPosY": 1754,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 3239,
+            "DestPosY": 1763,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 3291,
+            "StartPosY": 1705,
+            "StartRange": 6,
+            "StartWait": 5,
+            "DestPosX": 3283,
+            "DestPosY": 1713,
+            "DestRange": 7,
+            "DestWait": 7
+        }
+    ]
+}

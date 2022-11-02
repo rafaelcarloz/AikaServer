@@ -123,6 +123,6 @@ bool VisibleController::SendToVisible(LPVOID packet, WORD packetSize, bool sendS
 
 void VisibleController::ForEach(std::function<void(uint16_t, uint16_t)> procedure, uint16_t handleType) {
 	for (auto entity : this->GetEntities()) {
-		procedure(entity, handleType);
+		procedure(handleType, entity);
 	}
 }

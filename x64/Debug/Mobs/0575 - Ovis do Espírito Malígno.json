@@ -1,0 +1,168 @@
+{
+    "Index": 575,
+    "Name": "Ovis do Espírito Malígno",
+    "Face": 292,
+    "Hair": 0,
+    "Weapon": 1460,
+    "Health": 4195,
+    "Rotation": 179,
+    "Level": 47,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1540,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 1760,
+            "StartPosY": 1749,
+            "StartRange": 9,
+            "StartWait": 8,
+            "DestPosX": 1769,
+            "DestPosY": 1738,
+            "DestRange": 8,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1755,
+            "StartPosY": 1749,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 1760,
+            "DestPosY": 1737,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1775,
+            "StartPosY": 1757,
+            "StartRange": 7,
+            "StartWait": 4,
+            "DestPosX": 1780,
+            "DestPosY": 1769,
+            "DestRange": 12,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1768,
+            "StartPosY": 1771,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 1767,
+            "DestPosY": 1782,
+            "DestRange": 6,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1738,
+            "StartPosY": 1785,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 1726,
+            "DestPosY": 1788,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1742,
+            "StartPosY": 1768,
+            "StartRange": 9,
+            "StartWait": 4,
+            "DestPosX": 1742,
+            "DestPosY": 1763,
+            "DestRange": 7,
+            "DestWait": 6
+        },
+        {
+            "StartPosX": 1753,
+            "StartPosY": 1732,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 1756,
+            "DestPosY": 1741,
+            "DestRange": 9,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1762,
+            "StartPosY": 1732,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 1767,
+            "DestPosY": 1722,
+            "DestRange": 9,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1776,
+            "StartPosY": 1785,
+            "StartRange": 7,
+            "StartWait": 8,
+            "DestPosX": 1766,
+            "DestPosY": 1784,
+            "DestRange": 7,
+            "DestWait": 4
+        },
+        {
+            "StartPosX": 1736,
+            "StartPosY": 1796,
+            "StartRange": 11,
+            "StartWait": 6,
+            "DestPosX": 1729,
+            "DestPosY": 1799,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1744,
+            "StartPosY": 1769,
+            "StartRange": 10,
+            "StartWait": 7,
+            "DestPosX": 1752,
+            "DestPosY": 1780,
+            "DestRange": 12,
+            "DestWait": 8
+        },
+        {
+            "StartPosX": 1768,
+            "StartPosY": 1769,
+            "StartRange": 12,
+            "StartWait": 4,
+            "DestPosX": 1765,
+            "DestPosY": 1774,
+            "DestRange": 12,
+            "DestWait": 7
+        },
+        {
+            "StartPosX": 1774,
+            "StartPosY": 1787,
+            "StartRange": 10,
+            "StartWait": 6,
+            "DestPosX": 1771,
+            "DestPosY": 1781,
+            "DestRange": 7,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1740,
+            "StartPosY": 1785,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 1746,
+            "DestPosY": 1780,
+            "DestRange": 9,
+            "DestWait": 5
+        },
+        {
+            "StartPosX": 1736,
+            "StartPosY": 1809,
+            "StartRange": 7,
+            "StartWait": 7,
+            "DestPosX": 1730,
+            "DestPosY": 1801,
+            "DestRange": 9,
+            "DestWait": 7
+        }
+    ]
+}

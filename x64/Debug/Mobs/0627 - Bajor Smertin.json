@@ -1,0 +1,28 @@
+{
+    "Index": 627,
+    "Name": "Bajor Smertin",
+    "Face": 312,
+    "Hair": 0,
+    "Weapon": 1464,
+    "Health": 6868,
+    "Rotation": 65492,
+    "Level": 41,
+    "Height": 7,
+    "Chest": 119,
+    "Leg": 119,
+    "MobType": 1280,
+    "SpawnType": 0,
+    "IsService": 0,
+    "Positions": [
+        {
+            "StartPosX": 2425,
+            "StartPosY": 1738,
+            "StartRange": 11,
+            "StartWait": 8,
+            "DestPosX": 2424,
+            "DestPosY": 1729,
+            "DestRange": 8,
+            "DestWait": 5
+        }
+    ]
+}
