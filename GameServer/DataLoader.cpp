@@ -1,8 +1,8 @@
 #include <iostream>
 #include <boost/json.hpp>
 
-#include <Lua/lua.hpp>
-#pragma comment(lib, "lua54.lib")
+#include <lua.hpp>
+#pragma comment(lib, "lua.lib")
 
 #include "DataLoader.h"
 #include "Logger.h"

@@ -4,14 +4,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\rafae\OneDrive\Documentos\[Aika] ServerProjetoCSharp\AikaServer\AikaWeb\bin\Release\net6.0\publish\</_PublishTargetUrl>
-    <History>True|2022-10-19T01:14:23.8006903Z;True|2022-10-18T20:58:29.0813126-03:00;True|2022-10-18T18:58:04.2269677-03:00;True|2022-10-18T17:50:51.5453418-03:00;True|2022-10-18T16:55:16.9580112-03:00;True|2022-10-17T23:22:46.6140738-03:00;True|2022-10-17T20:16:19.8197440-03:00;True|2022-10-17T20:11:26.8765245-03:00;True|2022-10-17T20:08:00.0727414-03:00;True|2022-10-17T19:57:35.1313603-03:00;True|2022-10-17T19:55:16.6041365-03:00;True|2022-10-17T19:52:20.6380019-03:00;True|2022-10-17T19:28:22.4597989-03:00;True|2022-10-17T19:03:09.0822527-03:00;True|2022-10-17T19:00:58.0419606-03:00;True|2022-10-17T18:51:22.9516790-03:00;True|2022-10-17T18:46:39.5850417-03:00;True|2022-10-17T18:43:12.6351751-03:00;</History>
+    <_PublishTargetUrl>C:\Users\rafae\source\repos\AikaServer\AikaWeb\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2024-05-13T14:55:39.6372416Z;True|2024-05-12T17:34:15.6818281-03:00;True|2024-05-12T17:33:47.1002408-03:00;True|2024-05-12T17:31:32.3011206-03:00;True|2024-05-12T16:39:25.3163817-03:00;True|2024-05-12T16:36:07.0690475-03:00;True|2024-05-12T16:34:01.4023576-03:00;True|2024-05-12T16:32:45.1008976-03:00;True|2024-05-12T16:31:59.7209403-03:00;True|2024-05-12T16:30:11.6398459-03:00;True|2024-05-12T15:15:06.6041562-03:00;True|2022-10-18T22:14:23.8006903-03:00;True|2022-10-18T20:58:29.0813126-03:00;True|2022-10-18T18:58:04.2269677-03:00;True|2022-10-18T17:50:51.5453418-03:00;True|2022-10-18T16:55:16.9580112-03:00;True|2022-10-17T23:22:46.6140738-03:00;True|2022-10-17T20:16:19.8197440-03:00;True|2022-10-17T20:11:26.8765245-03:00;True|2022-10-17T20:08:00.0727414-03:00;True|2022-10-17T19:57:35.1313603-03:00;True|2022-10-17T19:55:16.6041365-03:00;True|2022-10-17T19:52:20.6380019-03:00;True|2022-10-17T19:28:22.4597989-03:00;True|2022-10-17T19:03:09.0822527-03:00;True|2022-10-17T19:00:58.0419606-03:00;True|2022-10-17T18:51:22.9516790-03:00;True|2022-10-17T18:46:39.5850417-03:00;True|2022-10-17T18:43:12.6351751-03:00;</History>
     <LastFailureDetails />
     <TimeStampOfAssociatedLegacyPublishXmlFile />
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="GameDbConnection">
-      <Value>Data Source=localhost%3bInitial Catalog=GameDatabase%3bPersist Security Info=True%3bUser ID=AIKA_WEB_API%3bPassword=oX83W5&amp;1WZT8</Value>
+      <Value>Data Source=localhost%3bInitial Catalog=GameDatabase%3bUser ID=GAME_API%3bPassword=1234%3bEncrypt=False</Value>
     </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="AikaWeb.Data.EntityHandler">
+      <Value>Data Source=localhost%3bInitial Catalog=GameDatabase%3bUser ID=GAME_API%3bPassword=1234%3bEncrypt=False</Value>
+    </EFMigrations>
   </ItemGroup>
 </Project>

@@ -6,10 +6,10 @@
 #include "Player.fwd.h"
 #include "ItemList.h"
 
-#include <Lua/lua.hpp>
+#include <lua.hpp>
 #include <LuaBridge/LuaBridge.h>
 
-#pragma comment(lib, "lua54.lib")
+#pragma comment(lib, "lua.lib")
 
 enum ScriptType : BYTE {
 	ScriptConsumeFunction,

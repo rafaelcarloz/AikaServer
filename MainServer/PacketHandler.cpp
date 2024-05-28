@@ -5,7 +5,7 @@
 
 #include "..\GameServer\Encryptation.h"
 
-using json = nlohmann::json;
+using namespace packets;
 
 bool PacketHandler::PacketControl(ClientConnection client, char* buffer, int receivedBytes, int initialOffset) {
 	if (receivedBytes == 0 || receivedBytes < sizeof(PacketHeader)) {
@@ -22,7 +22,7 @@ bool PacketHandler::PacketControl(ClientConnection client, char* buffer, int rec
 
 	auto& Header = reinterpret_cast<PacketHeader&>(buffer[0]);
 
-	switch (Header.Code) {
+	switch ((int)Header.Code) {
 
 	case 0x81:
 		PacketHandler::LoginHandler(client, buffer);
@@ -45,7 +45,7 @@ bool PacketHandler::LoginHandler(ClientConnection client, char* buffer) {
 	{
 		WebHandler webHandler;
 
-		json* response = new json();
+		boost::json::value *response = new boost::json::value();
 
 		if (!webHandler.GetSessionDataByToken(username, token, response)) {
 			Logger::Write(Logger::Format("account [%s] invalid token", username.c_str()), Warnings);
@@ -58,9 +58,9 @@ bool PacketHandler::LoginHandler(ClientConnection client, char* buffer) {
 		ZeroMemory(&PacketSend, sizeof(PacketSend));
 
 		PacketSend.Header.Size = sizeof(PacketSend);
-		PacketSend.Header.Code = 0x82;
-		PacketSend.Index = std::atoi((*response)["accountID"].dump().c_str());
-		PacketSend.Nation = std::atoi((*response)["accountNation"].dump().c_str());
+		PacketSend.Header.Code = (PacketCode)0x82;
+		PacketSend.Index = boost::json::value_to<int>(response->at("accountID"));
+		PacketSend.Nation = boost::json::value_to<int>(response->at("accountNation"));
 		PacketSend.Time = GetTickCount();
 
 		if (!client.SendPacket(&PacketSend, PacketSend.Header.Size)) {
@@ -71,7 +71,7 @@ bool PacketHandler::LoginHandler(ClientConnection client, char* buffer) {
 
 		Logger::Write(Logger::Format("account [%s] logged with token [%s]", username.c_str(), token.c_str()), LOG_TYPE::Packets);
 	}
-	catch (json::exception& e)
+	catch (std::exception& e)
 	{
 		Logger::Write(e.what(), Error);
 	}

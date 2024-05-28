@@ -172,6 +172,10 @@ bool BuffsController::GetDatabaseData() {
 	try {
 		json::value response = json::value();
 
+		if (this->_parent->entityMobType != EntityNPC) {
+			return true;
+		}
+
 		if (!webHandler.GetCharacterBuffs(this->_parent->character.CharacterId, &response)) {
 			return false;
 		}

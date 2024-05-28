@@ -1,7 +1,6 @@
 #pragma once
 
 #include "..\GameServer\ServerSocket.h"
-#include <nlohmann/json.hpp>
 
 #include <iostream>
 #include <iterator>
@@ -10,13 +9,15 @@
 #include <fstream>
 #include <mutex>
 
+#include <boost/json.hpp>
+
 #include "..\GameServer\WebHandler.h"
 
 #include "ClientConnection.h"
 
 
 using namespace std;
-using json = nlohmann::json;
+namespace json = boost::json;
 
 class ServerInstance {
 private:

@@ -11,6 +11,8 @@
 #include <winhttp.h>
 #include "WinVersion.h"
 
+#include "Logger.h"
+
 #pragma comment(lib, "Winhttp.lib")
 
 
@@ -21,6 +23,9 @@ bool WinHttpWrapper::HttpRequest::Get(
 {
 	static const std::wstring verb = L"GET";
 	static std::string body;
+
+	Logger::Write(LOG_TYPE::Status, "[HttpRequest::Get] requesting url '%ws' with header '%ws'", rest_of_path.c_str(), requestHeader.c_str());
+
 	return Request(
 		verb,
 		rest_of_path,
@@ -36,6 +41,9 @@ bool WinHttpWrapper::HttpRequest::Post(
 	HttpResponse& response)
 {
 	static const std::wstring verb = L"POST";
+
+	Logger::Write(LOG_TYPE::Status, "[HttpRequest::Post] requesting url '%ws' with header '%ws' using data '%ws'", rest_of_path.c_str(), requestHeader.c_str(), body.c_str());
+
 	return Request(
 		verb,
 		rest_of_path,
@@ -131,7 +139,7 @@ bool WinHttpWrapper::HttpRequest::http(const std::wstring& verb, const std::wstr
 	}
 	else
 	{
-		error = L"WinHttpOpen fails!";
+		error = L"WinHttpOpen fails to obtain a session handle!";
 		return false;
 	}
 
@@ -147,7 +155,7 @@ bool WinHttpWrapper::HttpRequest::http(const std::wstring& verb, const std::wstr
 	else
 	{
 		WinHttpCloseHandle(hSession);
-		error = L"WinHttpConnect fails!";
+		error = L"WinHttpConnect fails to connect to domain!";
 		return false;
 	}
 

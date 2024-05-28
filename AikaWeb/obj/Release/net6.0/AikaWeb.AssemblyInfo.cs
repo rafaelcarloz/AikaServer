@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AikaWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4482962d8d4c933153a5d6fc49b5a2a3332b3652")]
 [assembly: System.Reflection.AssemblyProductAttribute("AikaWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AikaWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

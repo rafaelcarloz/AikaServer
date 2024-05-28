@@ -15,7 +15,7 @@ bool WebHandler::ProcessResponse(HttpResponse& responseHttp, json::value* respon
 		}
 
 		default:
-			Logger::Write(Warnings, "[WebHandler::ProcessResponse] result[%d]: %s", responseHttp.statusCode, responseHttp.error.c_str());
+			Logger::Write(Warnings, "[WebHandler::ProcessResponse] result[%d]: %ws", responseHttp.statusCode, responseHttp.error.c_str());
 			return false;
 			break;
 		}

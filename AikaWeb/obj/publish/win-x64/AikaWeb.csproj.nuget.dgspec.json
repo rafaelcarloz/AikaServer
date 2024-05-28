@@ -1,34 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\AikaProject\\AikaServer\\AikaWeb\\AikaWeb.csproj": {}
+    "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\AikaWeb.csproj": {}
   },
   "projects": {
-    "C:\\AikaProject\\AikaServer\\AikaWeb\\AikaWeb.csproj": {
+    "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\AikaWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\AikaProject\\AikaServer\\AikaWeb\\AikaWeb.csproj",
+        "projectUniqueName": "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\AikaWeb.csproj",
         "projectName": "AikaWeb",
-        "projectPath": "C:\\AikaProject\\AikaServer\\AikaWeb\\AikaWeb.csproj",
+        "projectPath": "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\AikaWeb.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\AikaProject\\AikaServer\\AikaWeb\\obj\\publish\\win-x64\\",
+        "outputPath": "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\obj\\publish\\win-x64\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
           "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,13 +42,13 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[6.0.20, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[6.0.20, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -81,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       },
       "runtimes": {

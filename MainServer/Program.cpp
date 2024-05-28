@@ -18,15 +18,15 @@ void SetConsoleSpecs() {
 }
 
 void InitializeServers(ServerInstance* instance) {
-	json* servers = new json();
+	json::value *servers = new json::value();
 
 	if (!instance->webHandler.GetServers(servers)) {
 		Logger::Write("No servers found!", Status);
 		return;
 	}
 
-	for (auto& server : *servers) {
-		string serverData = server.dump();
+	for (auto& server : servers->as_array()) {
+		string serverData = json::serialize(server);
 		std::replace(serverData.begin(), serverData.end(), '\"', '\'');
 
 		string command = "start "+ currentDir + "\\GameServer.exe " + serverData ;

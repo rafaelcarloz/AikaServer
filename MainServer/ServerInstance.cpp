@@ -17,13 +17,33 @@ ServerInstance* ServerInstance::GetInstance()
 bool ServerInstance::LoadConfiguration() {
 	try {
 		std::ifstream f("MainServer.json");
-		json configurationData = json::parse(f);
+		std::string input(std::istreambuf_iterator<char>(f), {});
+		f.close();
 
-		string address = configurationData["serverSettings"]["address"];
-		WORD port = std::stoi(configurationData["serverSettings"]["port"].dump());
+		error_code ec;
+		auto configurationData = json::parse(input, ec);
 
-		this->version = configurationData["serverSettings"]["version"];
-		this->maxConnections = configurationData["serverSettings"]["maxConnections"];
+		printf("%d \n", ec);
+
+		if (configurationData.is_object()) {
+			printf("object \n");
+
+			boost::json::object& jsonObj = configurationData.as_object();
+
+			auto _a = jsonObj.end();
+		}
+		else if (configurationData.is_array()) {
+			printf("array \n");
+		}
+		else {
+			printf("invalid \n");
+		}
+
+		string address = json::value_to<string>(configurationData.at("serverSettings").at("address"));
+		WORD port = json::value_to<WORD>(configurationData.at("serverSettings").at("port"));
+
+		this->version = json::value_to<int>(configurationData.at("serverSettings").at("version"));
+		this->maxConnections = json::value_to<int>(configurationData.at("serverSettings").at("maxConnections"));
 
 		this->serverSocket = ServerSocket(address, port);
 	}

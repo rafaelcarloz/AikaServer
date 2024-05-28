@@ -36,8 +36,9 @@ namespace AikaWeb.Controllers
             try
             {
                 nation = _context.Nations.Find(id);
-            } catch (Exception)
+            } catch (Exception exception)
             {
+                Console.WriteLine(exception.Message);
                 return NotFound();
             }
 
