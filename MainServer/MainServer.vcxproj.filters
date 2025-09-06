@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="MainServer.json" />
+    <CopyFileToFolders Include="startup.bat" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

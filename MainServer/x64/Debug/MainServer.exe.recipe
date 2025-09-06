@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\x64\Debug\GameServer.exe</FullPath>
+      <FullPath>C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\bin\GameServer.exe</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\x64\Debug\MainServer.exe</FullPath>
+      <FullPath>C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\bin\MainServer.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
