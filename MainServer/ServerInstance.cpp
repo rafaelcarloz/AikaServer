@@ -3,6 +3,7 @@
 ServerInstance* ServerInstance::_instance{ nullptr };
 std::mutex ServerInstance::_mutex;
 
+
 ServerInstance* ServerInstance::GetInstance()
 {
 	std::lock_guard<std::mutex> lock(_mutex);
@@ -21,29 +22,14 @@ bool ServerInstance::LoadConfiguration() {
 		f.close();
 
 		error_code ec;
-		auto configurationData = json::parse(input, ec);
 
-		printf("%d \n", ec);
-
-		if (configurationData.is_object()) {
-			printf("object \n");
-
-			boost::json::object& jsonObj = configurationData.as_object();
-
-			auto _a = jsonObj.end();
-		}
-		else if (configurationData.is_array()) {
-			printf("array \n");
-		}
-		else {
-			printf("invalid \n");
-		}
-
+		json::value configurationData = json::parse(input, ec);
+			
 		string address = json::value_to<string>(configurationData.at("serverSettings").at("address"));
 		WORD port = json::value_to<WORD>(configurationData.at("serverSettings").at("port"));
 
-		this->version = json::value_to<int>(configurationData.at("serverSettings").at("version"));
-		this->maxConnections = json::value_to<int>(configurationData.at("serverSettings").at("maxConnections"));
+		this->version = int(json::value_to<WORD>(configurationData.at("serverSettings").at("version")));
+		this->maxConnections = int(json::value_to<WORD>(configurationData.at("serverSettings").at("maxConnections")));
 
 		this->serverSocket = ServerSocket(address, port);
 	}

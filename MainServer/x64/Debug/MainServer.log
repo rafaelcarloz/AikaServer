@@ -1,5 +1,4 @@
-﻿  ServerInstance.cpp
-C:\Users\rafae\source\repos\AikaServer\MainServer\ServerInstance.cpp(26,10): warning C4477: 'printf': a cadeia de formato '%d' requer um argumento do tipo 'int', mas um argumento variadic 1 tem o tipo 'std::error_code'
-  MainServer.vcxproj -> C:\Users\rafae\source\repos\AikaServer\x64\Debug\MainServer.exe
+﻿  PacketHandler.cpp
+  MainServer.vcxproj -> C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\x64\Debug\MainServer.exe
   'pwsh.exe' não é reconhecido como um comando interno
   ou externo, um programa operável ou um arquivo em lotes.

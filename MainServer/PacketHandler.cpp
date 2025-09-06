@@ -59,8 +59,8 @@ bool PacketHandler::LoginHandler(ClientConnection client, char* buffer) {
 
 		PacketSend.Header.Size = sizeof(PacketSend);
 		PacketSend.Header.Code = (PacketCode)0x82;
-		PacketSend.Index = boost::json::value_to<int>(response->at("accountID"));
-		PacketSend.Nation = boost::json::value_to<int>(response->at("accountNation"));
+		PacketSend.Index = boost::json::value_to<WORD>(response->at("accountID"));
+		PacketSend.Nation = boost::json::value_to<WORD>(response->at("accountNation"));
 		PacketSend.Time = GetTickCount();
 
 		if (!client.SendPacket(&PacketSend, PacketSend.Header.Size)) {

@@ -169,15 +169,20 @@ namespace AikaWeb.Controllers
             string user = tokenRequest.id ?? "";
             string tokenString = tokenRequest.pw ?? "";
 
+            if (user == String.Empty)
+            {
+                return BadRequest();
+            }
+
             SessionActiveModel sessionActive = new SessionActiveModel();
 
             try
             {
                 sessionActive = _context.SessionsActive.OrderByDescending(s => s.UpdatedOn).Where(s => user.Equals(s.AccountUsername)).Take(1).First();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                return NotFound();
+                return BadRequest(e.Message);
             }
 
             if (!user.Equals(sessionActive.AccountUsername))
@@ -187,7 +192,7 @@ namespace AikaWeb.Controllers
 
             if (!tokenString.Equals(sessionActive.SessionHash))
             {
-                return Unauthorized();
+                return Unauthorized(tokenString);
             }
 
             var session = _context.Sessions.Find(sessionActive.SessionID);

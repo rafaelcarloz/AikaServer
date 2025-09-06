@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\AikaWeb.csproj": {}
+    "C:\\Users\\rafae\\OneDrive\\Documentos\\GitHub\\AikaServer\\AikaWeb\\AikaWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\AikaWeb.csproj": {
+    "C:\\Users\\rafae\\OneDrive\\Documentos\\GitHub\\AikaServer\\AikaWeb\\AikaWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\AikaWeb.csproj",
+        "projectUniqueName": "C:\\Users\\rafae\\OneDrive\\Documentos\\GitHub\\AikaServer\\AikaWeb\\AikaWeb.csproj",
         "projectName": "AikaWeb",
-        "projectPath": "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\AikaWeb.csproj",
+        "projectPath": "C:\\Users\\rafae\\OneDrive\\Documentos\\GitHub\\AikaServer\\AikaWeb\\AikaWeb.csproj",
         "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafae\\source\\repos\\AikaServer\\AikaWeb\\obj\\",
+        "outputPath": "C:\\Users\\rafae\\OneDrive\\Documentos\\GitHub\\AikaServer\\AikaWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
