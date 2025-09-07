@@ -7,3 +7,5 @@
 /Debug
 /*.pdb
 /x64/debug/*.pdd
+*.obj
+*.tlog
