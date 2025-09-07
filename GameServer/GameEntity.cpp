@@ -233,8 +233,32 @@ void GameEntity::SendEffect(WORD effectId) {
 
 #pragma region "Damage"
 
+uint64_t GameEntity::CalculateReceivedPhysicalDamage(uint64_t damage) {
+	WORD rawDamageReduction = (this->statusController.volatileStatus.Damage.PhysDefense / 8);
+
+	uint64_t resultDamage = (damage - rawDamageReduction);
+
+	return resultDamage;  
+}
+
+uint64_t GameEntity::CalculateReceivedMagicalDamage(uint64_t damage) {
+	WORD rawDamageReduction = (this->statusController.volatileStatus.Damage.PhysDefense / 8);
+
+	uint64_t resultDamage = (damage - rawDamageReduction);
+
+	return resultDamage;
+}
 
 void GameEntity::DisplayDamage(uint16_t skill, uint16_t animation, uint64_t damage, DamageType damageType, GameEntity* attacker) {
+	Logger::Write(Packets, "current hp: %d, damage: %d", this->statusController.volatileStatus.Life.CurHP, damage);
+
+	if (damage >= this->statusController.volatileStatus.Life.CurHP) {
+		this->statusController.volatileStatus.Life.CurHP = 0;
+	}
+	else {
+		this->statusController.volatileStatus.Life.CurHP -= damage;
+	}
+	
 	PacketDisplayDamage packet;
 
 	ZeroMemory(&packet, sizeof(PacketDisplayDamage));

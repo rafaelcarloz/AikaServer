@@ -36,6 +36,8 @@ public:
 	time_t timeLastRegenerationTick;
 	time_t timeLastBuffTick;
 
+	time_t timeLastDeath;
+
 	std::string textTitle;
 
 	uint16_t entityMobType;
@@ -44,7 +46,13 @@ public:
 	virtual ~GameEntity() {};
 
 	bool IsDead();
+	
+	//damage
+	uint64_t CalculateReceivedPhysicalDamage(uint64_t damage);
+	uint64_t CalculateReceivedMagicalDamage(uint64_t damage);
 	void DisplayDamage(uint16_t skill, uint16_t animation, uint64_t damage, packets::DamageType damageType, GameEntity* attacker);
+
+
 	void GetCreateMobPacket(packets::PacketCreateMob& packet, int targetId);
 	void SendCreateMob(uint16_t spawnType, int targetId);
 	void GetSpawnMobPacket(packets::PacketSpawnMob& packet, int targetId);

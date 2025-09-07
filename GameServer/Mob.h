@@ -29,6 +29,7 @@ class Mob: public GameEntity {
 private:
 	uint16_t _positionId;
 	MobPosData _positionData;
+	MobPosData _originalPositionData;
 
 	bool _fighting = false;
 

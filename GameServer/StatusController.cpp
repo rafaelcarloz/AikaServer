@@ -24,7 +24,7 @@ void StatusController::Recalculate() {
 
 	ZeroMemory(&this->volatileStatus, sizeof(CharacterStatus));
 	ZeroMemory(&this->aditionalStatus, sizeof(CharacterAditionalStatus));
-	
+
 	this->volatileStatus = this->_baseCharacter.Status;
 
 	this->CalculateStatusPoints();
@@ -49,7 +49,6 @@ void StatusController::Recalculate() {
 
 	this->CalculateEquipmentsLifePoints();
 	this->CalculateLifePoints();
-
 
 	this->SendCurrentStatus();
 }
@@ -315,6 +314,12 @@ void StatusController::CalculateEquipmentsLifePoints() {
 }
 
 void StatusController::CalculateLifePoints() {
+	if (EntityHandler::GetEntityType(this->_entityId) != EntityPlayer) {
+		volatileStatus.Life.CurHP = volatileStatus.Life.MaxHP;
+		volatileStatus.Life.CurMP = volatileStatus.Life.MaxMP;
+		return;
+	}
+
 	this->volatileStatus.Life.MaxHP += HPIncrementPerLevel[(BYTE)((BYTE)this->_character->ClassInfo / 10)]
 		* (this->_character->Level + 1);
 

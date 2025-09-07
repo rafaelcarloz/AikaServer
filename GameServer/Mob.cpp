@@ -29,6 +29,8 @@ bool Mob::Initialize(uint16_t entityId, boost::json::value data, uint16_t positi
 	this->timeLastBuffTick = time(0);
 	this->timeLastRegenerationTick = time(0);
 
+	this->timeLastDeath = time(0);
+
 
 	this->_currentDestination = this->_positionData.Destination;
 	this->_awaitTime = this->_positionData.StartWait + ((rand() % 10 + 1));
@@ -64,10 +66,10 @@ bool Mob::FromJSON(boost::json::value data) {
 		weaponItem->Apparence = weaponItem->Index;
 
 
-		this->character.Status.Life.MaxHP = json::value_to<int>(data.at("Health"));
-		this->character.Status.Life.CurMP = this->character.Status.Life.MaxHP;
+		this->baseCharacter.Status.Life.MaxHP = json::value_to<int>(data.at("Health"));
+		this->character.Status.Life.CurHP = this->baseCharacter.Status.Life.MaxHP;
 
-		this->character.Status.Life.MaxMP = 10;
+		this->baseCharacter.Status.Life.MaxMP = 10;
 		this->character.Status.Life.CurMP = 10;
 
 		this->rotation = json::value_to<int>(data.at("Rotation"));
@@ -125,7 +127,7 @@ void Mob::PerformUpdate() {
 }
 
 void Mob::HandleMovement() {
-	if (!this->IsDead()) {
+	if (this->IsDead()) {
 		return;
 	}
 
@@ -176,5 +178,7 @@ void Mob::MoveTowards(Position destination) {
 }
 
 void Mob::HandleAttack() {
-
+	if (this->IsDead()) {
+		return;
+	}
 }
