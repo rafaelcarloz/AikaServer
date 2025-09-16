@@ -50,6 +50,7 @@ public:
 
 	time_t GetExpireDate();
 	void SetExpireDate(time_t date);
+	bool IsExpired();
 
 	bool IsSealed();
 	void SetSealed(bool seal);

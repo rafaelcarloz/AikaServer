@@ -9,6 +9,7 @@
 #include "UseItemHandler.h"
 #include "NPCHandler.h"
 #include "TitleList.h"
+#include "SkillData.h"
 #include "SkillHandler.h"
 
 
@@ -120,7 +121,30 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 	case PacketCode::PacketActiveTitle:
 		PacketHandler::OnUpdateActiveTitlePacket(player, buffer);
 		break;
-	
+
+	case PacketCode::PacketBuyItem:
+		PacketHandler::OnBuyItemsPacket(player, buffer);
+		break;
+
+	case PacketCode::PacketSellItem:
+		PacketHandler::OnSellItemsPacket(player, buffer);
+		break;
+
+	case PacketCode::PacketRequestMobInfoformation:
+		PacketHandler::OnRequestMobInformationPacket(player, buffer);
+		break;
+
+	case PacketCode::PacketUnsealItem:
+		PacketHandler::OnUnsealItemPacket(player, buffer);
+		break;
+
+	case PacketCode::PacketAcquireSkill:
+		PacketHandler::OnAcquireSkillPacket(player, buffer);
+		break;
+
+	case PacketCode::PacketResetSkills:
+		PacketHandler::OnResetSkillsPacket(player, buffer);
+		break;
 
 	default:
 		Logger::Write(Logger::Format("On unknown packet => size: %x - opcode: %x", header.Size, header.Code), Packets);
@@ -672,7 +696,31 @@ bool PacketHandler::OnCharacterActionPacket(PPlayer player, char* buffer) {
 	return true;
 }
 
+bool PacketHandler::OnRevivePlayerPacket(PPlayer player, char* buffer) {
+	if (!player->IsDead()) {
+		return true;
+	}
 
+	ServerInstance* instance = ServerInstance::GetInstance();
+
+	if (player->account->accountNation != instance->GetNationData()->nationId) {
+		player->characterController->Teleport(2944, 1664);
+	}
+	else {
+		player->characterController->SendToSavedPosition();
+	}
+
+	player->character.Status.Life.CurHP = (uint32_t)(player->statusController.volatileStatus.Life.MaxHP / 0x10);
+	player->character.Status.Life.CurMP = (uint32_t)(player->statusController.volatileStatus.Life.MaxMP / 0x10);
+
+	player->buffsController->Recalculate();
+	player->statusController.Recalculate();
+
+	return true;
+}
+
+
+#pragma region "Inventory Handler"
 
 bool PacketHandler::OnMoveItemPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketMoveItem&>(buffer[0]);
@@ -719,30 +767,6 @@ bool PacketHandler::OnUngroupItemsPacket(PPlayer player, char* buffer) {
 	return player->inventoryController.UngroupItems((SlotType)packet.SlotType, (BYTE)packet.Slot, (WORD)packet.Amount);
 }
 
-bool PacketHandler::OnRevivePlayerPacket(PPlayer player, char* buffer) {
-	if (!player->IsDead()) {
-		return true;
-	}
-
-	ServerInstance* instance = ServerInstance::GetInstance();
-
-	if (player->account->accountNation != instance->GetNationData()->nationId) {
-		player->characterController->Teleport(2944, 1664);
-	}
-	else {
-		player->characterController->SendToSavedPosition();
-	}
-
-	player->character.Status.Life.CurHP = (uint32_t)(player->statusController.volatileStatus.Life.MaxHP / 0x10);
-	player->character.Status.Life.CurMP = (uint32_t)(player->statusController.volatileStatus.Life.MaxMP / 0x10);
-
-	player->buffsController->Recalculate();
-	player->statusController.Recalculate();
-
-	return true;
-}
-
-
 bool PacketHandler::OnUseItemPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketUseItem&>(buffer[0]);
 
@@ -770,6 +794,34 @@ bool PacketHandler::OnUseItemPacket(PPlayer player, char* buffer) {
 	return true;
 }
 
+
+bool PacketHandler::OnUnsealItemPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketSignalData&>(buffer[0]);
+
+	if (packet.Data > player->inventoryController.GetInventoryMaxSlots()) {
+		player->SendClientMessage("This inventory slot is not available !!!");
+		return true;
+	}
+
+	PItem item = &player->character.Inventory[packet.Data];
+
+	if (item->Index <= 0) {
+		return true;
+	}
+
+	if (item->IsSealed()) {
+		item->SetSealed(false);
+	}
+
+	UseItemHandler handler = UseItemHandler();
+	handler.UseInventoryItem(player, packet.Data, SlotInventory);
+
+	return true;
+}
+
+
+#pragma endregion
+#pragma region "NPC Handlers"
 
 bool PacketHandler::OnOpenNPCPacket(PPlayer player, char* buffer) {
 	auto& packet = reinterpret_cast<PacketOpenNPC&>(buffer[0]);
@@ -810,6 +862,172 @@ bool PacketHandler::OnCloseNPC(PPlayer player, char* buffer) {
 
 	return true;
 }
+
+
+bool PacketHandler::OnBuyItemsPacket(PPlayer player, char* buffer) {
+	return true;
+}
+
+bool PacketHandler::OnSellItemsPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketSellItem&>(buffer[0]);
+
+	if (player->usingNPC == nullptr) {
+		return true;
+	}
+
+	if (packet.Index != player->usingNPC->index) {
+		player->SendClientMessage("Openned NPC is different from the one you trying to buy o.O");
+		return true;
+	}
+
+	if (packet.Slot > 63) {
+		player->SendClientMessage("This inventory slot is not available !!!");
+		return true;
+	}
+
+	PItem item = &player->character.Inventory[packet.Slot];
+	auto itemData = ItemList::Get(item->Index);
+
+	uint32_t sellValue = 0;
+
+	if (item->Time > 0) {
+		player->SendClientMessage("Item can not be selled");
+		return true;
+	}
+
+	if (itemData.ItemType == 7) {
+		player->SendClientMessage("Item can not be selled");
+		return true;
+	}
+
+	if (item->CanAgroup()) {
+		if (itemData.SellPrice < 5) {
+			sellValue = itemData.SellPrice * item->Amount;
+		}
+		else {
+			if (itemData.ItemType == 60) {
+				sellValue = (itemData.SellPrice / 4) * item->Amount;
+			}
+			else {
+				sellValue = (itemData.SellPrice / 5) * item->Amount;
+			}
+		}
+	}
+
+	player->characterController->AddGold(sellValue);
+	player->inventoryController.DeleteItem(SlotInventory, packet.Slot, false);
+
+	return true;
+}
+
+bool PacketHandler::OnAcquireSkillPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketAcquireSkill&>(buffer[0]);
+
+	if (player->usingNPC == nullptr) {
+		return true;
+	}
+
+	if (packet.Index != player->usingNPC->index) {
+		player->SendClientMessage("Openned NPC is different from the one you trying to use o.O");
+		return true;
+	}
+
+	auto skillData = SkillData::Get(packet.Skill);
+
+	if (skillData.MinLevel > (player->character.Level+1)) {
+		player->SendClientMessage("Not enough level");
+		return true;
+	}
+
+	if (skillData.SkillPoints > player->character.Status.SkillPoints) {
+		player->SendClientMessage("Not enough skill points");
+		return true;
+	}
+
+	if ((int)(skillData.Classe/10) != (int)player->character.ClassInfo/10) {
+		player->SendClientMessage("This skill is not for your class");
+		return true;
+	}
+
+	if (skillData.LearnCosts > player->character.Gold) {
+		player->SendClientMessage("Not enough gold");
+		return true;
+	}
+
+	player->characterController->DecGold(skillData.LearnCosts);
+	player->characterController->AcquireSkill(packet.Skill);
+
+	player->character.Status.SkillPoints -= skillData.SkillPoints;
+
+	player->characterController->SendCharacterSkills(packet.Index);
+	player->characterController->SendCharacterSkillLevels();
+	player->statusController.Recalculate();
+
+	return true;
+}
+
+bool PacketHandler::OnRequestMobInformationPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketRequestMobInfoformation&>(buffer[0]);
+
+	Logger::Write(Debug, "[PacketHandler::OnRequestMobInformationPacket] entity %d requesting mob %d - type  %d information", 
+		player->index, 
+		packet.Index,
+		packet.MobType
+	);
+
+	if (packet.MobType == ENTITY_MOB) {
+		PGameEntity entity = EntityHandler::GetEntity(packet.Index);
+
+		entity->SendSpawnMob(SpawnType::SpawnNormal, player->index);
+		Logger::Write(Debug, "[PacketHandler::OnRequestMobInformationPacket] spawn send to entity %d for mob %d - type  %d",
+			player->index,
+			packet.Index,
+			packet.MobType
+		);
+	}
+
+	return true;
+}
+
+#pragma endregion
+#pragma region "Skills and Buffs"
+
+bool PacketHandler::OnResetSkillsPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketResetSkills&>(buffer[0]);
+
+	const int SKILL_RESET_TAX_PER_LEVEL = 500;
+	const int SKILL_POINTS_PER_LEVEL = 1;
+
+	uint64_t taxReset = (player->character.Level+1) * SKILL_RESET_TAX_PER_LEVEL;
+
+	if (taxReset > player->character.Gold) {
+		player->SendClientMessage("not enough gold");
+
+		return true;
+	}
+
+	InitialCharacters* initialCharacters = InitialCharacters::GetInstance();
+
+	Character baseCharacter = initialCharacters->Get((WORD)player->character.ClassInfo);
+
+	for (int slot = 0; slot < 60; slot++) {
+		player->character.SkillList[slot].skillID = baseCharacter.SkillList[slot].skillID;
+	}
+
+	player->characterController->DecGold(taxReset);
+
+	player->character.Status.SkillPoints = player->character.Level * SKILL_POINTS_PER_LEVEL;
+
+	player->characterController->SendCharacterSkills(packet.Index);
+	player->characterController->SendCharacterSkillLevels();
+
+	player->statusController.Recalculate();
+
+	return true;
+}
+
+#pragma endregion
+
 
 
 bool PacketHandler::OnItemBarPacket(PPlayer player, char* buffer) {

@@ -28,7 +28,7 @@ typedef struct ItemFromList {
 	char NameEnglish[64];
 	char Descrition[128]; // Description
 	bool CanAgroup;
-	bool Unknow;
+	bool MaxValue;
 	WORD ItemType;
 	BYTE UnkValues[8];
 	WORD UseEffect;
@@ -37,7 +37,7 @@ typedef struct ItemFromList {
 		PriceHonor, // valor
 		PriceMedal, // valor
 		PriceGold, // valor
-		SellPrince,
+		SellPrice,
 		Null_0;
 	WORD CharacterClass; // dword
 	BYTE Null_1[6];

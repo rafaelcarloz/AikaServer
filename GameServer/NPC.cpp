@@ -29,6 +29,8 @@ bool NPC::Initialize(uint16_t entityId, boost::json::value data) {
 	this->timeLastBuffTick = time(0);
 	this->timeLastRegenerationTick = time(0);
 
+	this->timeLastDeath = time(0);
+
 	return true;
 }
 

@@ -1,6 +1,6 @@
 {
     "Index": 154,
-    "Name": "Larva do Guru Dócil",
+    "Name": "Larva do Guru D\u00c3\u00b3cil",
     "Face": 243,
     "Hair": 0,
     "Weapon": 0,
@@ -13,6 +13,10 @@
     "MobType": 1027,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 4,
+    "DropIndex": 11,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 3361,

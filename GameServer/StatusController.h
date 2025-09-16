@@ -472,6 +472,8 @@ private:
 
 	uint32_t _mobEffects[400];
 
+	time_t _timeLastDotTick;
+
 	void AddEffect(uint16_t effectId, uint32_t effectValue);
 	void SetEffect(uint16_t effectId, uint32_t effectValue);
 
@@ -523,11 +525,12 @@ public:
 	void RestaureLifePoints();
 
 	void SendCurrentStatus();
-	void SendCurrentLife();
+	void SendCurrentLife(bool Update = false);
 
 	void RecalculateEffects();
 
 	void DoRegenerationTick();
+	void DoDotTick();
 };
 
 

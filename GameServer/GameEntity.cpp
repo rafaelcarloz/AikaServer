@@ -99,6 +99,8 @@ void GameEntity::GetSpawnMobPacket(PacketSpawnMob& packet, int targetId) {
 	packet.MaxHP = this->statusController.volatileStatus.Life.MaxHP;
 	packet.MaxMP = this->statusController.volatileStatus.Life.MaxMP;
 
+	packet.Level = this->character.Level;
+
 	packet.CurrentPosition = this->position;
 	packet.Rotation = this->rotation;
 
@@ -236,60 +238,153 @@ void GameEntity::SendEffect(WORD effectId) {
 uint64_t GameEntity::CalculateReceivedPhysicalDamage(uint64_t damage) {
 	WORD rawDamageReduction = (this->statusController.volatileStatus.Damage.PhysDefense / 8);
 
+	if (damage == 0) {
+		return damage;
+	}
+
+	if (rawDamageReduction > damage) {
+		return MIN_ENTITY_DAMAGE;
+	}
+
 	uint64_t resultDamage = (damage - rawDamageReduction);
 
 	return resultDamage;  
 }
 
 uint64_t GameEntity::CalculateReceivedMagicalDamage(uint64_t damage) {
-	WORD rawDamageReduction = (this->statusController.volatileStatus.Damage.PhysDefense / 8);
+	WORD rawDamageReduction = (this->statusController.volatileStatus.Damage.MagDefense / 8);
+
+	if (damage == 0) {
+		return damage;
+	}
+
+	if (rawDamageReduction > damage) {
+		return MIN_ENTITY_DAMAGE;
+	}
 
 	uint64_t resultDamage = (damage - rawDamageReduction);
 
 	return resultDamage;
 }
 
-void GameEntity::DisplayDamage(uint16_t skill, uint16_t animation, uint64_t damage, DamageType damageType, GameEntity* attacker) {
-	Logger::Write(Packets, "current hp: %d, damage: %d", this->statusController.volatileStatus.Life.CurHP, damage);
-
-	if (damage >= this->statusController.volatileStatus.Life.CurHP) {
-		this->statusController.volatileStatus.Life.CurHP = 0;
-	}
-	else {
-		this->statusController.volatileStatus.Life.CurHP -= damage;
-	}
-	
+void GameEntity::DisplayDamage(uint16_t skill, uint16_t attackAnimation, uint64_t damage, DamageType damageType, GameEntity* attacker) {
 	PacketDisplayDamage packet;
 
 	ZeroMemory(&packet, sizeof(PacketDisplayDamage));
+
+	auto skillItem = SkillData::Get(skill);
 
 	packet.header.Size = sizeof(PacketDisplayDamage);
 	packet.header.Index = this->index;
 	packet.header.Code = PacketCode::PacketDisplayDamage;
 
-	packet.animation = animation;
+	packet.animation = attackAnimation;
 	packet.skill = skill;
 	packet.damage = damage;
 	packet.damageType = damageType;
 
-	packet.attackerId = attacker->index;
+	if (attacker != nullptr) {
+		packet.attackerId = attacker->index;
+		packet.attackerHp = attacker->statusController.volatileStatus.Life.CurHP;
+		packet.attackerPosition = attacker->position;
+	}
+
 	packet.targetId = this->index;
 
-	packet.attackerHp = attacker->statusController.volatileStatus.Life.CurHP;
 	packet.targetHp = this->statusController.volatileStatus.Life.CurHP;
-
-	packet.attackerPosition = attacker->position;
 
 	if (this->IsDead()) {
 		packet.deathPosition = this->position;
 	}
 
-	packet.mobAnimation = SkillData::Get(skill).TargetAnimation;
+	packet.mobAnimation = skillItem.TargetAnimation;
 
-	ServerInstance* instance = ServerInstance::GetInstance();
-
-	instance->SendPacketToClient(this->index, &packet, packet.header.Size);
-	instance->SendPacketToClient(attacker->index, &packet, packet.header.Size);
+	this->visibleController->SendToVisible(&packet, packet.header.Size);
 }
 
+void GameEntity::AttackTarget(GameEntity* target, uint16_t skill, uint16_t animation, EntityDamage entityDamage) {
+	this->entityLastTarget = target;
+	this->timeLastAttack = time(0);
+
+	if (target->IsDead()) {
+		return;
+	}
+
+	if (skill == 0) {
+		this->timeLastAttack = time(0);
+		this->timeLastBasicAttack = time(0);
+	}
+
+	target->OnGetAttacked(this, skill, animation, entityDamage);
+}
+
+void GameEntity::OnGetAttacked(GameEntity* attacker, uint16_t skill, uint16_t attackAnimation, EntityDamage entityDamage){
+	this->timeLastReceivedAttack = time(0);
+	this->entityLastAttacker = attacker;
+
+	uint64_t damage = 0;
+
+	if (entityDamage.DamageScope == DamagePhysical) {
+		damage = this->CalculateReceivedPhysicalDamage(entityDamage.DamageValue);
+	}
+	else {
+		damage = this->CalculateReceivedMagicalDamage(entityDamage.DamageValue);
+	}
+
+	this->DealDamage(damage);
+
+	Logger::Write(Debug, "[Entity::%d] Attacking Entity %d with damage %d, remaining health: %d", attacker->index, this->index, damage, this->statusController.volatileStatus.Life.CurHP);
+
+	this->DisplayDamage(skill, attackAnimation, damage, entityDamage.DamageType, attacker);
+}
+
+void GameEntity::DealDamage(uint64_t damage) {
+	if (damage >= this->statusController.volatileStatus.Life.CurHP) {
+		this->statusController.volatileStatus.Life.CurHP = 0;
+		this->OnDie(this->entityLastAttacker);
+	}
+	else {
+		this->statusController.volatileStatus.Life.CurHP -= damage;
+	}
+
+	this->character.Status.Life.CurHP = this->statusController.volatileStatus.Life.CurHP;
+}
+
+void GameEntity::RemoveMana(uint32_t damage) {
+	if (damage >= this->character.Status.Life.CurMP) {
+		this->character.Status.Life.CurMP = 0;
+	}
+	else {
+		this->character.Status.Life.CurMP -= damage;
+	}
+
+	this->statusController.volatileStatus.Life.CurMP = this->character.Status.Life.CurMP;
+}
+
+
 #pragma endregion
+
+void GameEntity::Teleport(float positionX, float positionY) {
+	this->Teleport(Position(positionX, positionY));
+}
+
+void GameEntity::Teleport(Position position) {
+	this->position = position;
+
+	this->SendMovemment(position, MovemmentType::MovemmentTeleport, 70);
+	this->SendCreateMob(SpawnType::SpawnTeleport, this->index);
+}
+
+void GameEntity::OnDie(GameEntity* killer) {
+	this->timeLastDeath = time(0);
+
+	Logger::Write(Debug, "[Entity::%d] killed by Entity %d", this->index, killer->index);
+
+	if (EntityHandler::GetEntityType(killer->index) == EntityPlayer) {
+		PPlayer player = (PPlayer)killer;
+
+		if (EntityHandler::GetEntityType(this->index) == EntityMob) {
+			player->characterController->OnKillMob(this);
+		}
+	}
+}

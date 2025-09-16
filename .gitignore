@@ -11,3 +11,4 @@
 *.tlog
 *.pdb
 *.obj
+bin/main.py

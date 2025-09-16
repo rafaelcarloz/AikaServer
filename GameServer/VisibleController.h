@@ -25,7 +25,7 @@ private:
 	bool AddToVisible(const WORD entityId);
 	void RemoveFromVisible(const WORD entityId);
 
-	void EvaluateEntity(PGameEntity entity, WORD entityId);
+	void EvaluateEntity(GameEntity*, WORD entityId);
 	void EvaluateVisibles();
 public:
 	void Initialize(PGameEntity parent);

@@ -1,6 +1,6 @@
 {
     "Index": 243,
-    "Name": "Juíz do Clã Dread",
+    "Name": "Ju\u00c3\u00adz do Cl\u00c3\u00a3 Dread",
     "Face": 235,
     "Hair": 0,
     "Weapon": 1431,
@@ -13,6 +13,10 @@
     "MobType": 64512,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 11,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 3210,

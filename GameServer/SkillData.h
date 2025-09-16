@@ -13,7 +13,20 @@
 
 #pragma pack(push,1)
 
+#pragma region "Skill Use Functions"
 
+enum SkillFunction : uint32_t {
+	Return = 72,
+	ChaosFlame = 97,
+	Change = 99,
+	ShockWave,
+	BlackShield,
+	ChaosInferno,
+	ManaStream = 201,
+	Pain = 250,
+};
+
+#pragma endregion
 #pragma region "SkillData File"
 
 typedef struct SkillFromList {

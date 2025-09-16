@@ -1,17 +1,28 @@
 #include <stdio.h>
 #include <boost/json.hpp>
 #include <functional>
+#include <list>
+#include <algorithm>
 
 #include "CharacterController.h"
 #include "Player.h"
 #include "InitialCharacters.h"
+#include "Mob.h"
+
 #include "WebHandler.h"
 #include "Packets.h"
 
-#include "SkillData.h"
 #include "ServerInstance.h"
+
 #include "DateFunctions.h"
+#include "RandomFunctions.h"
+
+#include "SkillData.h"
+
 #include "TitleList.h"
+#include "ExpList.h"
+#include "DropList.h"
+
 
 using namespace packets;
 
@@ -604,6 +615,12 @@ bool CharacterController::SendToWorld() {
 	}
 
 #pragma endregion
+#pragma region "Set Quests"
+
+	Packet.Quests[0].Index = 1;
+
+#pragma endregion
+
 
 	Packet.ExpPoints = this->_player->character.ExpPoints;
 	Packet.Gold = this->_player->character.Gold;
@@ -738,6 +755,35 @@ void CharacterController::SendActiveTitle() {
 	this->_player->visibleController->SendToVisible(&packet, packet.Header.Size);
 }
 
+
+void CharacterController::AddExperience(uint64_t amount, bool notifyPlayer) {
+	if (amount <= 0) {
+		return;
+	}
+
+	this->_player->character.ExpPoints += amount;
+
+	uint64_t nextLevelExp = ExpList::Get(this->_player->character.Level+1);
+
+	uint16_t levelsToAdd = 0;
+
+	while (nextLevelExp <= this->_player->character.ExpPoints) {
+		levelsToAdd++;
+
+		nextLevelExp = ExpList::Get(this->_player->character.Level + levelsToAdd + 1);
+	}
+
+	if (levelsToAdd > 0) {
+		this->AddLevel(levelsToAdd);
+	}
+	
+	this->SendRefreshExperience();
+
+	if (notifyPlayer) {
+		this->_player->SendClientMessage(Logger::Format("Você recebeu %d pontos de experiência.", amount), MESSAGE_COLOR::WHITE, MESSAGE_TYPE::NORMAL);
+	}
+}
+
 void CharacterController::SendRefreshExperience() {
 	PacketCharacterLevel Packet;
 
@@ -751,4 +797,240 @@ void CharacterController::SendRefreshExperience() {
 	Packet.Level = this->_player->character.Level;
 
 	this->_player->SendPacket(&Packet, Packet.Header.Size);
+}
+
+void CharacterController::AddLevel(uint16_t amount) {
+	if (amount <= 0) {
+		return;
+	}
+
+	uint16_t SKILL_POINTS_PER_LEVEL = 1;
+
+	uint16_t rewardedSkillPoints = SKILL_POINTS_PER_LEVEL * amount;
+	this->_player->character.Status.SkillPoints += rewardedSkillPoints;
+
+	this->_player->character.Level += 1;
+
+	this->OnLevelUp();
+}
+
+void CharacterController::OnLevelUp() {
+	this->_player->statusController.Recalculate();
+	this->_player->statusController.RestaureLifePoints();
+
+	//RefreshParty
+	//RefreshGuild
+	//RefreshToFriends
+
+	this->SendEffect(1);
+}
+
+
+void CharacterController::AddGold(uint64_t amount) {
+	if (amount <= 0) {
+		return;
+	}
+
+	this->_player->character.Gold += amount;
+
+	this->SendRefreshGold();
+}
+
+void CharacterController::DecGold(uint64_t amount) {
+	if (amount <= 0) {
+		return;
+	}
+
+	if (this->_player->character.Gold < amount) {
+		this->_player->SendClientMessage("not enough gold");
+		return;
+	}
+
+	this->_player->character.Gold -= amount;
+
+	this->SendRefreshGold();
+}
+
+void CharacterController::SendRefreshGold() {
+	PacketRefreshGold Packet;
+
+	ZeroMemory(&Packet, sizeof(Packet));
+
+	Packet.Header.Size = sizeof(Packet);
+	Packet.Header.Index = this->_player->index;
+	Packet.Header.Code = PacketCode::PacketRefreshGold;
+
+	Packet.InventoryGold = this->_player->character.Gold;
+	Packet.StorageGold = 0;
+
+	this->_player->SendPacket(&Packet, Packet.Header.Size);
+}
+
+
+void CharacterController::SendCharacterSkills(uint16_t entityIndex) {
+	PacketNPCShop Packet;
+
+	ZeroMemory(&Packet, sizeof(Packet));
+
+	Packet.header.Size = sizeof(Packet);
+	Packet.header.Index = this->_player->index;
+	Packet.header.Code = PacketCode::PacketNPCShop;
+
+	Packet.index = entityIndex;
+
+	if (entityIndex > 0) {
+		Packet.shopType = NpcShopType::NpcShoSkills;
+
+		this->_player->SendSignal(PacketCode::PacketCloseNPC);
+	}
+
+	const int MAX_SKILL_LEVEL = 16;
+	const int MAX_SKILL_CLASS_AMOUNT = 60;
+
+	for (int slot = 0; slot < 40; slot++) {
+		WORD skillId = this->_player->character.SkillList[slot].skillID;
+
+		if (skillId == 0) {
+			skillId = 1;
+
+			uint8_t classId = (int)((int)this->_player->character.ClassInfo / 10);
+
+			skillId += classId * (MAX_SKILL_LEVEL * MAX_SKILL_CLASS_AMOUNT);
+
+			skillId += slot * MAX_SKILL_LEVEL;
+		}
+
+		Packet.items[slot] = skillId;
+	}
+
+	this->_player->SendPacket(&Packet, Packet.header.Size);
+}
+
+void CharacterController::AcquireSkill(uint16_t skillIndex) {
+	const int SKILL_MAX_LEVEL = 16;
+	const int SKILL_CLASS_AMOUT = 60;
+
+	int baseClass = (int)this->_player->character.ClassInfo / 10;
+	int classSkillStart = baseClass * (SKILL_CLASS_AMOUT * SKILL_MAX_LEVEL);
+
+	int skillSlot = (skillIndex - classSkillStart) / 16;
+
+	this->_player->character.SkillList[skillSlot].skillID = skillIndex;
+
+	Logger::Write(Debug, "[CharacterController::AcquireSkill] Entity [%d] acquiring skillId: %d on skill slot: %d", this->_player->index, skillIndex, skillSlot);
+}
+
+void CharacterController::SendCharacterSkillLevels() {
+	PacketCharacterSkillsLevel Packet;
+
+	ZeroMemory(&Packet, sizeof(Packet));
+
+	Packet.Header.Size = sizeof(Packet);
+	Packet.Header.Index = this->_player->index;
+	Packet.Header.Code = PacketCode::PacketCharacterSkillsLevel;
+
+	SkillData* skillData = SkillData::GetInstance();
+
+	int j = 0;
+	int k = 0;
+
+	DWORD Skill = 0;
+
+	for (int slot = 0; slot < 60; slot++) {
+		if (this->_player->character.SkillList[slot].skillID == 0) {
+			j++;
+			continue;
+		}
+
+		k = skillData->GetSendToWorldSkill(this->_player->character.SkillList[slot].skillID, Skill);
+
+		memcpy(&Packet.Skills[j], &Skill, 2 * k);
+
+		j += k;
+	}
+
+	Packet.SkillPoints = this->_player->character.Status.SkillPoints;
+
+	Packet.NULL_1 = 0xCCCC;
+
+	this->_player->SendPacket(&Packet, Packet.Header.Size);
+}
+
+void CharacterController::SendEffect(uint32_t effectIndex) {
+	PacketClientIndex Packet;
+
+	ZeroMemory(&Packet, sizeof(Packet));
+
+	Packet.Header.Size = sizeof(Packet);
+	Packet.Header.Index = this->_player->index;
+	Packet.Header.Code = PacketCode::PacketClientIndex;
+
+	Packet.Index = this->_player->index;
+	Packet.Effect = effectIndex;
+
+	this->_player->visibleController->SendToVisible(&Packet, Packet.Header.Size);
+}
+
+void CharacterController::OnKillMob(PGameEntity entity) {
+	PMob killedMob = (PMob)entity;
+
+	uint64_t baseExp = killedMob->GetMobBaseExp();
+	int16_t levelDiff = this->_player->character.Level - killedMob->character.Level;
+
+	if (levelDiff >= 4) {
+		baseExp *= 0.5;
+	}
+	else if (levelDiff <= -4) {
+		baseExp *= 1.5;
+	}
+
+	this->AddExperience(baseExp);
+
+	this->HandleMobDrops(entity);
+
+	Logger::Write(Debug, "[CharacterController::OnKillMob] Entity [%d] with level {%d} rewarded Entity [%d] with level {%d} exp = %d on dying", 
+		entity->index, 
+		entity->character.Level+1,
+		this->_player->index, 
+		this->_player->character.Level+1,
+		baseExp);
+}
+
+void CharacterController::HandleMobDrops(PGameEntity entity) {
+	PMob killedMob = (PMob)entity;
+
+	DropItems mobDrops = DropList::Get(killedMob->dropIndex);
+
+	if (mobDrops.items.size() == 0) {
+		return;
+	}
+
+	uint16_t maxDropCount = mobDrops.items.size() - 1;
+
+	std::vector<uint16_t> droppedItems = std::vector<uint16_t>();
+	std::vector<uint16_t> droppedItemsRariry = std::vector<uint16_t>();
+
+	for (int dropIndex = 0; dropIndex < maxDropCount; dropIndex++) {
+		uint16_t dropItemId = mobDrops.items[dropIndex].itemId;
+
+		if (std::find(droppedItemsRariry.begin(), droppedItemsRariry.end(), mobDrops.items[dropIndex].dropRarity) != droppedItemsRariry.end()) {
+			continue;
+		}
+
+		bool dropItem = RandomFunctions::RandomPercentSelection(mobDrops.items[dropIndex].dropRarityChance);
+
+		if (!dropItem) {
+			continue;
+		}
+
+		droppedItemsRariry.push_back(mobDrops.items[dropIndex].dropRarity);
+		droppedItems.push_back(dropItemId);
+	}
+
+	const uint16_t DEFAULT_DROP_ITEM_AMOUNT = 1;
+
+	for (auto& dropItemId : droppedItems)
+	{
+		this->_player->inventoryController.PutItem(dropItemId, DEFAULT_DROP_ITEM_AMOUNT);
+	}
 }

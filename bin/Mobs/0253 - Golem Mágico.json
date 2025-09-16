@@ -1,6 +1,6 @@
 {
     "Index": 253,
-    "Name": "Golem Mágico",
+    "Name": "Golem M\u00c3\u00a1gico",
     "Face": 272,
     "Hair": 0,
     "Weapon": 0,
@@ -13,6 +13,10 @@
     "MobType": 1030,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 0,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 3415,

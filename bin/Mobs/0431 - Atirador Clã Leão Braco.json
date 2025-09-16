@@ -1,6 +1,6 @@
 {
     "Index": 431,
-    "Name": "Atirador Clã Leão Braco",
+    "Name": "Atirador Cl\u00c3\u00a3 Le\u00c3\u00a3o Braco",
     "Face": 312,
     "Hair": 0,
     "Weapon": 1464,
@@ -13,6 +13,12 @@
     "MobType": 1280,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 1,
+    "Skills": [
+        6332
+    ],
     "Positions": [
         {
             "StartPosX": 2291,

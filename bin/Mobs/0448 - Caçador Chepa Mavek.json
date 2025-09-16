@@ -1,6 +1,6 @@
 {
     "Index": 448,
-    "Name": "Caçador Chepa Mavek",
+    "Name": "Ca\u00c3\u00a7ador Chepa Mavek",
     "Face": 324,
     "Hair": 0,
     "Weapon": 1470,
@@ -13,6 +13,12 @@
     "MobType": 1536,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 2,
+    "Skills": [
+        6459
+    ],
     "Positions": [
         {
             "StartPosX": 2210,

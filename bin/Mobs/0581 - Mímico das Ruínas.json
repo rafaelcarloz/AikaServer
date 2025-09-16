@@ -1,6 +1,6 @@
 {
     "Index": 581,
-    "Name": "Mímico das Ruínas",
+    "Name": "M\u00c3\u00admico das Ru\u00c3\u00adnas",
     "Face": 318,
     "Hair": 0,
     "Weapon": 1505,
@@ -13,6 +13,10 @@
     "MobType": 1031,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 2,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 1690,

@@ -1,6 +1,6 @@
 {
     "Index": 666,
-    "Name": "Arqueiro Esqueleto das Ruínas",
+    "Name": "Arqueiro Esqueleto das Ru\u00c3\u00adnas",
     "Face": 282,
     "Hair": 0,
     "Weapon": 0,
@@ -13,6 +13,12 @@
     "MobType": 65029,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 10,
+    "DropIndex": 2,
+    "Skills": [
+        6186
+    ],
     "Positions": [
         {
             "StartPosX": 2026,

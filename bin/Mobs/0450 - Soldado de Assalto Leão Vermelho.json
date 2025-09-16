@@ -1,6 +1,6 @@
 {
     "Index": 450,
-    "Name": "Soldado de Assalto Leão Vermelho",
+    "Name": "Soldado de Assalto Le\u00c3\u00a3o Vermelho",
     "Face": 308,
     "Hair": 0,
     "Weapon": 1465,
@@ -13,6 +13,12 @@
     "MobType": 1792,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 2,
+    "Skills": [
+        6341
+    ],
     "Positions": [
         {
             "StartPosX": 2364,

@@ -1,6 +1,6 @@
 {
     "Index": 391,
-    "Name": "Singh Exótico Clã Kinga",
+    "Name": "Singh Ex\u00c3\u00b3tico Cl\u00c3\u00a3 Kinga",
     "Face": 286,
     "Hair": 0,
     "Weapon": 1458,
@@ -13,6 +13,12 @@
     "MobType": 1536,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 1,
+    "Skills": [
+        6263
+    ],
     "Positions": [
         {
             "StartPosX": 2848,

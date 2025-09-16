@@ -1,6 +1,6 @@
 {
     "Index": 452,
-    "Name": "Mago Negro Leão Vermelho",
+    "Name": "Mago Negro Le\u00c3\u00a3o Vermelho",
     "Face": 307,
     "Hair": 0,
     "Weapon": 1463,
@@ -13,6 +13,15 @@
     "MobType": 1792,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 2,
+    "Skills": [
+        6290,
+        6342,
+        6343,
+        6344
+    ],
     "Positions": [
         {
             "StartPosX": 2300,

@@ -1,6 +1,6 @@
 {
     "Index": 454,
-    "Name": "Cubo Caótico",
+    "Name": "Cubo Ca\u00c3\u00b3tico",
     "Face": 305,
     "Hair": 0,
     "Weapon": 1502,
@@ -13,6 +13,10 @@
     "MobType": 1031,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 0,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 2298,

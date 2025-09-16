@@ -14,6 +14,8 @@ void StatusController::Initialize(uint16_t entityId, PCharacter character, Chara
 
 	this->_entityId = entityId;
 
+	this->_timeLastDotTick = time(0);
+
 	this->Recalculate();
 }
 
@@ -26,6 +28,9 @@ void StatusController::Recalculate() {
 	ZeroMemory(&this->aditionalStatus, sizeof(CharacterAditionalStatus));
 
 	this->volatileStatus = this->_baseCharacter.Status;
+	this->volatileStatus.Life.CurHP = this->_character->Status.Life.CurHP;
+	this->volatileStatus.Life.CurMP = this->_character->Status.Life.CurMP;
+	this->volatileStatus.SkillPoints = this->_character->Status.SkillPoints;
 
 	this->CalculateStatusPoints();
 	this->CalculateMoveSpeed();
@@ -55,7 +60,9 @@ void StatusController::Recalculate() {
 
 
 void StatusController::CalculateMoveSpeed() {
-	this->aditionalStatus.MoveSpeed += (40 + this->GetEffect(EF_RUNSPEED));
+	uint16_t baseMoveSpeed = 40;
+
+	this->aditionalStatus.MoveSpeed += (baseMoveSpeed + this->GetEffect(EF_RUNSPEED));
 	this->aditionalStatus.MoveSpeed += this->GetEffect(EF_RELIQUE_RUNSPEED);
 }
 
@@ -260,10 +267,17 @@ void StatusController::CalculateEquipmentDefense() {
 }
 
 void StatusController::CalculateDefense() {
+	if (this->GetEffect(EF_UNARMOR) > 0) {
+		this->volatileStatus.Damage.PhysDefense = 0;
+		this->volatileStatus.Damage.MagDefense = 0;
+
+		return;
+	}
+
 	this->volatileStatus.Damage.PhysDefense += (UINT16)this->GetEffect(EF_RESISTANCE1);
 	this->volatileStatus.Damage.PhysDefense += (UINT16)this->GetEffect(EF_PRAN_RESISTANCE1);
 
-	this->volatileStatus.Damage.PhysDefense += (UINT16)round(this->volatileStatus.Attributes.Strength * 1.3f);
+	this->volatileStatus.Damage.PhysDefense += (UINT16)round(this->volatileStatus.Attributes.Strength * 0.5f);
 
 	this->volatileStatus.Damage.PhysDefense *= 1 + (this->GetEffect(EF_PER_RESISTANCE1) / 100);
 	this->volatileStatus.Damage.PhysDefense *= 1 + (this->GetEffect(EF_RELIQUE_PER_RESISTANCE1) / 100);
@@ -272,19 +286,18 @@ void StatusController::CalculateDefense() {
 	this->volatileStatus.Damage.MagDefense += (UINT16)this->GetEffect(EF_RESISTANCE2);
 	this->volatileStatus.Damage.MagDefense += (UINT16)this->GetEffect(EF_PRAN_RESISTANCE2);
 
-	this->volatileStatus.Damage.MagDefense += (UINT16)round(this->volatileStatus.Attributes.Spirit * 1.3f);
+	this->volatileStatus.Damage.MagDefense += (UINT16)round(this->volatileStatus.Attributes.Spirit * 0.5f);
 
 	this->volatileStatus.Damage.MagDefense *= 1 + (this->GetEffect(EF_PER_RESISTANCE2) / 100);
 	this->volatileStatus.Damage.MagDefense *= 1 + (this->GetEffect(EF_RELIQUE_PER_RESISTANCE2) / 100);
-
-	if (this->GetEffect(EF_UNARMOR) > 0) {
-		this->volatileStatus.Damage.PhysDefense = 0;
-		this->volatileStatus.Damage.MagDefense = 0;
-	}
 }
 
 
 void StatusController::CalculateEquipmentsLifePoints() {
+	if (this->GetEffect(EF_UNARMOR) > 0) {
+		return;
+	}
+
 	for (int slot = 2; slot < 8; slot++) {
 		if (slot == 6) {
 			continue;
@@ -314,9 +327,7 @@ void StatusController::CalculateEquipmentsLifePoints() {
 }
 
 void StatusController::CalculateLifePoints() {
-	if (EntityHandler::GetEntityType(this->_entityId) != EntityPlayer) {
-		volatileStatus.Life.CurHP = volatileStatus.Life.MaxHP;
-		volatileStatus.Life.CurMP = volatileStatus.Life.MaxMP;
+	if (EntityHandler::GetEntityType(this->_entityId) == EntityMob) {
 		return;
 	}
 
@@ -411,7 +422,7 @@ void StatusController::SendRefreshAttributes() {
 	serverInstance->SendPacketToClient(this->_entityId, &packet, packet.Header.Size);
 }
 
-void StatusController::SendCurrentLife() {
+void StatusController::SendCurrentLife(bool Update) {
 	PacketCharacterLife packet;
 
 	ZeroMemory(&packet, sizeof(PacketCharacterLife));
@@ -423,6 +434,10 @@ void StatusController::SendCurrentLife() {
 	this->volatileStatus.Life.CurHP = this->_character->Status.Life.CurHP;
 
 	packet.Life = this->volatileStatus.Life;
+
+	if (Update) {
+		packet.NULL_1 = 1;
+	}
 
 	PGameEntity gameEntity = EntityHandler::GetEntity(this->_entityId);
 	gameEntity->visibleController->SendToVisible(&packet, packet.Header.Size);
@@ -648,6 +663,46 @@ void StatusController::DoRegenerationTick() {
 	}
 
 	entity->timeLastRegenerationTick = time(0);
+}
+
+void StatusController::DoDotTick() {
+	if (difftime(time(0), this->_timeLastDotTick) < 1) {
+		return;
+	}
+
+	this->_timeLastDotTick = time(0);
+
+	PGameEntity entity = EntityHandler::GetEntity(this->_entityId);
+
+	if (entity->IsDead()) {
+		return;
+	}
+
+	if (this->GetEffect(EF_DOT_TIMER) <= 0) {
+		return;
+	}
+
+	uint32_t physicalDamage = this->GetEffect(EF_SKILL_DOTA_DAMAGE1);
+	uint32_t magicalDamage = this->GetEffect(EF_SKILL_DOTA_DAMAGE2);
+
+	uint32_t realDamage = 0;
+
+	if (physicalDamage > 0) {
+		realDamage += entity->CalculateReceivedPhysicalDamage(physicalDamage);
+	}
+
+	if (magicalDamage > 0) {
+		realDamage += entity->CalculateReceivedMagicalDamage(magicalDamage);
+	}
+
+	if (realDamage > 0) {
+		if (realDamage > this->volatileStatus.Life.CurHP) {
+			realDamage = this->volatileStatus.Life.CurHP - 1;
+		}
+
+		entity->DealDamage(realDamage);
+		this->SendCurrentLife(true);
+	}
 }
 
 #pragma endregion

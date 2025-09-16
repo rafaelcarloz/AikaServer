@@ -1,6 +1,6 @@
 {
     "Index": 167,
-    "Name": "Garubian Dócil",
+    "Name": "Garubian D\u00c3\u00b3cil",
     "Face": 242,
     "Hair": 0,
     "Weapon": 0,
@@ -13,6 +13,10 @@
     "MobType": 1025,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 6,
+    "DropIndex": 11,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 3518,

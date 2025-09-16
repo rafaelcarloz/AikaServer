@@ -44,6 +44,11 @@ void Item::SetExpireDate(time_t date) {
 	memcpy(&this->Amount, &date, sizeof(DWORD));
 }
 
+bool Item::IsExpired() {
+	return time(0) > this->GetExpireDate();
+}
+
+
 bool Item::IsSealed() {
 	return (this->GetExpireDate() == 0);
 }
@@ -58,7 +63,7 @@ void Item::SetSealed(bool seal) {
 }
 
 DWORD Item::GetEquipmentSellPrice() {
-	return (DWORD)(ItemList::Get(this->Index).SellPrince * (this->MinDurability / this->MaxDurability));
+	return (DWORD)(ItemList::Get(this->Index).SellPrice * (this->MinDurability / this->MaxDurability));
 }
 
 #pragma endregion

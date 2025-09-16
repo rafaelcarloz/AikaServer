@@ -1,6 +1,6 @@
 {
     "Index": 571,
-    "Name": "Arqueólogo Clã Trapaceiro",
+    "Name": "Arque\u00c3\u00b3logo Cl\u00c3\u00a3 Trapaceiro",
     "Face": 329,
     "Hair": 0,
     "Weapon": 1472,
@@ -13,6 +13,10 @@
     "MobType": 1280,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 2,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 1652,

@@ -6,13 +6,16 @@
 #include <stdio.h>
 #include <string>
 
+#define FOREGROUND_YELLOW       0x000E
+
 enum LOG_TYPE {
 	None = 0,
 	Status,
 	ConnectionsTrafic,
 	Packets,
 	Warnings,
-	Error
+	Error,
+	Debug
 };
 
 class Logger {

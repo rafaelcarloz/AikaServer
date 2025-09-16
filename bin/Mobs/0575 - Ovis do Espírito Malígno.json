@@ -1,6 +1,6 @@
 {
     "Index": 575,
-    "Name": "Ovis do Espírito Malígno",
+    "Name": "Ovis do Esp\u00c3\u00adrito Mal\u00c3\u00adgno",
     "Face": 292,
     "Hair": 0,
     "Weapon": 1460,
@@ -13,6 +13,10 @@
     "MobType": 1540,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 2,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 1760,

@@ -17,6 +17,8 @@
 #include "MobPos.h"
 #include "NPC.h"
 #include "Mob.h"
+#include "ExpList.h"
+#include "DropList.h"
 
 
 bool DataLoader::Startup(ServerInstance* server) {
@@ -72,6 +74,14 @@ bool DataLoader::Startup(ServerInstance* server) {
 	}
 
 	if (!this->LoadMobs()) {
+		return false; 
+	}
+
+	if (!this->LoadExpList()) {
+		return false;
+	} 
+
+	if (!this->LoadDropList()) {
 		return false;
 	}
 
@@ -808,6 +818,144 @@ bool DataLoader::LoadMobs() {
 	}
 
 	Logger::Write(Status, "loaded %d Mobs data files!", loadedFiles);
+
+	return true;
+}
+
+bool ProcessDropFile(std::string workingrPath, std::string fileName) {
+	std::string fullFileName = Logger::Format(R"(%s\Drops\%s)", workingrPath.c_str(), fileName.c_str());
+
+	try {
+		std::ifstream ifs(fullFileName);
+		std::string	input(std::istreambuf_iterator<char>(ifs), {});
+		ifs.close();
+
+		json::value data = json::parse(input);
+
+		if (data.is_null()) {
+			return false;
+		}
+
+		UINT16 index = json::value_to<int>(data.at("Index"));
+
+		DropList* dropList = DropList::GetInstance();
+
+		DropItems dropItems = DropItems();
+		dropItems.items = std::vector<DropItem>();
+
+		for (auto& drop : data.at("DropList").as_array()) {
+
+			int itemId = json::value_to<int>(drop.at("item"));
+			DropRarity itemRarity = (DropRarity)json::value_to<int>(drop.at("rarity"));
+
+			DropItem dropItem = DropItem();
+
+			dropItem.itemId = itemId;
+			dropItem.dropRarity = itemRarity;
+
+			switch (dropItem.dropRarity)
+			{
+
+			case DropRarity::DROP_NORMAL:{
+				dropItem.dropRarityChance = DropRarityChance::DROP_NORMAL_CHANCE;
+				break;
+			}
+
+			case  DropRarity::DROP_SUPERIOR: {
+				dropItem.dropRarityChance = DropRarityChance::DROP_SUPERIOR_CHANCE;
+				break;
+			}
+
+			case  DropRarity::DROP_RARE: {
+				dropItem.dropRarityChance = DropRarityChance::DROP_RARE_CHANCE;
+				break;
+			}
+
+			case  DropRarity::DROP_LEGENDARY: {
+				dropItem.dropRarityChance = DropRarityChance::DROP_LEGENDARY_CHANCE;
+				break;
+			}
+
+			default:
+				break;
+			}
+
+			dropItems.items.push_back(dropItem);
+		}
+
+		dropList->Add(index, dropItems);
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[ProcessDropFile] file=%s error: %s", fullFileName.c_str(), e.what());
+		return false;
+	}
+
+	return true;
+}
+
+bool DataLoader::LoadDropList() {
+	std::string folderPathFilter = Logger::Format(R"(%s\Drops\*.json)", this->_currentDir.c_str());
+
+	int loadedFiles = 0;
+
+	if (!this->ForEachFileInFolder(folderPathFilter, &ProcessDropFile, &loadedFiles)) {
+		Logger::Write(Error, "error loading Drops data!");
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d Drops data files!", loadedFiles);
+
+	return true;
+}
+
+#pragma endregion
+#pragma region "Exp"
+
+bool DataLoader::LoadExpList() {
+	std::string fileName = Logger::Format(R"(%s\Data\ExpList.bin)", this->_currentDir.c_str());
+
+	std::ifstream ifs(fileName, std::ios::in | std::ios::binary);
+
+	if (!ifs.is_open()) {
+		Logger::Write("error loading ExpList, file not found!", LOG_TYPE::Error);
+		return false;
+	}
+
+	int itemsLoaded = 0;
+
+	try {
+		int bufferSize = sizeof(uint64_t);
+		char* buffer = new char[bufferSize];
+
+		size_t bytesRead{ 0 };
+
+		ExpList* itemList = ExpList::GetInstance();
+
+		do {
+			bytesRead = ifs.read(buffer, bufferSize).gcount();
+
+			if (bytesRead == 0) {
+				continue;
+			}
+
+			uint64_t item = 0;
+			memcpy(&item, &buffer[0], bufferSize);
+
+			itemList->Add(item);
+
+			if (item == 0) {
+				continue;
+			}
+
+			itemsLoaded++;
+		} while (bytesRead == bufferSize);
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[DataLoader::LoadExpList] error: %s", e.what());
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d levels from ExpList.bin", itemsLoaded);
 
 	return true;
 }

@@ -497,13 +497,17 @@ bool InventoryController::SendRefreshSlot(SlotType slotType, BYTE slot, Item ite
 
 
 BYTE InventoryController::GetEmptySlot(SlotType slotType) {
-	BYTE maxSlots = this->GetInventoryMaxSlots(slotType);
+	BYTE maxSlots = 60;
 
 	for (BYTE i = 0; i < maxSlots; i++) {
 		switch (slotType) {
 
 		case SlotInventory:
 			if (this->_player->character.Inventory[i].Index == 0) {
+				if (!this->IsEmptySlotAvailable(slotType, i)) {
+					continue;
+				}
+
 				return i;
 			}
 			break;
@@ -541,6 +545,36 @@ BYTE InventoryController::GetUsedSlotsCount(SlotType slotType) {
 
 BYTE InventoryController::GetAvailableSlotsCount(SlotType slotType) {
 	return this->GetInventoryMaxSlots(slotType) - this->GetUsedSlotsCount(slotType);
+}
+
+bool InventoryController::IsEmptySlotAvailable(SlotType slotType, BYTE slot) {
+	switch (slotType) {
+
+	case SlotInventory:
+		if (slot >= 0 && slot < 15) {
+			return this->_player->character.Inventory[60].Index != 0;
+		}
+
+		if (slot >=  15 && slot < 30) {
+			return this->_player->character.Inventory[61].Index != 0;
+		}
+
+		if (slot >= 30 && slot < 45) {
+			return this->_player->character.Inventory[62].Index != 0;
+		}
+
+		if (slot >= 45 && slot < 60) {
+			return this->_player->character.Inventory[63].Index != 0;
+		}
+
+		break;
+
+	case SlotStorage:
+		return false;
+		break;
+	}
+
+	return false;
 }
 
 

@@ -105,6 +105,7 @@ namespace packets{
 
 		PacketBuffItem = 0x21B,
 
+		PacketUnsealItem = 0x224,
 		PacketUnknow227 = 0x227,
 
 		PacketCharacterViewResponse = 0x22C,
@@ -146,8 +147,8 @@ namespace packets{
 		PacketPartyUpdate,
 
 		PacketRemoveBuff = 0x329,
-
-		PacketCraftItem = 0x32B,
+		PacketResetSkills,
+		PacketCraftItem,
 		PacketDeleteItem,
 		PacketItemAttribute,
 		PacketReinforceResponse,
@@ -373,12 +374,12 @@ namespace packets{
 #pragma endregion
 #pragma region "Player Message Packets"
 
-	enum class MESSAGE_COLOR : BYTE {
+	enum MESSAGE_COLOR : BYTE {
 		WHITE,
 		YELLOW = 16,
 	};
 
-	enum class MESSAGE_TYPE : BYTE {
+	enum MESSAGE_TYPE : BYTE {
 		NORMAL,
 		UPPER_MSG = 16,
 		GM_MSG = 32,
@@ -611,10 +612,16 @@ namespace packets{
 		DWORD DeleteType;
 	}*PPacket_101;
 
+
+	enum MobType : DWORD {
+		ENTITY_MOB,
+		ENTITY_NPC
+	};
+
 	typedef struct PacketRequestMobInfoformation {
 		PacketHeader Header;
 		DWORD Index;
-		DWORD MobType;
+		MobType MobType;
 	}*PPacket_306;
 
 
@@ -689,6 +696,13 @@ namespace packets{
 		DWORD Type1;
 	}*PPacket_31D;
 
+	typedef struct PacketRefreshGold {
+		PacketHeader Header;
+		DWORD Unknow;
+		UINT64 InventoryGold;
+		UINT64 StorageGold;
+	}*PPacket_312;
+
 #pragma endregion
 #pragma region "Score & Status Packets"
 
@@ -759,6 +773,11 @@ namespace packets{
 		DWORD buffID;
 	}*PPacket_329;
 
+	typedef struct PacketResetSkills {
+		PacketHeader header;
+		DWORD Index;
+	}*PPacket_32A;
+
 #pragma endregion
 #pragma region "Item Bar Packets"
 
@@ -794,6 +813,27 @@ namespace packets{
 		WORD shopType;
 		WORD items[40];
 	}*PPacket_106;
+
+	typedef struct PacketBuyItem {
+		PacketHeader header;
+		DWORD Index;
+		DWORD Slot;
+		DWORD Ammount;
+	}*PPacket_313;
+
+	typedef struct PacketSellItem {
+		PacketHeader header;
+		DWORD Index;
+		DWORD Slot;
+	}*PPacket_314; 
+
+
+	typedef struct PacketAcquireSkill {
+		PacketHeader header;
+		DWORD Skill;
+		DWORD Index;
+	}*PPacket_31C;
+		
 
 #pragma endregion
 #pragma region "Titles"
@@ -842,42 +882,6 @@ namespace packets{
 
 #pragma endregion
 #pragma region "Attack e Skill"
-
-	enum class DamageType : BYTE {
-		Normal,
-		Critical,
-		Double,
-		DoubleCritical,
-		Immune,
-		ImmuneCritical,
-		ImmuneDouble,
-		ImmuneDoubleCritical,
-		Miss,
-		MissCritical,
-		MissDouble,
-		MissCritical2,
-		Miss2,
-		Miss2Critical,
-		Miss2Double,
-		Miss2Critical2,
-		Block,
-		BlockCritical,
-		BlockDouble,
-		BlockCritical2,
-		Immune2,
-		Immune2Critical,
-		Immune2Double,
-		Immune2Critical2,
-		Miss3,
-		Miss3Critical,
-		Miss3Double,
-		Miss3Critical2,
-		Miss4,
-		Miss4Critical,
-		Miss4Double,
-		Miss4Critical2,
-		None
-	};
 
 	typedef struct PacketAttackTarget {
 		PacketHeader Header;

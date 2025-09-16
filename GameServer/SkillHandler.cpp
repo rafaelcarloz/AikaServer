@@ -3,11 +3,14 @@
 #include "Player.h"
 
 #include "EntityHandler.h"
+#include "SkillData.h"
 
 using namespace packets;
 
-bool SkillHandler::OnAttackTarget(PPlayer player, char* buffer) {
+bool SkillHandler::OnAttackTarget(PGameEntity attacker, char* buffer) {
 	auto& packet = reinterpret_cast<PacketAttackTarget&>(buffer[0]);
+	PPlayer player = (PPlayer)attacker;
+
 
 	PGameEntity entity = EntityHandler::GetEntity(packet.Index);
 
@@ -16,32 +19,185 @@ bool SkillHandler::OnAttackTarget(PPlayer player, char* buffer) {
 	}
 
 	if (packet.Skill == 0) {
-		return SkillHandler::BasicAttack(player, &packet, entity);
+		return SkillHandler::BasicAttack(attacker, &packet, entity);
 	}
 
-	//entity->OnAttacked(packet.Skill, packet.Animation, 100, DamageType::Critical, (PGameEntity)player);
+	auto skillData = SkillData::Get(packet.Skill);
+
+	if (skillData.MagicPointsRequired > attacker->statusController.volatileStatus.Life.CurMP) {
+		player->SendClientMessage("not enough mana");
+		return true;
+	}
+
+	attacker->RemoveMana(skillData.MagicPointsRequired);
+	attacker->statusController.SendCurrentLife();
+
+	switch (skillData.Index)
+	{
+
+	case SkillFunction::Return:
+		SkillHandler::Return(attacker, entity, packet.Skill, packet.Animation);
+		break;
+
+	case SkillFunction::ChaosFlame:
+		SkillHandler::ChaosFlame(attacker, entity, packet.Skill, packet.Animation);
+		break;
+
+	case SkillFunction::Change:
+		SkillHandler::Change(attacker, entity, packet.Skill, packet.Animation);
+		break;
+
+	case SkillFunction::ShockWave:
+		SkillHandler::ShockWave(attacker, entity, packet.Skill, packet.Animation);
+		break;
+
+	case SkillFunction::BlackShield:
+		SkillHandler::BlackShield(attacker, entity, packet.Skill, packet.Animation);
+		break;
+
+	case SkillFunction::ChaosInferno:
+		SkillHandler::ChaosInferno(attacker, entity, packet.Skill, packet.Animation);
+		break;
+
+	case SkillFunction::ManaStream:
+		SkillHandler::ManaStream(attacker, entity, packet.Skill, packet.Animation);
+		break;
+
+	case SkillFunction::Pain:
+		SkillHandler::Pain(attacker, entity, packet.Skill, packet.Animation);
+		break;
+
+
+	default:
+		break;
+	}
+
+	Logger::Write(Debug, "[SkillHandler::OnAttackTarget] Entity {%d} using skill => %d, %d", attacker->index, skillData.Index, packet.Skill);
 
 	return true;
 }
 
-bool SkillHandler::OnSkillUse(PPlayer player, char* buffer) {
+bool SkillHandler::OnSkillUse(PGameEntity attacker, char* buffer) {
 	auto& packet = reinterpret_cast<PacketSkillUse&>(buffer[0]);
 
-	player->visibleController->SendToVisible(&packet, packet.header.Size);
+	attacker->visibleController->SendToVisible(&packet, packet.header.Size);
 
 	return true;
 }
 
 
-bool SkillHandler::BasicAttack(PPlayer player, void* packetData, void* target){
+bool SkillHandler::BasicAttack(PGameEntity attacker, void* packetData, void* target){
 	PacketAttackTarget packet = *(PPacket_302)packetData;
 	PGameEntity entity = (PGameEntity)target;
 
-	uint64_t rawDamage = player->statusController.volatileStatus.Damage.PhysDamage;
-	uint64_t dealDamage = entity->CalculateReceivedPhysicalDamage(rawDamage);
+	EntityDamage entityDamage;
 
+	entityDamage.DamageValue = attacker->statusController.volatileStatus.Damage.PhysDamage;
+	entityDamage.DamageScope = DamagePhysical;
+	entityDamage.DamageType = Normal;
 
-	entity->DisplayDamage(packet.Skill, packet.Animation, dealDamage, DamageType::Normal, (PGameEntity)player);
+	attacker->AttackTarget(entity, packet.Skill, packet.Animation, entityDamage);
 
 	return true;
 }
+
+#pragma region "Common"
+
+bool SkillHandler::Return(PGameEntity attacker, PGameEntity target, uint32_t skillId, uint16_t animation) {
+	attacker->Teleport(3400, 565);
+
+	return true;
+}
+
+#pragma endregion
+#pragma region "Wizzard"
+
+bool SkillHandler::ChaosFlame(PGameEntity attacker, PGameEntity target, uint32_t skillId, uint16_t animation) {
+	auto skillData = SkillData::Get(skillId);
+
+	EntityDamage entityDamage;
+
+	entityDamage.DamageValue = attacker->statusController.volatileStatus.Damage.MagDamage + skillData.Damage;
+	entityDamage.DamageScope = DamageMagical;
+	entityDamage.DamageType = Normal;
+
+	attacker->AttackTarget(target, skillId, animation, entityDamage);
+
+	target->buffsController->AddBuff(skillId);
+
+	return true;
+}
+
+bool SkillHandler::Change(PGameEntity attacker, PGameEntity target, uint32_t skillId, uint16_t animation) {
+	attacker->AttackTarget(target, skillId, animation, EntityDamage());
+
+	target->buffsController->AddBuff(skillId);
+
+	return true;
+}
+
+bool SkillHandler::ShockWave(PGameEntity attacker, PGameEntity target, uint32_t skillId, uint16_t animation) {
+	auto skillData = SkillData::Get(skillId);
+
+	EntityDamage entityDamage;
+
+	entityDamage.DamageValue = attacker->statusController.volatileStatus.Damage.MagDamage + skillData.Damage;
+	entityDamage.DamageScope = DamageMagical;
+	entityDamage.DamageType = Normal;
+
+	attacker->AttackTarget(target, skillId, animation, entityDamage);
+
+	target->buffsController->AddBuff(skillId);
+	return true;
+}
+
+bool SkillHandler::BlackShield(PGameEntity attacker, PGameEntity target, uint32_t skillId, uint16_t animation) {
+	attacker->AttackTarget(target, skillId, animation, EntityDamage());
+
+	target->buffsController->AddBuff(skillId);
+	return true;
+}
+
+bool SkillHandler::ChaosInferno(PGameEntity attacker, PGameEntity target, uint32_t skillId, uint16_t animation) {
+	auto skillData = SkillData::Get(skillId);
+
+	EntityDamage entityDamage;
+
+	entityDamage.DamageValue = attacker->statusController.volatileStatus.Damage.MagDamage + skillData.Damage;
+	entityDamage.DamageScope = DamageMagical;
+	entityDamage.DamageType = Normal;
+
+	if (target->statusController.GetEffect(EF_ACCELERATION1) > 0) {
+		entityDamage.DamageValue += skillData.Adicional;
+	}
+
+	attacker->AttackTarget(target, skillId, animation, entityDamage);
+	return true;
+}
+
+bool SkillHandler::ManaStream(PGameEntity attacker, PGameEntity target, uint32_t skillId, uint16_t animation) {
+	attacker->AttackTarget(target, skillId, animation, EntityDamage());
+
+	uint16_t recoveryMana = (attacker->statusController.volatileStatus.Life.MaxMP * 0.5);
+
+	if (recoveryMana + attacker->statusController.volatileStatus.Life.CurMP > attacker->statusController.volatileStatus.Life.MaxMP) {
+		recoveryMana = attacker->statusController.volatileStatus.Life.MaxMP - attacker->statusController.volatileStatus.Life.CurMP;
+	}
+
+	attacker->statusController.volatileStatus.Life.CurMP += recoveryMana;
+	attacker->character.Status.Life.CurMP += recoveryMana;
+
+	attacker->statusController.SendCurrentLife(true);
+
+	return true;
+}
+
+bool SkillHandler::Pain(PGameEntity attacker, PGameEntity target, uint32_t skillId, uint16_t animation) {
+	attacker->AttackTarget(target, skillId, animation, EntityDamage());
+
+	target->buffsController->AddBuff(skillId);
+
+	return true;
+}
+
+#pragma endregion

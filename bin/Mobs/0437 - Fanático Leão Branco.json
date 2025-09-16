@@ -1,6 +1,6 @@
 {
     "Index": 437,
-    "Name": "Fanático Leão Branco",
+    "Name": "Fan\u00c3\u00a1tico Le\u00c3\u00a3o Branco",
     "Face": 312,
     "Hair": 0,
     "Weapon": 1465,
@@ -13,6 +13,10 @@
     "MobType": 1280,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 1,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 2368,

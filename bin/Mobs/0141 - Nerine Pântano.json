@@ -1,6 +1,6 @@
 {
     "Index": 141,
-    "Name": "Nerine Pântano",
+    "Name": "Nerine P\u00c3\u00a2ntano",
     "Face": 204,
     "Hair": 0,
     "Weapon": 0,
@@ -13,6 +13,10 @@
     "MobType": 1025,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 0,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 3219,

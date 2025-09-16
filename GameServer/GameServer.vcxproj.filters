@@ -107,6 +107,15 @@
     <ClCompile Include="SkillHandler.cpp">
       <Filter>Handlers</Filter>
     </ClCompile>
+    <ClCompile Include="ExpList.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DropList.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomFunctions.cpp">
+      <Filter>Functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Network">
@@ -263,6 +272,15 @@
     </ClInclude>
     <ClInclude Include="SkillHandler.h">
       <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpList.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DropList.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomFunctions.h">
+      <Filter>Functions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

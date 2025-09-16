@@ -1,6 +1,6 @@
 {
     "Index": 434,
-    "Name": "Caçador Clã Leão Branco",
+    "Name": "Ca\u00c3\u00a7ador Cl\u00c3\u00a3 Le\u00c3\u00a3o Branco",
     "Face": 312,
     "Hair": 0,
     "Weapon": 1464,
@@ -13,6 +13,13 @@
     "MobType": 1280,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 1,
+    "Skills": [
+        6353,
+        6362
+    ],
     "Positions": [
         {
             "StartPosX": 2443,

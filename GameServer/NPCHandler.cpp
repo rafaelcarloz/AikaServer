@@ -26,9 +26,10 @@ bool NPCHandler::OpenNPC(PPlayer player, PNpc npc, PacketOpenNPC& packet) {
 	case NpcOptionStore:
 		NPCHandler::DisplayShop(player, npc);
 		break;
-	/*case NpcOptionSkills:
+	case NpcOptionSkills:
+		player->characterController->SendCharacterSkills(npc->index);
 		break;
-	case NpcOptionStorage:
+		/*case NpcOptionStorage:
 		break;*/
 	case NpcOptionClose: 
 		NPCHandler::CloseNPC(player);

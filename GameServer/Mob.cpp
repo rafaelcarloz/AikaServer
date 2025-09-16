@@ -3,6 +3,8 @@
 #include "ItemList.h"
 #include "Packets.h"
 
+#include <math.h>
+
 namespace json = boost::json;
 
 bool Mob::Initialize(uint16_t entityId, boost::json::value data, uint16_t positionId) {
@@ -21,6 +23,7 @@ bool Mob::Initialize(uint16_t entityId, boost::json::value data, uint16_t positi
 	this->statusController.Initialize(this->index, &this->character, this->baseCharacter);
 	this->buffsController->Initialize(this->index, this);
 
+	this->isDungeonMob = false;
 	this->IsIstantiated = true;
 
 	this->timeLastBasicAttack = time(0);
@@ -65,8 +68,8 @@ bool Mob::FromJSON(boost::json::value data) {
 		weaponItem->Index = json::value_to<int>(data.at("Weapon"));
 		weaponItem->Apparence = weaponItem->Index;
 
-
 		this->baseCharacter.Status.Life.MaxHP = json::value_to<int>(data.at("Health"));
+		this->baseCharacter.Status.Life.CurHP = this->baseCharacter.Status.Life.MaxHP;
 		this->character.Status.Life.CurHP = this->baseCharacter.Status.Life.MaxHP;
 
 		this->baseCharacter.Status.Life.MaxMP = 10;
@@ -76,6 +79,8 @@ bool Mob::FromJSON(boost::json::value data) {
 		this->serviceId = json::value_to<int>(data.at("IsService"));
 
 		this->character.Level = json::value_to<int>(data.at("Level"));
+
+		this->baseCharacter.Status.Damage.PhysDamage = this->character.Level * MOB_DAMAGE_PER_LEVEL;
 
 		this->baseCharacter.Status.Sizes.Altura = json::value_to<int>(data.at("Height"));
 		this->baseCharacter.Status.Sizes.Tronco = json::value_to<int>(data.at("Chest"));
@@ -98,6 +103,20 @@ bool Mob::FromJSON(boost::json::value data) {
 		this->position.X = this->_positionData.Start.X;
 		this->position.Y = this->_positionData.Start.Y;
 
+		this->_respawnTime = json::value_to<int>(data.at("RespawnTime"));
+		this->dropIndex = json::value_to<int>(data.at("DropIndex"));
+
+		this->skills = new std::map<uint16_t, MobSkill>();
+
+		for (auto& item : data.at("Skills").as_array()) {
+			auto mobSkill = MobSkill();
+
+			mobSkill.SkillId = json::value_to<int>(item);
+			mobSkill.LastUsedTime = time(0);
+
+			this->skills->emplace(mobSkill.SkillId, mobSkill);
+		}
+
 		return true;
 	}
 	catch (std::exception e) {
@@ -114,10 +133,20 @@ void Mob::PerformUpdate() {
 			return;
 		}
 
-		void HandleRespawn();
+		this->HandleRespawn();
 
 		return;
 	}
+
+	if (this->IsDead()) {
+		this->HandleDeath();
+	}
+
+	if (difftime(time(0), this->_lastActionTime) < 1) {
+		return;
+	}
+
+	this->_lastActionTime = time(0);
 
 	if (!this->_fighting) {
 		this->HandleMovement();
@@ -149,36 +178,210 @@ void Mob::HandleMovement() {
 		return;
 	}
 
-	this->MoveTowards(this->_currentDestination);
+	this->Walk(this->_currentDestination);
 }
 
-void Mob::MoveTowards(Position destination) {
+void Mob::MoveTowards(Position destination, uint16_t speed) {
 	Position _moveTo;
 
-	float moveDistance = 2.2f;
+	uint16_t moveSpeed = this->statusController.aditionalStatus.MoveSpeed;
+
+	float moveDistance = (float)(moveSpeed / 10);
 
 	if (this->position.X > destination.X) {
-		_moveTo.X = position.X - moveDistance;
+		float deltaX = this->position.X - destination.X;
+
+		if (moveDistance > deltaX) {
+			_moveTo.X = position.X - deltaX;
+		}
+		else {
+			_moveTo.X = position.X - moveDistance;
+		}
 	}
 	else {
-		_moveTo.X = position.X + moveDistance;
+		float deltaX = destination.X - this->position.X;
+
+		if (moveDistance > deltaX) {
+			_moveTo.X = position.X + deltaX;
+		}
+		else {
+			_moveTo.X = position.X + moveDistance;
+		}
 	}
 
 	if (this->position.Y > destination.Y) {
-		_moveTo.Y = position.Y - moveDistance;
+		float deltaY = this->position.Y - destination.Y;
+
+		if (moveDistance > deltaY) {
+			_moveTo.Y = position.Y - deltaY;
+		}
+		else {
+			_moveTo.Y = position.Y - moveDistance;
+		}
 	}
 	else {
-		_moveTo.Y = position.Y + moveDistance;
+		float deltaY = destination.Y - this->position.Y;
+
+		if (moveDistance > deltaY) {
+			_moveTo.Y = position.Y + deltaY;
+		}
+		else {
+			_moveTo.Y = position.Y + moveDistance;
+		}
 	}
 
 	this->position = _moveTo;
 
-	this->SendMovemment(_moveTo, packets::MovemmentNormal, 25);
+	this->SendMovemment(_moveTo, packets::MovemmentNormal, moveSpeed);
+}
+
+void Mob::Walk(Position destination) {
+	Position _moveTo;
+
+	uint16_t moveSpeed = 25;
+
+	float moveDistance = 3.0f;
+
+	if (this->position.X > destination.X) {
+		float deltaX = this->position.X - destination.X;
+
+		if (moveDistance > deltaX) {
+			_moveTo.X = position.X - deltaX;
+		}
+		else {
+			_moveTo.X = position.X - moveDistance;
+		}
+	}
+	else {
+		float deltaX = destination.X - this->position.X;
+
+		if (moveDistance > deltaX) {
+			_moveTo.X = position.X + deltaX;
+		}
+		else {
+			_moveTo.X = position.X + moveDistance;
+		}
+	}
+
+	if (this->position.Y > destination.Y) {
+		float deltaY = this->position.Y - destination.Y;
+
+		if (moveDistance > deltaY) {
+			_moveTo.Y = position.Y - deltaY;
+		}
+		else {
+			_moveTo.Y = position.Y - moveDistance;
+		}
+	}
+	else {
+		float deltaY = destination.Y - this->position.Y;
+
+		if (moveDistance > deltaY) {
+			_moveTo.Y = position.Y + deltaY;
+		}
+		else {
+			_moveTo.Y = position.Y + moveDistance;
+		}
+	}
+
+	this->position = _moveTo;
+
+	this->SendMovemment(_moveTo, packets::MovemmentNormal, moveSpeed);
 	this->_lastMovemmentTime = time(0);
+}
+
+void Mob::RotateTowards(Position destination) {
+	float deltaX = destination.X - this->position.X;
+	float deltaY = destination.Y - this->position.Y;
+
+	auto radAngle = atan2(deltaY, deltaX);
+
+	this->rotation = (int)(radAngle * (180/3.1415f));
+	this->SendRotation();
 }
 
 void Mob::HandleAttack() {
 	if (this->IsDead()) {
 		return;
 	}
+
+	if (this->entityLastAttacker == nullptr) {
+		return;
+	}
+
+	if (this->position.Distance(this->_currentDestination) > 30) {
+		this->_fighting = false;
+		this->entityLastAttacker = nullptr;
+
+		return;
+	}
+
+	this->_fighting = true;
+
+	Position mobFollowPosition = this->entityLastAttacker->position;
+
+	if (this->entityLastAttacker->position.Distance(this->position) > 1) {
+		if (mobFollowPosition.X > this->position.X) {
+			mobFollowPosition.X -= 1;
+		}
+
+		if (mobFollowPosition.X < this->position.X) {
+			mobFollowPosition.X += 1;
+		}
+
+		if (mobFollowPosition.Y > this->position.Y) {
+			mobFollowPosition.Y -= 1;
+		}
+
+		if (mobFollowPosition.Y < this->position.Y) {
+			mobFollowPosition.Y += 1;
+		}
+
+
+		this->MoveTowards(mobFollowPosition, 30);
+		return;
+	}
+
+	if (difftime(time(0), this->timeLastAttack) < 2) {
+		return;
+	}
+
+	EntityDamage damage;
+
+	damage.DamageValue = this->statusController.volatileStatus.Damage.PhysDamage;
+	damage.DamageScope = DamagePhysical;
+	damage.DamageType = Normal;
+
+	this->AttackTarget(this->entityLastAttacker, DEFAULT_MOB_ATTACK_SKILL, DEFAULT_MOB_ATTACK_ANIMATION, damage);
+}
+
+uint64_t Mob::GetMobBaseExp() {
+	return this->baseCharacter.Status.Life.MaxHP;
+}
+
+void Mob::HandleDeath() {
+	if (difftime(time(0), this->timeLastDeath) <= 3) {
+		return;
+	}
+
+	this->entityLastAttacker = nullptr;
+	this->_fighting = false;
+	this->IsIstantiated = false;
+}
+
+void Mob::HandleRespawn() {
+	if (difftime(time(0), this->timeLastDeath) < this->_respawnTime) {
+		return;
+	}
+
+	Logger::Write(Debug, "[Entity::%d] Mob Respawned after %d seconds dead", this->index, this->_respawnTime);
+
+	this->position = this->_positionData.Start;
+	this->_currentDestination = this->_positionData.Destination;
+	this->_awaitTime = this->_positionData.StartWait + ((rand() % 10 + 1));
+
+	this->statusController.RestaureLifePoints();
+	this->IsIstantiated = true;
+
+	this->_lastMovemmentTime = time(0);
 }

@@ -1,6 +1,6 @@
 {
     "Index": 667,
-    "Name": "Feiticeiro Esqueleto das Ruínas",
+    "Name": "Feiticeiro Esqueleto das Ru\u00c3\u00adnas",
     "Face": 277,
     "Hair": 0,
     "Weapon": 1457,
@@ -13,6 +13,12 @@
     "MobType": 65029,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 10,
+    "DropIndex": 2,
+    "Skills": [
+        6203
+    ],
     "Positions": [
         {
             "StartPosX": 2115,

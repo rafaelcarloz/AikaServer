@@ -1,6 +1,6 @@
 {
     "Index": 438,
-    "Name": "Juíz Pagão Leão Branco",
+    "Name": "Ju\u00c3\u00adz Pag\u00c3\u00a3o Le\u00c3\u00a3o Branco",
     "Face": 311,
     "Hair": 0,
     "Weapon": 1467,
@@ -13,6 +13,13 @@
     "MobType": 1280,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 7,
+    "DropIndex": 0,
+    "Skills": [
+        6333,
+        6354
+    ],
     "Positions": [
         {
             "StartPosX": 2364,

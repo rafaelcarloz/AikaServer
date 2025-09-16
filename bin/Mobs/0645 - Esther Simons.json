@@ -13,6 +13,15 @@
     "MobType": 1792,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 13,
+    "DropIndex": 4,
+    "Skills": [
+        2993,
+        3073,
+        3208,
+        2890
+    ],
     "Positions": [
         {
             "StartPosX": 1614,

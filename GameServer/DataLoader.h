@@ -47,9 +47,13 @@ private:
 	//NPCs
 	bool LoadNPCs();
 
-	//Mobs
+	//Mobs & Drops
 	bool LoadMobPos();
 	bool LoadMobs();
+	bool LoadDropList();
+
+	//Exp
+	bool LoadExpList();
 public:
 	bool Startup(ServerInstance* server);
 };

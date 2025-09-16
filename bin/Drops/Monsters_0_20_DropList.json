@@ -1,0 +1,125 @@
+{
+    "Index": 0,
+    "DropList": [
+        {
+            "id": 1,
+            "item": 5100,
+            "rarity": 1
+        },
+        {
+            "id": 2,
+            "item": 5101,
+            "rarity": 1
+        },
+        {
+            "id": 3,
+            "item": 4630,
+            "rarity": 1
+        },
+        {
+            "id": 4,
+            "item": 4631,
+            "rarity": 2
+        },
+        {
+            "id": 5,
+            "item": 4632,
+            "rarity": 2
+        },
+        {
+            "id": 6,
+            "item": 4540,
+            "rarity": 3
+        },
+        {
+            "id": 7,
+            "item": 4633,
+            "rarity": 1
+        },
+        {
+            "id": 8,
+            "item": 4638,
+            "rarity": 3
+        },
+        {
+            "id": 9,
+            "item": 4641,
+            "rarity": 1
+        },
+        {
+            "id": 10,
+            "item": 4780,
+            "rarity": 1
+        },
+        {
+            "id": 11,
+            "item": 4784,
+            "rarity": 2
+        },
+        {
+            "id": 12,
+            "item": 4541,
+            "rarity": 3
+        },
+        {
+            "id": 13,
+            "item": 4930,
+            "rarity": 1
+        },
+        {
+            "id": 14,
+            "item": 4934,
+            "rarity": 2
+        },
+        {
+            "id": 15,
+            "item": 4635,
+            "rarity": 1
+        },
+        {
+            "id": 16,
+            "item": 4638,
+            "rarity": 1
+        },
+        {
+            "id": 17,
+            "item": 5080,
+            "rarity": 2
+        },
+        {
+            "id": 18,
+            "item": 4560,
+            "rarity": 3
+        },
+        {
+            "id": 19,
+            "item": 5081,
+            "rarity": 1
+        },
+        {
+            "id": 20,
+            "item": 5082,
+            "rarity": 1
+        },
+        {
+            "id": 21,
+            "item": 4351,
+            "rarity": 2
+        },
+        {
+            "id": 22,
+            "item": 4391,
+            "rarity": 2
+        },
+        {
+            "id": 23,
+            "item": 5320,
+            "rarity": 2
+        },
+        {
+            "id": 24,
+            "item": 4561,
+            "rarity": 3
+        }
+    ]
+}

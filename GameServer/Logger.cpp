@@ -45,6 +45,11 @@ void Logger::Write(char* LogMsg, LOG_TYPE LogType) {
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),
 			FOREGROUND_RED | FOREGROUND_INTENSITY);
 		break;
+	case Debug:
+		sprintf_s(error_msg, "[%s] %s \n", Logger::CurrentDateTime().c_str(), LogMsg);
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),
+			FOREGROUND_YELLOW | FOREGROUND_INTENSITY);
+		break;
 	default:
 		break;
 	}

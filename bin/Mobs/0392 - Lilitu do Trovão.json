@@ -1,6 +1,6 @@
 {
     "Index": 392,
-    "Name": "Lilitu do Trovão",
+    "Name": "Lilitu do Trov\u00c3\u00a3o",
     "Face": 315,
     "Hair": 0,
     "Weapon": 0,
@@ -13,6 +13,12 @@
     "MobType": 1281,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 8,
+    "DropIndex": 1,
+    "Skills": [
+        6281
+    ],
     "Positions": [
         {
             "StartPosX": 2956,

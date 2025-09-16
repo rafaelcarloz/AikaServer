@@ -63,7 +63,26 @@ public:
 
 	void SendActiveTitle();
 
+	void AddExperience(uint64_t amount, bool notifyPlayer = true);
 	void SendRefreshExperience();
+
+	void AddLevel(uint16_t ammount = 1);
+	void OnLevelUp();
+
+	void AddGold(uint64_t amount);
+	void DecGold(uint64_t amount);
+	void SendRefreshGold();
+
+
+	void SendCharacterSkills(uint16_t entityIndex);
+	void AcquireSkill(uint16_t skillIndex);
+	void SendCharacterSkillLevels();
+
+
+	void SendEffect(uint32_t effectIndex);
+
+	void OnKillMob(PGameEntity entity);
+	void HandleMobDrops(PGameEntity entity);
 };
 
 

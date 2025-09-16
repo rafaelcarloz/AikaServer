@@ -134,6 +134,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BuffsController.cpp" />
+    <ClCompile Include="DropList.cpp" />
+    <ClCompile Include="ExpList.cpp" />
     <ClCompile Include="GameEntity.cpp" />
     <ClCompile Include="InventoryController.cpp" />
     <ClCompile Include="ItemData.cpp" />
@@ -156,6 +158,7 @@
     <ClCompile Include="Nation.cpp" />
     <ClCompile Include="PacketHandler.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RandomFunctions.cpp" />
     <ClCompile Include="ReinforceData.cpp" />
     <ClCompile Include="ServerSocekt.cpp" />
     <ClCompile Include="ServerInstance.cpp" />
@@ -176,8 +179,10 @@
     <ClInclude Include="CharacterController.h" />
     <ClInclude Include="DataLoader.h" />
     <ClInclude Include="DateFunctions.h" />
+    <ClInclude Include="DropList.h" />
     <ClInclude Include="Encryptation.h" />
     <ClInclude Include="EntityHandler.h" />
+    <ClInclude Include="ExpList.h" />
     <ClInclude Include="GameEntity.fwd.h" />
     <ClInclude Include="GameEntity.h" />
     <ClInclude Include="InitialCharacters.h" />
@@ -197,6 +202,7 @@
     <ClInclude Include="Nation.h" />
     <ClInclude Include="PacketHandler.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="RandomFunctions.h" />
     <ClInclude Include="ReinforceData.h" />
     <ClInclude Include="ServerInstance.h" />
     <ClInclude Include="ServerSocket.fwd.h" />

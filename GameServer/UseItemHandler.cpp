@@ -50,6 +50,7 @@ bool UseItemHandler::RunScript(WORD scriptId, ScriptType scriptType) {
 		.addFunction("GetServerNation", &UseItemHandler::GetServerNation)
 		.addFunction("GetCharacterNation", &UseItemHandler::GetCharacterNation)
 		.addFunction("TeleportScroll", &UseItemHandler::TeleportScroll)
+		.addFunction("MoveUsedItemToSlot", &UseItemHandler::MoveUsedItemToSlot)
 		.endClass();
 	
 	
@@ -128,6 +129,19 @@ bool UseItemHandler::AddCharacterMana(lua_State* L) {
 
 bool UseItemHandler::AddCharacterBuff(lua_State* L) {
 	return this->_player->buffsController->AddBuff(_itemData.UseEffect);
+}
+
+bool UseItemHandler::MoveUsedItemToSlot(lua_State* L) {
+	uint16_t destSlot = lua_tointeger(L, -1);
+
+	PItem destItem = &this->_player->character.Inventory[destSlot];
+
+	this->_player->inventoryController.SwapItems(this->_item, destItem);
+
+	this->_player->inventoryController.SendRefreshSlot(SlotInventory, this->_slot, *this->_item);
+	this->_player->inventoryController.SendRefreshSlot(SlotInventory, destSlot, *destItem);
+
+	return true;
 }
 
 

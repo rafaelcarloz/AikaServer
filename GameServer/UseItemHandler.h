@@ -41,6 +41,8 @@ private:
 	bool AddCharacterMana(lua_State* L);
 	bool AddCharacterBuff(lua_State* L);
 
+	bool MoveUsedItemToSlot(lua_State* L);
+
 	BYTE GetIventoryAvailableSlots(lua_State* L);
 	bool SendClientMessage(lua_State* L);
 	BYTE GetCharacterClass(lua_State* L);

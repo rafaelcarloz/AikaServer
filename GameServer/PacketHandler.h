@@ -19,14 +19,26 @@ private:
 	static bool OnRotationPacket(PPlayer player, char* buffer);
 	static bool OnCharacterActionPacket(PPlayer player, char* buffer);
 
+	//Inventory Handler
 	static bool OnMoveItemPacket(PPlayer player, char* buffer);
 	static bool OnDeleteItemPacket(PPlayer player, char* buffer);
 	static bool OnGroupItemsPacket(PPlayer player, char* buffer);
 	static bool OnUngroupItemsPacket(PPlayer player, char* buffer);
 	static bool OnUseItemPacket(PPlayer player, char* buffer);
+	static bool OnUnsealItemPacket(PPlayer player, char* buffer);
 
+	//NPC Handler
 	static bool OnOpenNPCPacket(PPlayer player, char* buffer);
 	static bool OnCloseNPC(PPlayer player, char* buffer);
+	static bool OnBuyItemsPacket(PPlayer player, char* buffer);
+	static bool OnSellItemsPacket(PPlayer player, char* buffer);
+	static bool OnAcquireSkillPacket(PPlayer player, char* buffer);
+	static bool OnRequestMobInformationPacket(PPlayer player, char* buffer);
+
+	//Skills and Buffs
+	static bool OnResetSkillsPacket(PPlayer player, char* buffer);
+	
+
 
 	static bool OnRevivePlayerPacket(PPlayer player, char* buffer);
 

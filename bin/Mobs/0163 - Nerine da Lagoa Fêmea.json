@@ -1,6 +1,6 @@
 {
     "Index": 163,
-    "Name": "Nerine da Lagoa Fêmea",
+    "Name": "Nerine da Lagoa F\u00c3\u00aamea",
     "Face": 268,
     "Hair": 0,
     "Weapon": 0,
@@ -13,6 +13,10 @@
     "MobType": 1025,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 6,
+    "DropIndex": 11,
+    "Skills": [],
     "Positions": [
         {
             "StartPosX": 3212,

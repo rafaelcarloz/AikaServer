@@ -14,7 +14,7 @@
 
 class GameEntity {
 private:
-	
+	const uint64_t MIN_ENTITY_DAMAGE = 1;
 public:
 	uint16_t index;
 
@@ -32,11 +32,15 @@ public:
 
 	time_t timeLastReceivedAttack;
 	time_t timeLastBasicAttack;
+	time_t timeLastAttack;
 
 	time_t timeLastRegenerationTick;
 	time_t timeLastBuffTick;
 
 	time_t timeLastDeath;
+
+	PGameEntity entityLastAttacker;
+	PGameEntity entityLastTarget;
 
 	std::string textTitle;
 
@@ -50,7 +54,11 @@ public:
 	//damage
 	uint64_t CalculateReceivedPhysicalDamage(uint64_t damage);
 	uint64_t CalculateReceivedMagicalDamage(uint64_t damage);
-	void DisplayDamage(uint16_t skill, uint16_t animation, uint64_t damage, packets::DamageType damageType, GameEntity* attacker);
+	void DisplayDamage(uint16_t skill, uint16_t attackAnimation, uint64_t damage, DamageType damageType, GameEntity* attacker);
+	void AttackTarget(GameEntity* target, uint16_t skill, uint16_t animation, EntityDamage entityDamage);
+	void OnGetAttacked(GameEntity* attacker, uint16_t skill, uint16_t attackAnimation, EntityDamage entityDamage);
+	void DealDamage(uint64_t damage);
+	void RemoveMana(uint32_t damage);
 
 
 	void GetCreateMobPacket(packets::PacketCreateMob& packet, int targetId);
@@ -65,6 +73,11 @@ public:
 	void SendAction(WORD actionId);
 	void SendMovemment(Position position, BYTE moveType, BYTE speed);
 	void SendEffect(WORD effectId);
+
+	void Teleport(float positionX, float positionY);
+	void Teleport(Position position);
+
+	void OnDie(GameEntity* killer);
 };
 
 #endif

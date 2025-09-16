@@ -272,7 +272,8 @@ void ServerInstance::RoutineUpdateBuffsAndStatus() {
 
 			entity.second->buffsController->Recalculate();
 
-			entity.second->statusController.DoRegenerationTick();
+			entity.second->statusController.DoRegenerationTick(); 
+			entity.second->statusController.DoDotTick();
 		}
 
 		Sleep(100);

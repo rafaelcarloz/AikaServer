@@ -1,6 +1,6 @@
 {
     "Index": 390,
-    "Name": "Singh Violento Clã Kinga",
+    "Name": "Singh Violento Cl\u00c3\u00a3 Kinga",
     "Face": 286,
     "Hair": 0,
     "Weapon": 1458,
@@ -13,6 +13,12 @@
     "MobType": 1536,
     "SpawnType": 0,
     "IsService": 0,
+    "RespawnTime": 45,
+    "Elevation": 6,
+    "DropIndex": 1,
+    "Skills": [
+        6263
+    ],
     "Positions": [
         {
             "StartPosX": 2806,
