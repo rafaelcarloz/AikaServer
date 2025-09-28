@@ -116,6 +116,12 @@
     <ClCompile Include="RandomFunctions.cpp">
       <Filter>Functions</Filter>
     </ClCompile>
+    <ClCompile Include="Quests.cpp">
+      <Filter>Data\Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QuestsController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Network">
@@ -281,6 +287,12 @@
     </ClInclude>
     <ClInclude Include="RandomFunctions.h">
       <Filter>Functions</Filter>
+    </ClInclude>
+    <ClInclude Include="Quests.h">
+      <Filter>Data\Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QuestsController.h">
+      <Filter>Controller</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

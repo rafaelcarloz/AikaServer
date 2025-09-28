@@ -19,6 +19,7 @@
 #include "Mob.h"
 #include "ExpList.h"
 #include "DropList.h"
+#include "Quests.h"
 
 
 bool DataLoader::Startup(ServerInstance* server) {
@@ -82,6 +83,10 @@ bool DataLoader::Startup(ServerInstance* server) {
 	} 
 
 	if (!this->LoadDropList()) {
+		return false;
+	}
+
+	if (!this->LoadQuestList()) {
 		return false;
 	}
 
@@ -961,3 +966,87 @@ bool DataLoader::LoadExpList() {
 }
 
 #pragma endregion
+#pragma region "Quests"
+
+
+bool DataLoader::LoadQuestList() {
+	std::string fileName = Logger::Format(R"(%s\Data\Quest.bin)", this->_currentDir.c_str());
+
+	std::ifstream ifs(fileName, std::ios::in | std::ios::binary);
+
+	if (!ifs.is_open()) {
+		Logger::Write("error loading ExpList, file not found!", LOG_TYPE::Error);
+		return false;
+	}
+
+	const int BASE_NPC_ID = 2047;
+
+	int itemsLoaded = 0;
+
+	try {
+		int bufferSize = sizeof(QuestData);
+		char* buffer = new char[bufferSize];
+
+		size_t bytesRead{ 0 };
+
+		QuestList* itemList = QuestList::GetInstance();
+		itemList->unlockQuests = std::map<uint16_t, std::vector<uint16_t>>();
+
+		do {
+			bytesRead = ifs.read(buffer, bufferSize).gcount();
+
+			if (bytesRead == 0) {
+				continue;
+			}
+
+			QuestData item = QuestData();
+			memcpy(&item, &buffer[0], bufferSize);
+
+			itemList->Add(item);
+
+			if (item.Index == 0) {
+				continue;
+			}
+
+			itemsLoaded++;
+
+			uint16_t unlockedBy = item.UnlockedByQuestId();
+
+			if (unlockedBy > 0) {
+				itemList->AddUnlocks(unlockedBy, item.Index);
+			}
+
+			if (item.StartNPC == 0) {
+				continue;
+			}
+
+			int npcId = BASE_NPC_ID + item.StartNPC;
+
+			if (EntityHandler::GetEntityType(npcId) != EntityNPC) {
+				//Logger::Write(Debug, "[%s] Quest ID: %d is trying to be allocated to a non npc entity: %d", __FUNCTION__,item.Index, npcId);
+				continue;
+			}
+
+			PNpc npcEntity = (PNpc)EntityHandler::GetEntity(npcId);
+
+			if (npcEntity == nullptr) {
+				//Logger::Write(Debug, "[%s] Cannot find NPC ID: %d for Quest ID: %d", __FUNCTION__, npcId, item.Index);
+				continue;
+			}
+
+			npcEntity->AddQuest(item.Index);
+			
+		} while (bytesRead == bufferSize);
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[%s] error: %s", __FUNCTION__,e.what());
+		return false;
+	}
+
+	Logger::Write(Status, "loaded %d quests from Quest.bin", itemsLoaded);
+
+	return true;
+}
+
+#pragma endregion
+

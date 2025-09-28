@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <map>
+#include <vector>
 
 #include <boost/json.hpp>
 
@@ -104,7 +105,12 @@ private:
 public:
 	std::map<uint16_t, NPCMenuOption> options;
 
+	std::vector<uint16_t>* quests;
+
 	bool Initialize(uint16_t entityId, boost::json::value data);
+
+	bool AddQuest(const uint16_t questId);
+	bool HasQuest(const uint16_t questId);
 };
 
 typedef NPC* PNpc;

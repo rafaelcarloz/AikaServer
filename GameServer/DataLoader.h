@@ -54,6 +54,9 @@ private:
 
 	//Exp
 	bool LoadExpList();
+
+	//Quests
+	bool LoadQuestList();
 public:
 	bool Startup(ServerInstance* server);
 };

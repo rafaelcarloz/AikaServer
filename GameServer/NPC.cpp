@@ -31,6 +31,8 @@ bool NPC::Initialize(uint16_t entityId, boost::json::value data) {
 
 	this->timeLastDeath = time(0);
 
+	this->quests = new std::vector<uint16_t>();
+
 	return true;
 }
 
@@ -124,4 +126,19 @@ bool NPC::FromJSON(boost::json::value data) {
 	}
 
 	return false;
+}
+
+bool NPC::AddQuest(const uint16_t questId) {
+	try {
+		this->quests->push_back(questId);
+
+		return true;
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[%s] NPC=%d error: %s", __FUNCTION__, this->index, e.what());
+	}
+}
+
+bool NPC::HasQuest(const uint16_t questId) {
+	return std::find(this->quests->begin(), this->quests->end(), questId) != this->quests->end();
 }

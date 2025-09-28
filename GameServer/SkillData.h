@@ -16,14 +16,159 @@
 #pragma region "Skill Use Functions"
 
 enum SkillFunction : uint32_t {
+	AttackMeele,
+
+	Slugger,
+	ChargeDash,
+	ArmorBreak,
+	Incite,
+	Berserker,
+	BladeStrom,
+	HowlOfGlory,
+	Stark,
+	Fortitude,
+	DragonicBody,
+	HowlOfValor,
+	ImpactGround,
+	HowlOfWar,
+	Awakening,
+	Thrust,
+	HowlOfDefence,
+	DeathWound,
+	Halmont,
+	WeaponGuard,
+
+	RoteShield = 25,
+	Remedy,
+	Nemesis,
+	MassIncite,
+	Guardian,
+	HolyBlood,
+	LockOn,
+	PointDefence,
+	Punishment,
+	Revelation,
+	DivineUnion,
+	Protect,
+	DivineEmission,
+	ShieldReflection,
+	ElTycia,
+	ElIaster,
+	ELThymos,
+	ELAegis,
+
+	AttackShooter = 48,
+	Countdown,
+	FatalFlaw,
+	HighAngleGun,
+	LegShot,
+	ShooterHiding,
+	Najmun,
+	CruelChaser,
+	Precision,
+	Concentration,
+	CriticalPower,
+	Detonation,
+	FirstEncounter,
+	ClosingTarget,
+	SonicBlast,
+	VitalSpot,
+	MarkOfPursuer,
+	X14Demolition,
+	BlowBack,
+	Elimination,
+	X14Destruction = 69,
+
 	Return = 72,
-	ChaosFlame = 97,
+	Mjolnir,
+	VenomSpain,
+	PromptAction,
+	Restraint,
+	DualGunnerHiding,
+	FireWildly,
+	SlowPoison,
+	Requiem,
+	SharpGaze,
+	GraceMovement,
+	BlackRose,
+	ManaPoison,
+	BloodySmoke,
+	InstanceShock,
+	ShiningExplosion,
+	AntiCurePoison,
+	RapidFire,
+	HeartRipper,
+	Dodge,
+
+	AttackMagic = 96,
+	ChaosFlame,
 	Change = 99,
 	ShockWave,
 	BlackShield,
 	ChaosInferno,
+	Hitch,
+	Erode,
+	ManaStorm,
+	ManaHarmony,
+	DarknessSwarm,
+	Eclater,
+
+	ChaosBlaze = 110,
+	SleepingHaze,
+	HandOfDarkness,
+	MassTeleport,
+	DarknessFall,
+
+
+	Revitalize = 120,
+
+
+	HolyBolt,
+	Cure,
+	MagicShield,
+	Bless,
+	HandOfCure,
+	Resurrection,
+	Haste,
+	SunRay,
+	HolyActivation,
+	ManaActivation,
+	MassCureShield,
+	UgenesLux,
+	ManaRelease,
+	PreventionCure,
+	ShieldOfNikita,
+	FeedbackMagic,
+	HolyStriking,
+	Recovery,
+	MagicSensor,
+	Purification,
+
+
+	SharpWeapon = 160,
+
+
+	SummonMount = 163,
+
+	Brave = 193,
+	ElementalGuard,
+	FlameStriking,
+	FairyForm,
+	Courage,
+	FireThorns,
+	BlazeEdge,
+	BurningMagic,
 	ManaStream = 201,
+
+
+	LightingLance = 225,
 	Pain = 250,
+
+	FunFishing = 318,
+
+	AcademySkill = 427,
+
+	LavaBlood = 510,
 };
 
 #pragma endregion
@@ -79,6 +224,8 @@ typedef struct SkillFromList {
 	DWORD Animation;
 	BYTE UNK_8[68];
 	char Description[288];
+
+	bool ContainsEffect(uint16_t effectId);
 }*PSkillFromList;
 
 #pragma endregion

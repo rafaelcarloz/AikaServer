@@ -1,5 +1,6 @@
 #include "NPCHandler.h"
 #include "Player.h"
+#include "Quests.h"
 
 using namespace packets;
 
@@ -17,10 +18,12 @@ bool NPCHandler::OpenNPC(PPlayer player, PNpc npc, PacketOpenNPC& packet) {
 		NPCHandler::DisplayOptions(player, npc);
 		break;			  
 	/*case NpcOptionTalk:
-		break;
+		break;*/
 	case NpcOptionQuest:
+		NPCHandler::DisplayQuests(player, npc, packet.Type2);
 		break;
 
+	/*
 	case NpcOptionEnterCastle:
 		break;*/
 	case NpcOptionStore:
@@ -75,10 +78,11 @@ bool NPCHandler::OpenNPC(PPlayer player, PNpc npc, PacketOpenNPC& packet) {
 	case NpcOptionMenu:
 		NPCHandler::DisplayOptions(player, npc);
 		break;
-	/*case NpcOptionTakeQuest:
+	case NpcOptionTakeQuest:
+		NPCHandler::AcceptQuest(player, npc, packet.Type2);
 		break;
 
-	case NpcOptionDeliveryQuest:
+	/*case NpcOptionDeliveryQuest:
 		break;
 	case NpcOptionSaveLocation:
 		break;
@@ -131,7 +135,7 @@ bool NPCHandler::DisplayOptions(PPlayer player, PNpc npc) {
 		return false;
 	}
 
-	if (player->usingNPC != nullptr) {
+	if (player->usingNPC != nullptr && player->usingNPC->index != npc->index) {
 		player->SendSignal(PacketCode::PacketCloseNPC);
 		player->usingNPC = nullptr;
 		return true;
@@ -152,6 +156,61 @@ bool NPCHandler::DisplayOptions(PPlayer player, PNpc npc) {
 	return true;
 }
 
+#pragma region "quests"
+
+bool NPCHandler::DisplayQuests(PPlayer player, PNpc npc, uint16_t questId) {
+	player->SendSignal(PacketCode::PacketUnknow110);
+
+	if (questId > 0) {
+		QuestData questData = QuestList::Get(questId);
+
+		player->SendSignalData(PacketCode::PacketAnimationTalk, questData.DialogStart);
+		NPCHandler::SendCustomOption(player, npc, NpcOptionTakeQuest, "Aceitar", questData.Index);
+	}
+	else {
+		for (int i = 0; i < npc->quests->size(); i++) {
+			if (!player->questsController->AvailableContains(npc->quests->at(i))) {
+				continue;
+			}
+
+			QuestData questData = QuestList::Get(npc->quests->at(i));
+
+			NPCHandler::SendCustomOption(player, npc, NpcOptionQuest, questData.Title, questData.Index);
+		}
+	}
+
+	NPCHandler::SendCloseOption(player, npc);
+
+	return true;
+}
+
+
+bool NPCHandler::AcceptQuest(PPlayer player, PNpc npc, uint16_t questId) {
+	if (!npc->HasQuest(questId)) {
+		player->SendClientMessage("NPC does not have this quest");
+		return true;
+	}
+
+	if (!player->questsController->AvailableContains(questId)) {
+		player->SendClientMessage("This quest is not available for you yet");
+		return true;
+	}
+
+	if (player->questsController->activeQuests.size() >= 16) {
+		player->SendClientMessage("You cannot accept any more quests");
+		return true;
+	}
+
+	NPCHandler::CloseNPC(player);
+
+	return player->questsController->AcceptQuest(questId);
+}
+
+#pragma endregion
+
+
+
+
 bool NPCHandler::CloseNPC(PPlayer player) {
 	player->usingNPC = nullptr;
 	player->usingNPCOption = 0;
@@ -168,7 +227,7 @@ bool NPCHandler::SendOption(PPlayer player, PNpc npc, NpcUsingOption option, DWO
 	ZeroMemory(&packet, sizeof(PacketShowNPCOption));
 
 	packet.Header.Size = sizeof(PacketShowNPCOption);
-	packet.Header.Index = 0x7535;
+	packet.Header.Index = DEFAULT_SERVER_CLIENT_ID;
 	packet.Header.Code = PacketCode::PacketShowNPCOption;
 
 	packet.Option = option;
@@ -181,11 +240,33 @@ bool NPCHandler::SendOption(PPlayer player, PNpc npc, NpcUsingOption option, DWO
 	}
 	
 	if (option == NpcOptionMenu) {
+		strcpy_s(packet.Text, "Menu");
 		packet.Show = 0xFF7FC1F4;
 	}
 	else {
 		packet.Show = (color == 0xFFFFFFFF) ? npc->options[option].Color : color;
 	}
+
+	player->SendPacket(&packet, packet.Header.Size);
+
+	return true;
+}
+
+bool NPCHandler::SendCustomOption(PPlayer player, PNpc npc, NpcUsingOption option, const char* title, uint16_t data, DWORD color) {
+	PacketShowNPCOption packet;
+
+	ZeroMemory(&packet, sizeof(PacketShowNPCOption));
+
+	packet.Header.Size = sizeof(PacketShowNPCOption);
+	packet.Header.Index = DEFAULT_SERVER_CLIENT_ID;
+	packet.Header.Code = PacketCode::PacketShowNPCOption;
+
+	packet.Option = option;
+	packet.Data = data;
+
+	strcpy_s(packet.Text, title);
+
+	packet.Show = color;
 
 	player->SendPacket(&packet, packet.Header.Size);
 

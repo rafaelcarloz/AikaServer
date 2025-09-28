@@ -158,6 +158,8 @@
     <ClCompile Include="Nation.cpp" />
     <ClCompile Include="PacketHandler.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Quests.cpp" />
+    <ClCompile Include="QuestsController.cpp" />
     <ClCompile Include="RandomFunctions.cpp" />
     <ClCompile Include="ReinforceData.cpp" />
     <ClCompile Include="ServerSocekt.cpp" />
@@ -202,6 +204,8 @@
     <ClInclude Include="Nation.h" />
     <ClInclude Include="PacketHandler.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Quests.h" />
+    <ClInclude Include="QuestsController.h" />
     <ClInclude Include="RandomFunctions.h" />
     <ClInclude Include="ReinforceData.h" />
     <ClInclude Include="ServerInstance.h" />

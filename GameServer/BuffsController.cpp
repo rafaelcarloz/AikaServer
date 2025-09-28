@@ -116,6 +116,26 @@ void BuffsController::RemoveBuff(uint16_t buffId) {
 	}
 }
 
+void BuffsController::RemoveBuffWithEffect(uint16_t effectId) {
+	auto currentBuffs = this->GetBuffs();
+
+	try {
+		for (auto& buff : currentBuffs) {
+			auto skillData = SkillData::Get(buff.first);
+
+			if (skillData.ContainsEffect(effectId)) {
+				this->RemoveBuff(buff.first);
+			}
+		}
+
+		this->_modified = true;
+		this->SendRefreshBuffs();
+	}
+	catch (std::exception e) {
+		Logger::Write(Error, "[BuffsController::RemoveBuffWithEffect] error: %s", e.what());
+	}
+}
+
 
 bool BuffsController::SetBuffDuration(uint16_t buffId, uint32_t buffDuration) {
 	std::lock_guard<std::mutex> lock(*_rwlock);

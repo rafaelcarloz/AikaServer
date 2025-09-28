@@ -2,6 +2,17 @@
 #include "Logger.h"
 #include <cmath>
 
+
+bool SkillFromList::ContainsEffect(uint16_t effectId) {
+	for (int i = 0; i < 4; i++) {
+		if (this->EF[i] == effectId) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
 SkillData* SkillData::_instance{ nullptr };
 
 SkillData* SkillData::GetInstance() {

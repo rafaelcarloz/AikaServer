@@ -12,6 +12,8 @@
 
 namespace packets{
 
+	const unsigned short DEFAULT_SERVER_CLIENT_ID = 0x7535;
+
 	enum class PacketCode : WORD {
 		CheckTokenPacket = 0x81,
 		ResponseLoginPacket,
@@ -802,7 +804,7 @@ namespace packets{
 	typedef struct PacketShowNPCOption {
 		PacketHeader Header;
 		DWORD Option;
-		DWORD Null;
+		DWORD Data;
 		char Text[64];
 		DWORD Show;
 	}*PPacket_112;
@@ -919,6 +921,45 @@ namespace packets{
 		DWORD targetHp;
 		Position deathPosition;
 	}*PPacket_102;
+
+#pragma endregion
+#pragma region "Quests Packets"
+
+	typedef struct PacketCancelQuest {
+		PacketHeader Header;
+		uint32_t QuestIndex;
+	}*PPacket_32F;
+
+	typedef struct PacketQuestInfo {
+		PacketHeader Header;
+		uint16_t QuestIndex;
+		uint8_t RequirimentType[5];
+		uint8_t RequirimentComplete[5];
+		uint8_t RequirimentAmount[5];
+		uint8_t UNK_1;
+		uint8_t RequirimentItem[5];
+		uint8_t IsCompleted;
+		uint8_t IsOld;
+		uint16_t UNK_2;
+	}*PPacket_331;
+
+
+	typedef struct PacketGiveExpGold {
+		PacketHeader Header;
+		uint32_t Experience;
+		uint32_t Gold;
+	}*PPacket_11B;
+
+	/*
+RequirimentType: Array[0..4] of Byte;
+RequirimentComplete: Array[0..4] of Byte;
+RequirimentAmount: Array[0..4] of Byte;
+Unk: Byte;
+RequirimentItem: Array[0..4] of WORD;
+IsCompleted: Byte;
+IsOld: Byte;
+Unk2: WORD;
+*/
 
 #pragma endregion
 

@@ -5,6 +5,7 @@
 
 #include "Player.fwd.h"
 #include "CharacterController.h"
+#include "QuestsController.h"
 
 #include "ServerSocket.h"
 
@@ -54,6 +55,7 @@ public:
 
 	CharacterController* characterController;
 	InventoryController inventoryController;
+	QuestsController* questsController;
 
 	PNpc usingNPC = nullptr;
 	uint16_t usingNPCOption;

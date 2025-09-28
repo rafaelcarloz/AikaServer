@@ -36,6 +36,7 @@ void CharacterController::Initialize(long characterId, PPlayer player) {
 
 	this->_player->visibleController = new VisibleController();
 	this->_player->buffsController = new BuffsController();
+	this->_player->questsController = new QuestsController();
 
 	if (!this->GetCharacterData()) {
 		this->_player->isActive = false;
@@ -62,11 +63,15 @@ void CharacterController::Initialize(long characterId, PPlayer player) {
 		return;
 	}
 
+	this->_player->questsController->Initialize(characterId, player);
+
 	this->_player->SendSignalData((PacketCode)0xCCCC, 1);
 
 	this->_player->SendSignalData((PacketCode)0x186, 1);
 	this->_player->SendSignalData((PacketCode)0x186, 1);
 	this->_player->SendSignalData((PacketCode)0x186, 1);
+
+	this->_player->questsController->Evaluate();
 
 	this->SendToWorld();
 }
@@ -618,6 +623,13 @@ bool CharacterController::SendToWorld() {
 #pragma region "Set Quests"
 
 	Packet.Quests[0].Index = 1;
+	Packet.Quests[0].UNK_1[0] = 2;
+	Packet.Quests[0].UNK_1[1] = 3;
+	Packet.Quests[0].UNK_1[2] = 4;
+	Packet.Quests[1].Index = 2;
+	Packet.Quests[1].UNK_1[0] = 2;
+	Packet.Quests[1].UNK_1[1] = 3;
+	Packet.Quests[1].UNK_1[2] = 4;
 
 #pragma endregion
 

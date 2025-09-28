@@ -63,6 +63,7 @@ public:
 
 	void GetCreateMobPacket(packets::PacketCreateMob& packet, int targetId);
 	void SendCreateMob(uint16_t spawnType, int targetId);
+	void SendCreateMob(uint16_t spawnType);
 	void GetSpawnMobPacket(packets::PacketSpawnMob& packet, int targetId);
 	void SendSpawnMob(uint16_t spawnType, int targetId);
 

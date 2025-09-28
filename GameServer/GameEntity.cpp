@@ -3,6 +3,9 @@
 #include "Player.h"
 #include "SkillData.h"
 
+#include <vector>
+#include <iostream>
+
 using namespace packets;
 
 bool GameEntity::IsDead() {
@@ -48,6 +51,12 @@ void GameEntity::GetCreateMobPacket(PacketCreateMob& packet, int targetId) {
 
 	packet.Sizes = this->statusController.volatileStatus.Sizes;
 
+	uint16_t effectChange = this->statusController.GetEffect(EF_CHANGE);
+
+	if (effectChange > 0) {
+		packet.Effects[0] = effectChange;
+	}
+
 	if (EntityHandler::GetEntityType(this->index) == EntityPlayer) {
 		auto player = (PPlayer)this;
 
@@ -61,8 +70,23 @@ void GameEntity::GetCreateMobPacket(PacketCreateMob& packet, int targetId) {
 			packet.ActiveTitle.Level = player->characterController->activeTitle->Level - 1;
 		}
 	}
-	
-	packet.IsService = (EntityHandler::GetEntityType(this->index) == EntityNPC);
+
+	if (EntityHandler::GetEntityType(this->index) == EntityNPC) {
+		packet.IsService = 1;
+
+		if (EntityHandler::GetEntityType(targetId) == EntityPlayer) {
+			PPlayer targetPlayer = (PPlayer)EntityHandler::GetEntity(targetId);
+
+			std::vector<uint16_t> npcQuests = *((PNpc)this)->quests;
+
+			for (uint16_t &quest : npcQuests) {
+				if (targetPlayer->questsController->AvailableContains(quest)) {
+					packet.EffectType = 8;
+					break;
+				}
+			}
+		}
+	}
 }
 
 void GameEntity::SendCreateMob(uint16_t spawnType, int targetId) {
@@ -81,6 +105,20 @@ void GameEntity::SendCreateMob(uint16_t spawnType, int targetId) {
 		packet.SpawnType = (BYTE)spawnType;
 
 		serverInstance->SendPacketToClient(targetId, &packet, packet.Header.Size);
+	}
+}
+
+void GameEntity::SendCreateMob(uint16_t spawnType) {
+	if (EntityHandler::GetEntityType(this->index) == EntityMob) {
+		PacketSpawnMob packet;
+		this->GetSpawnMobPacket(packet, 0);
+	}
+	else {
+		PacketCreateMob packet;
+
+		this->GetCreateMobPacket(packet, 0);
+
+		this->visibleController->SendToVisible(&packet, packet.Header.Size);
 	}
 }
 
@@ -106,6 +144,12 @@ void GameEntity::GetSpawnMobPacket(PacketSpawnMob& packet, int targetId) {
 
 	for (int i = 0; i < 8; i++) {
 		packet.Equipaments[i] = this->character.Equipaments[i].Apparence;
+	}
+
+	uint16_t effectChange = this->statusController.GetEffect(EF_CHANGE);
+
+	if (effectChange > 0) {
+		packet.Effects[0] = effectChange;
 	}
 
 	packet.Sizes = this->statusController.volatileStatus.Sizes;
@@ -308,6 +352,15 @@ void GameEntity::AttackTarget(GameEntity* target, uint16_t skill, uint16_t anima
 
 	if (target->IsDead()) {
 		return;
+	}
+
+	if (target->statusController.GetEffect(EF_WEAPON_GUARD) > 0) {
+		target->buffsController->RemoveBuffWithEffect(EF_WEAPON_GUARD);
+
+		entityDamage.DamageType = Block;
+		entityDamage.DamageValue = 0;
+
+		target->statusController.Recalculate();
 	}
 
 	if (skill == 0) {

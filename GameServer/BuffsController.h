@@ -39,6 +39,7 @@ public:
 	bool AddBuff(uint16_t buffId);
 
 	void RemoveBuff(uint16_t buffId);
+	void RemoveBuffWithEffect(uint16_t effectId);
 
 	bool SetBuffDuration(uint16_t buffId, uint32_t buffDuration);
 
