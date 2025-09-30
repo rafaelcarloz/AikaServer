@@ -234,6 +234,25 @@ BYTE InventoryController::GetInventoryMaxSlots(SlotType slotType) {
 	return maxSlots;
 }
 
+BYTE InventoryController::AddBag(Item item) {
+	BYTE result = INVALID_SLOT;
+
+	for (int destSlot = 60; destSlot < 64; destSlot++) {
+		PItem destItem = &this->_character->Inventory[destSlot];
+
+		if (destItem->Index != 0) {
+			continue;
+		}
+
+		memcpy(destItem, &item, sizeof(Item));
+		this->SendRefreshSlot(SlotInventory, destSlot, *destItem, true);
+
+		return destSlot;
+	}
+
+	return result;
+}
+
 
 bool InventoryController::MoveItem(SlotType sourceType, BYTE sourceSlot, SlotType destType, BYTE destSlot) {
 	if (sourceType == SlotEquipment && destType != SlotInventory) {
@@ -672,6 +691,10 @@ BYTE InventoryController::PutItem(Item item, BYTE startSlot, bool notify) {
 
 	if (itemData.CanSealed) {
 		item.SetSealed(true);
+	}
+
+	if (itemData.ItemType == ItemUseBag) {
+		return this->AddBag(item);
 	}
 
 	BYTE existingSlot = this->GetSlotById(item, SlotInventory, startSlot);

@@ -51,6 +51,8 @@ bool NPC::FromJSON(boost::json::value data) {
 		this->position.X = json::value_to<float>(data.at("Position").at(0));
 		this->position.Y = json::value_to<float>(data.at("Position").at(1));
 
+		this->initialDialog = json::value_to<int>(data.at("InitialDialog"));
+
 		slot = 0;
 		for (auto& item : data.at("Equip").as_array()) {
 			PItem _item = &this->character.Equipaments[slot];

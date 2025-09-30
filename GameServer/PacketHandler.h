@@ -37,7 +37,9 @@ private:
 
 	//Skills and Buffs
 	static bool OnResetSkillsPacket(PPlayer player, char* buffer);
-	
+
+	//Quest
+	static bool OnSelectQuestRewardPacket(PPlayer player, char* buffer);
 
 
 	static bool OnRevivePlayerPacket(PPlayer player, char* buffer);

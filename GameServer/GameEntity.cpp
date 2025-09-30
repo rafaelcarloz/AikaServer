@@ -76,15 +76,11 @@ void GameEntity::GetCreateMobPacket(PacketCreateMob& packet, int targetId) {
 
 		if (EntityHandler::GetEntityType(targetId) == EntityPlayer) {
 			PPlayer targetPlayer = (PPlayer)EntityHandler::GetEntity(targetId);
+			PNpc npc = ((PNpc)this);
 
-			std::vector<uint16_t> npcQuests = *((PNpc)this)->quests;
+			std::vector<uint16_t> npcQuests = *npc->quests;
 
-			for (uint16_t &quest : npcQuests) {
-				if (targetPlayer->questsController->AvailableContains(quest)) {
-					packet.EffectType = 8;
-					break;
-				}
-			}
+			packet.EffectType = targetPlayer->questsController->GetNpcQuestIcon(this->index);
 		}
 	}
 }
@@ -272,10 +268,25 @@ void GameEntity::SendEffect(WORD effectId) {
 	packet.Index = this->index;
 	packet.Effect = effectId;
 
-	serverInstance->SendPacketToClient(this->index, &packet, packet.Header.Size);
+	serverInstance->SendPacketToClient(this->index, &packet, packet.Header.Size); 
 }
 
+void GameEntity::SendEffect(WORD effectId, uint16_t targetId) {
+	PacketClientIndex packet;
 
+	ServerInstance* serverInstance = ServerInstance::GetInstance();
+
+	ZeroMemory(&packet, sizeof(PacketClientIndex));
+
+	packet.Header.Size = sizeof(PacketClientIndex);
+	packet.Header.Index = this->index;
+	packet.Header.Code = PacketCode::PacketClientIndex;
+
+	packet.Index = this->index;
+	packet.Effect = effectId;
+
+	serverInstance->SendPacketToClient(targetId, &packet, packet.Header.Size);
+}
 
 #pragma region "Damage"
 

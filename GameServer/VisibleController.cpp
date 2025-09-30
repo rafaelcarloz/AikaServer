@@ -126,3 +126,10 @@ void VisibleController::ForEach(std::function<void(uint16_t, uint16_t)> procedur
 		procedure(handleType, entity);
 	}
 }
+
+
+bool VisibleController::ContainsVisibleEntity(WORD entityId) {
+	auto entityList = this->GetEntities();
+
+	return std::find(entityList.begin(), entityList.end(), entityId) != entityList.end();
+}

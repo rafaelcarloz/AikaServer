@@ -146,6 +146,48 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 		PacketHandler::OnResetSkillsPacket(player, buffer);
 		break;
 
+	case PacketCode::PacketQuestRewardSelect: {
+		PacketHandler::OnSelectQuestRewardPacket(player, buffer);
+		break;
+	}
+
+
+	//test
+	case PacketCode::PacketChat:
+		PacketCreateMob packet;
+
+		ZeroMemory(&packet, sizeof(PacketCreateMob));
+
+		packet.Header.Size = sizeof(PacketCreateMob);
+		packet.Header.Code = PacketCode::PacketCreateMob;
+
+		for (int i = 0; i < 100; i++) {
+			packet.Header.Index = 10+i;
+			strcpy_s(packet.Name, Logger::Format("test %d", i).c_str());
+
+			for (int i = 0; i < 8; i++) {
+				packet.Equipaments[i] = player->character.Equipaments[i].Apparence;
+			}
+
+			packet.CurHP = 10;
+			packet.CurMP = 10;
+			packet.MaxHP = 10;
+			packet.MaxMP = 10;
+
+			packet.CurrentPosition.X = (float)3450;
+			packet.CurrentPosition.Y = (float)(730+i);
+
+			packet.Sizes = { 0x7, 0x77, 0x7, 0x0 };
+
+			packet.EffectType = i;
+
+			player->SendPacket(&packet, packet.Header.Size);
+		}
+
+		
+
+		break;
+
 	default:
 		Logger::Write(Logger::Format("On unknown packet => size: %x - opcode: %x", header.Size, header.Code), Packets);
 
@@ -1027,6 +1069,32 @@ bool PacketHandler::OnResetSkillsPacket(PPlayer player, char* buffer) {
 }
 
 #pragma endregion
+#pragma region "Quests"
+
+bool PacketHandler::OnSelectQuestRewardPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketQuestRewardSelect&>(buffer[0]);
+
+	if (!player->questsController->ActiveContains(packet.QuestIndex)) {
+		player->SendClientMessage("Quest not active!");
+		return false;
+	}
+
+	auto quest = player->questsController->activeQuests[packet.QuestIndex];
+
+	if (quest.IsCompleted != 1) {
+		player->SendClientMessage("Quest not completed yet!");
+		return false;
+	}
+
+	if (!player->questsController->DeliverQuest(packet.QuestIndex, packet.RewardSlot)) {
+		return false;
+	}
+
+	return true;
+}
+
+#pragma endregion
+
 
 
 

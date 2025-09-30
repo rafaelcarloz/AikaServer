@@ -1002,6 +1002,14 @@ bool DataLoader::LoadQuestList() {
 			QuestData item = QuestData();
 			memcpy(&item, &buffer[0], bufferSize);
 
+			if (item.StartNPC > 0) {
+				item.StartNPC += BASE_NPC_ID;
+			}
+
+			if (item.EndNPC > 0) {
+				item.EndNPC += BASE_NPC_ID;
+			}
+
 			itemList->Add(item);
 
 			if (item.Index == 0) {
@@ -1020,7 +1028,7 @@ bool DataLoader::LoadQuestList() {
 				continue;
 			}
 
-			int npcId = BASE_NPC_ID + item.StartNPC;
+			int npcId = item.StartNPC;
 
 			if (EntityHandler::GetEntityType(npcId) != EntityNPC) {
 				//Logger::Write(Debug, "[%s] Quest ID: %d is trying to be allocated to a non npc entity: %d", __FUNCTION__,item.Index, npcId);

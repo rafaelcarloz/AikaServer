@@ -69,9 +69,11 @@ public:
 	void AddLevel(uint16_t ammount = 1);
 	void OnLevelUp();
 
-	void AddGold(uint64_t amount);
+	void AddGold(uint64_t amount, bool notifyPlayer = true);
 	void DecGold(uint64_t amount);
 	void SendRefreshGold();
+
+	void SendAddExpGold(uint32_t expReward, uint32_t goldReward);
 
 
 	void SendCharacterSkills(uint16_t entityIndex);
@@ -80,6 +82,7 @@ public:
 
 
 	void SendEffect(uint32_t effectIndex);
+	void SendEntityEffect(uint32_t entityId, uint32_t effectIndex);
 
 	void OnKillMob(PGameEntity entity);
 	void HandleMobDrops(PGameEntity entity);

@@ -24,8 +24,8 @@ enum NpcUsingOption: BYTE {
 	NpcOptionSignCastle,
 	NpcOptionGuildCreate,
 	NpcOptionGuildStorage,
-
-	NpcOptionPranStation = 13,
+	NpcOptionQuestEngage,
+	NpcOptionPranStation,
 
 	NpcOptionAnvil = 15,
 	NpcOptionReinforce,
@@ -106,6 +106,8 @@ public:
 	std::map<uint16_t, NPCMenuOption> options;
 
 	std::vector<uint16_t>* quests;
+
+	uint16_t initialDialog;
 
 	bool Initialize(uint16_t entityId, boost::json::value data);
 

@@ -134,3 +134,13 @@ uint16_t QuestData::UnlockedByQuestId() {
 
 	return questId;
 }
+
+bool QuestData::IsItemChoiceReward() {
+	for (int i = 0; i < 8; i++) {
+		if (this->Rewards[i].TypeID == QuestDetailItemChoice) {
+			return true;
+		}
+	}
+
+	return false;
+}

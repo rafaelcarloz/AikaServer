@@ -74,6 +74,7 @@ public:
 	void SendAction(WORD actionId);
 	void SendMovemment(Position position, BYTE moveType, BYTE speed);
 	void SendEffect(WORD effectId);
+	void SendEffect(WORD effectId, uint16_t targetId);
 
 	void Teleport(float positionX, float positionY);
 	void Teleport(Position position);

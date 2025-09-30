@@ -93,6 +93,9 @@ enum ItemUseType : WORD {
 	ItemUseShoes,
 
 	ItemUsePranFood = 26,
+
+	ItemUseBag = 100,
+
 	ItemUseCityScroll = 202,
 	ItemUseLocationScroll = 204,
 	ItemUseRecipe,

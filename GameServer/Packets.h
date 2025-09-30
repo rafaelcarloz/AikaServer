@@ -29,7 +29,7 @@ namespace packets{
 		PacketUpdateStatus,
 		PacketUpdateBuffsAll,
 		PacketUnknow10C,
-		PacketUnknow10D, //pacote de pontos de exclamacao das quest
+		PacketEntityEffect,
 		PacketNPCTalk,
 		PacketCloseNPC,
 		PacketUnknow110,
@@ -154,7 +154,7 @@ namespace packets{
 		PacketDeleteItem,
 		PacketItemAttribute,
 		PacketReinforceResponse,
-		PacketQuestCancel,
+		PacketQuestRemove,
 		PacketQuestRewardSelect,
 		PacketQuestInfo,
 		PacketJoinItems,
@@ -627,6 +627,13 @@ namespace packets{
 	}*PPacket_306;
 
 
+	typedef struct PacketEntityEffect {
+		PacketHeader Header;
+		DWORD Index;
+		DWORD Effect;
+	}*PPacket_10D;
+
+
 #pragma endregion
 #pragma region "Movemment Packets"
 
@@ -925,10 +932,16 @@ namespace packets{
 #pragma endregion
 #pragma region "Quests Packets"
 
-	typedef struct PacketCancelQuest {
+	typedef struct PacketQuestRemove {
 		PacketHeader Header;
 		uint32_t QuestIndex;
 	}*PPacket_32F;
+
+	typedef struct PacketQuestRewardSelect {
+		PacketHeader Header;
+		uint32_t QuestIndex;
+		uint32_t RewardSlot;
+	}*PPacket_330;
 
 	typedef struct PacketQuestInfo {
 		PacketHeader Header;
@@ -937,7 +950,7 @@ namespace packets{
 		uint8_t RequirimentComplete[5];
 		uint8_t RequirimentAmount[5];
 		uint8_t UNK_1;
-		uint8_t RequirimentItem[5];
+		uint16_t RequirimentItem[5];
 		uint8_t IsCompleted;
 		uint8_t IsOld;
 		uint16_t UNK_2;
@@ -949,17 +962,6 @@ namespace packets{
 		uint32_t Experience;
 		uint32_t Gold;
 	}*PPacket_11B;
-
-	/*
-RequirimentType: Array[0..4] of Byte;
-RequirimentComplete: Array[0..4] of Byte;
-RequirimentAmount: Array[0..4] of Byte;
-Unk: Byte;
-RequirimentItem: Array[0..4] of WORD;
-IsCompleted: Byte;
-IsOld: Byte;
-Unk2: WORD;
-*/
 
 #pragma endregion
 

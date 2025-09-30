@@ -3,7 +3,7 @@
     "Name": "47",
     "Description": "",
     "MobEffect": 0,
-    "InitialDialog": 0,
+    "InitialDialog": 22,
     "Emote": 0,
     "Effect1": 0,
     "Effect2": 0,
@@ -75,7 +75,7 @@
     ],
     "options": [
         {
-            "text": "Nothing_1",
+            "text": "Checar Cadaver",
             "type": 12,
             "color": "0xFFFFFFFF"
         }

@@ -228,6 +228,9 @@ bool ServerInstance::StartRoutines() {
 	this->_threadMobActions = std::thread(&ServerInstance::RoutineUpdateMobActions, this);
 	this->_threadMobActions.detach();
 
+	this->_threadUpdateQuests = std::thread(&ServerInstance::RoutineUpdateQuests, this);
+	this->_threadUpdateQuests.detach();
+
 	return true;
 }
 
@@ -300,6 +303,34 @@ void ServerInstance::RoutineUpdateMobActions() {
 		}
 
 		Sleep(100);
+	}
+}
+
+void ServerInstance::RoutineUpdateQuests() {
+	while (this->isActive)
+	{
+		auto entities = this->entityHandler->GetEntities();
+
+		for (auto& entity : entities) {
+			if (EntityHandler::GetEntityType(entity.first) != EntityPlayer) {
+				continue;
+			}
+
+			PPlayer player;
+
+			if (!this->entityHandler->GetPlayerById(entity.first, player)) {
+				Logger::Write(Error, "[%s] get player error", __FUNCTION__);
+				continue;
+			}
+
+			if (player->IsIstantiated != true || player->index <= 0) {
+				continue;
+			}
+
+			player->questsController->Evaluate();
+		}
+
+		Sleep(2000);
 	}
 }
 

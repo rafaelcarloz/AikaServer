@@ -1,1 +1,14 @@
-﻿  GameServer.vcxproj -> C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\bin\GameServer.exe
+﻿  NPCHandler.cpp
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\NPCHandler.cpp(23,48): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\NPCHandler.cpp(86,46): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\NPCHandler.cpp(90,47): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\NPCHandler.cpp(132,34): warning C4244: '=': conversão de 'DWORD' para 'uint16_t', possível perda de dados
+  UseItemHandler.cpp
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\UseItemHandler.cpp(99,18): warning C4244: 'inicializando': conversão de 'lua_Integer' para 'uint32_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\UseItemHandler.cpp(100,18): warning C4244: 'inicializando': conversão de 'lua_Integer' para 'uint32_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\UseItemHandler.cpp(135,20): warning C4244: 'inicializando': conversão de 'lua_Integer' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\UseItemHandler.cpp(142,68): warning C4244: 'argumento': conversão de 'uint16_t' para 'BYTE', possível perda de dados
+  Gerando Código...
+  GameServer.vcxproj -> C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\bin\GameServer.exe
+  'pwsh.exe' não é reconhecido como um comando interno
+  ou externo, um programa operável ou um arquivo em lotes.

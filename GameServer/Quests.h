@@ -22,6 +22,12 @@ enum QuestDetailType : uint32_t {
 
 	QuestDetailQuest = 9,
 
+	QuestDetailItemChoice = 13,
+	QuestDetailExp,
+	QuestDetailGold,
+
+	QuestDetailEngageNPC = 19,
+
 	QuestDetailPran = 29
 };
 
@@ -48,18 +54,22 @@ struct QuestData {
 	uint16_t Summary;
 	uint8_t UNK_3[1155];
 	uint8_t Level;
-	uint16_t UNK_4;
-	uint16_t UNK_5;
-	uint16_t UNK_6;
+	uint16_t UNK_VAL;
+	uint8_t IsPlotQuest;
+	uint8_t UNK_Effect1;
+	uint8_t UNK_Effect2;
+	uint8_t UNK_Effect3;
 	uint16_t UNK_7;
 
 	QuestDetailData PreConditions[5];
 	QuestDetailData Requirements[5];
-	QuestDetailData GenericRewards[2];
-	QuestDetailData Rewards[14];
+	QuestDetailData Rewards[8];
+	QuestDetailData AcceptRewards[5];
+	QuestDetailData DeleteOnComplete[3];
 	QuestDetailData DropDetails[4];
 
 	uint16_t UnlockedByQuestId();
+	bool IsItemChoiceReward();
 };
 
 

@@ -30,6 +30,8 @@ private:
 	boost::json::value ItemToJSON(Item item, BYTE slot, BYTE slotType, uint64_t databaseId = 0);
 
 	PItem GetInventoryBagFromSlot(BYTE slot);
+
+	BYTE AddBag(Item item);
 public:
 	bool Initialize(PCharacter _character, PPlayer _player);
 	boost::json::value InventoryToJSON();

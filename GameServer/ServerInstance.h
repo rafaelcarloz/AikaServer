@@ -23,6 +23,7 @@ private:
 	std::thread _threadUpdatedVisible;
 	std::thread _threadUpdateBuffsAndStatus;
 	std::thread _threadMobActions;
+	std::thread _threadUpdateQuests;
 
 	ServerSocket serverSocket;
 
@@ -69,6 +70,7 @@ public:
 	void RoutineUpdateVisibleEntities();
 	void RoutineUpdateBuffsAndStatus();
 	void RoutineUpdateMobActions();
+	void RoutineUpdateQuests();
 };
 
 

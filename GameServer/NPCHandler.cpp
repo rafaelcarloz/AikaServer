@@ -46,9 +46,13 @@ bool NPCHandler::OpenNPC(PPlayer player, PNpc npc, PacketOpenNPC& packet) {
 		player->SendSignalData(PacketCode::PacketCreateGuild, 0);
 		break;
 	/*case NpcOptionGuildStorage:
+		break;*/
+
+	case NpcOptionQuestEngage:
+		NPCHandler::QuestEngage(player, npc);
 		break;
 			
-	case NpcOptionPranStation:
+	/*case NpcOptionPranStation:
 		break; */
 
 	case NpcOptionAnvil:
@@ -82,9 +86,10 @@ bool NPCHandler::OpenNPC(PPlayer player, PNpc npc, PacketOpenNPC& packet) {
 		NPCHandler::AcceptQuest(player, npc, packet.Type2);
 		break;
 
-	/*case NpcOptionDeliveryQuest:
+	case NpcOptionDeliveryQuest:
+		NPCHandler::DeliverQuest(player, npc, packet.Type2);
 		break;
-	case NpcOptionSaveLocation:
+	/*case NpcOptionSaveLocation:
 		break;
 	case NpcOptionDungeon:
 		break;*/
@@ -144,6 +149,10 @@ bool NPCHandler::DisplayOptions(PPlayer player, PNpc npc) {
 	player->SendSignal(PacketCode::PacketUnknow110);
 	player->SendSignalData(PacketCode::PacketNPCTalk, npc->index);
 
+	if (npc->initialDialog != 0) {
+		player->SendSignalData(PacketCode::PacketAnimationTalk, npc->initialDialog);
+	}
+
 	for (auto& option : npc->options) {
 		NPCHandler::SendOption(player, npc, (NpcUsingOption)option.first);
 	}
@@ -164,16 +173,49 @@ bool NPCHandler::DisplayQuests(PPlayer player, PNpc npc, uint16_t questId) {
 	if (questId > 0) {
 		QuestData questData = QuestList::Get(questId);
 
-		player->SendSignalData(PacketCode::PacketAnimationTalk, questData.DialogStart);
-		NPCHandler::SendCustomOption(player, npc, NpcOptionTakeQuest, "Aceitar", questData.Index);
+		uint16_t dialogId = 0;
+
+		if (player->questsController->ActiveContains(questId)) {
+			if (player->questsController->activeQuests[questId].IsCompleted) {
+				dialogId = questData.DialogEnd;
+				NPCHandler::SendCustomOption(player, npc, NpcOptionDeliveryQuest, "Completar", questData.Index);
+			}
+			else {
+				dialogId = questData.DialogUnfinished;
+			}
+		}
+		else {
+			dialogId = questData.DialogStart;
+			NPCHandler::SendCustomOption(player, npc, NpcOptionTakeQuest, "Aceitar", questData.Index);
+		}
+
+		player->SendSignalData(PacketCode::PacketAnimationTalk, dialogId);
 	}
 	else {
-		for (int i = 0; i < npc->quests->size(); i++) {
-			if (!player->questsController->AvailableContains(npc->quests->at(i))) {
+		std::vector<uint16_t> quests = player->questsController->availableQuests;
+
+		for (auto& questId : quests) {
+			if (player->questsController->CompletedContains(questId)) {
 				continue;
 			}
 
-			QuestData questData = QuestList::Get(npc->quests->at(i));
+			QuestData questData = QuestList::Get(questId);
+
+			if (questData.StartNPC != npc->index && questData.EndNPC != npc->index) {
+				continue;
+			}
+
+			if (questData.EndNPC == npc->index && questData.EndNPC != questData.StartNPC) {
+				if (!player->questsController->ActiveContains(questId)) {
+					continue;
+				}
+
+				auto quest = player->questsController->activeQuests[questId];
+
+				if (!quest.IsCompleted) {
+					continue;
+				}
+			}
 
 			NPCHandler::SendCustomOption(player, npc, NpcOptionQuest, questData.Title, questData.Index);
 		}
@@ -203,7 +245,56 @@ bool NPCHandler::AcceptQuest(PPlayer player, PNpc npc, uint16_t questId) {
 
 	NPCHandler::CloseNPC(player);
 
-	return player->questsController->AcceptQuest(questId);
+	player->questsController->AcceptQuest(questId);
+
+	const int EffectQuestInProgress = 3;
+	player->characterController->SendEntityEffect(npc->index, EffectQuestInProgress);
+
+	return true;
+}
+
+bool NPCHandler::DeliverQuest(PPlayer player, PNpc npc, uint16_t questId) {
+	if (!player->questsController->ActiveContains(questId)) {
+		player->SendClientMessage("You are not currently doing this quest");
+		return true;
+	}
+
+	NPCHandler::CloseNPC(player);
+
+	if (!player->questsController->DeliverQuest(questId)) {
+		return false;
+	}
+
+	return true;
+}
+
+bool NPCHandler::QuestEngage(PPlayer player, PNpc npc) {
+	NPCHandler::CloseNPC(player);
+
+	int npcNameId = std::atoi(npc->character.Name);
+
+	for (auto& quest : player->questsController->activeQuests) {
+		if (quest.second.IsCompleted) {
+			continue;
+		}
+
+		for (int i = 0; i < quest.second.Goals.size(); i++) {
+			auto goal = quest.second.Goals[i];
+
+			if (goal.Type != QuestDetailEngageNPC) {
+				continue;
+			}
+
+			if (goal.Index != npcNameId) {
+				continue;
+			}
+
+			player->questsController->activeQuests[quest.first].Goals[i].CompletedAmount += 1;
+			player->questsController->SendQuestUpdate(player->questsController->activeQuests[quest.first]);
+		}
+	}
+
+	return true;
 }
 
 #pragma endregion

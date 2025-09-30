@@ -34,6 +34,8 @@ public:
 	bool IsVisible();
 	void SetVisible(bool visivility);
 
+	bool ContainsVisibleEntity(WORD entityId);
+
 	std::list<uint16_t> GetEntities();
 
 	bool SendToVisible(LPVOID packet, WORD packetSize, bool sendSelf = true);

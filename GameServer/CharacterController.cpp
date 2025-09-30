@@ -789,9 +789,8 @@ void CharacterController::AddExperience(uint64_t amount, bool notifyPlayer) {
 		this->AddLevel(levelsToAdd);
 	}
 	
-	this->SendRefreshExperience();
-
 	if (notifyPlayer) {
+		this->SendRefreshExperience();
 		this->_player->SendClientMessage(Logger::Format("Você recebeu %d pontos de experiência.", amount), MESSAGE_COLOR::WHITE, MESSAGE_TYPE::NORMAL);
 	}
 }
@@ -838,14 +837,16 @@ void CharacterController::OnLevelUp() {
 }
 
 
-void CharacterController::AddGold(uint64_t amount) {
+void CharacterController::AddGold(uint64_t amount, bool notifyPlayer) {
 	if (amount <= 0) {
 		return;
 	}
 
 	this->_player->character.Gold += amount;
 
-	this->SendRefreshGold();
+	if (notifyPlayer) {
+		this->SendRefreshGold();
+	}
 }
 
 void CharacterController::DecGold(uint64_t amount) {
@@ -877,6 +878,22 @@ void CharacterController::SendRefreshGold() {
 
 	this->_player->SendPacket(&Packet, Packet.Header.Size);
 }
+
+void CharacterController::SendAddExpGold(uint32_t expReward, uint32_t goldReward) {
+	PacketGiveExpGold Packet;
+
+	ZeroMemory(&Packet, sizeof(Packet));
+
+	Packet.Header.Size = sizeof(Packet);
+	Packet.Header.Index = this->_player->index;
+	Packet.Header.Code = PacketCode::PacketGiveExpGold;
+
+	Packet.Gold = goldReward;
+	Packet.Experience = expReward;
+
+	this->_player->SendPacket(&Packet, Packet.Header.Size);
+}
+
 
 
 void CharacterController::SendCharacterSkills(uint16_t entityIndex) {
@@ -983,6 +1000,21 @@ void CharacterController::SendEffect(uint32_t effectIndex) {
 	this->_player->visibleController->SendToVisible(&Packet, Packet.Header.Size);
 }
 
+void CharacterController::SendEntityEffect(uint32_t entityId, uint32_t effectIndex) {
+	PacketEntityEffect Packet;
+
+	ZeroMemory(&Packet, sizeof(Packet));
+
+	Packet.Header.Size = sizeof(Packet);
+	Packet.Header.Index = this->_player->index;
+	Packet.Header.Code = PacketCode::PacketEntityEffect;
+
+	Packet.Index = entityId;
+	Packet.Effect = effectIndex;
+
+	this->_player->SendPacket(&Packet, Packet.Header.Size);
+}
+
 void CharacterController::OnKillMob(PGameEntity entity) {
 	PMob killedMob = (PMob)entity;
 
@@ -999,6 +1031,8 @@ void CharacterController::OnKillMob(PGameEntity entity) {
 	this->AddExperience(baseExp);
 
 	this->HandleMobDrops(entity);
+
+	this->_player->questsController->EvaluateGoalMonsterKill(killedMob->character.CharacterId);
 
 	Logger::Write(Debug, "[CharacterController::OnKillMob] Entity [%d] with level {%d} rewarded Entity [%d] with level {%d} exp = %d on dying", 
 		entity->index, 
