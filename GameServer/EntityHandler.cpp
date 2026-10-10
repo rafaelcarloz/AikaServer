@@ -125,12 +125,14 @@ bool EntityHandler::GetEntity(const UINT32 entityId, PGameEntity& entity) {
 	return true;
 }
 
-PGameEntity& EntityHandler::GetEntity(const UINT32 entityId) {
+PGameEntity EntityHandler::GetEntity(const UINT32 entityId) {
 	PGameEntity entity = nullptr;
 
 	ServerInstance* instance = ServerInstance::GetInstance();
 
-	instance->entityHandler->GetEntity(entityId, entity);
+	if (instance->entityHandler->GetEntity(entityId, entity)) {
+		return entity;
+	}
 
 	return entity;
 }

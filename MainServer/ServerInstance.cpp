@@ -26,15 +26,15 @@ bool ServerInstance::LoadConfiguration() {
 		json::value configurationData = json::parse(input, ec);
 			
 		string address = json::value_to<string>(configurationData.at("serverSettings").at("address"));
-		WORD port = json::value_to<WORD>(configurationData.at("serverSettings").at("port"));
+		WORD port = json::value_to<short>(configurationData.at("serverSettings").at("port"));
 
-		this->version = int(json::value_to<WORD>(configurationData.at("serverSettings").at("version")));
-		this->maxConnections = int(json::value_to<WORD>(configurationData.at("serverSettings").at("maxConnections")));
+		this->version = int(json::value_to<uint64_t>(configurationData.at("serverSettings").at("version")));
+		this->maxConnections = int(json::value_to<uint64_t>(configurationData.at("serverSettings").at("maxConnections")));
 
 		this->serverSocket = ServerSocket(address, port);
 	}
 	catch (exception e) {
-		Logger::Write(e.what(), LOG_TYPE::Error);
+		Logger::Write(LOG_TYPE::Error,"[%s] error loading configuration: %s", __FUNCTION__, e.what());
 		return false;
 	}
 

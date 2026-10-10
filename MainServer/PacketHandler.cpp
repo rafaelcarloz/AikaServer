@@ -55,12 +55,15 @@ bool PacketHandler::LoginHandler(ClientConnection client, char* buffer) {
 
 		ResponseLoginPacket PacketSend;
 
+		std::string teste = boost::json::serialize(*response);
+		//Logger::Write(LOG_TYPE::Packets, "json: %s", teste.c_str());
+
 		ZeroMemory(&PacketSend, sizeof(PacketSend));
 
 		PacketSend.Header.Size = sizeof(PacketSend);
 		PacketSend.Header.Code = (PacketCode)0x82;
-		PacketSend.Index = boost::json::value_to<WORD>(response->at("accountID"));
-		PacketSend.Nation = boost::json::value_to<WORD>(response->at("accountNation"));
+		PacketSend.Index = boost::json::value_to<uint64_t>(response->at("accountID"));
+		PacketSend.Nation = boost::json::value_to<uint64_t>(response->at("accountNation"));
 		PacketSend.Time = GetTickCount();
 
 		if (!client.SendPacket(&PacketSend, PacketSend.Header.Size)) {
@@ -73,7 +76,7 @@ bool PacketHandler::LoginHandler(ClientConnection client, char* buffer) {
 	}
 	catch (std::exception& e)
 	{
-		Logger::Write(e.what(), Error);
+		Logger::Write(Error, "[%s] error on login : %s", __FUNCTION__, e.what());
 	}
 
 	client.isActive = false;

@@ -1,0 +1,28 @@
+﻿  PacketHandler.cpp
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\MainServer\PacketHandler.cpp(65,53): warning C4244: '=': conversão de 'T' para 'DWORD', possível perda de dados
+          with
+          [
+              T=uint64_t
+          ]
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\MainServer\PacketHandler.cpp(66,54): warning C4244: '=': conversão de 'T' para 'DWORD', possível perda de dados
+          with
+          [
+              T=uint64_t
+          ]
+LINK : warning C4744: 'static class boost::system::detail::interop_error_category const boost::system::detail::interop_cat_holder<void>::instance' possui tipo diferente em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\program.cpp' e em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\packethandler.cpp': 'struct (56 bytes)' e '__declspec(align(4)) struct (52 bytes)'
+LINK : warning C4744: 'static class boost::system::detail::system_error_category const boost::system::detail::system_cat_holder<void>::instance' possui tipo diferente em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\program.cpp' e em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\packethandler.cpp': 'struct (56 bytes)' e '__declspec(align(4)) struct (52 bytes)'
+LINK : warning C4742: 'struct boost::source_location const `struct boost::source_location const & __ptr64 __cdecl boost::system::error_code::location(void)const __ptr64'::`2'::loc' possui alinhamento diferente em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\program.cpp' e em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\packethandler.cpp': 8 e 1
+LINK : warning C4742: 'struct boost::source_location const `unsigned __int64 __cdecl boost::json::value::to_number<unsigned __int64>(class boost::system::error_code & __ptr64)const __ptr64'::`2'::loc' possui alinhamento diferente em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\serverinstance.cpp' e em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\packethandler.cpp': 8 e 1
+LINK : warning C4744: 'static class boost::system::detail::interop_error_category const boost::system::detail::interop_cat_holder<void>::instance' possui tipo diferente em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\serverinstance.cpp' e em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\packethandler.cpp': 'struct (56 bytes)' e '__declspec(align(4)) struct (52 bytes)'
+LINK : warning C4744: 'static class boost::system::detail::system_error_category const boost::system::detail::system_cat_holder<void>::instance' possui tipo diferente em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\serverinstance.cpp' e em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\packethandler.cpp': 'struct (56 bytes)' e '__declspec(align(4)) struct (52 bytes)'
+LINK : warning C4742: 'struct boost::source_location const `struct boost::source_location const & __ptr64 __cdecl boost::system::error_code::location(void)const __ptr64'::`2'::loc' possui alinhamento diferente em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\serverinstance.cpp' e em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\packethandler.cpp': 8 e 1
+  Gerando código
+LINK : warning C4743: 'static class boost::system::detail::system_error_category const boost::system::detail::system_cat_holder<void>::instance' possui tamanho diferente em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\serverinstance.cpp' e em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\packethandler.cpp': 56 e 52 bytes
+LINK : warning C4743: 'static class boost::system::detail::interop_error_category const boost::system::detail::interop_cat_holder<void>::instance' possui tamanho diferente em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\serverinstance.cpp' e em 'c:\users\rafae\onedrive\documentos\github\aikaserver\mainserver\packethandler.cpp': 56 e 52 bytes
+  2 of 889 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    12 functions had inline decision re-evaluated but remain unchanged
+  Finalizada a geração de código
+  MainServer.vcxproj -> C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\x64\Release\MainServer.exe
+  'pwsh.exe' não é reconhecido como um comando interno
+  ou externo, um programa operável ou um arquivo em lotes.

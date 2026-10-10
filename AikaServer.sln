@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MainServer", "MainServer\Ma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AikaWeb", "AikaWeb\AikaWeb.csproj", "{20E7A0B8-5464-439B-9B50-12C3DC72FE44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacketTester", "PacketTester\PacketTester.csproj", "{F973F1AA-56A3-472D-BB13-E50418BED4C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{20E7A0B8-5464-439B-9B50-12C3DC72FE44}.Release|x64.Build.0 = Release|Any CPU
 		{20E7A0B8-5464-439B-9B50-12C3DC72FE44}.Release|x86.ActiveCfg = Release|Any CPU
 		{20E7A0B8-5464-439B-9B50-12C3DC72FE44}.Release|x86.Build.0 = Release|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Debug|x64.Build.0 = Debug|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Debug|x86.Build.0 = Debug|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Release|x64.ActiveCfg = Release|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Release|x64.Build.0 = Release|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Release|x86.ActiveCfg = Release|Any CPU
+		{F973F1AA-56A3-472D-BB13-E50418BED4C8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -681,7 +681,18 @@ bool ProcessNPC(std::string workingrPath, std::string fileName) {
 
 		instance->entityHandler->AddEntity(new NPC(), EntityNPC, &entityId);
 
-		PNpc npc = (PNpc)instance->entityHandler->GetEntity(entityId);
+		PGameEntity gameEntity = nullptr;
+		
+
+		instance->entityHandler->GetEntity(entityId, gameEntity);
+
+		PNpc npc = (PNpc)gameEntity;
+
+		if (npc == nullptr) {
+			Logger::Write(Error, "[%s] error adding entity id: %d", __FUNCTION__, entityId);
+			return false;
+		}
+
 		npc->Initialize(entityId, npcData);
 	}
 	catch (std::exception e) {

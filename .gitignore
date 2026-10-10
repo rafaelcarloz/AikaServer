@@ -12,3 +12,9 @@
 *.pdb
 *.obj
 bin/main.py
+/bin/fix_initial.py
+/bin/NPCs.zip
+/bin/Backup
+/x64
+/Teste
+/PacketTester

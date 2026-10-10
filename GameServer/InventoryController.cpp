@@ -632,6 +632,39 @@ void InventoryController::DecreaseAmount(BYTE slot, WORD amount, SlotType slotTy
 	}
 }
 
+bool InventoryController::DecreaseAmount(WORD itemId, WORD amount, SlotType slotType) {
+	PItem item = nullptr;
+	int8_t srcSlot = -1;
+
+	switch (slotType)
+	{
+		case SlotInventory:
+			for (int slot = 0; slot < 60; slot++) {
+				PItem temp = &this->_player->character.Inventory[slot];
+
+				if (temp->Index == itemId) {
+					item = &this->_player->character.Inventory[slot];
+					srcSlot = slot;
+				}
+			}
+			break;
+		case SlotStorage:
+			break;
+		case SlotPremium:
+			break;
+		default:
+			break;
+	}
+
+	if (item == nullptr) {
+		return false;
+	}
+
+	this->DecreaseAmount(srcSlot, amount, slotType, item);
+
+	return true;
+}
+
 ItemAgroupStatus InventoryController::CanAgroupAmount(const Item item, WORD amount) {
 	ItemFromList itemData = ItemList::GetInstance()->Get(item.Index);
 
@@ -785,4 +818,56 @@ BYTE InventoryController::PutItem(WORD itemId, WORD amount) {
 	item.MinDurability = item.MaxDurability;
 
 	return this->PutItem(item, 0, true);
+}
+
+PItem InventoryController::FindItemById(uint16_t itemId, SlotType slotType) {
+
+	switch (slotType)
+	{
+	case SlotEquipment:
+		for (BYTE i = 0; i < 16; i++) {
+			PItem item = &this->_player->character.Equipaments[i];
+
+			if (item->Index == itemId) {
+				return item;
+			}
+		}
+		break;
+	case SlotInventory:
+		for (BYTE i = 0; i < 64; i++) {
+			PItem item = &this->_player->character.Inventory[i];
+
+			if (item->Index == itemId) {
+				return item;
+			}
+		}
+		break;
+	case SlotStorage:
+		return nullptr;
+		break;
+	case SlotPremium:
+		return nullptr;
+		break;
+	default:
+		return nullptr;
+		break;
+	}
+
+	return nullptr;
+}
+
+bool InventoryController::HasItem(uint16_t itemId, SlotType slotType) {
+	PItem item = this->FindItemById(itemId, slotType);
+
+	return item != nullptr;
+}
+
+bool InventoryController::HasItem(uint16_t itemId, uint16_t amount, SlotType slotType) {
+	PItem item = this->FindItemById(itemId, slotType);
+
+	if (item == nullptr) {
+		return false;
+	}
+
+	return item->Amount >= amount;
 }

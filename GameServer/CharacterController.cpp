@@ -334,6 +334,11 @@ bool CharacterController::SaveCharacter() {
 		return false;
 	}
 
+	if (!this->_player->questsController->Destroy()) {
+		Logger::Write(Error, "[QuestsController::Destroy] error while saving data!");
+		return false;
+	}
+
 	return true;
 }
 
@@ -620,19 +625,6 @@ bool CharacterController::SendToWorld() {
 	}
 
 #pragma endregion
-#pragma region "Set Quests"
-
-	Packet.Quests[0].Index = 1;
-	Packet.Quests[0].UNK_1[0] = 2;
-	Packet.Quests[0].UNK_1[1] = 3;
-	Packet.Quests[0].UNK_1[2] = 4;
-	Packet.Quests[1].Index = 2;
-	Packet.Quests[1].UNK_1[0] = 2;
-	Packet.Quests[1].UNK_1[1] = 3;
-	Packet.Quests[1].UNK_1[2] = 4;
-
-#pragma endregion
-
 
 	Packet.ExpPoints = this->_player->character.ExpPoints;
 	Packet.Gold = this->_player->character.Gold;
@@ -665,6 +657,8 @@ bool CharacterController::EnterIngame() {
 	this->_player->timeLastRegenerationTick = time(0);
 
 	this->_player->character.ExpPoints++;
+
+	this->_player->questsController->SendQuests();
 
 	return true;
 }
@@ -789,8 +783,9 @@ void CharacterController::AddExperience(uint64_t amount, bool notifyPlayer) {
 		this->AddLevel(levelsToAdd);
 	}
 	
+	this->SendRefreshExperience();
+
 	if (notifyPlayer) {
-		this->SendRefreshExperience();
 		this->_player->SendClientMessage(Logger::Format("Você recebeu %d pontos de experiência.", amount), MESSAGE_COLOR::WHITE, MESSAGE_TYPE::NORMAL);
 	}
 }
@@ -844,8 +839,10 @@ void CharacterController::AddGold(uint64_t amount, bool notifyPlayer) {
 
 	this->_player->character.Gold += amount;
 
+	this->SendRefreshGold();
+
 	if (notifyPlayer) {
-		this->SendRefreshGold();
+		
 	}
 }
 
@@ -1045,38 +1042,51 @@ void CharacterController::OnKillMob(PGameEntity entity) {
 void CharacterController::HandleMobDrops(PGameEntity entity) {
 	PMob killedMob = (PMob)entity;
 
-	DropItems mobDrops = DropList::Get(killedMob->dropIndex);
+	DropList* dropList = DropList::GetInstance();
+	DropItems mobDrops = DropItems();
 
-	if (mobDrops.items.size() == 0) {
-		return;
+	if (dropList->Contains(killedMob->dropIndex)) {
+		DropItems mobDrops = DropList::Get(killedMob->dropIndex);
 	}
 
-	uint16_t maxDropCount = mobDrops.items.size() - 1;
+	if (mobDrops.items.size() != 0) {
+		uint16_t maxDropCount = mobDrops.items.size() - 1;
 
-	std::vector<uint16_t> droppedItems = std::vector<uint16_t>();
-	std::vector<uint16_t> droppedItemsRariry = std::vector<uint16_t>();
+		std::vector<uint16_t> droppedItems = std::vector<uint16_t>();
+		std::vector<uint16_t> droppedItemsRariry = std::vector<uint16_t>();
 
-	for (int dropIndex = 0; dropIndex < maxDropCount; dropIndex++) {
-		uint16_t dropItemId = mobDrops.items[dropIndex].itemId;
+		const uint16_t DEFAULT_DROP_ITEM_AMOUNT = 1;
 
-		if (std::find(droppedItemsRariry.begin(), droppedItemsRariry.end(), mobDrops.items[dropIndex].dropRarity) != droppedItemsRariry.end()) {
+		for (int dropIndex = 0; dropIndex < maxDropCount; dropIndex++) {
+			uint16_t dropItemId = mobDrops.items[dropIndex].itemId;
+
+			if (std::find(droppedItemsRariry.begin(), droppedItemsRariry.end(), mobDrops.items[dropIndex].dropRarity) != droppedItemsRariry.end()) {
+				continue;
+			}
+
+			bool dropItem = RandomFunctions::RandomPercentSelection(mobDrops.items[dropIndex].dropRarityChance);
+
+			if (!dropItem) {
+				continue;
+			}
+
+			droppedItemsRariry.push_back(mobDrops.items[dropIndex].dropRarity);
+
+			this->_player->inventoryController.PutItem(dropItemId, DEFAULT_DROP_ITEM_AMOUNT);
+		}
+	}
+
+	for (auto& questDrop : this->_player->questsController->questDrops) {
+		if (entity->character.CharacterId != questDrop.MobId) {
 			continue;
 		}
 
-		bool dropItem = RandomFunctions::RandomPercentSelection(mobDrops.items[dropIndex].dropRarityChance);
+		bool dropItem = RandomFunctions::RandomPercentSelection(questDrop.DropRate);
 
 		if (!dropItem) {
 			continue;
 		}
 
-		droppedItemsRariry.push_back(mobDrops.items[dropIndex].dropRarity);
-		droppedItems.push_back(dropItemId);
-	}
-
-	const uint16_t DEFAULT_DROP_ITEM_AMOUNT = 1;
-
-	for (auto& dropItemId : droppedItems)
-	{
-		this->_player->inventoryController.PutItem(dropItemId, DEFAULT_DROP_ITEM_AMOUNT);
+		this->_player->inventoryController.PutItem(questDrop.DropItem, 0, true);
 	}
 }

@@ -1,0 +1,32 @@
+{
+    "Index": 12,
+    "Name": "Pazira",
+    "Face": 255,
+    "Hair": 0,
+    "Weapon": 0,
+    "Health": 1622,
+    "Rotation": 44,
+    "Level": 8,
+    "Height": 9,
+    "Chest": 123,
+    "Leg": 123,
+    "MobType": 1,
+    "SpawnType": 0,
+    "IsService": 0,
+    "RespawnTime": 120,
+    "Elevation": 9,
+    "DropIndex": 0,
+    "Skills": [],
+    "Positions": [
+        {
+            "StartPosX": 3581,
+            "StartPosY": 900,
+            "StartRange": 12,
+            "StartWait": 6,
+            "DestPosX": 3573,
+            "DestPosY": 912,
+            "DestRange": 11,
+            "DestWait": 6
+        }
+    ]
+}

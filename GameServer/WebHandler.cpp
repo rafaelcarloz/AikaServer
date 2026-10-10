@@ -313,5 +313,36 @@ bool WebHandler::PostCharacterTitles(int characterId, const json::value items, j
 }
 
 #pragma endregion
+#pragma region "Quests"
+
+bool WebHandler::GetCharacterQuests(int characterId, json::value* response) {
+	HttpRequest reqquest(this->_domain, this->_port, this->_https);
+	HttpResponse httpResponse;
+
+	std::wstring url = L"/characters/" + std::to_wstring(characterId) + L"/quests";
+
+	reqquest.Get(url,
+		this->_requestHeader,
+		httpResponse);
+
+	return this->ProcessResponse(httpResponse, response);
+}
+
+bool WebHandler::PostCharacterQuests(int characterId, const json::value items, json::value* response) {
+	HttpRequest reqquest(this->_domain, this->_port, this->_https);
+	HttpResponse httpResponse;
+
+	std::wstring url = L"/characters/" + std::to_wstring(characterId) + L"/quests";
+
+	reqquest.Post(url,
+		this->_requestHeader,
+		json::serialize(items),
+		httpResponse);
+
+	return this->ProcessResponse(httpResponse, response);
+}
+
+#pragma endregion
+
 
 

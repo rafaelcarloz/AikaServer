@@ -48,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -134,6 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BuffsController.cpp" />
+    <ClCompile Include="CommandHandler.cpp" />
     <ClCompile Include="DropList.cpp" />
     <ClCompile Include="ExpList.cpp" />
     <ClCompile Include="GameEntity.cpp" />
@@ -145,6 +146,7 @@
     <ClCompile Include="MobPos.cpp" />
     <ClCompile Include="NPC.cpp" />
     <ClCompile Include="NPCHandler.cpp" />
+    <ClCompile Include="PartyController.cpp" />
     <ClCompile Include="PlayerData.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="CharacterController.cpp" />
@@ -162,6 +164,7 @@
     <ClCompile Include="QuestsController.cpp" />
     <ClCompile Include="RandomFunctions.cpp" />
     <ClCompile Include="ReinforceData.cpp" />
+    <ClCompile Include="ServerRoutines.cpp" />
     <ClCompile Include="ServerSocekt.cpp" />
     <ClCompile Include="ServerInstance.cpp" />
     <ClCompile Include="SetItem.cpp" />
@@ -179,6 +182,7 @@
     <ClInclude Include="BuffsController.h" />
     <ClInclude Include="CharacterController.fwd.h" />
     <ClInclude Include="CharacterController.h" />
+    <ClInclude Include="CommandHandler.h" />
     <ClInclude Include="DataLoader.h" />
     <ClInclude Include="DateFunctions.h" />
     <ClInclude Include="DropList.h" />
@@ -198,6 +202,7 @@
     <ClInclude Include="NPC.h" />
     <ClInclude Include="NPCHandler.h" />
     <ClInclude Include="Packets.h" />
+    <ClInclude Include="PartyController.h" />
     <ClInclude Include="Player.fwd.h" />
     <ClInclude Include="PlayerData.h" />
     <ClInclude Include="Logger.h" />
@@ -208,6 +213,7 @@
     <ClInclude Include="QuestsController.h" />
     <ClInclude Include="RandomFunctions.h" />
     <ClInclude Include="ReinforceData.h" />
+    <ClInclude Include="ServerRoutines.h" />
     <ClInclude Include="ServerInstance.h" />
     <ClInclude Include="ServerSocket.fwd.h" />
     <ClInclude Include="ServerSocket.h" />

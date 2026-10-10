@@ -5,6 +5,7 @@
 #include "ServerSocket.h"
 #include <Winsock2.h>
 #include "Mob.h"
+#include "ServerRoutines.h"
 
 using namespace std;
 namespace json = boost::json;
@@ -90,7 +91,9 @@ bool ServerInstance::Startup(json::value serverInfo) {
 	this->_connectionsThread = std::thread(&ServerInstance::HandleConnections, this);
 	this->_connectionsThread.detach();
 
-	this->StartRoutines();
+	ServerRoutines* serverRoutines = new ServerRoutines();
+
+	serverRoutines->StartRoutines();
 
 	return true;
 }
@@ -216,122 +219,3 @@ Nation* ServerInstance::GetNationData() {
 	return this->nation;
 }
 
-#pragma region "Server Threads"
-
-bool ServerInstance::StartRoutines() {
-	this->_threadUpdatedVisible = std::thread(&ServerInstance::RoutineUpdateVisibleEntities, this);
-	this->_threadUpdatedVisible.detach();
-
-	this->_threadUpdateBuffsAndStatus = std::thread(&ServerInstance::RoutineUpdateBuffsAndStatus, this);
-	this->_threadUpdateBuffsAndStatus.detach();
-
-	this->_threadMobActions = std::thread(&ServerInstance::RoutineUpdateMobActions, this);
-	this->_threadMobActions.detach();
-
-	this->_threadUpdateQuests = std::thread(&ServerInstance::RoutineUpdateQuests, this);
-	this->_threadUpdateQuests.detach();
-
-	return true;
-}
-
-
-void ServerInstance::RoutineUpdateVisibleEntities() {
-	while (this->isActive)
-	{
-		auto entities = this->entityHandler->GetEntities();
-
-		for (auto& entity : entities) {
-			if (EntityHandler::GetEntityType(entity.first) != EntityPlayer) {
-				continue;
-			}
-
-			PPlayer player;
-
-			if (!this->entityHandler->GetPlayerById(entity.first, player)) {
-				Logger::Write(Error, "[ServerInstance::RoutineUpdateVisibleEntities] get player error");
-				continue;
-			}
-
-			if (player->IsIstantiated != true || player->index <= 0) {
-				continue;
-			}
-
-			player->visibleController->PerformUpdate();
-		}
-
-		Sleep(10);
-	}
-}
-
-void ServerInstance::RoutineUpdateBuffsAndStatus() {
-	while (this->isActive)
-	{
-		auto entities = this->entityHandler->GetEntities();
-
-		for (auto& entity : entities) {
-			if (!entity.second->IsIstantiated) {
-				continue;
-			}
-
-			entity.second->buffsController->Recalculate();
-
-			entity.second->statusController.DoRegenerationTick(); 
-			entity.second->statusController.DoDotTick();
-		}
-
-		Sleep(100);
-	}
-}
-
-void ServerInstance::RoutineUpdateMobActions() {
-	while (this->isActive)
-	{
-		auto entities = this->entityHandler->GetEntities();
-
-		for (auto& entity : entities) {
-			if (EntityHandler::GetEntityType(entity.first) != EntityMob) {
-				continue;
-			}
-
-			PMob mob = (PMob)this->entityHandler->GetEntity(entity.first);
-
-			if (mob->index <= 0) {
-				continue;
-			}
-
-			mob->PerformUpdate();
-		}
-
-		Sleep(100);
-	}
-}
-
-void ServerInstance::RoutineUpdateQuests() {
-	while (this->isActive)
-	{
-		auto entities = this->entityHandler->GetEntities();
-
-		for (auto& entity : entities) {
-			if (EntityHandler::GetEntityType(entity.first) != EntityPlayer) {
-				continue;
-			}
-
-			PPlayer player;
-
-			if (!this->entityHandler->GetPlayerById(entity.first, player)) {
-				Logger::Write(Error, "[%s] get player error", __FUNCTION__);
-				continue;
-			}
-
-			if (player->IsIstantiated != true || player->index <= 0) {
-				continue;
-			}
-
-			player->questsController->Evaluate();
-		}
-
-		Sleep(2000);
-	}
-}
-
-#pragma endregion

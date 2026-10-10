@@ -18,8 +18,9 @@ bool NPC::Initialize(uint16_t entityId, boost::json::value data) {
 	this->buffsController = new BuffsController();
 
 	this->visibleController->Initialize(this);
-	this->statusController.Initialize(this->index, &this->character, this->baseCharacter);
 	this->buffsController->Initialize(this->index, this);
+	this->statusController.Initialize(this->index, &this->character, this->baseCharacter);
+	
 
 	this->IsIstantiated = true;
 
@@ -40,10 +41,10 @@ bool NPC::FromJSON(boost::json::value data) {
 	ZeroMemory(&this->character, sizeof(Character));
 	ZeroMemory(&this->baseCharacter, sizeof(Character));
 
-	ItemList* itemList = ItemList::GetInstance();
-
 	BYTE slot = 0;
 	try {
+		ItemList* itemList = ItemList::GetInstance();
+
 		strcpy_s(this->character.Name, json::value_to<std::string>(data.at("Name")).c_str());
 		this->textTitle = json::value_to<std::string>(data.at("Description"));
 

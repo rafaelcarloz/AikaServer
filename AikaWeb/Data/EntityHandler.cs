@@ -23,6 +23,8 @@ namespace AikaWeb.Data
         public DbSet<TitleModel> Titles { get; set; } = default!;
 
         public DbSet<ServerModel> Servers { get; set; } = default!;
-        public DbSet<NationModel> Nations { get; set; } = default!;
+        public DbSet<NationModel> Nations { get; set; } = default!; 
+
+        public DbSet<CharacterQuestModel> CharacterQuests { get; set; } = default!;
     }
 }

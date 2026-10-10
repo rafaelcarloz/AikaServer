@@ -50,6 +50,10 @@ public:
 	//Titles
 	bool GetCharacterTitles(int characterId, json::value* response);
 	bool PostCharacterTitles(int characterId, const json::value items, json::value* response);
+
+	//Quests
+	bool GetCharacterQuests(int characterId, json::value* response);
+	bool PostCharacterQuests(int characterId, const json::value items, json::value* response);
 };
 
 #endif

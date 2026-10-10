@@ -307,6 +307,30 @@ namespace AikaWeb.Controllers
             }
 
             #endregion
+            #region "Quests"
+
+            [HttpGet("/characters/{characterID}/quests")]
+            public ActionResult<IEnumerable<CharacterQuestModel>> GetCharacterQuests(long characterID)
+            {
+                return _context.CharacterQuests.Where(item => (item.CharacterID == characterID) && (item.IsActive > 0)).ToList();
+            }
+
+            [HttpPost("/characters/{characterID}/quests")]
+            public ActionResult<CharacterCreateResponse> PostCharacterQuests(long characterID, [FromBody] IEnumerable<CharacterQuestModel> items)
+            {
+                foreach (var quest in items)
+                {
+                    quest.UpdatedOn = DateTime.Now;
+
+                    _context.Entry(quest).State = (quest.CharacterQuestID == 0) ? EntityState.Added : EntityState.Modified;
+                }
+
+                _context.SaveChanges();
+
+                return new CharacterCreateResponse() { success = true };
+            }
+
+            #endregion
         }
     }
 }

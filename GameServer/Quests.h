@@ -64,8 +64,8 @@ struct QuestData {
 	QuestDetailData PreConditions[5];
 	QuestDetailData Requirements[5];
 	QuestDetailData Rewards[8];
-	QuestDetailData AcceptRewards[5];
-	QuestDetailData DeleteOnComplete[3];
+	QuestDetailData DeleteOnComplete[5];
+	QuestDetailData AcceptRewards[3];
 	QuestDetailData DropDetails[4];
 
 	uint16_t UnlockedByQuestId();

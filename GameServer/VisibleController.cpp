@@ -28,6 +28,10 @@ void VisibleController::PerformUpdate() {
 }
 
 std::list<uint16_t> VisibleController::GetEntities() {
+	if (!this->_isVisible) {
+		return std::list<uint16_t>();
+	}
+
 	std::lock_guard<std::mutex> lock(*_rwlock);
 
 	return *this->_visibleEntities;

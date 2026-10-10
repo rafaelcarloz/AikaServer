@@ -20,6 +20,8 @@ void BuffsController::Initialize(uint16_t entityId, PGameEntity parent) {
 
 	ZeroMemory(&this->databaseBuff, 60*sizeof(uint64_t));
 
+	this->isInitialized = true;
+
 	if (!this->GetDatabaseData()) {
 		return;
 	}

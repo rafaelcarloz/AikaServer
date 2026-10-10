@@ -65,6 +65,11 @@ DropItems DropList::Get(const uint16_t index) {
 	return item;
 }
 
+bool DropList::Contains(const uint16_t index) {
+	return (this->_items.find(index) != this->_items.end());
+}
+
+
 DropItems DropList::operator[](const uint16_t index) {
 	DropItems item = DropItems();
 

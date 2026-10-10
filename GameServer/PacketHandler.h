@@ -40,6 +40,10 @@ private:
 
 	//Quest
 	static bool OnSelectQuestRewardPacket(PPlayer player, char* buffer);
+	static bool OnCancelQuest(PPlayer player, char* buffer);
+
+	//Chat
+	static bool OnChatPacket(PPlayer player, char* buffer);
 
 
 	static bool OnRevivePlayerPacket(PPlayer player, char* buffer);

@@ -3,7 +3,7 @@
     "Name": "95",
     "Description": "Clair's Friend",
     "MobEffect": 0,
-    "InitialDialog": 0,
+    "InitialDialog": 628,
     "Emote": 0,
     "Effect1": 0,
     "Effect2": 0,
@@ -82,6 +82,11 @@
         {
             "text": "Loja",
             "type": 5,
+            "color": "0xFFFFFFFF"
+        },
+        {
+            "text": "Entendido",
+            "type": 12,
             "color": "0xFFFFFFFF"
         }
     ]

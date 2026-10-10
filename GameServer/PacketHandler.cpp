@@ -11,6 +11,7 @@
 #include "TitleList.h"
 #include "SkillData.h"
 #include "SkillHandler.h"
+#include "CommandHandler.h"
 
 
 namespace json = boost::json;
@@ -27,7 +28,7 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 	WORD receivedHeaderSize = reinterpret_cast<WORD&>(buffer[0]);
 
 	if (receivedBytes != receivedHeaderSize) {
-		Logger::Write(Warnings, "received different sizes: 0x%x || pSize: 0x%x \n", receivedBytes, receivedHeaderSize);
+		//Logger::Write(Warnings, "received different sizes: 0x%x || pSize: 0x%x \n", receivedBytes, receivedHeaderSize);
 	}
 
 	if (initialOffset > 0) {
@@ -146,46 +147,16 @@ bool PacketHandler::PacketControl(PPlayer player, char* buffer, int receivedByte
 		PacketHandler::OnResetSkillsPacket(player, buffer);
 		break;
 
-	case PacketCode::PacketQuestRewardSelect: {
+	case PacketCode::PacketQuestRewardSelect:
 		PacketHandler::OnSelectQuestRewardPacket(player, buffer);
 		break;
-	}
 
+	case PacketCode::PacketQuestRemove:
+		PacketHandler::OnCancelQuest(player, buffer);
+		break;
 
-	//test
 	case PacketCode::PacketChat:
-		PacketCreateMob packet;
-
-		ZeroMemory(&packet, sizeof(PacketCreateMob));
-
-		packet.Header.Size = sizeof(PacketCreateMob);
-		packet.Header.Code = PacketCode::PacketCreateMob;
-
-		for (int i = 0; i < 100; i++) {
-			packet.Header.Index = 10+i;
-			strcpy_s(packet.Name, Logger::Format("test %d", i).c_str());
-
-			for (int i = 0; i < 8; i++) {
-				packet.Equipaments[i] = player->character.Equipaments[i].Apparence;
-			}
-
-			packet.CurHP = 10;
-			packet.CurMP = 10;
-			packet.MaxHP = 10;
-			packet.MaxMP = 10;
-
-			packet.CurrentPosition.X = (float)3450;
-			packet.CurrentPosition.Y = (float)(730+i);
-
-			packet.Sizes = { 0x7, 0x77, 0x7, 0x0 };
-
-			packet.EffectType = i;
-
-			player->SendPacket(&packet, packet.Header.Size);
-		}
-
-		
-
+		PacketHandler::OnChatPacket(player, buffer);
 		break;
 
 	default:
@@ -304,10 +275,14 @@ bool PacketHandler::OnCreateCharacter(PPlayer player, char* buffer) {
 		return true;
 	}
 
-	if (!json::value_to<bool>(response.at("success"))) {
+
+	/* boost json bool conversion error  */
+	/*if (response.at("success").get_bool() == false) {     
+		Logger::Write(Debug, "[%s] character create response: %s", __FUNCTION__, boost::json::serialize(response).c_str());
+
 		player->SendClientMessage(json::value_to<std::string>(response.at("message")));
 		return true;
-	}
+	}*/
 
 	long characterId = json::value_to<int>(response.at("data").at("characterID"));
 
@@ -414,7 +389,7 @@ bool PacketHandler::OnCreateCharacter(PPlayer player, char* buffer) {
 			json::object& _item = item.emplace_object();
 
 			_item.emplace("CharacterSkillID", skillItem->databaseID);
-			_item.emplace("SkillStatus", (skillItem->skillID == 0)? 0 : 1);
+			_item.emplace("SkillStatus", 1);
 			_item.emplace("CharacterID", characterId);
 			_item.emplace("SkillType", (slot < 6) ? 0 : 1);
 			_item.emplace("SkillSlot", slot);
@@ -451,9 +426,9 @@ bool PacketHandler::OnCreateCharacter(PPlayer player, char* buffer) {
 			json::object& _item = item.emplace_object();
 
 			_item.emplace("CharacterHotBarID", hotBarItem->databaseID);
-			_item.emplace("ItemStatus", (hotBarItem->itemID == 0) ? 0 : 1);
+			_item.emplace("ItemStatus", 1);
 			_item.emplace("CharacterID", characterId);
-			_item.emplace("ItemType", 0);
+			_item.emplace("ItemType", hotBarItem->itemType);
 			_item.emplace("ItemSlot", slot);
 
 			_item.emplace("ItemID", hotBarItem->itemID);
@@ -1088,6 +1063,32 @@ bool PacketHandler::OnSelectQuestRewardPacket(PPlayer player, char* buffer) {
 
 	if (!player->questsController->DeliverQuest(packet.QuestIndex, packet.RewardSlot)) {
 		return false;
+	}
+
+	return true;
+}
+
+bool PacketHandler::OnCancelQuest(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketSignalData&>(buffer[0]);
+
+	if (packet.Data <= 0) {
+		return false;
+	}
+
+	return player->questsController->CancelQuest(packet.Data);
+}
+
+#pragma endregion
+#pragma region "Chat"
+
+bool PacketHandler::OnChatPacket(PPlayer player, char* buffer) {
+	auto& packet = reinterpret_cast<PacketChat&>(buffer[0]);
+
+	char firstCharacter = packet.ChatText[0];
+
+	if (firstCharacter == '`') {
+		CommandHandler::CommandControl(player, packet.ChatText);
+		return true;
 	}
 
 	return true;

@@ -64,13 +64,6 @@ public:
 	bool SendPacketToAll();
 
 	Nation* GetNationData();
-
-
-	bool StartRoutines();
-	void RoutineUpdateVisibleEntities();
-	void RoutineUpdateBuffsAndStatus();
-	void RoutineUpdateMobActions();
-	void RoutineUpdateQuests();
 };
 
 

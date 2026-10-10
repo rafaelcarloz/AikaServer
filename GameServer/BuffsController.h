@@ -29,6 +29,8 @@ private:
 	void CalculateBuffDuration(uint16_t buffId, uint32_t& buffDuration);
 	void EvaluateBuffTimes();
 public:
+	bool isInitialized = false;
+
 	void Initialize(uint16_t entityId, PGameEntity parent);
 
 	void Recalculate();

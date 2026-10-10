@@ -194,6 +194,8 @@ bool NPCHandler::DisplayQuests(PPlayer player, PNpc npc, uint16_t questId) {
 	else {
 		std::vector<uint16_t> quests = player->questsController->availableQuests;
 
+		uint32_t color = 0xFFFFFFFF; 
+
 		for (auto& questId : quests) {
 			if (player->questsController->CompletedContains(questId)) {
 				continue;
@@ -217,7 +219,17 @@ bool NPCHandler::DisplayQuests(PPlayer player, PNpc npc, uint16_t questId) {
 				}
 			}
 
-			NPCHandler::SendCustomOption(player, npc, NpcOptionQuest, questData.Title, questData.Index);
+			color = 0xFFFFFFFF;
+
+			if (player->questsController->ActiveContains(questId)) {
+				color = 0xfff5f05f;
+
+				if (player->questsController->activeQuests[questId].IsCompleted) {
+					color = 0xff35bcff;
+				}
+			}
+
+			NPCHandler::SendCustomOption(player, npc, NpcOptionQuest, questData.Title, questData.Index, color);
 		}
 	}
 

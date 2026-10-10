@@ -45,7 +45,7 @@ public:
 	bool FindFreeEntityId(EntityType entityType, UINT32* entityId);
 
 	bool GetEntity(const UINT32 entityId, PGameEntity& entity);
-	static PGameEntity& GetEntity(const UINT32 entityId);
+	static PGameEntity GetEntity(const UINT32 entityId);
 
 	bool GetPlayerById(const UINT32 entityId, PPlayer& player);
 

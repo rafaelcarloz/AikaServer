@@ -91,6 +91,7 @@ Character InitialCharacters::FromJSON(boost::json::value characterData) {
 		PCharacterItemBar item = &character.ItemBar[slot];
 
 		item->itemID = (DWORD)json::value_to<int>(bar.at("index"));
+		item->itemType = (DWORD)json::value_to<int>(bar.at("type"));
 	}
 
 	return character;

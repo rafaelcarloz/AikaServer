@@ -1,14 +1,69 @@
-﻿  NPCHandler.cpp
+﻿  CharacterController.cpp
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\CharacterController.cpp(1022,17): warning C4244: '*=': conversão de 'double' para 'uint64_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\CharacterController.cpp(1025,17): warning C4244: '*=': conversão de 'double' para 'uint64_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\CharacterController.cpp(1032,79): warning C4244: 'argumento': conversão de 'UINT64' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\CharacterController.cpp(1053,52): warning C4267: 'inicializando': conversão de 'size_t' para 'uint16_t', possível perda de dados
+  CommandHandler.cpp
+  EntityHandler.cpp
+  GameEntity.cpp
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\GameEntity.cpp(129,34): warning C4244: '=': conversão de 'UINT64' para 'WORD', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\GameEntity.cpp(148,23): warning C4244: '=': conversão de 'uint16_t' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\GameEntity.cpp(336,21): warning C4244: '=': conversão de 'uint16_t' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\GameEntity.cpp(355,33): warning C4244: '=': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\GameEntity.cpp(411,61): warning C4244: '-=': conversão de 'uint64_t' para 'DWORD', possível perda de dados
+  InventoryController.cpp
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\InventoryController.cpp(32,53): warning C4244: 'argumento': conversão de 'UINT64' para 'int', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\InventoryController.cpp(66,53): warning C4244: 'argumento': conversão de 'UINT64' para 'int', possível perda de dados
+  NPCHandler.cpp
 C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\NPCHandler.cpp(23,48): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
 C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\NPCHandler.cpp(86,46): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
 C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\NPCHandler.cpp(90,47): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
 C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\NPCHandler.cpp(132,34): warning C4244: '=': conversão de 'DWORD' para 'uint16_t', possível perda de dados
+  PacketHandler.cpp
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(707,27): warning C4244: 'argumento': conversão de 'DWORD' para 'WORD', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(741,99): warning C4244: 'argumento': conversão de 'WORD' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(741,66): warning C4244: 'argumento': conversão de 'WORD' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(756,81): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(773,67): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(774,67): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(800,55): warning C4244: 'argumento': conversão de 'DWORD' para 'WORD', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(800,42): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(830,41): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(931,62): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(948,40): warning C4244: 'argumento': conversão de 'DWORD' para 'const WORD', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(950,25): warning C4018: '>': incompatibilidade de signed/unsigned
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(971,50): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(973,63): warning C4244: '-=': conversão de 'DWORD' para 'WORD', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(975,57): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(1034,57): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(1074,53): warning C4244: 'argumento': conversão de 'DWORD' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(1117,53): warning C4244: 'argumento': conversão de 'DWORD' para 'BYTE', possível perda de dados
+  Player.cpp
+  QuestsController.cpp
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\QuestsController.cpp(49,62): warning C4244: 'argumento': conversão de 'UINT64' para 'int', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\QuestsController.cpp(420,45): warning C4267: 'inicializando': conversão de 'size_t' para 'int', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\QuestsController.cpp(487,20): warning C4018: '<': incompatibilidade de signed/unsigned
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\QuestsController.cpp(563,6): warning C4101: 'npcId': variável local não referenciada
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\QuestsController.cpp(564,14): warning C4101: 'entity': variável local não referenciada
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\QuestsController.cpp(742,45): warning C4244: '=': conversão de 'uint16_t' para 'uint8_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\QuestsController.cpp(744,47): warning C4244: '=': conversão de 'uint16_t' para 'uint8_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\QuestsController.cpp(745,49): warning C4244: '=': conversão de 'uint16_t' para 'uint8_t', possível perda de dados
+  ServerInstance.cpp
+  ServerRoutines.cpp
+  SkillHandler.cpp
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\SkillHandler.cpp(397,24): warning C4244: 'inicializando': conversão de 'double' para 'uint16_t', possível perda de dados
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\SkillHandler.cpp(400,71): warning C4244: '=': conversão de 'unsigned long' para 'uint16_t', possível perda de dados
   UseItemHandler.cpp
 C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\UseItemHandler.cpp(99,18): warning C4244: 'inicializando': conversão de 'lua_Integer' para 'uint32_t', possível perda de dados
 C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\UseItemHandler.cpp(100,18): warning C4244: 'inicializando': conversão de 'lua_Integer' para 'uint32_t', possível perda de dados
 C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\UseItemHandler.cpp(135,20): warning C4244: 'inicializando': conversão de 'lua_Integer' para 'uint16_t', possível perda de dados
 C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\UseItemHandler.cpp(142,68): warning C4244: 'argumento': conversão de 'uint16_t' para 'BYTE', possível perda de dados
   Gerando Código...
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\ServerInstance.cpp(24): warning C4715: 'ConsoleHandler': nem todos os caminhos de controle retornam um valor
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\QuestsController.cpp(723): warning C4715: 'QuestsController::DeliverQuest': nem todos os caminhos de controle retornam um valor
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\PacketHandler.cpp(775): warning C4715: 'PacketHandler::OnGroupItemsPacket': nem todos os caminhos de controle retornam um valor
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\InventoryController.cpp(451): warning C4715: 'InventoryController::UngroupItems': nem todos os caminhos de controle retornam um valor
+C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\GameServer\EntityHandler.cpp(135): warning C4172: retornando o endereço da variável local ou temporário: entity
   GameServer.vcxproj -> C:\Users\rafae\OneDrive\Documentos\GitHub\AikaServer\bin\GameServer.exe
   'pwsh.exe' não é reconhecido como um comando interno
   ou externo, um programa operável ou um arquivo em lotes.

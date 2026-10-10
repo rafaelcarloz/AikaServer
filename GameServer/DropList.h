@@ -20,10 +20,10 @@ enum DropRarity : uint16_t {
 };
 
 enum DropRarityChance : uint16_t {
-	DROP_NORMAL_CHANCE = 80,
-	DROP_SUPERIOR_CHANCE = 20,
-	DROP_RARE_CHANCE = 10,
-	DROP_LEGENDARY_CHANCE = 5
+	DROP_NORMAL_CHANCE = 50,
+	DROP_SUPERIOR_CHANCE = 10,
+	DROP_RARE_CHANCE = 5,
+	DROP_LEGENDARY_CHANCE = 3
 };
 
 struct DropItem {
@@ -54,6 +54,8 @@ public:
 	bool Add(const uint16_t index, const DropItems item);
 	bool Get(const uint16_t index, DropItems* item);
 	static DropItems Get(const uint16_t index);
+
+	bool Contains(const uint16_t index);
 
 	DropItems operator[](const uint16_t index);
 };

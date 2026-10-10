@@ -2,7 +2,7 @@
     "Index": 2048,
     "Name": "41",
     "Description": "Save Point",
-    "MobEffect": 0,
+    "MobEffect": 5,
     "InitialDialog": 0,
     "Emote": 0,
     "Effect1": 0,

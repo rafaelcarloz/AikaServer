@@ -122,6 +122,15 @@
     <ClCompile Include="QuestsController.cpp">
       <Filter>Controller</Filter>
     </ClCompile>
+    <ClCompile Include="CommandHandler.cpp">
+      <Filter>Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerRoutines.cpp">
+      <Filter>Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="PartyController.cpp">
+      <Filter>Controller</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Network">
@@ -156,6 +165,9 @@
     </Filter>
     <Filter Include="Core\Nation">
       <UniqueIdentifier>{38215148-5ac2-418f-b172-4355591d5b89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Routines">
+      <UniqueIdentifier>{db0dbb8a-f956-4b32-a3ff-24f332bdc112}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -292,6 +304,15 @@
       <Filter>Data\Files</Filter>
     </ClInclude>
     <ClInclude Include="QuestsController.h">
+      <Filter>Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandHandler.h">
+      <Filter>Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerRoutines.h">
+      <Filter>Routines</Filter>
+    </ClInclude>
+    <ClInclude Include="PartyController.h">
       <Filter>Controller</Filter>
     </ClInclude>
   </ItemGroup>

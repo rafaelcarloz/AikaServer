@@ -1,0 +1,185 @@
+{
+    "Index": 0,
+    "DropList": [
+        {
+            "id": 1,
+            "item": 5101,
+            "rarity": 1
+        },
+        {
+            "id": 2,
+            "item": 4638,
+            "rarity": 1
+        },
+        {
+            "id": 3,
+            "item": 4938,
+            "rarity": 1
+        },
+        {
+            "id": 4,
+            "item": 4942,
+            "rarity": 1
+        },
+        {
+            "id": 5,
+            "item": 4946,
+            "rarity": 1
+        },
+        {
+            "id": 6,
+            "item": 4788,
+            "rarity": 1
+        },
+        {
+            "id": 7,
+            "item": 5100,
+            "rarity": 2
+        },
+        {
+            "id": 8,
+            "item": 4796,
+            "rarity": 2
+        },
+        {
+            "id": 9,
+            "item": 5321,
+            "rarity": 2
+        },
+        {
+            "id": 10,
+            "item": 4642,
+            "rarity": 2
+        },
+        {
+            "id": 11,
+            "item": 4951,
+            "rarity": 2
+        },
+        {
+            "id": 12,
+            "item": 4792,
+            "rarity": 2
+        },
+        {
+            "id": 13,
+            "item": 5102,
+            "rarity": 2
+        },
+        {
+            "id": 14,
+            "item": 4788,
+            "rarity": 2
+        },
+        {
+            "id": 15,
+            "item": 5105,
+            "rarity": 2
+        },
+        {
+            "id": 16,
+            "item": 4356,
+            "rarity": 2
+        },
+        {
+            "id": 17,
+            "item": 4396,
+            "rarity": 2
+        },
+        {
+            "id": 18,
+            "item": 5103,
+            "rarity": 3
+        },
+        {
+            "id": 19,
+            "item": 5104,
+            "rarity": 3
+        },
+        {
+            "id": 20,
+            "item": 4562,
+            "rarity": 3
+        },
+        {
+            "id": 21,
+            "item": 4542,
+            "rarity": 3
+        },
+        {
+            "id": 22,
+            "item": 4142,
+            "rarity": 3
+        },
+        {
+            "id": 23,
+            "item": 4580,
+            "rarity": 4
+        },
+        {
+            "id": 24,
+            "item": 2688,
+            "rarity": 4
+        },
+        {
+            "id": 25,
+            "item": 2653,
+            "rarity": 4
+        },
+        {
+            "id": 26,
+            "item": 2758,
+            "rarity": 4
+        },
+        {
+            "id": 27,
+            "item": 2723,
+            "rarity": 4
+        },
+        {
+            "id": 28,
+            "item": 2548,
+            "rarity": 4
+        },
+        {
+            "id": 29,
+            "item": 2513,
+            "rarity": 4
+        },
+        {
+            "id": 30,
+            "item": 1416,
+            "rarity": 4
+        },
+        {
+            "id": 31,
+            "item": 1334,
+            "rarity": 4
+        },
+        {
+            "id": 32,
+            "item": 6112,
+            "rarity": 4
+        },
+        {
+            "id": 33,
+            "item": 6116,
+            "rarity": 4
+        },
+        {
+            "id": 34,
+            "item": 6117,
+            "rarity": 4
+        },
+        {
+            "id": 35,
+            "item": 6127,
+            "rarity": 4
+        },
+        {
+            "id": 36,
+            "item": 6129,
+            "rarity": 4
+        }
+    ]
+}

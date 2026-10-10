@@ -54,6 +54,7 @@ public:
 	bool IsEmptySlotAvailable(SlotType slotType, BYTE slot);
 
 	void DecreaseAmount(BYTE slot, WORD amount, SlotType slotType = SlotInventory, PItem source = nullptr);
+	bool DecreaseAmount(WORD itemId, WORD amount, SlotType slotType = SlotInventory);
 
 
 	ItemAgroupStatus CanAgroupAmount(const Item item, WORD amount);
@@ -62,6 +63,10 @@ public:
 
 	BYTE PutItem(Item item, BYTE startSlot = 0, bool notify = false);
 	BYTE PutItem(WORD itemId, WORD amount = 1);
+
+	PItem FindItemById(uint16_t itemId, SlotType slotType = SlotInventory);
+	bool HasItem(uint16_t itemId, SlotType slotType = SlotInventory);
+	bool HasItem(uint16_t itemId, uint16_t amount, SlotType slotType = SlotInventory);
 };
 
 #endif
