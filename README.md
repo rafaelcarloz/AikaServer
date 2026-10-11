@@ -2,6 +2,10 @@
 
 AikaServer is organized into three subprojects that handle database access, player login, and gameplay.
 
+## Documentation
+
+See the [full project documentation](docs/README.md) for architecture, the complete API and database references, game systems, network packets, runtime content and Lua, operations, and development workflows.
+
 ## Subprojects
 
 | Subproject | Responsibility |
@@ -78,7 +82,7 @@ dotnet ef database update
 Set-Location ..
 ```
 
-Configure the connection string in step 4 before running this alternative. The migration creates the schema but does not seed gameplay data; populate the required server, nation, and account records before using the servers.
+Configure the connection string in step 4 before running this alternative. The migration creates the schema but does not seed gameplay data. It also creates `vwSessionsActive` as an empty table without a view definition or population mechanism; token resolution needs additional database logic. See the [database guide](docs/database.md#active-session-object) before choosing this path. Populate the required server, nation, and account records before using the servers.
 
 ### 4. Configure database access and server settings
 
@@ -123,7 +127,7 @@ Set-Location .\bin
 
 MainServer requests `/servers/all` from AikaWeb and launches `GameServer.exe` once for each returned server record. Keep both executables in the same directory.
 
-Run the native servers with `bin/` as their working directory: they load JSON configuration and game assets using relative paths. Keep `lua.dll` and the `Data/`, `InitialCharacters/`, `NPCs/`, `Mobs/`, `Drops/`, and `Scripts/` directories in place.
+Run the native servers with `bin/` as their working directory: JSON configuration uses the working directory, while GameServer assets are resolved relative to the executable directory. Keep both executables, `lua.dll`, and the `Data/`, `InitialCharacters/`, `NPCs/`, `Mobs/`, `Drops/`, and `Scripts/` directories in place.
 
 For an individual GameServer during development, run this from `bin/` instead of launching the same instance through MainServer:
 
